@@ -1,0 +1,679 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+    <header class="navbar">
+        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
+            <div class="navbar-inner">
+
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/quecut-logo.svg" alt="Quecut" class="img-fluid">
+                    </a>
+                </div>
+
+                <!-- DESKTOP MENU (hidden on mobile, structure kept class-free for WP) -->
+                <nav class="navbar-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Services
+                                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/social-media-service.svg" alt="Social Media"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/marketing-service.svg" alt="Marketing"
+                                            class="dropdown-icon">
+                                        <span>Marketing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/web-design-service.svg" alt="Web Design"
+                                            class="dropdown-icon">
+                                        <span>Web Design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/print-and-editorial-service.svg" alt="Print & Editorial"
+                                            class="dropdown-icon">
+                                        <span>Print & Editorial</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="navbar-btn z-6">
+                    <a href="#" class="btn-getsample font-fira">
+                        <span class="btn-text-wipe btn-text-wipe--navbar">Get Free Sample</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggle" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MOBILE OFF-CANVAS MENU (separate structure, matches Figma mobile design) -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-track">
+
+                <!-- panel 1: main menu -->
+                <div class="mobile-menu-panel mobile-menu-panel-main">
+                    <div class="mobile-menu-top">
+                        <span class="mobile-menu-heading">Menu</span>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu-list">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu-expand" data-panel="services">
+                                Services
+                                <span class="mobile-menu-plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="btn-getsample mobile-menu-btn">Get Free Sample</a>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+                <!-- panel 2: services grid -->
+                <div class="mobile-menu-panel mobile-menu-panel-services">
+                    <div class="mobile-menu-top">
+                        <button class="mobile-menu-back" type="button">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6H15M1 6L6 1M1 6L6 11" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Back
+                        </button>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <span class="mobile-menu-heading mobile-services-heading">Services</span>
+
+                    <div class="mobile-services-grid">
+                        <a href="#">
+                            <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                class="dropdown-icon">
+                            <span>Brand Identity</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/social-media-service.svg" alt="Social Media" class="dropdown-icon">
+                            <span>Social Media</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/marketing-service.svg" alt="Marketing" class="dropdown-icon">
+                            <span>Marketing</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/web-design-service.svg" alt="Web Design" class="dropdown-icon">
+                            <span>Web Design</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/packaging-service.svg" alt="Packaging Design" class="dropdown-icon">
+                            <span>Packaging Design</span>
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/print-and-editorial-service.svg" alt="Print & Editorial"
+                                class="dropdown-icon">
+                            <span>Print & Editorial</span>
+                        </a>
+                    </div>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- navbar end -->
+
+
+    <!-- banner start -->
+    <section class="banner relative min-h-[90vh] bg-[#0B0C0B] overflow-hidden">
+        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 items-center">
+
+                <!-- ================= LEFT CONTENT (Tailwind classes only) ================= -->
+                <div class="flex flex-col justify-between h-full pt-24 pb-20 banner-left relative z-10">
+
+                    <div class="flex flex-col gap-3">
+                        <!-- badge -->
+                        <div
+                            class="bg-[linear-gradient(to_right,#D5FF02_0%,#A8C91A_5%,#666666_25%,#666666_100%)] rounded-full p-px inline-flex w-fit">
+                            <div class="inline-flex w-fit items-center gap-2   bg-[#0B0C0B]  rounded-full  px-4 py-2">
+                                <img src="assets/images/quecut-trust-icon.svg" class="img-fluid" alt="trust icon">
+                                <span class="text-yellow1 md:text-base sm:text-sm text-xs font-semibold leading-[150%] uppercase">Trusted by
+                                    500+ small businesses worldwide</span>
+                            </div>
+                        </div>
+
+
+                        <!-- title -->
+                        <h1
+                            class="text-[32px] sm:text-[42px] lg:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
+                            Unlimited Graphic Design <br class="hidden sm:block">Services for Your Business.
+                        </h1>
+
+                        <!-- description -->
+                        <p class=" text-dark7 sm:text-base text-sm md:text-lg lg:text-xl font-light leading-[150%]">
+                            Get professional, on-brand designs delivered in 48 hours. Subscribe and request unlimited
+                            designs with no contracts or hidden fees.
+                        </p>
+
+                          <!-- buttons -->
+                    <div class="flex items-center gap-4 flex-wrap mt-12">
+
+                        <!-- outer anchor is now the single hover trigger for BOTH icon reveal + text wipe -->
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative w-14 h-14 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Get free sample">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13791)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13791">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13951)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13951">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 px-8 py-4 text-base font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Get Free Sample</span>
+                            </span>
+                        </a>
+
+                        <a href="#"
+                            class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-yellow1 px-8 py-4 text-base font-semibold uppercase whitespace-nowrap">
+                            <span class="btn-text-wipe btn-text-wipe--outline">See Pricing</span>
+                        </a>
+                    </div>
+                    </div>
+
+                  
+
+                    <!-- trust checklist -->
+                    <div class="flex flex-wrap items-center gap-x-8 gap-y-3 py-8 bg-dark1">
+                        <div class="flex items-center gap-2 text-dark8 font-fira text-lg md:text-xl lg:text-2xl">
+                            <img src="assets/images/banner-check.svg" class="img-fluid" alt="check icon">
+                            <span>Cancel anytime</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-dark8 font-fira text-lg md:text-xl lg:text-2xl">
+                            <img src="assets/images/banner-check.svg" class="img-fluid" alt="check icon">
+                            <span>48hr delivery</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-dark8 font-fira text-lg md:text-xl lg:text-2xl">
+                            <img src="assets/images/banner-check.svg" class="img-fluid" alt="check icon">
+                            <span>Unlimited revisions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= RIGHT SLIDER (Splide + custom CSS/JS) ================= -->
+                <div class="banner-slider relative h-[60vh] lg:h-[90vh]">
+
+                    <!-- DESKTOP: 3 vertical columns -->
+                    <div class="banner-slider-desktop hidden lg:grid grid-cols-3 gap-4 h-full">
+
+                        <div class="banner-slide-col splide" data-direction="up">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-1.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-2.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-3.webp"
+                                            alt="" class="img-fluid"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="banner-slide-col splide" data-direction="down">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-4.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-5.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-6.webp"
+                                            alt="" class="img-fluid"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="banner-slide-col splide" data-direction="up">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-7.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-8.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-9.webp"
+                                            alt="" class="img-fluid"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOBILE: 2 horizontal rows -->
+                    <div class="banner-slider-mobile lg:hidden flex flex-col gap-4 h-full py-8">
+
+                        <div class="banner-slide-row splide" data-direction="ltr">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-1.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-2.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-3.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-4.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-5.webp"
+                                            alt="" class="img-fluid"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="banner-slide-row splide" data-direction="rtl">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-6.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-7.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-8.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-9.webp"
+                                            alt="" class="img-fluid"></li>
+                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-10.webp"
+                                            alt="" class="img-fluid"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- banner end -->
+
+
+<!-- achievements start -->
+<section class="achievements-section py-6 bg-[#0B0C0B] overflow-hidden">
+        <div class="achievements-slider splide" aria-label="Achievements">
+            <div class="splide__track overflow-visible">
+                <ul class="splide__list flex items-stretch">
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                           <img src="assets/images/trustpilot.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira mb-1">4.8</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Trustpilot Review</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                            <img src="assets/images/clutch.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Clutch Review</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                             <img src="assets/images/fiverr.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">Level 2</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Seller in Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                            <img src="assets/images/g2-review.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">G2 Review</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                             <img src="assets/images/google-rating.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8/5</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Google Rating</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                            <img src="assets/images/upwork.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">Top Rated</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Agency in Upwork</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- duplicate set so the loop has enough buffer for a seamless continuous marquee -->
+                           <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                           <img src="assets/images/trustpilot.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Trustpilot Review</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                            <img src="assets/images/clutch.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Clutch Review</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                             <img src="assets/images/fiverr.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">Level 2</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Seller in Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                            <img src="assets/images/g2-review.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">G2 Review</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                             <img src="assets/images/google-rating.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">4.8/5</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Google Rating</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div class="flex items-center md:gap-4 gap-2 sm:px-6 sm:py-5 py-3 px-3 rounded-[24px] bg-dark3 whitespace-nowrap">
+                            <img src="assets/images/upwork.svg" class="img-fluid" alt="achievement icon">
+                            <div>
+                                <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira mb-1">Top Rated</p>
+                                <p class="m-0 text-dark6 md:text-lg sm:text-base text-sm font-normal leading-[130%]">Agency in Upwork</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+</section>
+<!-- achievements end -->
+
+
+<!-- how-it-works start -->
+<section class="how-it-works-section section-padding bg-[#0B0C0B]">
+    <div class="container">
+
+        <!-- section title -->
+        <div class="max-w-184 mx-auto text-center mb-16">
+            <h2 class="text-[#FFF] text-center font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                How It Works
+            </h2>
+            <p class="text-dark7 text-center font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%] mt-3">
+                Get started in minutes and receive your first design within 48 hours. No complicated onboarding, just simple steps to great design.
+            </p>
+        </div>
+
+        <!-- cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 pt-12 counter-bg-shape">
+
+            <!-- ===== CARD 1 ===== -->
+            <div class="how-card how-card--1 relative rounded-4xl pt-16 px-6 sm:px-8 flex flex-col h-full">
+
+                <!-- counter badge -->
+                <div class="how-card-counter absolute left-1/2 -translate-x-1/2 -top-12 w-24 h-24 flex items-center justify-center">
+                    <span class="how-card-counter-bg absolute inset-0 rounded-full bg-[linear-gradient(180deg,#D2F234_0%,#E7FD79_49.04%,#DEF669_100%)]"></span>
+                    <span class="relative z-10 bg-[linear-gradient(180deg,#526300_40.31%,#E5FC75_90.62%)] bg-clip-text text-transparent text-[58.514px] font-bold leading-[110%]">1</span>
+                </div>
+
+                <div class="flex flex-col justify-between h-full gap-8">
+                    <div>
+                        <h3 class="text-dark1 text-center font-fira text-[28px] sm:text-[32px] font-medium leading-[110%]">Submit Your Request</h3>
+                <p class="text-dark1 text-center text-base sm:text-lg md:text-xl font-normal leading-[120%] sm:mt-4 mt-2">
+                    Fill out our brief form with your design requirements. Include as much or as little detail we'll guide you through the process.
+                </p>
+                    </div>
+                     <!-- image: space-between from text above, flush to card edges, zero bottom padding -->
+                <img src="assets/images/submit-request.svg" alt="Submit your request" class="img-fluid">
+                </div>
+
+               
+            </div>
+
+            <!-- ===== CARD 2 ===== -->
+            <div class="how-card how-card--2 relative rounded-4xl pt-16 px-6 sm:px-8 flex flex-col h-full">
+
+                <div class="how-card-counter absolute left-1/2 -translate-x-1/2 -top-12 w-24 h-24 flex items-center justify-center">
+                    <span class="how-card-counter-bg absolute inset-0 rounded-full bg-[linear-gradient(180deg,#FF6A00_0%,#FEC297_48.43%,#FEB079_100%)]"></span>
+                    <span class="relative z-10 bg-[linear-gradient(180deg,#526300_40.31%,#E5FC75_90.62%)] bg-clip-text text-transparent text-[58.514px] font-bold leading-[110%]">2</span>
+                </div>
+
+                <div class="flex flex-col justify-between h-full gap-8">
+                    <div>
+                         <h3 class="text-dark1 text-center font-fira text-[28px] sm:text-[32px] font-medium leading-[110%]">We Design and Deliver</h3>
+                <p class="text-dark1 text-center text-base sm:text-lg md:text-xl font-normal leading-[120%] sm:mt-4 mt-2">
+                    Fill out our brief form with your design requirements. Include as much or as little detail we'll guide you through the process.
+                </p>
+                    </div>
+                     <img src="assets/images/design-and-deliver.svg" alt="We design and deliver" class="img-fluid">
+                </div>
+
+               
+
+               
+            </div>
+
+            <!-- ===== CARD 3 ===== -->
+            <div class="how-card how-card--3 relative rounded-4xl pt-16 px-6 sm:px-8 flex flex-col h-full">
+
+                <div class="how-card-counter absolute left-1/2 -translate-x-1/2 -top-12 w-24 h-24 flex items-center justify-center">
+                    <span class="how-card-counter-bg absolute inset-0 rounded-full bg-[linear-gradient(180deg,#0AF_0%,#DCF1FA_55%,#BFE9FE_100%)]"></span>
+                    <span class="relative z-10 bg-[linear-gradient(180deg,#526300_40.31%,#E5FC75_90.62%)] bg-clip-text text-transparent text-[58.514px] font-bold leading-[110%]">3</span>
+                </div>
+
+                <div class="flex flex-col justify-between h-full gap-8">
+                   <div>
+                     <h3 class="text-dark1 text-center font-fira text-[28px] sm:text-[32px] font-medium leading-[110%]">Request Revisions</h3>
+                <p class="text-dark1 text-center text-base sm:text-lg md:text-xl font-normal leading-[120%] sm:mt-4 mt-2">
+                    Not quite right? No problem. Request unlimited revisions until you're 100% satisfied with the final design. It's that simple.
+                </p>
+                   </div>
+
+                <img src="assets/images/request-revision.svg" alt="Request revisions" class="img-fluid">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- how-it-works end -->
+
+
+
+
+<!-- how-it-works end -->
+<!-- how-it-works end -->
+
+
+
+    <div class="h-[60vh] bg-green-600">
+
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

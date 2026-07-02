@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+
+# Build output (Tailwind-er output file jodi alada thake)
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
