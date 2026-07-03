@@ -1,0 +1,28 @@
+<svg width="397" height="356" viewBox="0 0 397 356" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_7204_4231)">
+<mask id="mask0_7204_4231" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="873" height="1126">
+<path d="M454.002 749.963C592.637 734.118 687.882 610.533 687.882 439.415C687.882 255.621 578.879 126.754 423.312 126.754C267.745 126.754 158.742 255.621 158.742 439.415C158.742 632.715 261.395 744.681 530.199 843.972C724.922 916.856 872.023 971.782 872.023 1126H723.864C723.864 1073.19 632.852 1043.61 446.594 970.726C130.168 847.141 0 678.135 0 439.415C0 181.681 174.616 0 423.312 0C672.008 0 846.624 181.681 846.624 439.415C846.624 614.758 766.195 755.244 636.027 826.015L454.002 749.963Z" fill="url(#paint0_linear_7204_4231)"/>
+</mask>
+<g mask="url(#mask0_7204_4231)">
+<line x1="5.24219" y1="-2.18557e-08" x2="5.24222" y2="800" stroke="#BEC4BE"/>
+<line x1="93.3164" y1="-2.18557e-08" x2="93.3164" y2="800" stroke="#BEC4BE"/>
+<line x1="181.391" y1="-2.18557e-08" x2="181.391" y2="800" stroke="#BEC4BE"/>
+<line x1="357.537" y1="-2.18557e-08" x2="357.537" y2="800" stroke="#BEC4BE"/>
+<line x1="269.463" y1="-2.18557e-08" x2="269.463" y2="800" stroke="#BEC4BE"/>
+<line x1="713" y1="92.2432" x2="-87" y2="92.2432" stroke="#BEC4BE"/>
+<line x1="713" y1="180.316" x2="-87" y2="180.316" stroke="#BEC4BE"/>
+<line x1="713" y1="268.39" x2="-87" y2="268.39" stroke="#BEC4BE"/>
+<line x1="713" y1="356.463" x2="-87" y2="356.463" stroke="#BEC4BE"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_7204_4231" x1="-57.5342" y1="439.932" x2="436.18" y2="1043.82" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CDCDCD"/>
+<stop offset="0.558995" stop-color="#636363"/>
+<stop offset="1" stop-color="#313131"/>
+</linearGradient>
+<clipPath id="clip0_7204_4231">
+<rect width="397" height="356" fill="white"/>
+</clipPath>
+</defs>
+</svg>

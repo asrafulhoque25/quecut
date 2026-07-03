@@ -710,3 +710,200 @@ html {
     background-image: linear-gradient(180deg, #E0F5FF 0%, #30BAFF 36.78%, #0078B4 100%);
 }
  
+
+
+/* why choose quecut  */
+
+.why-choose-us {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    perspective: 1200px; /* needed for the child's rotateX/rotateY to read as 3D */
+}
+ 
+.why-choose-bg {
+    position: absolute;
+    inset: -30px; /* small bleed so scale/tilt never reveals an edge */
+    z-index: -1;
+ 
+    background-image: url("../images/why-choose-main-background.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+ 
+    transform-origin: center;
+    will-change: transform, opacity, filter;
+    animation: why-choose-bg-breathe 14s ease-in-out infinite;
+ 
+    /* initial "light off" state -- JS fades/brightens this in on scroll */
+    opacity: 0;
+    filter: brightness(0.15);
+}
+ 
+@keyframes why-choose-bg-breathe {
+    0%, 25% {
+        transform: scale(1) rotateX(0deg) rotateY(0deg);
+    }
+    60% {
+        transform: scale(1.12) rotateX(1.5deg) rotateY(-1.5deg);
+    }
+    100% {
+        transform: scale(1) rotateX(0deg) rotateY(0deg);
+    }
+}
+ 
+
+
+
+/* marquee css start  */
+/* ================= QUECUT TAPE MARQUEE ================= */
+.quecut-tape-marquee-section {
+    position: relative;
+    z-index: 2000;
+    margin-top: -130px; 
+    margin-inline: 50px; 
+}
+ 
+
+.quecut-tape-marquee-rotate {
+    transform: rotate(3deg);
+    transform-origin: center;
+    margin-inline: -40px; 
+}
+ 
+.quecut-tape-marquee-stripe {
+    overflow: hidden;
+    border-radius: 100px;
+    padding-block: 24px; 
+ 
+    background: linear-gradient(234deg, var(--Main-Colors-Primary, rgba(210, 242, 52, 0.20)) 28.73%, rgba(102, 102, 102, 0.20) 35.98%), #404240;
+}
+ 
+.quecut-tape-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: max-content;
+    animation: quecut-tape-scroll 26s linear infinite;
+}
+ 
+.quecut-tape-marquee-section:hover .quecut-tape-marquee-track {
+    animation-play-state: paused;
+}
+ 
+@keyframes quecut-tape-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+ 
+.quecut-tape-marquee-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+ 
+.quecut-tape-marquee-item span {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+ 
+@media (min-width: 768px) {
+    .quecut-tape-marquee-item span {
+        font-size: 30px;
+    }
+}
+ 
+@media (min-width: 1024px) {
+    .quecut-tape-marquee-item span {
+        font-size: 36px;
+    }
+}
+ 
+.quecut-tape-marquee-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+ 
+@media (min-width: 1024px) {
+    .quecut-tape-marquee-icon {
+        width: auto;
+        height: 62px;
+    }
+}
+
+
+
+
+
+/* service section design  */
+
+/* ================= DESIGN SERVICES: ANIMATED HOVER BORDER =================
+   Each card sets its own color via the --card-accent CSS variable directly
+   in HTML (Tailwind arbitrary property syntax), e.g. [--card-accent:#FF6A00].
+   This file only defines the reusable animation mechanism once. */
+
+@property --design-card-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.design-card {
+    isolation: isolate;
+}
+
+.design-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    padding: 2px;
+
+    background: conic-gradient(
+        from var(--design-card-angle),
+        transparent 0%,
+        var(--card-accent, #D2F234) 12%,
+        transparent 28%
+    );
+
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    animation: design-card-border-spin 3.5s linear infinite;
+    animation-play-state: paused;
+}
+
+.design-card:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+/* the "popular" card (card 2) keeps its persistent solid border AND still
+   gets the animated glow layered on top when hovered */
+.design-card--popular::before {
+    padding: 3px; /* sits just outside the persistent 2px solid border */
+}
+
+@keyframes design-card-border-spin {
+    to {
+        --design-card-angle: 360deg;
+    }
+}

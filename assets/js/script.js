@@ -312,7 +312,66 @@ document.addEventListener('DOMContentLoaded', () => {
         onLeaveBack: () => tl.reverse(), // resets when scrolling back above the trigger, so it can replay
     });
 });
+
+
+
+
+
+// ================= WHY CHOOSE: LEFT SHAPE SCROLL ROTATION =================
+// Scoped to '.choose-section-shape' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const shape = document.querySelector('.choose-section-shape');
+    if (!shape) return;
  
+    const section = shape.closest('section');
+ 
+    // starting state: rotated -200deg, anchored at the bottom (transform-origin already
+    // set to bottom via the 'origin-bottom' class in HTML), plus a subtle 3D tilt + scale
+    // so it doesn't feel like a flat 2D spin.
+    gsap.set(shape, {
+        rotation: -200,
+        rotationY: -20,
+        scale: 0.85,
+        transformPerspective: 1200,
+    });
+ 
+    gsap.to(shape, {
+        rotation: 0,
+        rotationY: 0,
+        scale: 1,
+        ease: 'none', // linear -- motion should feel directly tied to scroll, not eased on its own
+        scrollTrigger: {
+            trigger: section || shape,
+            start: 'top bottom',   // begins as soon as the section enters the viewport
+            end: 'top 10%',        // finishes once the section has scrolled most of the way up
+            scrub: 1,               // smoothly follows scroll position, with a little lag for smoothness
+        },
+    });
+});
+ 
+
+ 
+
+// ================= WHY CHOOSE: BACKGROUND "LIGHT ON" REVEAL =================
+// Scoped to '.why-choose-bg' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const bg = document.querySelector('.why-choose-bg');
+    if (!bg) return;
+
+    const section = bg.closest('section') || bg.closest('.why-choose-us');
+
+    gsap.to(bg, {
+        opacity: 1,
+        filter: 'brightness(1)',
+        duration: 1.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: section || bg,
+            start: 'top 70%', // section top reaches 70% down the viewport = 30% up from the bottom
+            toggleActions: 'play none none reverse', // dims back out if you scroll back above the trigger
+        },
+    });
+});
 
 
 
