@@ -15,6 +15,7 @@
     --color-dark7: #DDE3DD;
     --color-dark8: #EEF3EE;
     --color-dark1: #0B0C0B;
+    --color-dark2: #151615;
     --color-dark3: #232423;
 }
 
@@ -562,6 +563,8 @@ html {
     background-clip: text;
     color: transparent;
     transition: background-position 0.6s ease;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
 }
 
 /* Get Free Sample: dark -> white */
@@ -811,7 +814,7 @@ html {
  
 .quecut-tape-marquee-item span {
     font-family: "Fira Sans", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 800;
     line-height: 110%;
@@ -820,11 +823,11 @@ html {
  
 @media (min-width: 768px) {
     .quecut-tape-marquee-item span {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
  
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .quecut-tape-marquee-item span {
         font-size: 36px;
     }
@@ -837,7 +840,7 @@ html {
     object-fit: contain;
 }
  
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .quecut-tape-marquee-icon {
         width: auto;
         height: 62px;
@@ -906,4 +909,127 @@ html {
     to {
         --design-card-angle: 360deg;
     }
+}
+
+
+
+/* ================= PORTFOLIO: TABS ================= */
+.portfolio-tab {
+    padding: 12px 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    color:  #BEC4BE;
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-tab:last-child {
+    margin-right: 0;
+}
+
+.portfolio-tab:hover {
+    color: #fff;
+}
+
+.portfolio-tab.active {
+    color: var(--color-yellow1);
+    border-bottom-color: var(--color-yellow1);
+}
+
+/* hides the scrollbar for the drag-scrollable tab row while keeping it scrollable */
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar.is-dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+/* ================= PORTFOLIO: CARD LABEL (glassmorphism) ================= */
+.portfolio-card-label {
+    border-radius: 0 0 10.537px 10.537px;
+    background: linear-gradient(90deg, var(--Dark-Colors-Dark-1, rgba(11, 12, 11, 0.60)) 0%, rgba(125, 134, 80, 0.06) 100%);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+
+/* filtered-out cards hide smoothly instead of jump-cutting */
+.portfolio-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-card.is-hidden {
+    display: none;
+}
+
+
+
+/* testimonial section  */
+
+
+.testimonial-card-body::before {
+        content: "";
+    position: absolute;
+    inset: 0;
+    top: 74%;
+    left: -46%;
+    background-image: url(../images/testimonial-bg-shape.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: contain; */
+    z-index: 77;
+ 
+}
+ 
+@media (max-width: 640px) {
+    .testimonial-card-body::before {
+       background-size: 64%;
+top: 80%;
+    }
+}
+
+.testimonials-section{
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials-section::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 120px;
+    width: 100%;
+    height: 398px; 
+
+    background-image: url("../images/counter-shape.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    z-index: -1;
+}
+
+@media (max-width: 1400px) {
+    .testimonials-section::after{
+        background-image:none;
+    }
+    .testimonials-section{
+    position: static;
+}
 }

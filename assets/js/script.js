@@ -320,36 +320,37 @@ document.addEventListener('DOMContentLoaded', () => {
 // ================= WHY CHOOSE: LEFT SHAPE SCROLL ROTATION =================
 // Scoped to '.choose-section-shape' only, no generic selectors.
 document.addEventListener('DOMContentLoaded', () => {
-    const shape = document.querySelector('.choose-section-shape');
-    if (!shape) return;
+    const shapes = document.querySelectorAll('.choose-section-shape');
+    if (!shapes.length) return;
  
-    const section = shape.closest('section');
+    shapes.forEach((shape) => {
+        const section = shape.closest('section');
  
-    // starting state: rotated -200deg, anchored at the bottom (transform-origin already
-    // set to bottom via the 'origin-bottom' class in HTML), plus a subtle 3D tilt + scale
-    // so it doesn't feel like a flat 2D spin.
-    gsap.set(shape, {
-        rotation: -200,
-        rotationY: -20,
-        scale: 0.85,
-        transformPerspective: 1200,
-    });
+        // starting state: rotated -200deg, anchored at the bottom (transform-origin already
+        // set to bottom via the 'origin-bottom' class in HTML), plus a subtle 3D tilt + scale
+        // so it doesn't feel like a flat 2D spin.
+        gsap.set(shape, {
+            rotation: -200,
+            rotationY: -20,
+            scale: 0.85,
+            transformPerspective: 1200,
+        });
  
-    gsap.to(shape, {
-        rotation: 0,
-        rotationY: 0,
-        scale: 1,
-        ease: 'none', // linear -- motion should feel directly tied to scroll, not eased on its own
-        scrollTrigger: {
-            trigger: section || shape,
-            start: 'top bottom',   // begins as soon as the section enters the viewport
-            end: 'top 10%',        // finishes once the section has scrolled most of the way up
-            scrub: 1,               // smoothly follows scroll position, with a little lag for smoothness
-        },
+        gsap.to(shape, {
+            rotation: 0,
+            rotationY: 0,
+            scale: 1,
+            ease: 'none', // linear -- motion should feel directly tied to scroll, not eased on its own
+            scrollTrigger: {
+                trigger: section || shape,
+                start: 'top bottom',   // begins as soon as the section enters the viewport
+                end: 'top 10%',        // finishes once the section has scrolled most of the way up
+                scrub: 1,               // smoothly follows scroll position, with a little lag for smoothness
+            },
+        });
     });
 });
  
-
  
 
 // ================= WHY CHOOSE: BACKGROUND "LIGHT ON" REVEAL =================
@@ -373,6 +374,231 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+
+
+// ================= PORTFOLIO: TAB FILTER + DRAG-SCROLL TABS =================
+// Scoped to '.portfolio-tabs' / '.portfolio-card' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const tabsWrapper = document.querySelector('.portfolio-tabs-wrapper');
+    const tabs = document.querySelectorAll('.portfolio-tab');
+    const cards = document.querySelectorAll('.portfolio-card');
+    if (!tabs.length || !cards.length) return;
+
+    // ---- filtering ----
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach((t) => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const filter = tab.dataset.filter;
+
+            cards.forEach((card) => {
+                const matches = filter === 'all' || card.dataset.category === filter;
+                card.classList.toggle('is-hidden', !matches);
+            });
+        });
+    });
+
+    // ---- drag-to-scroll for the tab bar (mouse on desktop; touch works natively) ----
+    if (!tabsWrapper) return;
+
+    let isDown = false;
+    let startX = 0;
+    let scrollLeftStart = 0;
+
+    tabsWrapper.addEventListener('mousedown', (e) => {
+        isDown = true;
+        tabsWrapper.classList.add('is-dragging');
+        startX = e.pageX - tabsWrapper.offsetLeft;
+        scrollLeftStart = tabsWrapper.scrollLeft;
+    });
+
+    ['mouseleave', 'mouseup'].forEach((evt) => {
+        tabsWrapper.addEventListener(evt, () => {
+            isDown = false;
+            tabsWrapper.classList.remove('is-dragging');
+        });
+    });
+
+    tabsWrapper.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - tabsWrapper.offsetLeft;
+        const walk = x - startX;
+        tabsWrapper.scrollLeft = scrollLeftStart - walk;
+    });
+});
+
+
+
+
+
+
+// ================= TESTIMONIALS: SPLIDE MARQUEE (continuous, auto-scroll, draggable) =================
+// Scoped to '.testimonial-slider' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const el = document.querySelector('.testimonial-slider');
+    if (!el) return;
+
+    const slideCount = el.querySelectorAll('.splide__slide').length;
+
+    const splide = new Splide(el, {
+        type: 'loop',
+        direction: 'ltr',
+        perPage: 'auto',
+        gap: 24,
+        arrows: false,
+        pagination: false,
+        drag: true,
+        clones: slideCount * 3, // enough duplicated slides so the continuous marquee never shows a gap at the loop seam
+        autoScroll: {
+            speed: 0.6,
+            pauseOnHover: true,
+            pauseOnFocus: false,
+        },
+    });
+
+    splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
+});
+
+
+// ================= TESTIMONIALS: STAT COUNTERS =================
+// Scoped to '.testimonial-stats' / '.stat-counter' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const statsSection = document.querySelector('.testimonial-stats');
+    const counters = document.querySelectorAll('.stat-counter');
+    if (!statsSection || !counters.length) return;
+
+    ScrollTrigger.create({
+        trigger: statsSection,
+        start: 'top 70%', // "bottom theke 30% upore ashle" = section top reaches 70% down the viewport
+        once: true,
+        onEnter: () => {
+            counters.forEach((el) => {
+                const target = parseFloat(el.dataset.target);
+                const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals, 10) : 0;
+                const suffix = el.dataset.suffix || '';
+                const counterObj = { val: 0 };
+
+                gsap.to(counterObj, {
+                    val: target,
+                    duration: 2,
+                    ease: 'power2.out',
+                    onUpdate: () => {
+                        el.textContent = counterObj.val.toFixed(decimals) + suffix;
+                    },
+                });
+            });
+        },
+    });
+});
+
+
+
+
+// faq section start 
+
+
+function initFAQ(section) {
+  const faqItems = section.querySelectorAll('.faq-item');
+  if (faqItems.length === 0) return;
+
+  faqItems.forEach(item => {
+    const trigger   = item.querySelector('.faq-trigger');
+    const content   = item.querySelector('.faq-content');
+    const border    = item.querySelector('.faq-border');
+    const iconClose = item.querySelector('.icon-close');
+    if (!trigger) return;
+
+    if (iconClose) {
+      iconClose.style.transition = 'transform 0.5s ease-in-out';
+    }
+
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // IMPORTANT: only close other items within the SAME column (item.parentElement),
+      // not every '.faq-item' in the whole section -- otherwise opening a card in the
+      // left column would also close whatever is open in the right column.
+      const columnItems = item.parentElement.querySelectorAll('.faq-item');
+
+      columnItems.forEach(other => {
+        if (other !== item && other.classList.contains('active')) {
+          other.classList.remove('active');
+          const oc = other.querySelector('.faq-content');
+          const ob = other.querySelector('.faq-border');
+          const oC = other.querySelector('.icon-close');
+          if (oc) oc.style.maxHeight = '0';
+          if (ob) ob.classList.add('hidden');
+          if (oC) oC.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('active');
+        if (content)   content.style.maxHeight = '0';
+        if (border)    border.classList.add('hidden');
+        if (iconClose) iconClose.style.transform = 'rotate(0deg)';
+      } else {
+        item.classList.add('active');
+        if (content)   content.style.maxHeight = content.scrollHeight + 'px';
+        if (border)    border.classList.remove('hidden');
+        if (iconClose) iconClose.style.transform = 'rotate(180deg)'; // chevron flips upside-down when open
+      }
+    });
+  });
+}
+
+function initFAQGrid(section) {
+  const wrap = section.querySelector('#faqGridWrap');
+  if (!wrap) return;
+
+  const items = Array.from(wrap.querySelectorAll('.faq-item'));
+  if (items.length === 0) return;
+
+  const leftCol  = document.createElement('div');
+  const rightCol = document.createElement('div');
+  leftCol.className  = 'flex flex-col gap-0 w-full md:w-1/2';
+  rightCol.className = 'flex flex-col gap-0 w-full md:w-1/2';
+
+  items.forEach((item, i) => {
+    if (i % 2 === 0) leftCol.appendChild(item);
+    else             rightCol.appendChild(item);
+  });
+
+  wrap.innerHTML = '';
+  wrap.className = 'flex flex-col md:flex-row md:gap-8 items-start';
+  wrap.appendChild(leftCol);
+  wrap.appendChild(rightCol);
+}
+
+// Quecut FAQ
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.quecut-faq').forEach(section => {
+    initFAQGrid(section);
+    initFAQ(section);
+  });
+});
+
+
+// Home Services FAQ
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.home-services-faq').forEach(section => {
+    initFAQGrid(section);
+    initFAQ(section);
+  });
+});
+
+
+// Real Estate Agency FAQ
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.realestate-agency-faq').forEach(section => {
+    initFAQGrid(section);
+    initFAQ(section);
+  });
+});
 
 
 
