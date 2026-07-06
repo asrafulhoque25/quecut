@@ -685,13 +685,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const splide = new Splide(el, {
         type: 'loop',
         direction: 'ltr',
-        perPage: 'auto',
+        perPage: 3,               // <-- desktop: 3 ta item ekbare dekhabe
         gap: 24,
         arrows: false,
         pagination: false,
         drag: 'free',
-        autoWidth: true,
-        clones: slideCount * 6, // <-- fix: dukdik e (forward + backward) drag korar jonne yothesto buffer
+        clones: slideCount * 4,   // <-- fix: dui dik e (forward + backward) drag korar jonne yothesto buffer
+        breakpoints: {
+            1024: { perPage: 2 }, // tablet: 2 ta
+            640:  { perPage: 2 }, // mobile: 2 ta (tumi cheye chile 1 o korte paro)
+        },
         autoScroll: {
             speed: 0.6,
             pauseOnHover: true,
@@ -707,6 +710,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
 });
+
+
+
+
+
+// ================= CTA SECTION: "LIGHTS ON" RADIAL REVEAL (sequential) =================
+// Scoped to '.cta-section' / '.cta-radial' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.cta-section');
+    if (!section) return;
+
+    const gray   = section.querySelector('.cta-radial-gray');
+    const orange = section.querySelector('.cta-radial-orange');
+    if (!gray || !orange) return;
+    gsap.set(gray, {
+        opacity: 0,
+        clipPath: 'inset(0 0 100% 0)',
+        filter: 'brightness(0.4)',
+    });
+
+    gsap.set(orange, {
+        opacity: 0,
+        filter: 'brightness(0.4)',
+    });
+
+    
+  const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',           
+            end: 'top 50%',            
+            toggleActions: 'restart none none reset', 
+        },
+    });
+
+   
+    tl.to(gray, {
+        opacity: 1,
+        clipPath: 'inset(0 0 0% 0)',
+        filter: 'brightness(1)',
+        duration: 0.7,
+        ease: 'power2.out',
+    });
+
+
+    tl.to(orange, {
+        opacity: 1,
+        filter: 'brightness(1)',
+        duration: 1.5,
+        ease: 'power2.out',
+    }, '-=0.4');
+});
+
+
+
 
 
 
@@ -728,3 +786,72 @@ gsap.ticker.add((time) => {
 });
 
 gsap.ticker.lagSmoothing(0);
+
+
+
+
+
+// footer 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.quecut-mega-logo');
+    if (!container) return;
+
+    const blobs = container.querySelectorAll('.quecut-blob');
+    if (!blobs.length) return;
+
+    function setupWaveAnimation() {
+        const width = container.offsetWidth;
+
+        // start/end positions -- blobs are off-screen at both extremes so the
+        // "wrap-around" moment (right edge -> left edge) is always invisible
+        const startX = -400;
+        const endX = width + 400;
+        const totalDuration = 14; // seconds -- longer = slower, more subtle wave
+
+        blobs.forEach((blob, i) => {
+            // kill any existing tweens so resize doesn't stack tweens on top of each other
+            gsap.killTweensOf(blob);
+
+            // centering: xPercent/yPercent shift blob by half its own size,
+            // so (x, y) refers to the blob's CENTER instead of its top-left
+            gsap.set(blob, {
+                x: startX,
+                y: 0,
+                xPercent: -50,
+                yPercent: -50,
+            });
+
+            // ---- horizontal continuous drift ----
+            // each blob moves left -> right in `totalDuration` seconds, then loops back.
+            // `progress(...)` offsets each blob's start point so they're evenly distributed
+            // in the animation cycle from the start -- no bunching, no visible gaps.
+            const hTween = gsap.to(blob, {
+                x: endX,
+                duration: totalDuration,
+                ease: 'none',
+                repeat: -1,
+            });
+            hTween.progress(i / blobs.length);
+
+            // ---- subtle vertical float -- adds "wave" feel to the horizontal drift ----
+            const vTween = gsap.to(blob, {
+                y: i % 2 === 0 ? -80 : 80,
+                duration: 3.5 + i * 0.4,
+                ease: 'sine.inOut',
+                repeat: -1,
+                yoyo: true,
+            });
+            vTween.progress(i * 0.25);
+        });
+    }
+
+    setupWaveAnimation();
+
+    // re-setup on resize so blob travel distance always matches new container width
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setupWaveAnimation, 250);
+    });
+});

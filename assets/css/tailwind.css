@@ -1065,3 +1065,212 @@ top: 80%;
     right:0;
     bottom:0;
 }
+
+
+/* blog read more button  */
+.blog-card .blog-read-more-btn{
+    transition: color 0.3s ease;
+
+}
+.blog-card .blog-read-more-btn:hover{
+    color:#52D6DA
+}
+
+.arrow-icon-right-read-more-icon{
+    transition: filter 0.3s ease;
+}
+
+.blog-card .blog-read-more-btn:hover .arrow-icon-right-read-more-icon{
+    filter: brightness(0) saturate(100%) invert(78%) sepia(35%) saturate(930%) hue-rotate(137deg) brightness(96%) contrast(93%);
+}
+
+
+
+
+/* ================= CTA SECTION ================= */
+.cta-section {
+    position: relative;
+    isolation: isolate;
+}
+
+/* both radial "lights" start invisible; GSAP fades them in on scroll */
+.cta-radial {
+    z-index: 0;
+    opacity: 0;
+    will-change: opacity, transform, filter;
+}
+
+/* gray spotlight from below -- creates the soft top-lit vignette behind the mockup */
+@media (min-width: 1025px) {
+    .cta-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-block: 40px;
+    }
+}
+
+/* both radial "lights" start invisible; GSAP fades them in on scroll */
+.cta-radial {
+    z-index: 0;
+    opacity: 0;
+    will-change: opacity, transform, filter;
+}
+
+/* gray spotlight from below -- creates the soft top-lit vignette behind the mockup */
+.cta-radial-gray {
+    background: radial-gradient(
+        96.17% 158.78% at 50% 148.47%,
+        rgba(105, 107, 105, 0.00) 77.54%,
+        rgba(70, 71, 70, 0.65) 92.03%,
+        var(--color-dark3, #232423) 100%
+    );
+}
+
+/* orange glow at bottom-left -- only covers the bottom half of the section (max 562px) */
+.cta-radial-orange {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    max-height: 562px;
+    background: radial-gradient(
+        29.25% 99.93% at 33.98% 100%,
+        #FF6A00 0%,
+        rgba(11, 12, 11, 0.00) 100%,
+        rgba(11, 12, 11, 0.10) 100%
+    );
+}
+
+
+
+
+
+/* ================= FOOTER ================= */
+.footer-col-title {
+    color: var(--color-yellow1, #D2F234);
+    font-family: "Fira Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.footer-col-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col-list li a {
+    color: #9EA19E;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col-list li a:hover {
+    color: var(--color-yellow1, #D2F234);
+}
+
+.footer-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #323432;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    background: #4C4C4C;
+    color: #0B0C0B;
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    color: #fff;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 48px 0;
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background: #BEC4BE;
+    opacity: 0.2;
+    margin: 0 0 0px 0;
+}
+
+/* ---- BIG BOTTOM QUECUT LOGO with animated gradient wave ---- */
+.quecut-mega-logo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920 / 405;
+    overflow: hidden;
+
+    /* SVG letter shape as CSS mask -- only letters visible, rest transparent */
+    -webkit-mask-image: url("../images/quecut-mega-logo.svg");
+    mask-image: url("../images/quecut-mega-logo.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    /* dark base color -- visible through letters when no blob is overlapping */
+    background-color: #3E403E;
+}
+
+.quecut-blob {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    filter: blur(72px);
+    pointer-events: none;
+    will-change: transform;
+}
+
+.quecut-blob--yellow  { width: 564px; height: 564px; background: #D2F234; }
+.quecut-blob--orange  { width: 570px; height: 570px; background: #FF6A00; }
+.quecut-blob--blue    { width: 564px; height: 564px; background: #0AF;    }
+.quecut-blob--magenta { width: 564px; height: 564px; background: #F0D;    }
+
+/* mobile: scale blobs down so they fit the narrower shape properly */
+@media (max-width: 1024px) {
+    .quecut-blob {
+        width: 340px !important;
+        height: 340px !important;
+        filter: blur(48px);
+    }
+}
+
+@media (max-width: 640px) {
+    .quecut-blob {
+        width: 220px !important;
+        height: 220px !important;
+        filter: blur(32px);
+    }
+}
+
+
+.footer {
+background: radial-gradient(69.77% 41.77% at 49.27% 27.33%, var(--Dark-Colors-Dark-5, #272827) 0%, var(--Dark-Colors-Dark-1, #0B0C0B) 100%);
+}
