@@ -779,7 +779,8 @@ html {
     border-radius: 100px;
     padding-block: 24px; 
  
-    background: linear-gradient(234deg, var(--Main-Colors-Primary, rgba(210, 242, 52, 0.20)) 28.73%, rgba(102, 102, 102, 0.20) 35.98%), #404240;
+background: linear-gradient(-176deg, var(--Main-Colors-Primary, rgba(210, 242, 52, 0.20)) 28.73%, rgba(102, 102, 102, 0.20) 35.98%), #404240;
+
 }
  
 .quecut-tape-marquee-track {
@@ -1032,4 +1033,35 @@ top: 80%;
     .testimonials-section{
     position: static;
 }
+}
+
+
+
+/* ================= DESIGN MARKET: SLIDER TRACK ================= */
+.design-market-slider .splide__track {
+    overflow: visible;
+}
+
+.design-market-slider .splide__slide {
+    height: auto;
+}
+
+/* ================= DESIGN MARKET: PROGRESS SCROLLBAR ================= */
+.design-market-progress-bar {
+    transition: width 400ms ease;
+}
+
+.degital-market-slide{
+    position : relative;
+    overflow: hidden;
+}
+.degital-market-slide::after{
+    content: "";
+    position : absolute;
+    background-image: url("../images/degital-market-shape.png");
+    height:403px;
+    width:234px;
+    background-repeat: no-repeat;
+    right:0;
+    bottom:0;
 }

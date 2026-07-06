@@ -69,43 +69,42 @@ document.addEventListener('DOMContentLoaded', () => {
         sliderInstances = [];
     }
 
-    // how many images should be visible at once per column (2.5 = one and a half peeking)
-    //
-    // IMPORTANT: Splide does parseFloat() on fixedHeight internally for its clone-count
-    // math. parseFloat('calc(...)') returns NaN, which was causing Splide to generate
-    // thousands of clone <li> elements (the hang / black-shadow rendering glitch you saw).
-    // fixedHeight must be a real NUMBER (px) or a simple percentage string, never calc().
     const DESKTOP_GAP = 16;
     const DESKTOP_VISIBLE_COUNT = 2.5;
-    const DESKTOP_COL_PADDING = 48; // .banner-slider-desktop has p-6 (24px top + 24px bottom)
+    const DESKTOP_COL_PADDING = 48;
 
     function computeDesktopSlideHeight() {
         return (window.innerHeight - DESKTOP_COL_PADDING - DESKTOP_GAP * (DESKTOP_VISIBLE_COUNT - 1)) / DESKTOP_VISIBLE_COUNT;
     }
 
+    // helper: pause autoScroll while dragging, resume after release
+    function attachDragPause(splideInstance) {
+        splideInstance.on('mounted', () => {
+            const autoScroll = splideInstance.Components.AutoScroll;
+            splideInstance.on('drag', () => autoScroll.pause());
+            splideInstance.on('dragged', () => autoScroll.play());
+        });
+    }
+
     function initDesktopColumns() {
-        const slideHeight = computeDesktopSlideHeight(); // a plain number, e.g. 296.8
+        const slideHeight = computeDesktopSlideHeight();
 
         document.querySelectorAll('.banner-slide-col').forEach((el) => {
             const dir = el.dataset.direction; // 'up' or 'down'
             const slideCount = el.querySelectorAll('.splide__slide').length;
-
-            // NOTE: speed sign controls direction.
-            // negative = images travel upward, positive = images travel downward.
-            // Flip the sign below if the direction looks reversed for your design.
             const speed = dir === 'down' ? 0.5 : -0.5;
 
             const splide = new Splide(el, {
                 type: 'loop',
                 direction: 'ttb',
-                height: '100%',       // required by Splide's internal validation for direction:'ttb'
-                fixedHeight: slideHeight, // real number, not a calc() string
+                height: '100%',
+                fixedHeight: slideHeight,
                 perPage: 1,
                 gap: DESKTOP_GAP,
                 arrows: false,
                 pagination: false,
-                drag: true,
-                clones: slideCount * 3, // enough duplicated slides so continuous autoScroll never runs out at the loop seam
+                drag: 'free',            // <-- fix: smooth free-drag, both directions
+                clones: slideCount * 4,  // <-- fix: enough buffer for both up & down drag
                 autoScroll: {
                     speed: speed,
                     pauseOnHover: true,
@@ -113,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             });
 
+            attachDragPause(splide);
             splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
             sliderInstances.push(splide);
         });
@@ -127,12 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 type: 'loop',
                 direction: dir === 'rtl' ? 'rtl' : 'ltr',
                 perPage: 'auto',
-                autoWidth: false,
+                autoWidth: true,          // <-- fix: accurate width detection for clone calculation
                 gap: 12,
                 arrows: false,
                 pagination: false,
-                drag: true,
-                clones: slideCount * 3, // enough duplicated slides so continuous autoScroll never runs out at the loop seam
+                drag: 'free',             // <-- fix: smooth free-drag, both directions
+                clones: slideCount * 4,   // <-- fix: enough buffer for both left & right drag
                 autoScroll: {
                     speed: 0.5,
                     pauseOnHover: true,
@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             });
 
+            attachDragPause(splide);
             splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
             sliderInstances.push(splide);
         });
@@ -166,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeTimer = setTimeout(initBannerSliders, 250);
     });
 });
-
 
 // ================= BANNER BUTTONS: GSAP MAGNETIC HOVER =================
 document.addEventListener('DOMContentLoaded', () => {
@@ -240,15 +240,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 // ================= ACHIEVEMENTS SLIDER (Splide + AutoScroll) =================
 document.addEventListener('DOMContentLoaded', () => {
     const achievementsEl = document.querySelector('.achievements-slider');
     if (!achievementsEl) return;
- 
+
     const slideCount = achievementsEl.querySelectorAll('.splide__slide').length;
- 
+
     const achievementsSplide = new Splide(achievementsEl, {
         type: 'loop',
         direction: 'ltr',
@@ -256,8 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
         gap: 16,
         arrows: false,
         pagination: false,
-        drag: true,
-        clones: slideCount * 2, // enough duplicated slides so the continuous marquee never shows a gap at the loop seam
+        drag: 'free',            // <-- fix: smooth free-drag, both directions
+        clones: slideCount * 4,  // <-- fix: enough buffer for both left-to-right & right-to-left drag
         breakpoints: {
             1024: { perPage: 3 }, // tablet
             640: { perPage: 2 },  // mobile: 2 cards per view
@@ -268,13 +266,15 @@ document.addEventListener('DOMContentLoaded', () => {
             pauseOnFocus: false,
         },
     });
- 
+
+    achievementsSplide.on('mounted', () => {
+        const autoScroll = achievementsSplide.Components.AutoScroll;
+        achievementsSplide.on('drag', () => autoScroll.pause());
+        achievementsSplide.on('dragged', () => autoScroll.play());
+    });
+
     achievementsSplide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
 });
- 
- 
-
-
 
 
 
@@ -451,13 +451,20 @@ document.addEventListener('DOMContentLoaded', () => {
         gap: 24,
         arrows: false,
         pagination: false,
-        drag: true,
-        clones: slideCount * 3, // enough duplicated slides so the continuous marquee never shows a gap at the loop seam
+        drag: 'free',           // <-- fix: smooth free-drag, both directions
+        autoWidth: true,        // <-- fix: accurate width detection for clone calculation
+        clones: slideCount * 6, // <-- fix: enough buffer for both left-to-right & right-to-left drag
         autoScroll: {
             speed: 0.6,
             pauseOnHover: true,
             pauseOnFocus: false,
         },
+    });
+
+    splide.on('mounted', () => {
+        const autoScroll = splide.Components.AutoScroll;
+        splide.on('drag', () => autoScroll.pause());
+        splide.on('dragged', () => autoScroll.play());
     });
 
     splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
@@ -600,6 +607,106 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+
+
+
+
+// ================= DESIGN MARKET: SPLIDE SLIDER (draggable, 2.5 cards per view) =================
+// ================= DESIGN MARKET: SPLIDE SLIDER (draggable, progress bar) =================
+// Scoped to '.design-market-slider' / '.design-market-progress-bar' only, no generic selectors.
+document.addEventListener('DOMContentLoaded', () => {
+    const el = document.querySelector('.design-market-slider');
+    if (!el) return;
+
+    const splide = new Splide(el, {
+        type: 'slide',
+        drag: true,
+        gap: 24,
+        perPage: 2,
+        padding: { right: '12%' },
+        arrows: false,
+        pagination: false,
+        breakpoints: {
+            1024: {
+                perPage: 1,
+                padding: { right: '18%' },
+            },
+            640: {
+                perPage: 1,
+                padding: { right: '10%' },
+            },
+        },
+    });
+
+    const progressBar = document.querySelector('.design-market-progress-bar');
+    if (!progressBar) {
+        console.warn('Design Market: .design-market-progress-bar element not found in the DOM.');
+    }
+
+    function updateProgress() {
+        if (!progressBar) return;
+
+        let end;
+        try {
+            // official Splide approach
+            end = splide.Components.Controller.getEnd() + 1;
+        } catch (err) {
+            // fallback in case Components.Controller isn't accessible for any reason
+            const perPage = typeof splide.options.perPage === 'number' ? splide.options.perPage : 1;
+            end = Math.max(splide.length - perPage + 1, 1);
+        }
+
+        const rate = Math.min((splide.index + 1) / end, 1);
+        progressBar.style.width = (100 * rate) + '%';
+    }
+
+    splide.on('mounted move', updateProgress);
+    splide.mount();
+
+    // safety net: force an update right after mount in case the 'mounted' event
+    // fired before this listener was fully wired up
+    updateProgress();
+});
+
+
+
+
+
+//blog  section
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const el = document.querySelector('.blog-slider');
+    if (!el) return;
+
+    const slideCount = el.querySelectorAll('.splide__slide').length;
+
+    const splide = new Splide(el, {
+        type: 'loop',
+        direction: 'ltr',
+        perPage: 'auto',
+        gap: 24,
+        arrows: false,
+        pagination: false,
+        drag: 'free',
+        autoWidth: true,
+        clones: slideCount * 6, // <-- fix: dukdik e (forward + backward) drag korar jonne yothesto buffer
+        autoScroll: {
+            speed: 0.6,
+            pauseOnHover: true,
+            pauseOnFocus: false,
+        },
+    });
+
+    splide.on('mounted', () => {
+        const autoScroll = splide.Components.AutoScroll;
+        splide.on('drag', () => autoScroll.pause());
+        splide.on('dragged', () => autoScroll.play());
+    });
+
+    splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
+});
 
 
 
