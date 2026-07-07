@@ -254,11 +254,14 @@ document.addEventListener('DOMContentLoaded', () => {
         gap: 16,
         arrows: false,
         pagination: false,
-        drag: 'free',            // <-- fix: smooth free-drag, both directions
-        clones: slideCount * 4,  // <-- fix: enough buffer for both left-to-right & right-to-left drag
+        drag: 'free',          
+        clones: slideCount * 4,  
         breakpoints: {
-            1024: { perPage: 3 }, // tablet
-            640: { perPage: 2 },  // mobile: 2 cards per view
+            1440: { perPage: 4 }, 
+            1200: { perPage: 3.5 }, 
+            991: { perPage: 2.5 }, 
+            776: { perPage: 2 }, 
+            667: { perPage: 2 }, 
         },
         autoScroll: {
             speed: 0.5,
@@ -459,6 +462,11 @@ document.addEventListener('DOMContentLoaded', () => {
             pauseOnHover: true,
             pauseOnFocus: false,
         },
+        breakpoints: {
+            640: {
+                gap: 12,
+            },
+        },
     });
 
     splide.on('mounted', () => {
@@ -634,7 +642,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             640: {
                 perPage: 1,
-                padding: { right: '10%' },
+                gap:12,
+                padding: { right: '10%',},
             },
         },
     });
@@ -685,15 +694,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const splide = new Splide(el, {
         type: 'loop',
         direction: 'ltr',
-        perPage: 3,               // <-- desktop: 3 ta item ekbare dekhabe
+        perPage: 3,              
         gap: 24,
         arrows: false,
         pagination: false,
         drag: 'free',
-        clones: slideCount * 4,   // <-- fix: dui dik e (forward + backward) drag korar jonne yothesto buffer
+        clones: slideCount * 4,   
         breakpoints: {
-            1024: { perPage: 2 }, // tablet: 2 ta
-            640:  { perPage: 2 }, // mobile: 2 ta (tumi cheye chile 1 o korte paro)
+            1024: { perPage: 2 }, 
+            640:  { perPage: 1,
+                 gap: 12,
+             }, 
         },
         autoScroll: {
             speed: 0.6,

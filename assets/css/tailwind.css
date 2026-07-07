@@ -766,6 +766,13 @@ html {
     margin-top: -130px; 
     margin-inline: 50px; 
 }
+
+@media (max-width:640px) {
+    .quecut-tape-marquee-section {
+    margin-top: 0px; 
+}
+
+}
  
 
 .quecut-tape-marquee-rotate {
@@ -945,6 +952,12 @@ background: linear-gradient(-176deg, var(--Main-Colors-Primary, rgba(210, 242, 5
 .portfolio-tab.active {
     color: var(--color-yellow1);
     border-bottom-color: var(--color-yellow1);
+}
+
+@media (max-width: 640px) {
+    .portfolio-tab {
+        font-size: 14px;
+    }
 }
 
 /* hides the scrollbar for the drag-scrollable tab row while keeping it scrollable */
