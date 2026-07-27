@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ================= BANNER SLIDERS (Splide + AutoScroll, responsive direction) =================
-// ================= BANNER SLIDERS (Splide + AutoScroll, responsive direction) =================
 document.addEventListener('DOMContentLoaded', () => {
     let currentMode = null;
     let sliderInstances = [];
@@ -281,101 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// ================= HOW IT WORKS: COUNTER REVEAL ANIMATION =================
-document.addEventListener('DOMContentLoaded', () => {
-    const section = document.querySelector('.how-it-works-section');
-    const counters = document.querySelectorAll('.how-card-counter');       // number wrapper (position)
-    const counterBgs = document.querySelectorAll('.how-card-counter-bg'); // circle background (appears)
-    if (!section || !counters.length) return;
- 
-    // start state: number sitting 45px lower (fully visible), background circle hidden
-    gsap.set(counters, { y: 45 });
-    gsap.set(counterBgs, { opacity: 0, scale: 0.6 });
- 
-    const tl = gsap.timeline({ paused: true });
- 
-    tl.to(counters, {
-        y: 0,
-        duration: 1.1,
-        ease: 'power3.out',
-        stagger: 0.22,
-    }, 0)
-    .to(counterBgs, {
-        opacity: 1,
-        scale: 1,
-        duration: 1.1,
-        ease: 'power3.out',
-        stagger: 0.22,
-    }, 0); // same start time (0) as the rise -> bg appears together with the movement
- 
-    ScrollTrigger.create({
-        trigger: section,
-        start: 'top 60%',   // triggers when section top reaches 60% down the viewport (= 40% up from the bottom)
-        onEnter: () => tl.play(),
-        onLeaveBack: () => tl.reverse(), // resets when scrolling back above the trigger, so it can replay
-    });
-});
 
-
-
-
-
-// ================= WHY CHOOSE: LEFT SHAPE SCROLL ROTATION =================
-// Scoped to '.choose-section-shape' only, no generic selectors.
-document.addEventListener('DOMContentLoaded', () => {
-    const shapes = document.querySelectorAll('.choose-section-shape');
-    if (!shapes.length) return;
- 
-    shapes.forEach((shape) => {
-        const section = shape.closest('section');
- 
-        // starting state: rotated -200deg, anchored at the bottom (transform-origin already
-        // set to bottom via the 'origin-bottom' class in HTML), plus a subtle 3D tilt + scale
-        // so it doesn't feel like a flat 2D spin.
-        gsap.set(shape, {
-            rotation: -200,
-            rotationY: -20,
-            scale: 0.85,
-            transformPerspective: 1200,
-        });
- 
-        gsap.to(shape, {
-            rotation: 0,
-            rotationY: 0,
-            scale: 1,
-            ease: 'none', // linear -- motion should feel directly tied to scroll, not eased on its own
-            scrollTrigger: {
-                trigger: section || shape,
-                start: 'top bottom',   // begins as soon as the section enters the viewport
-                end: 'top 10%',        // finishes once the section has scrolled most of the way up
-                scrub: 1,               // smoothly follows scroll position, with a little lag for smoothness
-            },
-        });
-    });
-});
- 
- 
-
-// ================= WHY CHOOSE: BACKGROUND "LIGHT ON" REVEAL =================
-// Scoped to '.why-choose-bg' only, no generic selectors.
-document.addEventListener('DOMContentLoaded', () => {
-    const bg = document.querySelector('.why-choose-bg');
-    if (!bg) return;
-
-    const section = bg.closest('section') || bg.closest('.why-choose-us');
-
-    gsap.to(bg, {
-        opacity: 1,
-        filter: 'brightness(1)',
-        duration: 1.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-            trigger: section || bg,
-            start: 'top 70%', // section top reaches 70% down the viewport = 30% up from the bottom
-            toggleActions: 'play none none reverse', // dims back out if you scroll back above the trigger
-        },
-    });
-});
 
 
 
@@ -479,42 +384,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// ================= TESTIMONIALS: STAT COUNTERS =================
-// Scoped to '.testimonial-stats' / '.stat-counter' only, no generic selectors.
+
+
+
+
+
+
+// ================= WHY CHOOSE: LEFT SHAPE SCROLL ROTATION =================
+// Scoped to '.choose-section-shape' only, no generic selectors.
 document.addEventListener('DOMContentLoaded', () => {
-    const statsSection = document.querySelector('.testimonial-stats');
-    const counters = document.querySelectorAll('.stat-counter');
-    if (!statsSection || !counters.length) return;
-
-    ScrollTrigger.create({
-        trigger: statsSection,
-        start: 'top 70%', // "bottom theke 30% upore ashle" = section top reaches 70% down the viewport
-        once: true,
-        onEnter: () => {
-            counters.forEach((el) => {
-                const target = parseFloat(el.dataset.target);
-                const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals, 10) : 0;
-                const suffix = el.dataset.suffix || '';
-                const counterObj = { val: 0 };
-
-                gsap.to(counterObj, {
-                    val: target,
-                    duration: 2,
-                    ease: 'power2.out',
-                    onUpdate: () => {
-                        el.textContent = counterObj.val.toFixed(decimals) + suffix;
-                    },
-                });
-            });
-        },
+    const shapes = document.querySelectorAll('.choose-section-shape');
+    if (!shapes.length) return;
+ 
+    shapes.forEach((shape) => {
+        const section = shape.closest('section');
+ 
+        // starting state: rotated -200deg, anchored at the bottom (transform-origin already
+        // set to bottom via the 'origin-bottom' class in HTML), plus a subtle 3D tilt + scale
+        // so it doesn't feel like a flat 2D spin.
+        gsap.set(shape, {
+            rotation: -200,
+            rotationY: -20,
+            scale: 0.85,
+            transformPerspective: 1200,
+        });
+ 
+        gsap.to(shape, {
+            rotation: 0,
+            rotationY: 0,
+            scale: 1,
+            ease: 'none', // linear -- motion should feel directly tied to scroll, not eased on its own
+            scrollTrigger: {
+                trigger: section || shape,
+                start: 'top bottom',   // begins as soon as the section enters the viewport
+                end: 'top 10%',        // finishes once the section has scrolled most of the way up
+                scrub: 1,               // smoothly follows scroll position, with a little lag for smoothness
+            },
+        });
     });
 });
-
-
-
-
-// faq section start 
-
+ 
+// faq section start
 
 function initFAQ(section) {
   const faqItems = section.querySelectorAll('.faq-item');
@@ -534,12 +444,10 @@ function initFAQ(section) {
     trigger.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
 
-      // IMPORTANT: only close other items within the SAME column (item.parentElement),
-      // not every '.faq-item' in the whole section -- otherwise opening a card in the
-      // left column would also close whatever is open in the right column.
-      const columnItems = item.parentElement.querySelectorAll('.faq-item');
+      // Close any other open item in this same FAQ list
+      const siblingItems = section.querySelectorAll('.faq-item');
 
-      columnItems.forEach(other => {
+      siblingItems.forEach(other => {
         if (other !== item && other.classList.contains('active')) {
           other.classList.remove('active');
           const oc = other.querySelector('.faq-content');
@@ -560,43 +468,18 @@ function initFAQ(section) {
         item.classList.add('active');
         if (content)   content.style.maxHeight = content.scrollHeight + 'px';
         if (border)    border.classList.remove('hidden');
-        if (iconClose) iconClose.style.transform = 'rotate(180deg)'; // chevron flips upside-down when open
+        if (iconClose) iconClose.style.transform = 'rotate(180deg)'; // arrow flips upside-down when open
       }
     });
   });
 }
 
-function initFAQGrid(section) {
-  const wrap = section.querySelector('#faqGridWrap');
-  if (!wrap) return;
-
-  const items = Array.from(wrap.querySelectorAll('.faq-item'));
-  if (items.length === 0) return;
-
-  const leftCol  = document.createElement('div');
-  const rightCol = document.createElement('div');
-  leftCol.className  = 'flex flex-col gap-0 w-full md:w-1/2';
-  rightCol.className = 'flex flex-col gap-0 w-full md:w-1/2';
-
-  items.forEach((item, i) => {
-    if (i % 2 === 0) leftCol.appendChild(item);
-    else             rightCol.appendChild(item);
-  });
-
-  wrap.innerHTML = '';
-  wrap.className = 'flex flex-col md:flex-row md:gap-8 items-start';
-  wrap.appendChild(leftCol);
-  wrap.appendChild(rightCol);
-}
-
 // Quecut FAQ
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.quecut-faq').forEach(section => {
-    initFAQGrid(section);
     initFAQ(section);
   });
 });
-
 
 // Home Services FAQ
 document.addEventListener('DOMContentLoaded', () => {
@@ -619,64 +502,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-// ================= DESIGN MARKET: SPLIDE SLIDER (draggable, 2.5 cards per view) =================
-// ================= DESIGN MARKET: SPLIDE SLIDER (draggable, progress bar) =================
-// Scoped to '.design-market-slider' / '.design-market-progress-bar' only, no generic selectors.
-document.addEventListener('DOMContentLoaded', () => {
-    const el = document.querySelector('.design-market-slider');
-    if (!el) return;
-
-    const splide = new Splide(el, {
-        type: 'slide',
-        drag: true,
-        gap: 24,
-        perPage: 2,
-        padding: { right: '12%' },
-        arrows: false,
-        pagination: false,
-        breakpoints: {
-            1024: {
-                perPage: 1,
-                padding: { right: '18%' },
-            },
-            640: {
-                perPage: 1,
-                gap:12,
-                padding: { right: '10%',},
-            },
-        },
-    });
-
-    const progressBar = document.querySelector('.design-market-progress-bar');
-    if (!progressBar) {
-        console.warn('Design Market: .design-market-progress-bar element not found in the DOM.');
-    }
-
-    function updateProgress() {
-        if (!progressBar) return;
-
-        let end;
-        try {
-            // official Splide approach
-            end = splide.Components.Controller.getEnd() + 1;
-        } catch (err) {
-            // fallback in case Components.Controller isn't accessible for any reason
-            const perPage = typeof splide.options.perPage === 'number' ? splide.options.perPage : 1;
-            end = Math.max(splide.length - perPage + 1, 1);
-        }
-
-        const rate = Math.min((splide.index + 1) / end, 1);
-        progressBar.style.width = (100 * rate) + '%';
-    }
-
-    splide.on('mounted move', updateProgress);
-    splide.mount();
-
-    // safety net: force an update right after mount in case the 'mounted' event
-    // fired before this listener was fully wired up
-    updateProgress();
-});
 
 
 
@@ -802,67 +627,89 @@ gsap.ticker.lagSmoothing(0);
 
 
 
-// footer 
+// load more home page industry section
+
+(function () {
+  const ITEMS_PER_CLICK = 6;
+  const grid   = document.getElementById('industryGrid');
+  const button = document.getElementById('loadMoreBtn');
+  if (!grid || !button) return;
+ 
+  const cards = Array.from(grid.querySelectorAll('.industry-card'));
+  const initialCount = ITEMS_PER_CLICK;
+  let visibleCount = Math.min(initialCount, cards.length);
+ 
+  function render() {
+    cards.forEach((card, i) => {
+      card.classList.toggle('hidden', i >= visibleCount);
+    });
+ 
+    const allVisible = visibleCount >= cards.length;
+ 
+    if (allVisible) {
+      // Everything is showing → offer Show less
+      button.textContent = 'SHOW LESS';
+      button.disabled = false;
+    } else {
+      button.textContent = 'LOAD MORE';
+      button.disabled = false;
+    }
+ 
+    // If there was never more than one batch to begin with, disable entirely
+    if (cards.length <= initialCount) {
+      button.disabled = true;
+      button.textContent = 'LOAD MORE';
+    }
+  }
+ 
+  button.addEventListener('click', () => {
+    const allVisible = visibleCount >= cards.length;
+ 
+    if (allVisible) {
+      // Collapse back to the first batch
+      visibleCount = initialCount;
+      render();
+      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // Reveal the next batch
+      visibleCount = Math.min(visibleCount + ITEMS_PER_CLICK, cards.length);
+      render();
+    }
+  });
+ 
+  render();
+})(); 
+
+
+
+
+//industry page radiul
+
+
+
+// Why not a freelancer
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.quecut-mega-logo');
-    if (!container) return;
 
-    const blobs = container.querySelectorAll('.quecut-blob');
-    if (!blobs.length) return;
+    const backgrounds = document.querySelectorAll('.sec-bg-ani-grad');
 
-    function setupWaveAnimation() {
-        const width = container.offsetWidth;
+    if (!backgrounds.length) return;
 
-        // start/end positions -- blobs are off-screen at both extremes so the
-        // "wrap-around" moment (right edge -> left edge) is always invisible
-        const startX = -400;
-        const endX = width + 400;
-        const totalDuration = 14; // seconds -- longer = slower, more subtle wave
+    backgrounds.forEach((bg) => {
+        const section = bg.closest('section');
 
-        blobs.forEach((blob, i) => {
-            // kill any existing tweens so resize doesn't stack tweens on top of each other
-            gsap.killTweensOf(blob);
-
-            // centering: xPercent/yPercent shift blob by half its own size,
-            // so (x, y) refers to the blob's CENTER instead of its top-left
-            gsap.set(blob, {
-                x: startX,
-                y: 0,
-                xPercent: -50,
-                yPercent: -50,
-            });
-
-            // ---- horizontal continuous drift ----
-            // each blob moves left -> right in `totalDuration` seconds, then loops back.
-            // `progress(...)` offsets each blob's start point so they're evenly distributed
-            // in the animation cycle from the start -- no bunching, no visible gaps.
-            const hTween = gsap.to(blob, {
-                x: endX,
-                duration: totalDuration,
-                ease: 'none',
-                repeat: -1,
-            });
-            hTween.progress(i / blobs.length);
-
-            // ---- subtle vertical float -- adds "wave" feel to the horizontal drift ----
-            const vTween = gsap.to(blob, {
-                y: i % 2 === 0 ? -80 : 80,
-                duration: 3.5 + i * 0.4,
-                ease: 'sine.inOut',
-                repeat: -1,
-                yoyo: true,
-            });
-            vTween.progress(i * 0.25);
+        gsap.to(bg, {
+            opacity: 1,
+            filter: 'brightness(1)',
+            duration: 1.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section || bg,
+                start: 'top 70%',
+                toggleActions: 'play none none reverse',
+            },
         });
-    }
-
-    setupWaveAnimation();
-
-    // re-setup on resize so blob travel distance always matches new container width
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(setupWaveAnimation, 250);
     });
 });
+

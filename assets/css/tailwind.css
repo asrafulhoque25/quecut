@@ -674,6 +674,28 @@ html {
 
 
 
+/* why-design-matters-section section  */
+.why-design-matters-section{
+    background-image: url(../images/why-matter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.all-tools{
+     background-image: url(../images/all-tools-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .process-section{
+    background-image: url(../images/process-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+} */
+/* why-design-matters-section */
+
+
 /* how it works section  */
 
 .counter-bg-shape{
@@ -921,6 +943,89 @@ background: linear-gradient(-176deg, var(--Main-Colors-Primary, rgba(210, 242, 5
 
 
 
+
+
+@property --portfolio-card-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.portfolio-card {
+    isolation: isolate;
+}
+
+/* spinning gradient border — same language as .design-card, reused for consistency */
+.portfolio-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    padding: 2px;
+
+    background: conic-gradient(
+        from var(--portfolio-card-angle),
+        transparent 0%,
+        var(--card-accent, #D2F234) 12%,
+        transparent 28%
+    );
+
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    animation: portfolio-card-border-spin 3.5s linear infinite;
+    animation-play-state: paused;
+}
+
+.portfolio-card:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+@keyframes portfolio-card-border-spin {
+    to {
+        --portfolio-card-angle: 360deg;
+    }
+}
+
+/* image zoom on hover */
+.portfolio-card img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.65);
+}
+
+/* dark gradient overlay fades in so the label always stays readable + gives depth on hover */
+.portfolio-card-overlay {
+    background: linear-gradient(180deg, transparent 40%, rgba(11, 12, 11, 0.9) 100%);
+    opacity: 0.75;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+    opacity: 1;
+}
+
+/* label text: slides up slightly on hover */
+.portfolio-card-label span {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-card:hover .portfolio-card-label span {
+    transform: translateY(-4px);
+}
+
+
+
 /* ================= PORTFOLIO: TABS ================= */
 .portfolio-tab {
     padding: 12px 12px;
@@ -1024,60 +1129,10 @@ top: 80%;
     z-index: 1;
 }
 
-.testimonials-section::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 120px;
-    width: 100%;
-    height: 398px; 
-
-    background-image: url("../images/counter-shape.png");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
-    z-index: -1;
-}
-
-@media (max-width: 1400px) {
-    .testimonials-section::after{
-        background-image:none;
-    }
-    .testimonials-section{
-    position: static;
-}
-}
 
 
 
-/* ================= DESIGN MARKET: SLIDER TRACK ================= */
-.design-market-slider .splide__track {
-    overflow: visible;
-}
 
-.design-market-slider .splide__slide {
-    height: auto;
-}
-
-/* ================= DESIGN MARKET: PROGRESS SCROLLBAR ================= */
-.design-market-progress-bar {
-    transition: width 400ms ease;
-}
-
-.degital-market-slide{
-    position : relative;
-    overflow: hidden;
-}
-.degital-market-slide::after{
-    content: "";
-    position : absolute;
-    background-image: url("../images/degital-market-shape.png");
-    height:403px;
-    width:234px;
-    background-repeat: no-repeat;
-    right:0;
-    bottom:0;
-}
 
 
 /* blog read more button  */
@@ -1238,8 +1293,8 @@ top: 80%;
     overflow: hidden;
 
     /* SVG letter shape as CSS mask -- only letters visible, rest transparent */
-    -webkit-mask-image: url("../images/quecut-mega-logo.svg");
-    mask-image: url("../images/quecut-mega-logo.svg");
+    -webkit-mask-image: url("../images/quecut-footer.svg");
+    mask-image: url("../images/quecut-footer.svg");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
