@@ -232,214 +232,110 @@
     <!-- navbar end -->
 
 
-    <!-- banner start -->
-    <section class="banner relative min-h-[90vh] bg-[#0B0C0B] overflow-hidden">
-        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 items-center">
 
-                <!-- ================= LEFT CONTENT (Tailwind classes only) ================= -->
-                <div
-                    class="flex flex-col justify-between h-full md:pt-20 pt-18 lg:pt-24 xl:pb-20 md:pb-14 pb-10 banner-left relative z-10">
 
-                    <div class="flex flex-col gap-3">
-                        <!-- badge -->
+    <!-- sub banner section start -->
+    <section
+        class="sub-banner  overflow-hidden relative z-20 min-h-165 py-[136px] rounded-[16px] bg-[linear-gradient(180deg,#0B0C0B_0%,#0B0C0B_13.13%,#232423_88.9%,rgba(120,120,120,0.2)_101.89%)]">
+
+        <div class="choose-section-shape2 absolute left-0 bottom-0 origin-bottom will-change-transform -z-10">
+            <img src="assets/images/subbanner-shape.svg" class="img-fluid" alt="shape">
+        </div>
+
+        <div class="container">
+            <div class="max-w-185 mx-auto">
+                <div class="flex flex-col gap-3 items-center">
+                    <!-- badge -->
+                    <div
+                        class="bg-[linear-gradient(to_right,#D5FF02_0%,#A8C91A_5%,#666666_25%,#666666_100%)] rounded-full p-px inline-flex w-fit">
                         <div
-                            class="bg-[linear-gradient(to_right,#D5FF02_0%,#A8C91A_5%,#666666_25%,#666666_100%)] rounded-full p-px inline-flex w-fit">
-                            <div
-                                class="inline-flex w-fit items-center gap-2   bg-[#0B0C0B]  rounded-full px-2 sm:px-4 sm:py-1 py-1.5">
-                                <img src="assets/images/quecut-trust-icon.svg" class="img-fluid" alt="trust icon">
-                                <span
-                                    class="text-yellow1 font-fira xl:text-base lg:text-sm sm:text-xs text-[10px] font-semibold leading-[150%] uppercase">Trusted
-                                    by
-                                    500+ small businesses worldwide</span>
-                            </div>
-                        </div>
-
-
-                        <!-- title -->
-                        <h1
-                            class="text-[32px] sm:text-[42px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
-                            Unlimited Graphic Design <br class="hidden sm:block">Services for Your Business.
-                        </h1>
-
-                        <!-- description -->
-                        <p class=" text-dark7 sm:text-base text-sm md:text-lg xl:text-xl font-light leading-[150%]">
-                            Get professional, on-brand designs delivered in 48 hours. Subscribe and request unlimited
-                            designs with no contracts or hidden fees.
-                        </p>
-
-                        <!-- buttons -->
-                        <div
-                            class="flex items-center lg:gap-4 md:gap-3 sm:gap-2 gap-1 flex-wrap xl:mt-12 md:mt-8 sm:mt-6 mt-3">
-
-                            <!-- outer anchor is now the single hover trigger for BOTH icon reveal + text wipe -->
-                            <a href="#" class="btn-cta flex items-center gap-0">
-                                <span
-                                    class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
-                                    aria-label="Get free sample">
-                                    <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_391_13791)">
-                                                <path
-                                                    d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
-                                                    fill="black" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_391_13791">
-                                                    <rect width="24" height="24" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-
-                                    </span>
-                                    <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_391_13951)">
-                                                <path
-                                                    d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
-                                                    fill="#73870E" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_391_13951">
-                                                    <rect width="24" height="24" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-
-                                    </span>
-                                </span>
-
-                                <span
-                                    class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
-                                    <span class="btn-text-wipe">Get Free Sample</span>
-                                </span>
-                            </a>
-
-                            <a href="#"
-                                class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
-                                <span class="btn-text-wipe btn-text-wipe--outline">See Pricing</span>
-                            </a>
+                            class="inline-flex w-fit items-center gap-2   bg-[#0B0C0B]  rounded-full px-2 sm:px-4 sm:py-1 py-1.5">
+                            <img src="assets/images/quecut-trust-icon.svg" class="img-fluid" alt="trust icon">
+                            <span
+                                class="text-yellow1 font-fira xl:text-base lg:text-sm sm:text-xs text-[10px] font-semibold leading-[150%] uppercase">Trusted
+                                by
+                                500+ small businesses worldwide</span>
                         </div>
                     </div>
 
 
+                    <!-- title -->
+                    <h1
+                        class="text-[32px] text-center sm:text-[42px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
+                        Turn a name into a brand people trust.
+                    </h1>
 
-                    <!-- trust checklist -->
-                    <div class="flex flex-wrap items-center md:gap-x-8 sm:gap-x-4 gap-x-1 gap-y-3 py-8 bg-dark1">
-                        <div
-                            class="flex items-center md:gap-2 sm:gap-1.5 gap-1 text-dark8 font-fira sm:text-base text-xs md:text-lg lg:text-xl xl:text-2xl">
-                            <img src="assets/images/banner-check.svg" class="img-fluid md:w-auto sm:w-4.5 w-4"
-                                alt="check icon">
-                            <span>Cancel anytime</span>
-                        </div>
-                        <div
-                            class="flex items-center md:gap-2 sm:gap-1.5 gap-1 text-dark8 font-fira sm:text-base text-xs md:text-lg lg:text-xl xl:text-2xl">
-                            <img src="assets/images/banner-check.svg" class="img-fluid md:w-auto sm:w-4.5 w-4"
-                                alt="check icon">
-                            <span>48hr delivery</span>
-                        </div>
-                        <div
-                            class="flex items-center md:gap-2 sm:gap-1.5 gap-1 text-dark8 font-fira sm:text-base text-xs md:text-lg lg:text-xl xl:text-2xl">
-                            <img src="assets/images/banner-check.svg" class="img-fluid md:w-auto sm:w-4.5 w-4"
-                                alt="check icon">
-                            <span>Unlimited revisions</span>
-                        </div>
+                    <!-- description -->
+                    <p
+                        class=" text-dark7 text-center sm:text-base text-sm md:text-lg xl:text-xl font-light leading-[150%]">
+                        Strategy-led brand identity design — logo suite, color, typography,
+                        imagery, and a complete brand book — built as one cohesive system your
+                        whole company can run on. Whether you're launching, rebranding, or
+                        building a personal brand, we make you look the part.
+                    </p>
+
+                    <!-- buttons -->
+                    <div class="flex items-center lg:gap-4 md:gap-3 sm:gap-2 gap-1 flex-wrap md:mt-8 sm:mt-6 mt-3">
+
+                        <!-- outer anchor is now the single hover trigger for BOTH icon reveal + text wipe -->
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Get free sample">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13791)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13791">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13951)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13951">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Get Free Sample</span>
+                            </span>
+                        </a>
+
+                        <a href="#"
+                            class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                            <span class="btn-text-wipe btn-text-wipe--outline">See Pricing</span>
+                        </a>
                     </div>
                 </div>
-
-                <!-- ================= RIGHT SLIDER (Splide + custom CSS/JS) ================= -->
-                <div class="banner-slider relative h-[60vh] lg:h-[90vh]">
-
-                    <!-- DESKTOP: 3 vertical columns -->
-                    <div class="banner-slider-desktop hidden lg:grid grid-cols-3 gap-4 h-full">
-
-                        <div class="banner-slide-col splide" data-direction="up">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-1.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-2.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-3.webp"
-                                            alt="" class="img-fluid"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="banner-slide-col splide" data-direction="down">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-4.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-5.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-6.webp"
-                                            alt="" class="img-fluid"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="banner-slide-col splide" data-direction="up">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-7.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-8.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-9.webp"
-                                            alt="" class="img-fluid"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- MOBILE: 2 horizontal rows -->
-                    <div class="banner-slider-mobile lg:hidden flex flex-col gap-4 h-full py-8">
-
-                        <div class="banner-slide-row splide" data-direction="ltr">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-1.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-2.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-3.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-4.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-5.webp"
-                                            alt="" class="img-fluid"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="banner-slide-row splide" data-direction="rtl">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-6.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-7.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-8.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-9.webp"
-                                            alt="" class="img-fluid"></li>
-                                    <li class="splide__slide"><img src="assets/images/quecut-banner-slider-10.webp"
-                                            alt="" class="img-fluid"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
-    <!-- banner end -->
+    <!-- sub banner section end -->
+
+
 
 
     <!-- achievements start -->
@@ -630,6 +526,263 @@
     <!-- achievements end -->
 
 
+    <!-- brand identity comparison section start -->
+    <section class="brand-compare-section section-padding bg-[#0B0C0B] overflow-hidden">
+        <div class="container">
+
+            <!-- section title -->
+            <div class="max-w-184 mx-auto text-center lg:mb-18 md:mb-14 mb-10">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize mb-4 sm:mb-6">
+                    Your <span class="text-yellow1">Brand</span> is working for you — or against you
+                </h2>
+                <p
+                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%] lg:leading-[170%]">
+                    Inconsistency rarely arrives on purpose — it creeps in one off-brand slide at a time, until your
+                    brand starts to feel disposable and your marketing works twice as hard for half the result. A real
+                    identity system quietly flips that, and keeps it flipped.
+                </p>
+            </div>
+
+            <!-- comparison grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+
+                <!-- ===================== WITHOUT A REAL IDENTITY ===================== -->
+                <div class="relative rounded-2xl bg-[#232423] h-full">
+
+                    <!-- badge -->
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full bg-[#FF827D] px-4 py-2 font-fira font-bold text-base sm:text-lg lg:text-2xl text-[#2D0200] uppercase whitespace-nowrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.53906 1.54297L21.9027 21.9066M21.9027 1.54297L1.53906 21.9066"
+                                    stroke="#2D0200" stroke-width="4.36364" />
+                            </svg>
+
+                            Without A Real Identity
+                        </span>
+                    </div>
+
+                    <!-- image grid panel -->
+                    <div class="">
+                        <img src="assets/images/without-real-identity.webp" class="img-fluid rounded-t-2xl"
+                            alt="identity">
+                    </div>
+
+                    <!-- content panel -->
+                    <div class="bg-[#232423] p-6 sm:p-8 rounded-b-2xl">
+                        <h3
+                            class="text-[#FFF] font-fira text-2xl sm:text-3xl lg:text-[36px] font-medium leading-[110%] capitalize mb-4 sm:mb-6">
+                            Without A Real Identity
+                        </h3>
+
+                        <ul class="flex flex-col gap-3 sm:gap-4">
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-cross-red1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Looks
+                                    different on every channel — people re-learn who you are each time.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-cross-red1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Comes
+                                    across smaller and less trustworthy than you really are.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-cross-red1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Every
+                                    new asset starts from scratch, slowing your whole team down.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-cross-red1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Marketing
+                                    spends more to get less — you rent attention instead of building it.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ===================== WITH A QUECUT IDENTITY ===================== -->
+                <div class="relative rounded-2xl bg-[#232423] h-full">
+
+                    <!-- badge -->
+                    <!-- badge -->
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full bg-yellow1 px-4 py-2 font-fira font-bold text-base sm:text-lg lg:text-2xl text-[#2D0200] uppercase whitespace-nowrap">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_332_1906)">
+                                    <path d="M5.59375 16.1446L10.9641 25.735L23.4959 3.35742" stroke="#232A00"
+                                        stroke-width="4.36364" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_332_1906">
+                                        <rect width="29.0909" height="29.0909" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+
+                            With a Quecut identity
+                        </span>
+                    </div>
+                    <!-- image grid panel -->
+                    <div class="">
+                        <img src="assets/images/with-quecut-identity.webp" class="img-fluid rounded-t-2xl"
+                            alt="identity">
+                    </div>
+
+                    <!-- content panel -->
+                    <div class="bg-[#232423] p-6 sm:p-8">
+                        <h3
+                            class="text-[#FFF] font-fira text-2xl sm:text-3xl lg:text-[36px] font-medium leading-[110%] capitalize mb-4 sm:mb-6">
+                            With A Quecut Identity
+                        </h3>
+
+                        <ul class="flex flex-col gap-3 sm:gap-4">
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">One
+                                    recognizable identity everywhere it appears.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Instantly
+                                    credible, premium, and easy to remember.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Templates
+                                    and clear rules make everything faster.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-dark7 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">Every
+                                    asset compounds into brand equity you own.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- brand identity comparison section end -->
+
+
+
+    <!-- brand stats section start -->
+<section class="brand-stats-section section-padding overflow-hidden rounded-2xl  bg-[linear-gradient(180deg,_#151615_3.91%,_#0B0C0B_25.6%,_#151615_89.4%,_#232423_101.89%)]">
+    <div class="container">
+
+        <div class="">
+
+            <!-- section title -->
+            <div class="max-w-184 mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+                <h2 class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                    Brand Identity Is A Growth <span class="text-yellow1">Investment</span>
+                </h2>
+                <p class="text-dark7 font-sans text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[150%]">
+                    A consistent identity isn't decoration — it's a measurable driver of revenue, recognition, and trust. The numbers back it up.
+                </p>
+            </div>
+
+            <!-- stat cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 lg:mb-8 mb-6">
+
+                <!-- CARD 1: Revenue -->
+                <div class="design-card relative rounded-3xl sm:p-6 lg:p-8 p-4 bg-[linear-gradient(140deg,_#5F7200_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#B4D700]">
+                    <div class="relative z-10">
+                        <span class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-[#B4D700] mb-3">Up To</span>
+                        <span class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-[#B4D700] mb-4">+23%</span>
+                        <p class="text-dark8 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">higher revenue for brands with a consistent identity across every channel.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Recognition -->
+                <div class="design-card relative rounded-3xl sm:p-6 lg:p-8 p-4 bg-[linear-gradient(140deg,_#7B3300_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF7A00]">
+                    <div class="relative z-10">
+                        <span class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-[#FF7A00] mb-3">Up To</span>
+                        <span class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-[#FF7A00] mb-4">80%</span>
+                        <p class="text-dark8 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">more brand recognition from a distinctive, consistently-used color.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Impressions -->
+                <div class="design-card relative rounded-3xl sm:p-6 lg:p-8 p-4 bg-[linear-gradient(140deg,_#790069_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF3EDB]">
+                    <div class="relative z-10">
+                        <span class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-[#FF3EDB] mb-3">It Takes</span>
+                        <span class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-[#FF3EDB] mb-4">5&ndash;7</span>
+                        <p class="text-dark8 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">impressions before a brand is remembered — only a system gets you there.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Trust -->
+                <div class="design-card relative rounded-3xl sm:p-6 lg:p-8 p-4 bg-[linear-gradient(140deg,_#00537C_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#29B6F6]">
+                    <div class="relative z-10">
+                        <span class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-[#29B6F6] mb-3">Of Buyers</span>
+                        <span class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-[#29B6F6] mb-4">73%</span>
+                        <p class="text-dark8 font-sans text-base sm:text-lg lg:text-xl font-normal leading-[150%]">trust a brand more when its visual identity looks consistent.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- sources panel -->
+            <div class="rounded-3xl p-6 bg-[linear-gradient(140deg,_#696B69_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)]">
+
+                <h3 class="text-white text-center font-fira text-2xl sm:text-[28px] font-normal leading-[110%] mb-6">Sources</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1">
+
+                    <div class="flex items-center gap-3 py-4 md:px-8 px-4 border-b border-[#696B69] rounded-lg">
+                        <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0" alt="">
+                        <span class="text-dark7 font-sans text-base sm:text-lg md:text-xl font-normal leading-[150%]">Lucidpress / Marq</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 py-4 md:px-8 px-4 border-b border-[#696B69] rounded-lg">
+                        <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0" alt="">
+                        <span class="text-dark7 font-sans text-base sm:text-lg md:text-xl font-normal leading-[150%]">State of Brand Consistency Report</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 py-4 md:px-8 px-4 border-b border-[#696B69] rounded-lg">
+                        <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0" alt="">
+                        <span class="text-dark7 font-sans text-base sm:text-lg md:text-xl font-normal leading-[150%]">Loyola University color study</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 py-4 md:px-8 px-4 border-b border-[#696B69] rounded-lg">
+                        <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0" alt="">
+                        <span class="text-dark7 font-sans text-base sm:text-lg md:text-xl font-normal leading-[150%]">brand-trust & recall research.</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- brand stats section end -->
+
+
     <!-- design partner section -->
     <section
         class="relative bg-no-repeat bg-dark1 overflow-hidden bg-top-left bg-size-[260%_auto] lg:bg-center lg:bg-cover"
@@ -700,7 +853,7 @@
                     Nine core services. Fifty-plus specialties.
                 </h2>
                 <p
-                    class="text-[#DDE3DD] text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
+                    class="text-dark7 text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
                     Each of these is a complete service, backed by dozens of specialized sub-services and its own
                     dedicated page. Whether you need a single logo, a full packaging system, or an ongoing stream of
                     social and video content, you can pick exactly what you need — or hand us the entire brand and let
@@ -712,7 +865,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- ===== CARD 1: Logo Design ===== -->
-                <div class="design-card relative rounded-3xl md:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#5F7200_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#B4D700]">
+                <div
+                    class="design-card relative rounded-3xl md:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#5F7200_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#B4D700]">
                     <div class="relative z-10 flex flex-col justify-between h-full">
                         <div>
                             <img src="assets/images/logo-design-service.svg" class="img-fluid sm:w-auto w-10"
@@ -1059,6 +1213,290 @@
         </div>
     </section>
     <!-- design services end -->
+
+
+
+    <!-- brand system section start -->
+<section class="brand-system-section section-padding bg-[#0B0C0B] overflow-hidden">
+    <div class="container">
+
+        <!-- section title -->
+        <div class="max-w-184 mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+            <h2 class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                A Brand Is A System, Not Just A Logo
+            </h2>
+            <p class="text-dark7 font-sans text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[150%]">
+                Your logo is only the signature — a brand identity is the whole language behind it: strategy, color, type, imagery, voice, and the rules that tie them together. We design each part as one connected system, so your brand looks deliberate everywhere it appears.
+            </p>
+        </div>
+
+        <!-- cards grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
+
+            <!-- ===== CARD 1: Brand strategy ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#5F7200_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#B4D700]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-1.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Brand strategy</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">Positioning, audience, and personality that guide every choice.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 2: Logo suite ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#7B3300_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF7A00]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-2.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Logo suite</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">Primary, secondary, and submark for every placement.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 3: Color palette ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#00537C_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#29B6F6]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-3.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Color palette</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">A tested, accessible palette with exact codes.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 4: Typography ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#790400_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF6259]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-4.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Typography</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">A type system with clear hierarchy and pairings.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 5: Imagery & art direction ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#7C6B00_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FFE600]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-5.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Imagery & art direction</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">The photo and illustration style that fits your brand.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 6: Brand voice ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#790069_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF3EDB]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-6.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Brand voice</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">How your brand sounds, in words that stay on-message.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 7: Patterns & graphics ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#250070_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#9B6BFF]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-7.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Patterns & graphics</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">Supporting devices that make your brand recognizable.</p>
+                </div>
+            </div>
+
+            <!-- ===== CARD 8: Brand guidelines ===== -->
+            <div class="design-card relative rounded-3xl p-8 bg-[linear-gradient(140deg,_#005E06_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#3DDC46]">
+                <div class="relative z-10">
+                    <img src="assets/images/brand-system-8.svg" class="img-fluid" alt="brand system">
+                    <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Brand guidelines</h3>
+                    <p class="text-[#DDE3DD] font-sans text-base sm:text-lg font-normal leading-[150%]">The rulebook that keeps it all consistent everywhere.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- brand system section end -->
+
+
+
+
+<!-- brand process section start -->
+<section
+    class="process-section pt-[96px] bg-[linear-gradient(180deg,_#151615_0%,_#0B0C0B_101.89%)] overflow-hidden">
+    <div class="px-1">
+
+        <!-- section title -->
+        <div class="max-w-184 mx-auto text-center lg:mb-16 md:mb-14 sm:mb-12 mb-8">
+            <h2
+                class="text-white text-center font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                Our Brand Identity Process
+            </h2>
+        </div>
+
+        <!-- ================= DESKTOP / TABLET (absolute staggered layout, pixel-matched to design) ================= -->
+        <div class="hidden lg:block relative w-full aspect-[1920/890]">
+
+            <!-- connecting curve bg -->
+            <img src="assets/images/process-bgs.svg" class="absolute inset-0 w-full h-full z-0 top-[23%]" alt="">
+
+            <!-- ===== CARD 1: Discovery & strategy ===== -->
+            <div class="absolute z-10 left-[10.9375%] 2xl:top-[10.5506%] lg:top-[5%] xl:w-[22.396%] w-[26%] h-auto">
+                <div
+                    class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                    <div class="max-w-[315px] w-full">
+                        <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                            Discovery & strategy</h3>
+                        <p
+                            class="text-dark7 font-sans text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                            We define your positioning, audience, and personality.</p>
+                    </div>
+                    <img src="assets/images/process-discovery-strategy.svg" alt="Discovery & strategy"
+                        class="img-fluid w-full rounded-3xl">
+                </div>
+            </div>
+            <!-- stem 1 -->
+            <div class="absolute w-px bg-[#D2F234] z-0 left-[22.031%] top-[43.258%] h-[5.281%] -translate-x-1/2">
+            </div>
+            <!-- dot 1 -->
+            <div
+                class="absolute z-10 rounded-full bg-[#3B4400] text-[#D2F234] font-fira font-medium flex items-center justify-center left-[22.031%] top-[52.135%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                1</div>
+
+            <!-- ===== CARD 2: Identity design ===== -->
+            <div class="absolute z-10 left-[29.9%] top-[56.180%] xl:w-[22.396%] w-[26%] h-auto">
+                <div
+                    class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                    <div>
+                        <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                            Identity design</h3>
+                        <p
+                            class="text-dark7 font-sans text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                            Logo, color, type, and imagery explored and refined.</p>
+                    </div>
+                    <img src="assets/images/process-identity-design.svg" alt="Identity design"
+                        class="img-fluid w-full rounded-3xl">
+                </div>
+            </div>
+            <!-- stem 2 -->
+            <div class="absolute w-px bg-[#D2F234] z-0 left-[40.99%] top-[50.898%] h-[5.281%] -translate-x-1/2">
+            </div>
+            <!-- dot 2 -->
+            <div
+                class="absolute z-10 rounded-full bg-[#3B4400] text-[#D2F234] font-fira font-medium flex items-center justify-center left-[40.99%] top-[47.303%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                2</div>
+
+            <!-- ===== CARD 3: System & guidelines ===== -->
+            <div class="absolute z-10 left-[48.9%] 2xl:top-[6.5506%] lg:top-[-1%] xl:w-[22.396%] w-[26%] h-auto">
+                <div
+                    class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                    <div>
+                        <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                            System & guidelines</h3>
+                        <p
+                            class="text-dark7 font-sans text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                            We build the full system and your brand book.</p>
+                    </div>
+                    <img src="assets/images/process-system-guidelines.svg" alt="System & guidelines"
+                        class="img-fluid w-full rounded-3xl">
+                </div>
+            </div>
+            <!-- stem 3 -->
+            <div class="absolute w-px bg-[#D2F234] z-0 left-[59.99%] top-[35.955%] h-[6.854%] -translate-x-1/2">
+            </div>
+            <!-- dot 3 -->
+            <div
+                class="absolute z-10 rounded-full bg-[#3B4400] text-[#D2F234] font-fira font-medium flex items-center justify-center left-[59.99%] top-[46.404%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                3</div>
+
+            <!-- ===== CARD 4: Rollout support ===== -->
+            <div class="absolute z-10 left-[67.9%] top-[56.180%] xl:w-[22.396%] w-[26%] h-auto">
+                <div
+                    class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                    <div class="max-w-[315px] w-full">
+                        <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                            Rollout support</h3>
+                        <p
+                            class="text-dark7 font-sans text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                            Files, templates, and help applying it everywhere.</p>
+                    </div>
+                    <img src="assets/images/process-rollout-support.svg" alt="Rollout support"
+                        class="img-fluid w-full rounded-3xl">
+                </div>
+            </div>
+            <!-- stem 4 -->
+            <div class="absolute w-px bg-[#D2F234] z-0 left-[79.0%] top-[50.898%] h-[5.281%] -translate-x-1/2">
+            </div>
+            <!-- dot 4 -->
+            <div
+                class="absolute z-10 rounded-full bg-[#3B4400] text-[#D2F234] font-fira font-medium flex items-center justify-center left-[79.0%] top-[47.303%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                4</div>
+
+        </div>
+
+        <!-- ================= MOBILE / TABLET-DOWN (vertical timeline) ================= -->
+        <div class="lg:hidden relative pl-10 sm:pl-12 mt-8 lg:mt-0">
+
+            <!-- vertical line -->
+            <div class="absolute left-3 sm:left-3.5 top-2 bottom-2 w-px bg-[#D2F234]"></div>
+
+            <div class="flex flex-col gap-8 sm:gap-10">
+
+                <!-- ===== STEP 1: Discovery & strategy ===== -->
+                <div class="relative">
+                    <span
+                        class="absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">1</span>
+                    <div class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-normal leading-[110%] mb-2">
+                            Discovery & strategy</h3>
+                        <p class="text-dark7 font-sans text-sm sm:text-base font-normal leading-[150%] mb-6">We
+                            define your positioning, audience, and personality.</p>
+                        <img src="assets/images/process-discovery-strategy.svg" alt="Discovery & strategy"
+                            class="img-fluid w-full rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- ===== STEP 2: Identity design ===== -->
+                <div class="relative">
+                    <span
+                        class="absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">2</span>
+                    <div class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-normal leading-[110%] mb-2">
+                            Identity design</h3>
+                        <p class="text-dark7 font-sans text-sm sm:text-base font-normal leading-[150%] mb-6">
+                            Logo, color, type, and imagery explored and refined.</p>
+                        <img src="assets/images/process-identity-design.svg" alt="Identity design"
+                            class="img-fluid w-full rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- ===== STEP 3: System & guidelines ===== -->
+                <div class="relative">
+                    <span
+                        class="absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">3</span>
+                    <div class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-normal leading-[110%] mb-2">
+                            System & guidelines</h3>
+                        <p class="text-dark7 font-sans text-sm sm:text-base font-normal leading-[150%] mb-6">We
+                            build the full system and your brand book.</p>
+                        <img src="assets/images/process-system-guidelines.svg" alt="System & guidelines"
+                            class="img-fluid w-full rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- ===== STEP 4: Rollout support ===== -->
+                <div class="relative">
+                    <span
+                        class="absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">4</span>
+                    <div class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-normal leading-[110%] mb-2">
+                            Rollout support</h3>
+                        <p class="text-dark7 font-sans text-sm sm:text-base font-normal leading-[150%] mb-6">Files,
+                            templates, and help applying it everywhere.</p>
+                        <img src="assets/images/process-rollout-support.svg" alt="Rollout support"
+                            class="img-fluid w-full rounded-2xl">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- brand process section end -->
 
 
 
@@ -1457,7 +1895,7 @@
                     Work we're proud of
                 </h2>
                 <p
-                    class="text-[#DDE3DD] text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
+                    class="text-dark7 text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
                     A small selection of the brands we've helped shape — spanning logos, identities, packaging, social
                     campaigns, and motion. Every project here started the same way yours can: with a conversation about
                     your goals. Use the filters to explore work by service, and picture what that level of craft could
@@ -1911,7 +2349,7 @@
     <!-- industry section start  -->
     <section
         class="section-padding bg-[radial-gradient(50.13%_50.13%_at_50%_83.64%,#4A4C4A_0%,#0B0C0B_100%)] industry_sec">
-        <div class="lg:px-12 md:px-6 px-4">
+        <div class="container">
 
             <!-- Heading -->
             <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 mb-10">
@@ -2203,7 +2641,7 @@
                     What Our Clients Say
                 </h2>
                 <p
-                    class="text-[#DDE3DD] text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
+                    class="text-dark7 text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
                     Don't just take our word for it. Here's what business owners around the world are saying about
                     GraphicNomad.
                 </p>
@@ -2231,7 +2669,7 @@
                                                     class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
                                                     Leslie Alexander</p>
                                                 <p
-                                                    class="text-[#DDE3DD] font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    class="text-dark7 font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
                                                     CEO, TechStart Inc.</p>
                                             </div>
                                         </div>
@@ -2272,7 +2710,7 @@
                                                     class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
                                                     Jane Cooper</p>
                                                 <p
-                                                    class="text-[#DDE3DD] font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    class="text-dark7 font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
                                                     TechNova Solutions</p>
                                             </div>
                                         </div>
@@ -2311,7 +2749,7 @@
                                                     class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
                                                     Kathryn Murphy</p>
                                                 <p
-                                                    class="text-[#DDE3DD] font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    class="text-dark7 font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
                                                     BrightWave Digital</p>
                                             </div>
                                         </div>
@@ -2350,7 +2788,7 @@
                                                     class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
                                                     Leslie Alexander</p>
                                                 <p
-                                                    class="text-[#DDE3DD] font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    class="text-dark7 font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
                                                     CEO, TechStart Inc.</p>
                                             </div>
                                         </div>
@@ -2390,7 +2828,7 @@
                                                     class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
                                                     Jane Cooper</p>
                                                 <p
-                                                    class="text-[#DDE3DD] font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    class="text-dark7 font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
                                                     TechNova Solutions</p>
                                             </div>
                                         </div>
@@ -2429,7 +2867,7 @@
                                                     class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
                                                     Kathryn Murphy</p>
                                                 <p
-                                                    class="text-[#DDE3DD] font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    class="text-dark7 font-sans lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
                                                     BrightWave Digital</p>
                                             </div>
                                         </div>
@@ -3049,12 +3487,12 @@
             </div>
 
             <!-- blog marquee slider -->
-            <div class="" aria-label="Latest blog posts">
-                <div class="">
-                    <div class="grid grid-cols-3 gap-8 ">
+            <div class="blog-slider splide" aria-label="Latest blog posts">
+                <div class="splide__track overflow-visible">
+                    <ul class="splide__list flex items-stretch">
 
                         <!-- slide 1 -->
-                        <div class="h-auto">
+                        <li class="splide__slide shrink-0 h-auto">
                             <a href="#" class="blog-card bg-white rounded-2xl overflow-hidden h-full flex flex-col">
                                 <img src="assets/images/blog-1.webp" alt="2026 website design trends"
                                     class="w-full aspect-[4/3] object-cover">
@@ -3098,10 +3536,10 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </li>
 
                         <!-- slide 2 -->
-                        <div class=" h-auto">
+                        <li class="splide__slide shrink-0 h-auto">
                             <a href="#" class="blog-card bg-white rounded-2xl overflow-hidden h-full flex flex-col">
                                 <img src="assets/images/blog-2.webp" alt="How a startup scaled faster"
                                     class="w-full aspect-[4/3] object-cover">
@@ -3145,10 +3583,10 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </li>
 
                         <!-- slide 3 -->
-                        <div class="h-auto">
+                        <li class="splide__slide shrink-0 h-auto">
                             <a href="#" class="blog-card bg-white rounded-2xl overflow-hidden h-full flex flex-col">
                                 <img src="assets/images/blog-3.webp" alt="From freelancer to full-time designer"
                                     class="w-full aspect-[4/3] object-cover">
@@ -3193,11 +3631,103 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </li>
+
+                        <!-- slide 4 -->
+                        <li class="splide__slide shrink-0 h-auto">
+                            <a href="#" class="blog-card bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <img src="assets/images/blog-1.webp" alt="2026 website design trends"
+                                    class="w-full aspect-[4/3] object-cover">
+                                <div class="p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center gap-4 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-1.5 px-2 rounded-full bg-[#inline-flex items-center p-1.5 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">Branding</span>
+                                            <div class="flex items-center gap-2 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Md. Hasan Biswas"
+                                                    class="w-6 h-6 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 sm:text-base text-sm font-medium leading-[150%] truncate">Md.
+                                                    Hasan Biswas</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] text-2xl font-medium leading-[120%] line-clamp-3 ">
+                                            5 signs your brand identity needs a refresh this year</h3>
+                                        <div class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap"
+                                            ] text-[#0B0C0B] text-center shrink-0">
+                                            <span class="block text-xl font-medium leading-[120%]">20</span>
+                                            <span class="block text-sm font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="font-sans text-[#151615] text-base font-normal leading-[140%] line-clamp-3 mb-4">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- slide 5 -->
+                        <li class="splide__slide shrink-0 h-auto">
+                            <a href="#" class="blog-card bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <img src="assets/images/blog-3.webp" alt="Packaging design tips"
+                                    class="w-full aspect-[4/3] object-cover">
+                                <div class="p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center gap-4 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-1.5 px-2 rounded-full bg-[#inline-flex items-center p-1.5 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">Packaging</span>
+                                            <div class="flex items-center gap-2 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Albert Flores"
+                                                    class="w-6 h-6 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 sm:text-base text-sm font-medium leading-[150%] truncate">Albert
+                                                    Flores</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] text-2xl font-medium leading-[120%] line-clamp-3 ">
+                                            Packaging trends that actually move product off the shelf</h3>
+                                        <div class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap"
+                                            ] text-[#0B0C0B] text-center shrink-0">
+                                            <span class="block text-xl font-medium leading-[120%]">20</span>
+                                            <span class="block text-sm font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="font-sans text-[#151615] text-base font-normal leading-[140%] line-clamp-3 mb-4">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
 
 
-                    </div>
+                    </ul>
                 </div>
             </div>
 
@@ -3223,7 +3753,7 @@
                     Frequently Asked Questions
                 </h2>
                 <p
-                    class="text-[#DDE3DD] text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
+                    class="text-dark7 text-center font-sans sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
                     Don't just take our word for it. Here's what business owners around the world are saying about
                     GraphicNomad.
                 </p>
@@ -3249,7 +3779,7 @@
                         </span>
                     </button>
                     <div class="faq-content overflow-hidden" style="max-height:0;">
-                        <p class="text-[#DDE3DD] sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
+                        <p class="text-dark7 sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
                             Pick a plan, submit your first request through the dashboard, and a designer starts working
                             within hours. Requests queue up one at a time, and you get unlimited revisions until you're
                             happy.</p>
@@ -3272,7 +3802,7 @@
                         </span>
                     </button>
                     <div class="faq-content overflow-hidden" style="max-height:0;">
-                        <p class="text-[#DDE3DD] sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
+                        <p class="text-dark7 sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
                             Most designs are delivered within 48 hours. Simpler requests like social graphics often come
                             back same-day, while larger projects like a full brand kit may take a bit longer.</p>
                     </div>
@@ -3294,7 +3824,7 @@
                         </span>
                     </button>
                     <div class="faq-content overflow-hidden" style="max-height:0;">
-                        <p class="text-[#DDE3DD] sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
+                        <p class="text-dark7 sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
                             Yes. Request revisions until everything matches exactly what you had in mind, with no extra
                             fees or revision limits on any plan.</p>
                     </div>
@@ -3316,7 +3846,7 @@
                         </span>
                     </button>
                     <div class="faq-content overflow-hidden" style="max-height:0;">
-                        <p class="text-[#DDE3DD] sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
+                        <p class="text-dark7 sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
                             Figma, Adobe Photoshop, Illustrator, and InDesign, depending on the project. Source files
                             are always shared in an editable format.</p>
                     </div>
@@ -3338,7 +3868,7 @@
                         </span>
                     </button>
                     <div class="faq-content overflow-hidden" style="max-height:0;">
-                        <p class="text-[#DDE3DD] sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
+                        <p class="text-dark7 sm:text-base text-sm md:text-lg leading-[150%] px-6 pb-6 sm:pl-[72px]">
                             Yes, full ownership. Every design delivered to you is yours to use however you like, with no
                             licensing fees or restrictions.</p>
                     </div>

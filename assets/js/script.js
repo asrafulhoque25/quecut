@@ -398,10 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
  
     shapes.forEach((shape) => {
         const section = shape.closest('section');
- 
-        // starting state: rotated -200deg, anchored at the bottom (transform-origin already
-        // set to bottom via the 'origin-bottom' class in HTML), plus a subtle 3D tilt + scale
-        // so it doesn't feel like a flat 2D spin.
         gsap.set(shape, {
             rotation: -200,
             rotationY: -20,
@@ -423,7 +419,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
- 
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger); // ensure registered
+
+  const shapes = document.querySelectorAll('.choose-section-shape2');
+  if (!shapes.length) return;
+
+  shapes.forEach((shape) => {
+    const section = shape.closest('section');
+
+    gsap.fromTo(
+      shape,
+      {
+        
+        rotation: 0,
+        transformOrigin: 'right bottom', 
+      },
+      {
+        
+        rotation: -35, 
+        transformOrigin: 'right bottom',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'bottom center', 
+          end: 'bottom 20%',     
+          scrub: 1,               
+          markers: false,        
+        },
+      }
+    );
+  });
+});
+
+
+
+
 // faq section start
 
 function initFAQ(section) {
@@ -510,42 +545,42 @@ document.addEventListener('DOMContentLoaded', () => {
 //blog  section
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const el = document.querySelector('.blog-slider');
-    if (!el) return;
+// document.addEventListener('DOMContentLoaded', () => {
+//     const el = document.querySelector('.blog-slider');
+//     if (!el) return;
 
-    const slideCount = el.querySelectorAll('.splide__slide').length;
+//     const slideCount = el.querySelectorAll('.splide__slide').length;
 
-    const splide = new Splide(el, {
-        type: 'loop',
-        direction: 'ltr',
-        perPage: 3,              
-        gap: 24,
-        arrows: false,
-        pagination: false,
-        drag: 'free',
-        clones: slideCount * 4,   
-        breakpoints: {
-            1024: { perPage: 2 }, 
-            640:  { perPage: 1,
-                 gap: 12,
-             }, 
-        },
-        autoScroll: {
-            speed: 0.6,
-            pauseOnHover: true,
-            pauseOnFocus: false,
-        },
-    });
+//     const splide = new Splide(el, {
+//         type: 'loop',
+//         direction: 'ltr',
+//         perPage: 3,              
+//         gap: 24,
+//         arrows: false,
+//         pagination: false,
+//         drag: 'free',
+//         clones: slideCount * 4,   
+//         breakpoints: {
+//             1024: { perPage: 2 }, 
+//             640:  { perPage: 1,
+//                  gap: 12,
+//              }, 
+//         },
+//         autoScroll: {
+//             speed: 0.6,
+//             pauseOnHover: true,
+//             pauseOnFocus: false,
+//         },
+//     });
 
-    splide.on('mounted', () => {
-        const autoScroll = splide.Components.AutoScroll;
-        splide.on('drag', () => autoScroll.pause());
-        splide.on('dragged', () => autoScroll.play());
-    });
+//     splide.on('mounted', () => {
+//         const autoScroll = splide.Components.AutoScroll;
+//         splide.on('drag', () => autoScroll.pause());
+//         splide.on('dragged', () => autoScroll.play());
+//     });
 
-    splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
-});
+//     splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
+// });
 
 
 
