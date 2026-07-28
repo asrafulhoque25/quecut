@@ -586,6 +586,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 // ================= CTA SECTION: "LIGHTS ON" RADIAL REVEAL (sequential) =================
 // Scoped to '.cta-section' / '.cta-radial' only, no generic selectors.
 document.addEventListener('DOMContentLoaded', () => {
@@ -748,3 +750,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+// before and after drugable
+
+gsap.registerPlugin(Draggable);
+ 
+document.querySelectorAll('.before-after-wrap').forEach((wrap) => {
+    const afterImgWrap = wrap.querySelector('.img-wrap.is-after');
+    const dragger      = wrap.querySelector('.dragger');
+ 
+    gsap.set(dragger, { left: wrap.offsetWidth / 2 });
+ 
+    function updateClip() {
+        const draggerLeft = parseFloat(gsap.getProperty(dragger, 'left'));
+        const revealFromRight = wrap.offsetWidth - draggerLeft;
+        afterImgWrap.style.clipPath = `inset(0px ${revealFromRight}px 0px 0px)`;
+    }
+ 
+    const [draggableInstance] = Draggable.create(dragger, {
+        type: 'left',
+        bounds: wrap,
+        onDrag: updateClip
+    });
+ 
+    function animateTo(leftPx) {
+        gsap.to(dragger, {
+            left: leftPx,
+            duration: 0.7,
+            ease: 'power3.out',
+            onUpdate: updateClip
+        });
+    }
+ 
+    // click / tap anywhere on the frame to smoothly jump the divider there
+    wrap.addEventListener('click', (e) => {
+        if (draggableInstance.isDragging) return;
+        const rect = wrap.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clamped = Math.max(0, Math.min(clickX, wrap.offsetWidth));
+        animateTo(clamped);
+    });
+ 
+    // re-clamp on resize so the split stays proportionally correct
+    window.addEventListener('resize', () => {
+        const current = parseFloat(gsap.getProperty(dragger, 'left'));
+        const clamped = Math.max(0, Math.min(current, wrap.offsetWidth));
+        gsap.set(dragger, { left: clamped });
+        updateClip();
+    });
+ 
+    // initial paint
+    updateClip();
+});

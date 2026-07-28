@@ -1214,6 +1214,13 @@ top: 80%;
 
 
 
+/* band book bg  */
+.brand-book-section .brand-book-inner{
+    background-image:url(../images/brand-book-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 /* ================= FOOTER ================= */
 .footer-col-title {
@@ -1340,5 +1347,5 @@ top: 80%;
 
 
 .footer {
-background: radial-gradient(69.77% 41.77% at 49.27% 27.33%, var(--Dark-Colors-Dark-5, #272827) 0%, var(--Dark-Colors-Dark-1, #0B0C0B) 100%);
+background:  #0B0C0B;
 }
