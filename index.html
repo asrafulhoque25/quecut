@@ -12,7 +12,7 @@
 
 <body>
 
-
+ <!-- navbar start -->
     <header class="navbar">
         <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
             <div class="navbar-inner">
@@ -108,9 +108,12 @@
                 </div>
 
                 <button class="navbar-toggle" aria-label="Open Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+           <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="2" fill="#DDE3DD"/>
+<rect y="16" width="32" height="2" fill="#DDE3DD"/>
+</svg>
+
+
                 </button>
 
             </div>
@@ -239,7 +242,7 @@
 
                 <!-- ================= LEFT CONTENT (Tailwind classes only) ================= -->
                 <div
-                    class="flex flex-col justify-between h-full md:pt-20 pt-18 lg:pt-24 xl:pb-20 md:pb-14 pb-10 banner-left relative z-10">
+                    class="flex flex-col justify-between h-full md:pt-20 pt-12 lg:pt-24 xl:pb-20 lg:pb-14 pb-2 banner-left relative z-10">
 
                     <div class="flex flex-col gap-3 lg:max-w-186 w-full">
                         <!-- badge -->
@@ -256,13 +259,13 @@
 
                         <!-- title -->
                         <h1
-                            class="text-[32px] sm:text-[42px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
+                            class="text-[36px] sm:text-[42px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
                             
                             Design that makes your brand impossible to ignore.
                         </h1>
 
                         <!-- description -->
-                        <p class=" text-dark7 sm:text-base text-sm md:text-lg xl:text-xl font-light leading-[150%]">
+                        <p class=" text-dark7  text-sm sm:text-base md:text-xl xl:text-[22px] font-light leading-[150%]">
                            From your logo to your packaging, socials, and video — Quecut is the graphic design agency that gives growing brands one team for every pixel.
                         </p>
 
@@ -390,7 +393,7 @@
                     </div>
 
                     <!-- MOBILE: 2 horizontal rows -->
-                    <div class="banner-slider-mobile lg:hidden flex flex-col gap-4 h-full py-8">
+                    <div class="banner-slider-mobile lg:hidden flex flex-col gap-4 h-full lg:py-8">
 
                         <div class="banner-slide-row splide" data-direction="ltr">
                             <div class="splide__track">
@@ -441,8 +444,8 @@
                 <ul class="splide__list flex items-stretch">
 
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/rose-neal.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -452,8 +455,8 @@
                     </li>
 
                     <li class="splide__slide w-auto shrink-0">
-                       <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/google-rating.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                       <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -463,8 +466,8 @@
                     </li>
 
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/meta.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -473,8 +476,8 @@
                         </div>
                     </li>
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/adobe.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -483,8 +486,8 @@
                         </div>
                     </li>
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/aversan.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -493,8 +496,8 @@
                         </div>
                     </li>
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/fiverr.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -505,8 +508,8 @@
 
                
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/rose-neal.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -516,8 +519,8 @@
                     </li>
 
                     <li class="splide__slide w-auto shrink-0">
-                       <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/google-rating.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                       <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -527,8 +530,8 @@
                     </li>
 
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/meta.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -537,8 +540,8 @@
                         </div>
                     </li>
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/adobe.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -547,8 +550,8 @@
                         </div>
                     </li>
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/aversan.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -557,8 +560,8 @@
                         </div>
                     </li>
                     <li class="splide__slide w-auto shrink-0">
-                        <div class="flex items-center gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
-                            <img src="assets/images/fiverr.svg" class="img-fluid md:h-auto md:max-h-auto max-h-[64px] "
+                        <div class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg" class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
                                 alt="achievement icon">
                             <div>
                                 <p class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-black leading-[110%] font-fira">
@@ -578,14 +581,14 @@
 
     <!-- design partner section -->
     <section
-        class="relative bg-no-repeat bg-dark1 overflow-hidden  lg:bg-cover bg-left"
+        class="relative bg-no-repeat bg-dark1 overflow-hidden  bg-cover lg:bg-left bg-top-center"
         style="background-image: url('./assets/images/design-partner-banner.svg');">
 
         <!-- Main Flex Container -->
-        <div class="container relative z-20 flex flex-col lg:flex-row lg:justify-between">
+        <div class="container relative z-20 flex flex-col-reverse lg:flex-row lg:justify-between">
 
             <!-- Left Column (Quecut Graphic) -->
-            <div class="lg:w-[42%] flex items-center justify-center pt-10 lg:pt-20 lg:items-end">
+            <div class="lg:w-[42%] flex items-center justify-center pt-2 lg:pt-20 lg:items-end">
                 <img src="assets/images/design-partner-question.png" alt="Quecut Graphic"
                     class="w-full max-w-75 sm:max-w-90 md:max-w-md lg:max-w-full h-auto object-contain" />
             </div>
@@ -597,7 +600,7 @@
                     One design partner for your whole brand
                 </h2>
 
-                <p class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[170%]">
+                <p class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal lg:leading-[170%] leading-[150%]">
                     Most growing brands end up piecing their visual identity together from scattered sources — a logo
                     designer here, a packaging freelancer there, a social media team somewhere else, and yet another
                     editor cutting their videos. Each works in isolation, so the logo, the packaging, the ads, and the
@@ -1013,7 +1016,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center mb-6 lg:mb-8">
 
                 <!-- ================= LEFT: heading + description ================= -->
-                <div class="max-w-152 w-full">
+                <div class="lg:max-w-152 w-full">
                     <h2
                         class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize mb-4 sm:mb-6">
                         Why professional graphic <span class="text-yellow1">design</span> matters
@@ -1040,7 +1043,7 @@
 
                 <!-- ===== CARD 1: First impressions are visual ===== -->
                 <div
-                    class="why-card design-card [--card-accent:#D2F234] relative rounded-2xl lg:p-8 sm:p-6 p-4 flex flex-col gap-6 bg-[linear-gradient(140deg,_#5F7200_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
+                    class="why-card design-card [--card-accent:#D2F234] relative rounded-2xl lg:p-8 sm:p-6 p-6 flex flex-col gap-6 bg-[linear-gradient(140deg,_#5F7200_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
                     <img src="assets/images/first-impression-icon.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
                         alt="first impressions icon">
                     <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">First
@@ -1052,7 +1055,7 @@
 
                 <!-- ===== CARD 2: Consistency builds recognition ===== -->
                 <div
-                    class="why-card design-card [--card-accent:#FF6A00] relative rounded-2xl lg:p-8 sm:p-6 p-4 flex flex-col gap-6 bg-[linear-gradient(140deg,_#7B3300_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
+                    class="why-card design-card [--card-accent:#FF6A00] relative rounded-2xl lg:p-8 sm:p-6 p-6 flex flex-col gap-6 bg-[linear-gradient(140deg,_#7B3300_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
                     <img src="assets/images/consistency-icon.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
                         alt="consistency icon">
                     <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">Consistency
@@ -1063,7 +1066,7 @@
 
                 <!-- ===== CARD 3: It sets you apart ===== -->
                 <div
-                    class="why-card design-card [--card-accent:#00AAFF] relative rounded-2xl lg:p-8 sm:p-6 p-4 flex flex-col gap-6 bg-[linear-gradient(140deg,_#00537C_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
+                    class="why-card design-card [--card-accent:#00AAFF] relative rounded-2xl lg:p-8 sm:p-6 p-6 flex flex-col gap-6 bg-[linear-gradient(140deg,_#00537C_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
                     <img src="assets/images/sets-you-apart-icon.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
                         alt="sets you apart icon">
                     <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">It sets you
@@ -1074,7 +1077,7 @@
 
                 <!-- ===== CARD 4: Good design drives sales ===== -->
                 <div
-                    class="why-card design-card [--card-accent:#FF00DD] relative rounded-2xl lg:p-8 sm:p-6 p-4 flex flex-col gap-6 bg-[linear-gradient(140deg,_#790069_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
+                    class="why-card design-card [--card-accent:#FF00DD] relative rounded-2xl lg:p-8 sm:p-6 p-6 flex flex-col gap-6 bg-[linear-gradient(140deg,_#790069_0%,_#0B0C0B_13.38%,_#0B0C0B_86.92%,_#232423_91.21%)] ">
                     <img src="assets/images/drives-sales-icon.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
                         alt="drives sales icon">
                     <h3 class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">Good design
@@ -1102,13 +1105,13 @@
         <div class="container relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
 
             <!-- LEFT CONTENT (5 Columns) -->
-            <div class="lg:col-span-5 md:space-y-8 sm:space-y-6 space-y-4">
+            <div class="lg:col-span-5 md:space-y-8 sm:space-y-6 space-y-4 lg:order-1 order-2">
                 <h2
                     class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
                     One system, from logo to shelf
                 </h2>
 
-                <p class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[170%]">
+                <p class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal lg:leading-[170%] leading-[150%]">
                     Bloom came to us with a marketplace logo and mismatched packaging. We designed a full identity —
                     logo,
                     color system, packaging, and social templates — so every touchpoint finally looked like one brand.
@@ -1164,7 +1167,7 @@
             <div class="hidden lg:block lg:col-span-1"></div>
 
             <!-- RIGHT CONTENT (6 Columns) -->
-            <div class="lg:col-span-6 flex items-center justify-center">
+            <div class="lg:col-span-6 flex items-center justify-center lg:order-2 order-1">
                 <img src="assets/images/full-identity-package.svg" alt="Full Identity Package Graphic"
                     class="w-full h-auto object-contain max-w-lg lg:max-w-full" />
             </div>
@@ -1184,7 +1187,7 @@
         <div class="container relative z-10">
 
             <!-- HEADER SECTION -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-6 mb-3 sm:mb-10 md:mb-18.5 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-6 mb-6 sm:mb-10 md:mb-18.5 items-start">
                 <!-- Title (6 Columns) -->
                 <div class="lg:col-span-6">
                     <h2
@@ -1196,7 +1199,7 @@
                 <!-- Description (6 Columns) -->
                 <div class="lg:col-span-6">
                     <p
-                        class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[170%] max-w-[736px]">
+                        class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal lg:leading-[170%] leading-[150%] max-w-[736px]">
                         Choosing who designs your brand is one of those decisions that's easy to get wrong and expensive
                         to redo. Go too cheap and you end up with a template a thousand other businesses already own; go
                         too big and you're locked into long contracts and inflated agency rates. Quecut sits exactly
@@ -1214,8 +1217,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             We Design Brands, Not Just Graphics
                         </h3>
 
@@ -1235,8 +1238,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             One Partner for Your Entire Brand Presence
                         </h3>
 
@@ -1256,8 +1259,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             Original Creative Solutions, Never Generic Templates
                         </h3>
 
@@ -1278,8 +1281,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             Designs Made to Build Trust and Drive Attention
                         </h3>
 
@@ -1299,8 +1302,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             A Smooth, Collaborative Creative Experience
                         </h3>
 
@@ -1320,8 +1323,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             A Clear Quote, No Surprises
                         </h3>
 
@@ -1342,8 +1345,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             Experienced Designers, Not Beginners
                         </h3>
 
@@ -1363,8 +1366,8 @@
                 <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
                     style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
                     <!-- Content -->
-                    <div class="p-8">
-                        <h3 class="text-dark8 font-fira text-xl sm:text-[28px] font-medium leading-[110%]">
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
                             Revised Until You're Happy
                         </h3>
 
@@ -1393,7 +1396,7 @@
         <div class="px-4">
 
             <!-- section title -->
-            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 mb-10">
+            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 sm:mb-10 mb-8">
                 <h2
                     class="text-[#FFF] text-center font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
                     Work we're proud of
@@ -1423,12 +1426,12 @@
             </div>
 
             <!-- cards grid -->
-            <div class="portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div class="portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 gap-3 lg:gap-6 mb-12">
 
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="brand-identity">
                     <img src="assets/images/logo-design-image.webp" alt="Logo Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Logo
@@ -1439,7 +1442,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="brand-identity">
                     <img src="assets/images/brand-identity-image.webp" alt="Brand Identity Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Packaging design</span>
@@ -1449,7 +1452,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="marketing">
                     <img src="assets/images/event-poster.webp" alt="Event Poster"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Event
@@ -1460,7 +1463,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="web-design">
                     <img src="assets/images/ecommerce-website-design-image.webp" alt="Ecommerce Website Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Ecommerce
@@ -1471,7 +1474,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="packaging">
                     <img src="assets/images/product-packaging-image.webp" alt="Product Packaging Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Product
@@ -1482,7 +1485,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="social-media">
                     <img src="assets/images/social-media-design-image.webp" alt="Social Media Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Social
@@ -1493,7 +1496,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="packaging">
                     <img src="assets/images/business-card-design-image.webp" alt="Business Card Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Video editing</span>
@@ -1503,7 +1506,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="packaging">
                     <img src="assets/images/app-design-image.webp" alt="App Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">App
@@ -1514,7 +1517,7 @@
                 <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
                     data-category="marketing">
                     <img src="assets/images/company-profile-design-image.webp" alt="Company Profile Design"
-                        class="w-full aspect-[4/3] object-cover">
+                        class="w-full object-cover img-fluid">
                     <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
                         <span
                             class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Illustration</span>
@@ -1583,7 +1586,7 @@
     <section class="section-padding all-tools">
         <div class="container">
             <div class="grid md:grid-cols-12 gap-8 items-center">
-                <div class="col-span-5">
+                <div class="md:col-span-5">
                     <h2
                         class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize mb-4 sm:mb-6">
                         Graphic design <span class="text-yellow1">tools</span> we use
@@ -1597,7 +1600,7 @@
                     </p>
                 </div>
 
-                <div class="col-span-7">
+                <div class="md:col-span-7 ">
                     <img src="assets/images/all-tools.png" class="img-fluid sm:block hidden" alt="all tools">
                     <img src="assets/images/all-tools-mobile.png" class="img-fluid sm:hidden block w-full"
                         alt="all tools">
@@ -1615,7 +1618,7 @@
 
     <!-- process section start -->
     <section
-        class="process-section pt-[96px] bg-[linear-gradient(180deg,_#151615_0%,_#0B0C0B_101.89%)] overflow-hidden">
+        class="process-section xl:pt-[96px] md:pt-[64px] pt-12 bg-[linear-gradient(180deg,_#151615_0%,_#0B0C0B_101.89%)] overflow-hidden">
         <div class="px-1">
 
             <!-- section title -->
@@ -1853,7 +1856,7 @@
         <div class="lg:px-12 md:px-6 px-4">
 
             <!-- Heading -->
-            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 mb-10">
+            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 sm:mb-10 mb-8">
                 <h2
                     class="text-[#FFF] text-center text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
                     Design for every kind of<br class="hidden sm:block" /> <span class="text-yellow1">Industry</span>
@@ -1876,7 +1879,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -1896,7 +1899,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -1916,7 +1919,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -1936,7 +1939,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -1956,7 +1959,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -1976,7 +1979,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -1996,7 +1999,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -2016,7 +2019,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -2036,7 +2039,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -2056,7 +2059,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -2076,7 +2079,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -2096,7 +2099,7 @@
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[#D2F234]/0 group-hover:bg-[#D2F234]/5">
                     </div>
                     <span
-                        class="absolute top-3 left-3 inline-flex items-center gap-2 sm:gap-3 rounded-[31px] bg-[#0B0C0B] pl-5 pr-6 py-3 font-fira font-medium text-[16px] sm:text-[20px] md:text-[24px] leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
+                        class="absolute top-3 left-3 inline-flex items-center gap-1 sm:gap-2 md::gap-3 rounded-[31px] pl-2 pr-2 bg-[#0B0C0B] md:pl-5 md:pr-6 md:py-3 py-2 font-fira font-medium text-sm sm:text-base md:text-lg xl:text-2xl leading-[110%] text-[#D2F234] transition-transform duration-500 group-hover:-translate-y-1">
                         <svg width="10" height="10" viewBox="0 0 10 10" class="shrink-0">
                             <circle cx="5" cy="5" r="5" fill="#D2F234" />
                         </svg>
@@ -2136,7 +2139,7 @@
         <div class="px-0">
 
             <!-- section title -->
-            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 mb-10 px-4">
+            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 sm:mb-10 mb-8 px-4">
                 <h2
                     class="text-[#FFF] text-center text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
                     What Our Clients Say
@@ -2420,7 +2423,7 @@
         <div class="container relative z-10">
 
             <!-- Section Title -->
-            <div class="text-center max-w-182 mx-auto mb-12">
+            <div class="text-center max-w-182 mx-auto lg:mb-12 md:mb-10 mb-8">
                 <h2 class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%]">
                     Why not a freelancer or an AI tool?
                 </h2>
@@ -2956,7 +2959,7 @@
         <div class="container">
 
             <!-- section header -->
-            <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+            <div class="flex sm:flex-row flex-col items-center flex-wrap justify-center sm:justify-between sm:gap-6 gap-3 lg:mb-12 md:mb-10 mb-8">
                 <div class="max-w-xl">
                     <h2
                         class="text-[#FFF] text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
@@ -3000,21 +3003,21 @@
     <!-- slide 1 -->
     <div class="h-auto">
         <a href="#" class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
-            <div class="blog-card-media aspect-[4/3]">
+            <div class="blog-card-media">
                 <img src="assets/images/blog-1.webp" alt="2026 website design trends"
-                    class="w-full h-full object-cover">
+                    class="img-fluid w-full">
             </div>
-            <div class="p-6 flex flex-col flex-1">
+            <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
                 <div class="flex items-center justify-between gap-3 mb-4">
-                    <div class="flex items-center gap-4 min-w-0">
+                    <div class="flex items-center sm:gap-4 gap-3 min-w-0">
                         <span
-                            class="inline-flex items-center py-1.5 px-2 rounded-full bg-[#inline-flex items-center p-1.5 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                            class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
                             Design</span>
-                        <div class="flex items-center gap-2 min-w-0">
+                        <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
                             <img src="assets/images/blog-author.png" alt="Md. Hasan Biswas"
-                                class="w-6 h-6 rounded-full object-cover shrink-0">
+                                class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
                             <span
-                                class="text-dark2 sm:text-base text-sm font-medium leading-[150%] truncate">Md.
+                                class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Md.
                                 Hasan Biswas</span>
                         </div>
                     </div>
@@ -3022,12 +3025,12 @@
  
                 <div class="flex items-start justify-between gap-3 mb-4">
                     <h3
-                        class="overflow-hidden text-ellipsis text-[#0B0C0B] text-2xl font-medium leading-[120%] line-clamp-2 ">
+                        class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
                         2026 website design trends every modern designer should know</h3>
  
                     <div class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
-                        <span class="block text-xl font-medium leading-[120%]">20</span>
-                        <span class="block text-sm font-normal leading-[150%]">Feb</span>
+                        <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                        <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
                     </div>
                 </div>
  
@@ -3048,21 +3051,21 @@
     <!-- slide 2 -->
     <div class=" h-auto">
         <a href="#" class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
-            <div class="blog-card-media aspect-[4/3]">
+            <div class="blog-card-media">
                 <img src="assets/images/blog-2.webp" alt="How a startup scaled faster"
-                    class="w-full h-full object-cover">
+                    class="img-fluid w-full">
             </div>
-            <div class="p-6 flex flex-col flex-1">
+            <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
                 <div class="flex items-center justify-between gap-3 mb-4">
-                    <div class="flex items-center gap-4 min-w-0">
+                    <div class="flex items-center sm:gap-4 gap-3 min-w-0">
                         <span
-                            class="inline-flex items-center py-1.5 px-2 rounded-full bg-[#inline-flex items-center p-1.5 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                            class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
                             Design</span>
-                        <div class="flex items-center gap-2 min-w-0">
+                        <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
                             <img src="assets/images/blog-author.png" alt="Albert Flores"
-                                class="w-6 h-6 rounded-full object-cover shrink-0">
+                                class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
                             <span
-                                class="text-dark2 sm:text-base text-sm font-medium leading-[150%] truncate">Albert
+                                class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Albert
                                 Flores</span>
                         </div>
                     </div>
@@ -3071,12 +3074,12 @@
  
                 <div class="flex items-start justify-between gap-3 mb-4">
                     <h3
-                        class="overflow-hidden text-ellipsis text-[#0B0C0B] text-2xl font-medium leading-[120%] line-clamp-2 ">
+                        class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
                         How a startup scaled faster using our subscription design service</h3>
  
                     <div class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
-                        <span class="block text-xl font-medium leading-[120%]">20</span>
-                        <span class="block text-sm font-normal leading-[150%]">Feb</span>
+                        <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                        <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
                     </div>
                 </div>
                 <p
@@ -3096,21 +3099,21 @@
     <!-- slide 3 -->
     <div class="h-auto">
         <a href="#" class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
-            <div class="blog-card-media aspect-[4/3]">
+            <div class="blog-card-media">
                 <img src="assets/images/blog-3.webp" alt="From freelancer to full-time designer"
-                    class="w-full h-full object-cover">
+                    class="img-fluid w-full">
             </div>
-            <div class="p-6 flex flex-col flex-1">
+            <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
                 <div class="flex items-center justify-between gap-3 mb-4">
-                    <div class="flex items-center gap-4 min-w-0">
+                    <div class="flex items-center sm:gap-4 gap-3 min-w-0">
                         <span
-                            class="inline-flex items-center py-1.5 px-2 rounded-full bg-[#inline-flex items-center p-1.5 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                            class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
                             Design</span>
-                        <div class="flex items-center gap-2 min-w-0">
+                        <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
                             <img src="assets/images/blog-author.png" alt="Jenny Wilson"
-                                class="w-6 h-6 rounded-full object-cover shrink-0">
+                                class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
                             <span
-                                class="text-dark2 sm:text-base text-sm font-medium leading-[150%] truncate">Jenny
+                                class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Jenny
                                 Wilson</span>
                         </div>
                     </div>
@@ -3119,12 +3122,12 @@
  
                 <div class="flex items-start justify-between gap-3 mb-4">
                     <h3
-                        class="overflow-hidden text-ellipsis text-[#0B0C0B] text-2xl font-medium leading-[120%] line-clamp-2 ">
+                        class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
                         From freelancer to full-time designer with consistent client growth</h3>
  
                     <div class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
-                        <span class="block text-xl font-medium leading-[120%]">20</span>
-                        <span class="block text-sm font-normal leading-[150%]">Feb</span>
+                        <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                        <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
                     </div>
                 </div>
  
@@ -3155,14 +3158,14 @@
 
     <!-- FAQ section start -->
     <section
-        class="quecut-faq lg:pt-[135px] md:pt-25 sm:pt-20 pt-15 md:pb-55 sm:pb-32 pb-16 bg-dark2 overflow-hidden relative z-20">
-        <div class="choose-section-shape absolute left-0 bottom-0 origin-bottom will-change-transform -z-10">
+        class="quecut-faq lg:pt-[135px] md:pt-25 sm:pt-16 pt-12 md:pb-55 sm:pb-20 pb-12 bg-dark2 overflow-hidden relative z-20">
+        <div class="choose-section-shape absolute left-0 bottom-0 origin-bottom will-change-transform -z-10 lg:block hidden">
             <img src="assets/images/faq-shape.webp" class="img-fluid" alt="shape">
         </div>
         <div class="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- section title -->
-            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 mb-10">
+            <div class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 sm:mb-10 mb-8">
                 <h2
                     class="text-[#FFF] text-center text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
                     Frequently Asked Questions
@@ -3181,10 +3184,10 @@
                 <div
                     class="faq-item rounded-lg overflow-hidden bg-[linear-gradient(90deg,#696B69_0%,#232423_14.23%)] mb-2">
                     <button
-                        class="faq-trigger w-full flex items-center justify-between gap-4 p-6 cursor-pointer text-left">
-                        <span class="flex items-center gap-4">
+                        class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                        <span class="flex items-center sm:gap-4 gap-3">
                             <span
-                                class="w-8 h-8 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
+                                class="sm:w-8 sm:h-8 h-5 w-5 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
                             <span class="text-white font-fira text-lg sm:text-[22px] font-normal leading-[150%]">How
                                 does the subscription work?</span>
                         </span>
@@ -3205,10 +3208,10 @@
                 <div
                     class="faq-item rounded-lg overflow-hidden bg-[linear-gradient(90deg,#696B69_0%,#232423_14.23%)] mb-2">
                     <button
-                        class="faq-trigger w-full flex items-center justify-between gap-4 p-6 cursor-pointer text-left">
-                        <span class="flex items-center gap-4">
+                        class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                        <span class="flex items-center sm:gap-4 gap-3">
                             <span
-                                class="w-8 h-8 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
+                                class="sm:w-8 sm:h-8 h-5 w-5 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
                             <span class="text-white font-fira text-lg sm:text-[22px] font-normal leading-[150%]">What's
                                 the typical turnaround time?</span>
                         </span>
@@ -3227,10 +3230,10 @@
                 <div
                     class="faq-item rounded-lg overflow-hidden bg-[linear-gradient(90deg,#696B69_0%,#232423_14.23%)] mb-2">
                     <button
-                        class="faq-trigger w-full flex items-center justify-between gap-4 p-6 cursor-pointer text-left">
-                        <span class="flex items-center gap-4">
+                        class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                        <span class="flex items-center sm:gap-4 gap-3">
                             <span
-                                class="w-8 h-8 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
+                                class="sm:w-8 sm:h-8 h-5 w-5 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
                             <span class="text-white font-fira text-lg sm:text-[22px] font-normal leading-[150%]">Can I
                                 request unlimited revisions?</span>
                         </span>
@@ -3249,10 +3252,10 @@
                 <div
                     class="faq-item rounded-lg overflow-hidden bg-[linear-gradient(90deg,#696B69_0%,#232423_14.23%)] mb-2">
                     <button
-                        class="faq-trigger w-full flex items-center justify-between gap-4 p-6 cursor-pointer text-left">
-                        <span class="flex items-center gap-4">
+                        class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                        <span class="flex items-center sm:gap-4 gap-3">
                             <span
-                                class="w-8 h-8 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
+                                class="sm:w-8 sm:h-8 h-5 w-5 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
                             <span class="text-white font-fira text-lg sm:text-[22px] font-normal leading-[150%]">What
                                 design software do you use?</span>
                         </span>
@@ -3271,10 +3274,10 @@
                 <div
                     class="faq-item rounded-lg overflow-hidden bg-[linear-gradient(90deg,#696B69_0%,#232423_14.23%)] mb-2">
                     <button
-                        class="faq-trigger w-full flex items-center justify-between gap-4 p-6 cursor-pointer text-left">
-                        <span class="flex items-center gap-4">
+                        class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                        <span class="flex items-center sm:gap-4 gap-3">
                             <span
-                                class="w-8 h-8 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
+                                class="sm:w-8 sm:h-8 h-5 w-5 shrink-0 rounded-full bg-yellow1 flex items-center justify-center text-[#0B0C0B] font-fira font-bold text-base">Q</span>
                             <span class="text-white font-fira text-lg sm:text-[22px] font-normal leading-[150%]">Do I
                                 own the design files?</span>
                         </span>
@@ -3305,7 +3308,7 @@
         </div>
 
         <!-- CONTENT CONTAINER -->
-        <div class="relative z-10 max-w-150 p-4 md:p-0 mx-auto text-center flex flex-col items-center">
+        <div class="relative z-10 max-w-150 px-4 md:px-0 mx-auto text-center flex flex-col items-center">
 
             <!-- MAIN HEADING -->
             <div class="mb-6 md:mb-12">
@@ -3375,17 +3378,17 @@
                 </div>
 
                 <!-- ===== RIGHT: heading + desc + buttons ===== -->
-                <div class="cta-content order-1 lg:order-2 lg:py-16 md:py-12 py-10">
+                <div class="cta-content order-1 lg:order-2 lg:py-16 md:py-12 py-10 lg:text-start text-center">
                     <h2
                         class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%]">
                        Ready to build a brand people remember?
                     </h2>
-                    <p class="text-dark7 text-base sm:text-lg lg:text-xl font-normal leading-[150%] mt-4 max-w-lg">
+                    <p class="text-dark7 text-base sm:text-lg lg:text-xl font-normal leading-[150%] mt-4 max-w-lg lg:mx-0 mx-auto">
                       Tell us about your project — we'll reply within one business day with ideas and a quote.
                     </p>
 
                     <!-- buttons (same magnetic + reveal-icon pattern from banner) -->
-                    <div class="flex items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 flex-wrap xl:mt-12 md:mt-8 mt-6">
+                    <div class="flex items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 flex-wrap xl:mt-12 md:mt-8 mt-6 lg:justify-start justify-center">
                         <!-- START FREE TRIAL -->
                         <a href="#" class="btn-cta flex items-center gap-0">
                             <span
@@ -3493,7 +3496,7 @@
                 <!-- Social Media (full-width on mobile/tablet, 1 col on desktop) -->
                 <div class="footer-col col-span-2 md:col-span-4 lg:col-span-1">
                     <h3 class="footer-col-title">Social Media</h3>
-                    <div class="flex items-center gap-3 md:gap-4">
+                    <div class="flex items-center gap-2 flex-wrap">
                         <a href="#" class="footer-social-icon" aria-label="Dribbble">
                             <img src="assets/images/social-media-1.svg" class="img-fluid" alt="social media icon">
                         </a>
@@ -3528,14 +3531,14 @@
 
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script src="assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>

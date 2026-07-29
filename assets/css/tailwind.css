@@ -304,8 +304,8 @@ html {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 32px;
-    height: 32px;
+    /* width: 32px;
+    height: 32px; */
     background: transparent;
     border: none;
     cursor: pointer;
@@ -480,19 +480,51 @@ html {
 }
 
 @media (max-width: 1024px) {
-    /* hide desktop nav + button, show hamburger */
-    .navbar-menu,
-    .navbar .navbar-btn {
+    /* hide desktop nav links only — keep the "Get Free Sample" button visible on tablet + mobile */
+    .navbar-menu {
         display: none;
     }
 
     .navbar .navbar-toggle {
         display: flex;
+        order: 1;
+    }
+
+    .navbar .navbar-logo {
+        order: 2;
+    }
+
+    .navbar .navbar-btn {
+        display: block;
+        order: 3;
     }
 
     /* enable mobile off-canvas menu */
     .mobile-menu {
         display: block;
+    }
+}
+
+/* TABLET (641px–1024px): hamburger left, logo centered, button right —
+   navbar-inner already uses justify-content: space-between, so with only
+   3 visible items in this order it naturally reads as left / center / right */
+
+/* MOBILE (<=640px): hamburger + logo grouped together on the left,
+   button pinned to the far right */
+@media (max-width: 640px) {
+    .navbar .navbar-inner {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .navbar .navbar-btn {
+        margin-left: auto;
+    }
+
+    /* slightly more compact pill so it doesn't crowd the hamburger + logo on small screens */
+    .navbar .navbar-btn .btn-getsample {
+        padding: 10px 16px;
+        font-size: 12px;
     }
 }
 
@@ -503,7 +535,14 @@ html {
 }
 @media (max-width: 640px) {
     .navbar .navbar-inner {
-        padding-block: 16px;
+        padding-block:8px;
+    }
+    .navbar-toggle svg{
+        width: 29px;
+        height: 14px;
+    }
+    .navbar .navbar-logo img{
+        height: 20px;
     }
 }
 
@@ -516,7 +555,29 @@ html {
     background-repeat: no-repeat;
     background-position: left bottom;
 }
+
+@media (max-width:1400px) {
+    .banner-left{
+    background-size: 95%;
+}
+}
+@media (max-width:1026px) {
+    .banner-left{
+    background-image: none;
+}
+}
 /* banner css end  */
+
+
+/* industry css start  */
+@media (max-width:991px) {
+    .industry-card svg{
+        width: 6px;
+        height: 6px;
+}
+}
+
+/* industry css end  */
 
 
 
@@ -1256,6 +1317,8 @@ top: 80%;
     transition: color 0.3s ease;
 }
 
+
+
 .footer-col-list li a:hover {
     color: var(--color-yellow1, #D2F234);
 }
@@ -1352,4 +1415,15 @@ top: 80%;
 
 .footer {
 background:  #0B0C0B;
+}
+
+
+
+@media (max-width:640px) {
+    .footer-col-list li a {
+        font-size: 14px;
+    }
+    .footer-col-list {
+    gap: 10px;
+}
 }
