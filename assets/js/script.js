@@ -588,59 +588,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// ================= CTA SECTION: "LIGHTS ON" RADIAL REVEAL (sequential) =================
-// Scoped to '.cta-section' / '.cta-radial' only, no generic selectors.
-document.addEventListener('DOMContentLoaded', () => {
-    const section = document.querySelector('.cta-section');
-    if (!section) return;
-
-    const gray   = section.querySelector('.cta-radial-gray');
-    const orange = section.querySelector('.cta-radial-orange');
-    if (!gray || !orange) return;
-    gsap.set(gray, {
-        opacity: 0,
-        clipPath: 'inset(0 0 100% 0)',
-        filter: 'brightness(0.4)',
-    });
-
-    gsap.set(orange, {
-        opacity: 0,
-        filter: 'brightness(0.4)',
-    });
-
-    
-  const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',           
-            end: 'top 50%',            
-            toggleActions: 'restart none none reset', 
-        },
-    });
-
-   
-    tl.to(gray, {
-        opacity: 1,
-        clipPath: 'inset(0 0 0% 0)',
-        filter: 'brightness(1)',
-        duration: 0.7,
-        ease: 'power2.out',
-    });
-
-
-    tl.to(orange, {
-        opacity: 1,
-        filter: 'brightness(1)',
-        duration: 1.5,
-        ease: 'power2.out',
-    }, '-=0.4');
-});
-
-
-
-
-
-
 // ===== SMOOTH SCROLL (Lenis) =====
 const lenis = new Lenis({
     duration: 1.4,

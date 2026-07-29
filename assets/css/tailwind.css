@@ -58,16 +58,16 @@ html {
 }
 
 .section-padding {
-    padding-block: 120px;
+    padding-block: 96px;
 }
 @media (max-width:1024px) {
     .section-padding {
-    padding-block: 80px;
+    padding-block: 67px;
 }
 }
 @media (max-width:640px) {
     .section-padding {
-    padding-block: 52px;
+    padding-block: 48px;
 }
 }
 
@@ -1162,11 +1162,7 @@ top: 80%;
 }
 
 /* both radial "lights" start invisible; GSAP fades them in on scroll */
-.cta-radial {
-    z-index: 0;
-    opacity: 0;
-    will-change: opacity, transform, filter;
-}
+
 
 /* gray spotlight from below -- creates the soft top-lit vignette behind the mockup */
 @media (min-width: 1025px) {
@@ -1174,16 +1170,11 @@ top: 80%;
         min-height: 100vh;
         display: flex;
         align-items: center;
-        padding-block: 40px;
     }
 }
 
 /* both radial "lights" start invisible; GSAP fades them in on scroll */
-.cta-radial {
-    z-index: 0;
-    opacity: 0;
-    will-change: opacity, transform, filter;
-}
+
 
 /* gray spotlight from below -- creates the soft top-lit vignette behind the mockup */
 .cta-radial-gray {
@@ -1195,23 +1186,36 @@ top: 80%;
     );
 }
 
-/* orange glow at bottom-left -- only covers the bottom half of the section (max 562px) */
-.cta-radial-orange {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    max-height: 562px;
-    background: radial-gradient(
-        29.25% 99.93% at 33.98% 100%,
-        #FF6A00 0%,
-        rgba(11, 12, 11, 0.00) 100%,
-        rgba(11, 12, 11, 0.10) 100%
-    );
+
+
+
+/* blog section  */
+
+/* scoped to the blog card's cover image only — avatar image untouched */
+.blog-card-media {
+    position: relative;
+    overflow: hidden;
 }
-
-
+.blog-card-media img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+.blog-card:hover .blog-card-media img {
+    transform: scale(1.05);
+}
+/* subtle gradient fade instead of a harsh brightness darken — reads more premium */
+.blog-card-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 12, 11, 0) 55%, rgba(11, 12, 11, 0.35) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+.blog-card:hover .blog-card-media::after {
+    opacity: 1;
+}
 
 
 /* band book bg  */
