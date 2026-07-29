@@ -1368,9 +1368,6 @@
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
-  .pt-\[12\] {
-    padding-top: 12;
-  }
   .pt-\[96px\] {
     padding-top: 96px;
   }
@@ -3158,6 +3155,16 @@
   .\32 xl\:top-\[10\.5506\%\] {
     @media (width >= 96rem) {
       top: 10.5506%;
+    }
+  }
+  .\32 xl\:gap-20 {
+    @media (width >= 96rem) {
+      gap: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:py-28\.5 {
+    @media (width >= 96rem) {
+      padding-block: calc(var(--spacing) * 28.5);
     }
   }
   .\32 xl\:text-xl {
