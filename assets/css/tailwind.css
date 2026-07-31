@@ -20,7 +20,7 @@
 }
 
 .container {
-    max-width: 1535px;
+    max-width: 1545px;
     width: 100%;
     margin: auto;
     padding-inline: 20px;
@@ -211,7 +211,7 @@ html {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 612px;
+    width: 666px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -220,12 +220,19 @@ html {
     margin-top: -16px;
 
     border-radius: 24px;
-    background: linear-gradient(180deg, #121211 0%, var(--Dark-Colors-Dark-3, #232423) 31.53%, var(--Dark-Colors-Dark-4, #696B69) 100%);
-    background-image: url("../images/dropdown-frame.svg");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: cover;
-    background-clip: padding-box;
+
+    /* layered backgrounds: SVG watermark on top, gradient fill underneath.
+       first-listed layer = topmost. SVG is now a fixed 350px wide (height
+       auto, keeps its own aspect ratio) instead of scaling to the box —
+       "contain"/"cover" both react to the container's size, which is why
+       it kept changing; a fixed px value is what actually holds steady. */
+    background-image:
+        url("../images/dropdown-frame.svg"),
+        linear-gradient(180deg, var(--Dark-Colors-Dark-1, #0B0C0B) 0%, var(--Dark-Colors-Dark-2, #151615) 31.53%, var(--Dark-Colors-Dark-4, #4A4C4A) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom, right bottom;
+    background-size: 360px auto, cover;
+    background-clip: padding-box, padding-box;
 
     opacity: 0;
     visibility: hidden;
@@ -254,7 +261,7 @@ html {
     justify-content: flex-start;
     align-items: center;
     gap: 12px;
-    padding: 12px 16px;
+    padding: 8px 16px;
     border-radius: 16px;
     font-size: 16px;
     font-weight: 500;
@@ -277,7 +284,7 @@ html {
 
 
 .navbar-menu ul li ul li:hover > a {
-    background:  #0B0C0B;
+    background:  var(--color-dark3);
     color: #fff;
 }
 
@@ -365,6 +372,10 @@ html {
     flex-direction: column;
     position: relative;
     overflow-y: auto;
+    background-image: url(../images/mobile-menu-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
 }
 
 .mobile-menu-top {
@@ -433,8 +444,12 @@ html {
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
+    transition: .2s all linear;
 }
 
+.mobile-menu-list li a:hover{
+    color: var(--color-yellow1);
+}
 .mobile-menu-plus {
     display: flex;
     align-items: center;
@@ -465,18 +480,40 @@ html {
     gap: 10px;
     padding: 16px;
     border-radius: 16px;
-    background: #17181a;
+    border: 1px solid #2D2E2D;
+    background-color: var(--color-dark1);
     color: #fff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
+    position: relative;
+    z-index: 11;
+    transition: .2s all linear;
+}
+.mobile-services-grid a:hover{
+    background-color: var(--color-dark2);
+    color: var(--color-yellow1);
+}
+.mobile-services-grid img {
+    width: 36px;
+    height: 36px;
 }
 
-.mobile-services-grid img {
-    width: 26px;
-    height: 26px;
-}
+/* .mobile-menu-panel::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/mobile-menu-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+      width: 100%;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 100%;
+} */
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1200px) {
@@ -1269,30 +1306,16 @@ top: 80%;
 /* blog section  */
 
 /* scoped to the blog card's cover image only — avatar image untouched */
-.blog-card-media {
-    position: relative;
+.blog-card-media{
     overflow: hidden;
 }
-.blog-card-media img {
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
+.blog-card .blog-card-media img {
+    transition: .3s all linear;
 }
 .blog-card:hover .blog-card-media img {
     transform: scale(1.05);
 }
 /* subtle gradient fade instead of a harsh brightness darken — reads more premium */
-.blog-card-media::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(11, 12, 11, 0) 55%, rgba(11, 12, 11, 0.35) 100%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-}
-.blog-card:hover .blog-card-media::after {
-    opacity: 1;
-}
 
 
 /* band book bg  */

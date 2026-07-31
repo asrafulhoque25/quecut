@@ -1,0 +1,31 @@
+<svg width="390" height="172" viewBox="0 0 390 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_446_89728)">
+<mask id="mask0_446_89728" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="0" width="385" height="497">
+<path d="M211.045 330.452C272.131 323.471 314.098 269.016 314.098 193.617C314.098 112.633 266.069 55.8511 197.522 55.8511C128.975 55.8511 80.9458 112.633 80.9458 193.617C80.9458 278.79 126.177 328.125 244.619 371.875C330.419 403.99 395.235 428.192 395.235 496.144H329.953C329.953 472.873 289.85 459.841 207.781 427.726C68.3555 373.272 11 298.803 11 193.617C11 80.0533 87.9403 0 197.522 0C307.104 0 384.044 80.0533 384.044 193.617C384.044 270.878 348.605 332.78 291.249 363.963L211.045 330.452Z" fill="url(#paint0_linear_446_89728)"/>
+</mask>
+<g mask="url(#mask0_446_89728)">
+<line x1="47.3754" y1="-12.5145" x2="47.3754" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="89.6722" y1="-12.5145" x2="89.6723" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="131.969" y1="-12.5145" x2="131.969" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="216.563" y1="-12.5145" x2="216.563" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="258.86" y1="-12.5145" x2="258.86" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="301.157" y1="-12.5145" x2="301.157" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="343.453" y1="-12.5145" x2="343.453" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="174.266" y1="-12.5145" x2="174.266" y2="371.679" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="387.195" y1="31.8573" x2="3.00168" y2="31.8573" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="387.195" y1="74.1539" x2="3.00168" y2="74.1539" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="387.195" y1="116.45" x2="3.00168" y2="116.45" stroke="#EEF3EE" stroke-width="0.625723"/>
+<line x1="387.195" y1="158.747" x2="3.00168" y2="158.747" stroke="#EEF3EE" stroke-width="0.625723"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_446_89728" x1="-14.351" y1="193.845" x2="203.192" y2="459.932" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CDCDCD"/>
+<stop offset="0.558995" stop-color="#636363"/>
+<stop offset="1" stop-color="#313131"/>
+</linearGradient>
+<clipPath id="clip0_446_89728">
+<rect width="390" height="172" fill="white"/>
+</clipPath>
+</defs>
+</svg>

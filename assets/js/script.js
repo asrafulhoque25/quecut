@@ -399,9 +399,9 @@ document.addEventListener('DOMContentLoaded', () => {
     shapes.forEach((shape) => {
         const section = shape.closest('section');
         gsap.set(shape, {
-            rotation: -200,
+            rotation: -50,
             rotationY: -20,
-            scale: 0.85,
+            scale: 1,
             transformPerspective: 1200,
         });
  
