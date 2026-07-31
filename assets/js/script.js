@@ -460,6 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // faq section start
+// faq section start
 
 function initFAQ(section) {
   const faqItems = section.querySelectorAll('.faq-item');
@@ -473,7 +474,9 @@ function initFAQ(section) {
     if (!trigger) return;
 
     if (iconClose) {
-      iconClose.style.transition = 'transform 0.5s ease-in-out';
+      // matches the 0.6s / cubic-bezier(0.65, 0, 0.35, 1) transition on .faq-content
+      // so the arrow rotation and the panel opening finish in sync
+      iconClose.style.transition = 'transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)';
     }
 
     trigger.addEventListener('click', () => {
@@ -515,32 +518,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ(section);
   });
 });
-
-// Home Services FAQ
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.home-services-faq').forEach(section => {
-    initFAQGrid(section);
-    initFAQ(section);
-  });
-});
-
-
-// Real Estate Agency FAQ
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.realestate-agency-faq').forEach(section => {
-    initFAQGrid(section);
-    initFAQ(section);
-  });
-});
-
-
-
-
-
-
-
-
-
 
 //blog  section
 
@@ -752,3 +729,38 @@ if (typeof Draggable !== 'undefined') {
         updateClip();
     });
 }
+
+
+
+// ================= PROCESS TIMELINE (mobile): line starts/ends exactly at dot centers =================
+(function () {
+    function sizeProcessTimelines() {
+        document.querySelectorAll('.process-timeline').forEach((container) => {
+            const line = container.querySelector('.process-timeline-line');
+            const dots = container.querySelectorAll('.process-timeline-dot');
+            if (!line || dots.length < 2) return;
+ 
+            const firstDot = dots[0];
+            const lastDot = dots[dots.length - 1];
+ 
+            const containerTop = container.getBoundingClientRect().top;
+            const firstCenter = firstDot.getBoundingClientRect().top + firstDot.offsetHeight / 2 - containerTop;
+            const lastCenter = lastDot.getBoundingClientRect().top + lastDot.offsetHeight / 2 - containerTop;
+ 
+            line.style.top = firstCenter + 'px';
+            line.style.height = Math.max(0, lastCenter - firstCenter) + 'px';
+        });
+    }
+ 
+    document.addEventListener('DOMContentLoaded', sizeProcessTimelines);
+ 
+    // card illustrations are images — their load can shift card height after
+    // the initial DOMContentLoaded measurement, so re-measure once everything's in
+    window.addEventListener('load', sizeProcessTimelines);
+ 
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(sizeProcessTimelines, 200);
+    });
+})();

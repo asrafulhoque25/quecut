@@ -38,6 +38,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --tracking-wide: 0.025em;
     --radius-lg: 0.5rem;
@@ -1424,6 +1425,10 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
@@ -2235,6 +2240,11 @@
   .md\:mt-25 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 25);
+    }
+  }
+  .md\:mb-2 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 2);
     }
   }
   .md\:mb-4 {
@@ -4112,6 +4122,10 @@ html {
 }
 .cta-radial-gray {
   background: radial-gradient( 96.17% 158.78% at 50% 148.47%, rgba(105, 107, 105, 0.00) 77.54%, rgba(70, 71, 70, 0.65) 92.03%, var(--color-dark3, #232423) 100% );
+}
+.faq-content {
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .blog-card-media {
   position: relative;
