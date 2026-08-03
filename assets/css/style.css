@@ -47,6 +47,7 @@
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -220,6 +221,9 @@
   }
   .relative {
     position: relative;
+  }
+  .static {
+    position: static;
   }
   .sticky {
     position: sticky;
@@ -452,6 +456,9 @@
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -587,6 +594,9 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
@@ -691,6 +701,9 @@
   }
   .max-w-\[992px\] {
     max-width: 992px;
+  }
+  .max-w-\[1050px\] {
+    max-width: 1050px;
   }
   .max-w-full {
     max-width: 100%;
@@ -1105,6 +1118,9 @@
   .bg-\[linear-gradient\(180deg\,_\#0B0C0B_0\%\,_\#151615_101\.89\%\)\] {
     background-image: linear-gradient(180deg, #0B0C0B 0%, #151615 101.89%);
   }
+  .bg-\[linear-gradient\(180deg\,_\#0B0C0B_65\.86\%\,_\#9EA19E_100\%\)\] {
+    background-image: linear-gradient(180deg, #0B0C0B 65.86%, #9EA19E 100%);
+  }
   .bg-\[linear-gradient\(180deg\,_\#52D6DA_0\%\,_\#008589_100\%\)\] {
     background-image: linear-gradient(180deg, #52D6DA 0%, #008589 100%);
   }
@@ -1348,6 +1364,9 @@
   }
   .text-left {
     text-align: left;
+  }
+  .text-start {
+    text-align: start;
   }
   .font-\[\'Fira_Sans\'\] {
     font-family: 'Fira Sans';
@@ -1648,11 +1667,17 @@
   .\[--card-accent\:\#00AAFF\] {
     --card-accent: #00AAFF;
   }
+  .\[--card-accent\:\#00CD0D\] {
+    --card-accent: #00CD0D;
+  }
   .\[--card-accent\:\#00E5D4\] {
     --card-accent: #00E5D4;
   }
   .\[--card-accent\:\#3DDC46\] {
     --card-accent: #3DDC46;
+  }
+  .\[--card-accent\:\#8A50FF\] {
+    --card-accent: #8A50FF;
   }
   .\[--card-accent\:\#9B6BFF\] {
     --card-accent: #9B6BFF;
@@ -1666,11 +1691,17 @@
   .\[--card-accent\:\#D2F234\] {
     --card-accent: #D2F234;
   }
+  .\[--card-accent\:\#ECD540\] {
+    --card-accent: #ECD540;
+  }
   .\[--card-accent\:\#FF00DD\] {
     --card-accent: #FF00DD;
   }
   .\[--card-accent\:\#FF3EDB\] {
     --card-accent: #FF3EDB;
+  }
+  .\[--card-accent\:\#FF5E58\] {
+    --card-accent: #FF5E58;
   }
   .\[--card-accent\:\#FF6A00\] {
     --card-accent: #FF6A00;
@@ -1863,9 +1894,19 @@
       margin-top: calc(var(--spacing) * 6);
     }
   }
+  .sm\:mt-8 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 8);
+    }
+  }
   .sm\:mt-20 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:mb-2\.5 {
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 2.5);
     }
   }
   .sm\:mb-3 {
@@ -1946,6 +1987,11 @@
   .sm\:w-14 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 14);
+    }
+  }
+  .sm\:w-16 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 16);
     }
   }
   .sm\:w-20 {
@@ -2184,6 +2230,11 @@
       font-size: 22px;
     }
   }
+  .sm\:text-\[24px\] {
+    @media (width >= 40rem) {
+      font-size: 24px;
+    }
+  }
   .sm\:text-\[28px\] {
     @media (width >= 40rem) {
       font-size: 28px;
@@ -2244,6 +2295,11 @@
       margin-top: calc(var(--spacing) * 8);
     }
   }
+  .md\:mt-12 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 12);
+    }
+  }
   .md\:mt-14 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 14);
@@ -2257,6 +2313,11 @@
   .md\:mb-2 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 2);
+    }
+  }
+  .md\:mb-3 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 3);
     }
   }
   .md\:mb-4 {
@@ -2372,6 +2433,16 @@
   .md\:grid-cols-12 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
     }
   }
   .md\:gap-1\.5 {

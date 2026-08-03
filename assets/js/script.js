@@ -764,3 +764,43 @@ if (typeof Draggable !== 'undefined') {
         resizeTimer = setTimeout(sizeProcessTimelines, 200);
     });
 })();
+
+
+
+
+// video start on hover 
+
+document.querySelectorAll('.portfolio-card').forEach((card) => {
+  const video  = card.querySelector('.card-video');
+  const poster = card.querySelector('.card-poster');
+  if (!video) return;
+
+  let loaded = false;
+
+  const playVideo = () => {
+    if (!loaded) {            // prothom hover e load hobe — page fast thakbe
+      video.load();
+      loaded = true;
+    }
+    const p = video.play();
+    if (p) p.catch(() => {});
+
+    gsap.to(video,  { opacity: 1, duration: 0.4, ease: 'power2.out' });
+    gsap.to(poster, { opacity: 0, duration: 0.4, ease: 'power2.out' });
+  };
+
+  const stopVideo = () => {
+    gsap.to(video, {
+      opacity: 0,
+      duration: 0.35,
+      ease: 'power2.inOut',
+      onComplete: () => { video.pause(); video.currentTime = 0; }
+    });
+    gsap.to(poster, { opacity: 1, duration: 0.35, ease: 'power2.inOut' });
+  };
+
+  card.addEventListener('mouseenter', playVideo);
+  card.addEventListener('mouseleave', stopVideo);
+  card.addEventListener('focusin',  playVideo);  
+  card.addEventListener('focusout', stopVideo);
+});
