@@ -460,66 +460,181 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // faq section start
-// faq section start
+
+
+
 
 function initFAQ(section) {
-  const faqItems = section.querySelectorAll('.faq-item');
-  if (faqItems.length === 0) return;
+const faqItems = section.querySelectorAll('.faq-item');
+if (!faqItems.length) return;
 
-  faqItems.forEach(item => {
-    const trigger   = item.querySelector('.faq-trigger');
-    const content   = item.querySelector('.faq-content');
-    const border    = item.querySelector('.faq-border');
-    const iconClose = item.querySelector('.icon-close');
-    if (!trigger) return;
+faqItems.forEach(item => {
+const trigger = item.querySelector('.faq-trigger');
+const content = item.querySelector('.faq-content');
+const icon = item.querySelector('.icon-close');
 
-    if (iconClose) {
-      // matches the 0.6s / cubic-bezier(0.65, 0, 0.35, 1) transition on .faq-content
-      // so the arrow rotation and the panel opening finish in sync
-      iconClose.style.transition = 'transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)';
-    }
+if (!trigger || !content) return;
 
-    trigger.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
-
-      // Close any other open item in this same FAQ list
-      const siblingItems = section.querySelectorAll('.faq-item');
-
-      siblingItems.forEach(other => {
-        if (other !== item && other.classList.contains('active')) {
-          other.classList.remove('active');
-          const oc = other.querySelector('.faq-content');
-          const ob = other.querySelector('.faq-border');
-          const oC = other.querySelector('.icon-close');
-          if (oc) oc.style.maxHeight = '0';
-          if (ob) ob.classList.add('hidden');
-          if (oC) oC.style.transform = 'rotate(0deg)';
-        }
-      });
-
-      if (isOpen) {
-        item.classList.remove('active');
-        if (content)   content.style.maxHeight = '0';
-        if (border)    border.classList.add('hidden');
-        if (iconClose) iconClose.style.transform = 'rotate(0deg)';
-      } else {
-        item.classList.add('active');
-        if (content)   content.style.maxHeight = content.scrollHeight + 'px';
-        if (border)    border.classList.remove('hidden');
-        if (iconClose) iconClose.style.transform = 'rotate(180deg)'; // arrow flips upside-down when open
-      }
-    });
-  });
+if (icon) {
+icon.style.transition =
+'transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)';
 }
 
-// Quecut FAQ
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.quecut-faq').forEach(section => {
-    initFAQ(section);
-  });
+trigger.addEventListener('click', () => {
+const isOpen = item.classList.contains('active');
+
+// Close all other FAQs
+faqItems.forEach(other => {
+if (other !== item && other.classList.contains('active')) {
+other.classList.remove('active');
+
+other.classList.remove('border', 'border-[#A4DF00]/30');
+
+const otherContent = other.querySelector('.faq-content');
+const otherIcon = other.querySelector('.icon-close');
+
+if (otherContent) {
+otherContent.style.maxHeight = '0';
+}
+
+if (otherIcon) {
+otherIcon.style.transform = 'rotate(0deg)';
+}
+}
 });
 
+if (isOpen) {
+// Close current
+item.classList.remove('active');
+item.classList.remove('border', 'border-[#A4DF00]/30');
+
+content.style.maxHeight = '0';
+
+if (icon) {
+icon.style.transform = 'rotate(0deg)';
+}
+} else {
+// Open current
+item.classList.add('active');
+item.classList.add('border', 'border-[#A4DF00]/30');
+
+content.style.maxHeight = content.scrollHeight + 'px';
+
+if (icon) {
+icon.style.transform = 'rotate(180deg)';
+}
+}
+});
+});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('.quecut-faq').forEach(section => {
+initFAQ(section);
+});
+});
+
+
+
+
+
+
+
+
+
 //blog  section
+
+
+
+/* ============================
+   BLOG FILTER + SEARCH + LOAD MORE
+   ============================ */
+(function () {
+    const grid = document.getElementById('blogGrid');
+    if (!grid) return;
+
+    const items       = Array.from(grid.querySelectorAll('.blog-item'));
+    const tabs        = Array.from(document.querySelectorAll('.blog-tab-btn'));
+    const searchInput = document.getElementById('blogSearch');
+    const loadMoreBtn = document.getElementById('blogLoadMore');
+    const loadMoreWrap= document.getElementById('blogLoadMoreWrap');
+    const emptyMsg    = document.getElementById('blogEmpty');
+
+    const STEP    = 6;      // koto gula card ekbare dekhabe
+    let visible   = STEP;
+    let category  = 'all';
+    let query     = '';
+
+    function matches(item) {
+        const cats  = (item.dataset.category || '').toLowerCase().split(/\s+/);
+        const okCat = category === 'all' || cats.includes(category);
+        if (!okCat) return false;
+
+        if (!query) return true;
+        const titleEl = item.querySelector('.blog-title');
+        const title   = titleEl ? titleEl.textContent.toLowerCase() : '';
+        return title.includes(query);
+    }
+
+    function render() {
+        const matched = items.filter(matches);
+
+        items.forEach(item => {
+            item.classList.add('hidden');
+            item.classList.remove('is-entering');
+        });
+
+        matched.slice(0, visible).forEach(item => {
+            item.classList.remove('hidden');
+            item.classList.add('is-entering');
+        });
+
+        // empty state
+        emptyMsg.classList.toggle('hidden', matched.length !== 0);
+
+        // load more button
+        loadMoreWrap.classList.toggle('hidden', matched.length <= visible);
+    }
+
+    // ---- tab click ----
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            category = tab.dataset.filter;
+            visible  = STEP;
+            render();
+        });
+    });
+
+    // ---- search (debounced) ----
+    if (searchInput) {
+        let timer;
+        const runSearch = () => {
+            query   = searchInput.value.trim().toLowerCase();
+            visible = STEP;
+            render();
+        };
+        searchInput.addEventListener('input', () => {
+            clearTimeout(timer);
+            timer = setTimeout(runSearch, 200);
+        });
+        searchInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter') { e.preventDefault(); runSearch(); }
+        });
+    }
+
+    // ---- load more ----
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', e => {
+            e.preventDefault();
+            visible += STEP;
+            render();
+        });
+    }
+
+    render();
+})();
 
 
 // document.addEventListener('DOMContentLoaded', () => {

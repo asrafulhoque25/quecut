@@ -1,0 +1,3092 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packging Design</title>
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+ <!-- navbar start -->
+    <header class="navbar">
+        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
+            <div class="navbar-inner">
+
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/quecut-logo.svg" alt="Quecut" class="img-fluid">
+                    </a>
+                </div>
+
+                <!-- DESKTOP MENU (hidden on mobile, structure kept class-free for WP) -->
+                <nav class="navbar-menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Services
+                                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="logo-design.html">
+                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
+                                            class="dropdown-icon">
+                                        <span>Logo design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="brand-identity-design.html">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="packaging-design.html">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="print-design.html">
+                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Print design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="illustration-design.html">
+                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Illustration</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-media-design.html">
+                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="video-editing-service.html">
+                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
+                                            class="dropdown-icon">
+                                        <span>Video editing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="navbar-btn z-6">
+                    <a href="contact.html" class="btn-getsample font-fira">
+                        <span class="btn-text-wipe btn-text-wipe--navbar">Get Free Sample</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggle" aria-label="Open Menu">
+                    <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" fill="#DDE3DD" />
+                        <rect y="16" width="32" height="2" fill="#DDE3DD" />
+                    </svg>
+
+
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MOBILE OFF-CANVAS MENU (separate structure, matches Figma mobile design) -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-track">
+
+                <!-- panel 1: main menu -->
+                <div class="mobile-menu-panel mobile-menu-panel-main">
+                    <div class="mobile-menu-top">
+                        <span class="mobile-menu-heading">Menu</span>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu-expand" data-panel="services">
+                                Services
+                                <span class="mobile-menu-plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn-getsample mobile-menu-btn">Get Free Sample</a>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+                <!-- panel 2: services grid -->
+                <div class="mobile-menu-panel mobile-menu-panel-services">
+                    <div class="mobile-menu-top">
+                        <button class="mobile-menu-back" type="button">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6H15M1 6L6 1M1 6L6 11" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Back
+                        </button>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <span class="mobile-menu-heading mobile-services-heading">Services</span>
+
+                    <div class="mobile-services-grid">
+                                    <a href="logo-design-service.html">
+                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
+                                            class="dropdown-icon">
+                                        <span>Logo design</span>
+                                    </a>
+                                    <a href="brand-identity-design.html">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                    <a href="packaging-design.html">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                    <a href="print-design.html">
+                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Print design</span>
+                                    </a>
+                                    <a href="illustration-design.html">
+                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Illustration</span>
+                                    </a>
+                                    <a href="social-media-design.html">
+                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                    <a href="video-editing-service.html">
+                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
+                                            class="dropdown-icon">
+                                        <span>Video editing</span>
+                                    </a>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                    </div>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- navbar end -->
+
+
+
+    <!-- sub banner section start -->
+    <section
+        class="sub-banner  overflow-hidden relative z-20 xl:min-h-165 sm:py-20 pt-9 lg:py-37.75 xl:py-34 md:rounded-2xl bg-[linear-gradient(180deg,#0B0C0B_0%,#0B0C0B_13.13%,#232423_88.9%,rgba(120,120,120,0.2)_101.89%)]">
+
+        <div
+            class="choose-section-shape2 md:block hidden absolute xl:left-0 lg:-left-[160px] -left-[130px] bottom-0 origin-bottom will-change-transform -z-10">
+            <img src="assets/images/subbanner-shape.svg" class="lg:max-w-full w-full max-w-[80%]" alt="shape">
+        </div>
+
+        <div class="container">
+            <div class="lg:max-w-185 max-w-130 w-full mx-auto">
+                <div class="flex flex-col gap-3 items-center">
+                    <!-- badge -->
+                    <div
+                        class="bg-[linear-gradient(to_right,#D5FF02_0%,#A8C91A_5%,#666666_25%,#666666_100%)] rounded-full p-px inline-flex w-fit">
+                        <div
+                            class="inline-flex w-fit items-center gap-2   bg-[#0B0C0B]  rounded-full px-2 sm:px-4 sm:py-1 py-1.5">
+                            <img src="assets/images/quecut-trust-icon.svg" class="img-fluid" alt="trust icon">
+                            <span
+                                class="text-yellow1 font-fira xl:text-base lg:text-sm sm:text-xs text-[10px] font-semibold leading-[150%] uppercase">Packaging
+                                design services</span>
+                        </div>
+                    </div>
+
+
+                    <!-- title -->
+                    <h1
+                        class="text-[36px] text-center sm:text-[56px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
+                        Packaging design services that sell on sight.
+                    </h1>
+
+                    <!-- description -->
+                    <p
+                        class=" text-dark7 text-center xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm font-normal leading-[150%]">
+                        Shelf-ready, print-ready packaging and label design — from stickers and pouches to boxes,
+                        bottles, and pharma. Accurate dielines your printer will love, standout design that moves
+                        product, and files you fully own.
+                    </p>
+
+                    <!-- buttons -->
+                    <div class="flex items-center lg:gap-4 md:gap-3 sm:gap-2 gap-1 flex-wrap md:mt-8 sm:mt-6 mt-3">
+
+                        <!-- outer anchor is now the single hover trigger for BOTH icon reveal + text wipe -->
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Get free sample">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13791)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13791">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13951)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13951">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Get Free Sample</span>
+                            </span>
+                        </a>
+
+                        <a href="#"
+                            class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                            <span class="btn-text-wipe btn-text-wipe--outline">See Pricing</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sm:hidden flex justify-center w-full mt-8">
+                    <img src="assets/images/mobile-service-banner-image.svg" class="max-w-[400px] w-full"
+                        alt="mobile service banner">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sub banner section end -->
+
+
+
+
+    <!-- achievements start -->
+    <section class="achievements-section py-6 bg-[#0B0C0B] overflow-hidden">
+        <div class="achievements-slider splide" aria-label="Achievements">
+            <div class="splide__track overflow-visible">
+                <ul class="splide__list flex items-stretch">
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Rose Neal</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Google</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Meta</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Adobe</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Aversan</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Rose Neal</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Google</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Meta</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Adobe</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Aversan</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- achievements end -->
+
+
+
+
+
+
+    <!-- brand system section start -->
+    <section class="brand-system-section section-padding bg-[#0B0C0B] overflow-hidden">
+        <div class="container">
+
+            <!-- section title -->
+            <div class="max-w-248 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                    Why packaging design matters
+                </h2>
+                <p
+                    class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                    Packaging is more than protection — it's your brand's first impression. A well-designed package
+                    grabs attention, builds trust, communicates your product's value, and influences buying decisions.
+                    In today's competitive market, great packaging can be the difference between being noticed and
+                    being overlooked.
+                </p>
+            </div>
+
+            <!-- cards grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 md:gap-4  gap-3">
+
+                <!-- ===== CARD 1: Strong first impression ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#5F7200_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#B4D700]">
+                    <div class="relative z-10">
+                        <img src="assets/images/pacaking-brand-system-1.svg" class="img-fluid sm:w-auto w-10"
+                            alt="brand system">
+                        <h3
+                            class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] capitalize md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">
+                            Creates a strong first impression</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">
+                            Eye-catching packaging attracts customers
+                            and encourages them to pick your product
+                            over competitors.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 2: Builds brand recognition ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#7B3300_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF7A00]">
+                    <div class="relative z-10">
+                        <img src="assets/images/pacaking-brand-system-2.svg" class="img-fluid sm:w-auto w-10"
+                            alt="brand system">
+                        <h3
+                            class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] capitalize md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">
+                            Builds brand recognition</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Consistent
+                            colors, typography, and visual
+                            identity make your brand memorable and
+                            increase customer loyalty.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 3: Communicates product information ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#00537C_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#29B6F6]">
+                    <div class="relative z-10">
+                        <img src="assets/images/pacaking-brand-system-3.svg" class="img-fluid sm:w-auto w-10"
+                            alt="brand system">
+                        <h3
+                            class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] capitalize md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">
+                            Communicates product information</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Clear and
+                            organized packaging helps
+                            customers quickly understand features,
+                            ingredients, usage instructions, and benefits.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 4: Increases sales ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#7C6B00_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FFE600]">
+                    <div class="relative z-10">
+                        <img src="assets/images/pacaking-brand-system-4.svg" class="img-fluid sm:w-auto w-10"
+                            alt="brand system">
+                        <h3
+                            class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] capitalize md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">
+                            Increases sales</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">
+                            Professional packaging enhances perceived value, making customers more confident in their
+                            purchase decisions.</p>
+                    </div>
+                </div>
+
+
+                <!-- ===== CARD 5: Supports sustainable branding ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#790069_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF3EDB]">
+                    <div class="relative z-10">
+                        <img src="assets/images/pacaking-brand-system-5.svg" class="img-fluid sm:w-auto w-10"
+                            alt="brand system">
+                        <h3
+                            class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] capitalize md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">
+                            Supports sustainable branding</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">
+                            Eco-friendly packaging demonstrates your
+                            commitment to the environment and appeals
+                            to modern, conscious consumers.</p>
+                    </div>
+                </div>
+
+
+
+                <!-- ===== CARD 6: Protects your product ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#790400_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF6259]">
+                    <div class="relative z-10">
+                        <img src="assets/images/pacaking-brand-system-6.svg" class="img-fluid sm:w-auto w-10"
+                            alt="brand system">
+                        <h3
+                            class="text-white font-fira text-2xl sm:text-[28px] font-medium leading-[110%] capitalize md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">
+                            Protects your product</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Functional
+                            packaging keeps products safe
+                            during shipping, handling, and storage while
+                            maintaining product quality.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- stats title -->
+            <div class="max-w-184 mx-auto text-center mt-8 sm:mt-12 lg:mt-16 mb-6 sm:mb-8 lg:mb-12">
+                <h3
+                    class="text-white text-center font-fira text-2xl sm:text-[28px] font-normal leading-[110%] lg:mb-6 mb-4 ">
+                    And the numbers back it up
+                </h3>
+            </div>
+
+            <!-- stats grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 md:gap-4 gap-3 mb-4">
+
+                <!-- ===== STAT 1 ===== -->
+                <div class="p-4 bg-dark2">
+                    <div class="relative z-10">
+                        <span
+                            class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-yellow1 mb-3">Up
+                            To</span>
+                        <span
+                            class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-yellow1 mb-4">72%</span>
+                        <p
+                            class="text-dark8 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                            of shoppers say packaging design influences what they decide to buy.</p>
+                    </div>
+                </div>
+                <!-- ===== STAT 2 ===== -->
+                <div class="p-4 bg-dark2">
+                    <div class="relative z-10">
+                        <span
+                            class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-yellow1 mb-3">roughly</span>
+                        <span
+                            class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-yellow1 mb-4">1
+                            in 3</span>
+                        <p
+                            class="text-dark8 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                            purchase decisions are made at the shelf, on packaging alone.</p>
+                    </div>
+                </div>
+                <!-- ===== STAT 3 ===== -->
+                <div class="p-4 bg-dark2">
+                    <div class="relative z-10">
+                        <span
+                            class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-yellow1 mb-3">up
+                            to</span>
+                        <span
+                            class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-yellow1 mb-4">7
+                            in 10</span>
+                        <p
+                            class="text-dark8 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                            form their first impression of a brand from its packaging.</p>
+                    </div>
+                </div>
+                <!-- ===== STAT 4 ===== -->
+                <div class="p-4 bg-dark2">
+                    <div class="relative z-10">
+                        <span
+                            class="block font-fira font-black text-base uppercase tracking-[0.8px] leading-[110%] text-yellow1 mb-3">up
+                            to</span>
+                        <span
+                            class="block font-fira font-light text-[56px] sm:text-[64px] lg:text-[72px] leading-[110%] text-yellow1 mb-4">+30%</span>
+                        <p
+                            class="text-dark8 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                            sales lift is common after a strong packaging redesign.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- sources -->
+            <h3 class="text-white font-fira text-2xl sm:text-[28px] font-normal leading-[110%]  mb-2 md:mb-4 ">
+                Sources</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-0">
+
+                <div class="flex items-center gap-3 px-1 md:px-3 py-2 md:py-4 ">
+                    <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0"
+                        alt="">
+                    <span class="text-dark7 text-base sm:text-lg md:text-xl font-normal leading-[150%]">Ipsos / Paper &
+                        Packaging Board; </span>
+                </div>
+
+                <div class="flex items-center gap-3 px-1 md:px-3 py-2 md:py-4  ">
+                    <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0"
+                        alt="">
+                    <span class="text-dark7 text-base sm:text-lg md:text-xl font-normal leading-[150%]">Retail
+                        shopper-behaviour research</span>
+                </div>
+
+                <div class="flex items-center gap-3 px-1 md:px-3 py-2 md:py-4  ">
+                    <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0"
+                        alt="">
+                    <span class="text-dark7 text-base sm:text-lg md:text-xl font-normal leading-[150%]">Verify before
+                        publishing.</span>
+                </div>
+
+                <div class="flex items-center gap-3 px-1 md:px-3 py-2 md:py-4  ">
+                    <img src="assets/images/source-check.svg" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-auto lg:h-auto shrink-0"
+                        alt="">
+                    <span class="text-dark7 text-base sm:text-lg md:text-xl font-normal leading-[150%]">Packaging
+                        redesign case data. Figures are indicative</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- brand system section end -->
+
+
+
+
+
+    <!-- brand services showcase section start -->
+    <section
+        class="brand-showcase-section section-padding bg-[linear-gradient(180deg,_#151615_65.86%,_#9EA19E_100%)] overflow-hidden">
+        <div class="container">
+
+            <!-- section title -->
+            <div class="max-w-248 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                    Every printed piece your brand needs
+                </h2>
+                <p
+                    class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                    From the card you hand across a table to the banner behind your booth, we design the whole range —
+                    business cards, flyers, brochures, and beyond. Every piece is original, on-brand, and set up to
+                    print clean at any print shop you choose to work with.
+                </p>
+            </div>
+            <!-- cards grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:mb-10 mb-6 md:mb-12">
+
+                <!-- ===== CARD 1: Sticker design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-1.webp" alt="Sticker design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Sticker design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Die-cut and custom
+                            stickers that get stuck everywhere.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 2: Food packaging design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-2.webp" alt="Food packaging design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Food packaging design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Pouches, cartons, and
+                            wraps that
+                            meet label rules.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 3: Hang tag design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-3.webp" alt="Hang tag design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Hang tag design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Swing tags that finish
+                            a product
+                            beautifully.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 4: Bottle label design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-4.webp" alt="Bottle label design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Hang tag design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Wrap and front labels
+                            shaped for the bottle.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 5: Label design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-5.webp" alt="Label design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Hang tag design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Product labels that
+                            read clearly and sell hard.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 6: Box packaging design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-6.webp" alt="Box packaging design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Hang tag design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Cartons and mailers
+                            with an unboxing moment.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 7: Cosmetic packaging design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-7.webp" alt="Cosmetic packaging design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Cosmetic packaging design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Wrap and front labels
+                            shaped for the bottle.</p>
+                    </div>
+                </a>
+                <!-- ===== CARD 8: Pharma packaging design ===== -->
+                <a href="#" class="portfolio-card relative block rounded-3xl overflow-hidden bg-white">
+                    <div>
+                        <img src="assets/images/packaging-printend-piece-8.webp" alt="Pharma packaging design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-b-xl bg-white sm:p-5 p-2.5">
+                        <h3
+                            class="text-[#0B0C0B] font-fira sm:text-xl text-lg lg:text-2xl font-medium leading-[110%] md:mb-2 mb-1">
+                            Pharma packaging design</h3>
+                        <p class="text-[#151615] sm:text-base text-sm font-normal leading-[150%]">Clear, compliant
+                            cartons for health products.</p>
+                    </div>
+                </a>
+
+            </div>
+            <!-- CTA -->
+            <div class="flex justify-center">
+                <a href="#" class="btn-cta flex items-center gap-0">
+                    <span
+                        class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                        aria-label="Get free sample">
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_391_13791)">
+                                    <path
+                                        d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_391_13791">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_391_13951)">
+                                    <path
+                                        d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                        fill="#73870E" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_391_13951">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                    </span>
+
+                    <span
+                        class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                        <span class="btn-text-wipe">Get a free quote</span>
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- brand services showcase section end -->
+
+
+
+
+    <!-- brand process section start -->
+    <section class="process-section lg:pt-24 md:pt-16 pt-12 bg-[#0B0C0B] overflow-hidden">
+        <div class="px-1">
+
+            <!-- section title -->
+            <div class="max-w-248 mx-auto text-center lg:mb-16 md:mb-14 sm:mb-12 mb-8 px-4">
+                <h2
+                    class="text-white text-center font-fira  text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                    Our packaging design process
+                </h2>
+            </div>
+
+            <!-- ================= DESKTOP / TABLET (absolute staggered layout, pixel-matched to design) ================= -->
+            <div class="hidden lg:block relative w-full aspect-[1920/890]">
+
+                <!-- connecting curve bg -->
+                <img src="assets/images/process-bgs.svg" class="absolute inset-0 w-full h-full z-0 top-[23%]" alt="">
+
+                <!-- ===== CARD 1: Brief & specs ===== -->
+                <div class="absolute z-10 left-[10.9375%] 2xl:top-[5.5506%] lg:top-[5%] xl:w-[24.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div class="max-w-[384px] w-full">
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Brief & specs</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Product, audience, printer specs, and
+                                dieline gathered up front.</p>
+                        </div>
+                        <img src="assets/images/packaging-design-process-1.svg" alt="Brief & specs"
+                            class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 1 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[22.031%] top-[43.258%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 1 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-[#D2F234] font-fira border-4 border-dark1 font-medium flex items-center justify-center left-[22.031%] top-[52.135%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    1</div>
+
+                <!-- ===== CARD 2: Concept & structure ===== -->
+                <div class="absolute z-10 left-[29.9%] top-[54.180%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div>
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Concept & structure</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Logo, color, type, and imagery explored and refined.</p>
+                        </div>
+                        <img src="assets/images/packaging-design-process-2.svg" alt="Concept & structure"
+                            class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 2 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[40.99%] top-[48.898%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 2 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[40.99%] top-[46.303%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    2</div>
+
+                <!-- ===== CARD 3: Dieline & artwork ===== -->
+                <div class="absolute z-10 left-[48.9%] 2xl:top-[3.5506%] lg:top-[-1%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div>
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Dieline & artwork</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Chosen concept built out accurately
+                                across every panel.</p>
+                        </div>
+                        <img src="assets/images/packaging-design-process-3.svg" alt="Dieline & artwork"
+                            class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 3 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[59.99%] top-[35.955%] h-[6.854%] -translate-x-1/2">
+                </div>
+                <!-- dot 3 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[59.99%] top-[46.404%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    3</div>
+
+                <!-- ===== CARD 4: Print-ready handoff ===== -->
+                <div class="absolute z-10 left-[67.9%] top-[59.180%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div class="">
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Print-ready handoff</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Production files, mockups, and a spec sheet delivered.</p>
+                        </div>
+                        <img src="assets/images/packaging-design-process-4.svg" alt="Print-ready handoff"
+                            class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 4 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[79.0%] top-[53.898%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 4 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[79.0%] top-[51.303%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    4</div>
+
+            </div>
+
+            <!-- ================= MOBILE / TABLET-DOWN (vertical timeline) ================= -->
+            <div
+                class="process-timeline lg:hidden relative pl-10 sm:pl-12 mt-8 lg:mt-0 max-w-[644px] w-full mx-auto pr-4">
+
+                <!-- vertical line — top/height are now set by JS to exactly match dot 1 → dot 4 centers -->
+                <div class="process-timeline-line absolute left-3.5 sm:left-3.75 w-px bg-[#D2F234]"></div>
+
+                <div class="flex flex-col gap-8 sm:gap-10">
+
+                    <!-- ===== STEP 1: Brief & specs ===== -->
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">1</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Brief & specs</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">Product,
+                                audience, printer specs, and
+                                dieline gathered up front.</p>
+                            <img src="assets/images/packaging-design-process-1.svg" alt="Brief & specs"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 2: Concept & structure ===== -->
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">2</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Concept & structure</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">
+                                Design directions explored on your exact structure.</p>
+                            <img src="assets/images/packaging-design-process-2.svg" alt="Concept & structure"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 3: Dieline & artwork ===== -->
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">3</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Dieline & artwork</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">We
+                                Chosen concept built out accurately across every panel.</p>
+                            <img src="assets/images/packaging-design-process-3.svg" alt="Dieline & artwork"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 4: Print-ready handoff ===== -->
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">4</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Print-ready handoff</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">Production files,
+                                mockups, and a spec sheet delivered.</p>
+                            <img src="assets/images/packaging-design-process-4.svg" alt="Rollout support"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- brand process section end -->
+
+
+
+    <!-- portfolio showcase start -->
+    <section class="portfolio-section section-padding bg-[linear-gradient(180deg,#151615_0%,#0B0C0B_101.89%)]">
+        <div class="px-4">
+
+            <!-- section title -->
+            <div class="max-w-[736px] mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-[#FFF] text-center  text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                    Packaging we've designed
+                </h2>
+            </div>
+
+            <!-- tabs (drag-scrollable on mobile) -->
+            <!-- cards grid -->
+            <div class="portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3 md:mb-12 sm:mb-10 mb-8">
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="brand-identity">
+                    <img src="assets/images/packing-design-showcase-1.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="brand-identity">
+                    <img src="assets/images/packing-design-showcase-2.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="marketing">
+                    <img src="assets/images/packing-design-showcase-3.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="web-design">
+                    <img src="assets/images/packing-design-showcase-4.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="packaging">
+                    <img src="assets/images/packing-design-showcase-5.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="social-media">
+                    <img src="assets/images/packing-design-showcase-6.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="social-media">
+                    <img src="assets/images/packing-design-showcase-7.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="social-media">
+                    <img src="assets/images/packing-design-showcase-8.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card relative rounded-[10.537px] overflow-hidden"
+                    data-category="social-media">
+                    <img src="assets/images/packing-design-showcase-9.webp" alt="Oraluxe Logo Design"
+                        class="w-full aspect-[4/3] object-cover">
+                    <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                        <span
+                            class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Oraluxe
+                            Logo Design</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- view full portfolio (reuses the existing magnetic + reveal-icon button component) -->
+            <div class="flex justify-center">
+                <a href="#" class="btn-cta flex items-center gap-0">
+                    <span
+                        class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                        aria-label="Get free sample">
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_391_13791)">
+                                    <path
+                                        d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_391_13791">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_391_13951)">
+                                    <path
+                                        d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                        fill="#73870E" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_391_13951">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                    </span>
+
+                    <span
+                        class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                        <span class="btn-text-wipe">View Full Portfolio</span>
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- portfolio showcase end -->
+
+
+
+    <!-- before/after section start -->
+    <section
+        class="before-after-section section-padding bg-[radial-gradient(54%_54%_at_50%_57.05%,#4A4C4A_0%,#151615_100%)]">
+        <div class=" max-w-248 mx-auto px-4">
+
+            <!-- section title -->
+            <div class="max-w-184 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-white font-fira  text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                    Before & After
+                </h2>
+                <p
+                    class="text-dark7  xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                    Drag to see a full rebrand — same company, a sharper, more consistent identity.
+                </p>
+            </div>
+
+            <!-- draggable before/after frame -->
+            <div class="rounded-xl  mb-3">
+                <div class="before-after-wrap relative w-full aspect-[16/9] rounded-xl overflow-hidden select-none">
+
+                    <!-- BEFORE badge -->
+                    <span
+                        class="absolute top-4 left-4 z-20 rounded-lg bg-[#FF6A00] text-dark8 font-fira font-black text-sm sm:text-base uppercase px-2.5 py-2">Before</span>
+                    <!-- AFTER badge -->
+                    <span
+                        class="absolute top-4 right-4 z-20 rounded-lg bg-yellow1 text-[#232A00] font-fira font-black text-sm sm:text-base uppercase px-2.5 py-2">After</span>
+
+                    <!-- BEFORE image (base layer, full width) -->
+                    <div class="img-wrap is-before absolute inset-0">
+                        <img src="assets/images/packaging-before.webp" loading="lazy" alt="Before rebrand"
+                            class="is-before-after absolute inset-0 w-full h-full object-cover object-[50%_40%] select-none pointer-events-none">
+                    </div>
+
+                    <!-- AFTER image (clipped overlay layer) -->
+                    <div class="img-wrap is-after absolute inset-0 flex flex-col justify-center items-end"
+                        style="clip-path: inset(0 50% 0 0);">
+                        <img src="assets/images/packaging-design-after.webp" loading="lazy" alt="After rebrand"
+                            class="is-before-after absolute inset-0 w-full h-full object-cover object-[50%_40%] select-none pointer-events-none">
+                    </div>
+
+                    <!-- draggable divider -->
+                    <div
+                        class="dragger absolute top-0 bottom-0 left-1/2 z-30 md:w-2 w-1 bg-white rounded-none flex items-center justify-around cursor-grab active:cursor-grabbing">
+                        <div
+                            class="dragger-inner absolute md:w-9 w-5 md:h-9 h-5 rounded-full bg-white  border-white flex items-center justify-center">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- stat card -->
+            <div class="flex flex-col items-start gap-6 self-stretch rounded-2xl p-4 bg-[#151615] xl:mb-6">
+                <div
+                    class="w-full flex items-center lg:gap-12 sm:gap-8 gap-4 rounded-xl px-4 py-2 bg-[linear-gradient(90deg,_#D2F234_0%,_#232423_7.06%,_#0B0C0B_100%)]">
+                    <span
+                        class="shrink-0 text-yellow1 text-center font-fira font-light text-[36px] sm:text-[42px] md:text-[56px] lg:text-[62px] xl:text-[96px] leading-[96%] capitalize">+38%</span>
+                    <span
+                        class="text-dark7   md:text-sm sm:text-xs text-[10px] lg:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%]">sell-through
+                        after Bloom's tea range moved to a bolder, shelf-first pouch design.</span>
+                </div>
+
+                <div>
+                    <h3
+                        class="text-white font-fira text-2xl sm:text-[32px] lg:text-[36px] font-normal leading-[110%] mb-4">
+                        A pouch that finally stood out
+                    </h3>
+                    <p
+                        class="text-[#DDE3DD]  text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[150%] mb-6">
+                        Bloom's tea blended into the shelf — muted, busy, and hard to read at arm's length. We rebuilt
+                        the pouch around one bold idea, a clear hierarchy, and a color system that pops in the aisle.
+                        Retail buyers noticed, and so did shoppers: sell-through rose 38% in the first two quarters.
+                    </p>
+
+
+                    <!-- view full portfolio (reuses the existing magnetic + reveal-icon button component) -->
+                    <div class="flex justify-start">
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Get free sample">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13791)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13791">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13951)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13951">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Read the case study</span>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- before/after section end -->
+
+
+
+    <!-- testimonials start -->
+    <section class="testimonials-section section-padding bg-dark1 overflow-hidden">
+        <div class="px-0">
+
+            <!-- section title -->
+            <div class="max-w-[736px] mx-auto text-center mb-6 sm:mb-8 lg:mb-12 px-4">
+                <h2
+                    class="text-[#FFF] text-center  text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                    What Our Clients Say
+                </h2>
+                <p
+                    class="text-[#DDE3DD] text-center xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%] sm:mt-4 mt-3">
+                    Don't just take our word for it. Here's what business owners around the world are saying about
+                    GraphicNomad.
+                </p>
+            </div>
+
+            <!-- testimonial marquee slider -->
+            <div class="testimonial-slider splide " aria-label="Client testimonials">
+                <div class="splide__track overflow-visible">
+                    <ul class="splide__list flex items-stretch">
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full min-h-[442px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,#D2F234_0%,#798C1E_100%)]">
+                                    <img src="assets/images/testimonial-author-1.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Leslie Alexander</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    CEO, TechStart Inc.</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut has been a game-changer for our startup. We get professional designs
+                                        delivered fast, and the unlimited revisions mean we always get exactly what we
+                                        need."</p>
+
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full min-h-[442px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,#FF6A00_0%,#994000_100%)]">
+                                    <img src="assets/images/testimonial-author-2.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Jane Cooper</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    TechNova Solutions</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut delivered outstanding designs for our startup right on time. The fast
+                                        revisions made it easy for us to quickly reach the final product we needed."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full min-h-[442px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,#0AF_0%,#069_100%)]">
+                                    <img src="assets/images/testimonial-author-3.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Kathryn Murphy</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    BrightWave Digital</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut helped us refresh our brand with creative ideas and flawless execution.
+                                        The entire process was smooth, fast, and highly professional."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full min-h-[442px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,_#F0D_0%,_#770067_100%)]">
+                                    <img src="assets/images/testimonial-author-1.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Leslie Alexander</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    CEO, TechStart Inc.</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut has been a game-changer for our startup. We get professional designs
+                                        delivered fast, and the unlimited revisions mean we always get exactly what we
+                                        need."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full min-h-[442px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,_#52D6DA_0%,_#008589_100%)]">
+                                    <img src="assets/images/testimonial-author-2.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Jane Cooper</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    TechNova Solutions</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut delivered outstanding designs for our startup right on time. The fast
+                                        revisions made it easy for us to quickly reach the final product we needed."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full min-h-[442px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,_#ECD540_0%,_#A89100_100%)]">
+                                    <img src="assets/images/testimonial-author-3.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Kathryn Murphy</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    BrightWave Digital</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut helped us refresh our brand with creative ideas and flawless execution.
+                                        The entire process was smooth, fast, and highly professional."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- testimonials end -->
+
+
+    <!-- Everything your printer needs -->
+    <section
+        class=" section-padding bg-[linear-gradient(180deg,#151615_3.91%,#0B0C0B_25.6%,#151615_94.75%,#232423_101.89%)] overflow-hidden">
+        <div class="container">
+            <!-- section title -->
+            <div class="max-w-184 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3">
+                    Everything your printer needs
+                </h2>
+            </div>
+
+
+            <div class=" bg-dark1">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                    <!-- ================= LEFT: content ================= -->
+                    <div class="lg:order-1 order-2 ">
+                        <h3
+                            class="text-white font-fira text-4xl sm:text-5xl font-normal leading-[110%] capitalize mb-4 sm:mb-6">
+                            Straight to press, no surprises
+                        </h3>
+
+                        <p
+                            class="text-[#EEF3EE]  xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%] mb-6 sm:mb-8">
+                            The difference between a smooth print run and an expensive reprint is in the setup. We hand
+                            over production files done right the first time — so nothing gets lost between design and
+                            press.
+                        </p>
+
+                        <div class="grid grid-cols-1  gap-y-3 sm:gap-y-4 mb-6 sm:mb-8 lg:mb-10">
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Correct
+                                    bleed & margins</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Dielines
+                                    & spot colors</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Print
+                                    method matched</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">PDF/X,
+                                    AI, packaged files (merged from Straight To Press)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= RIGHT: image ================= -->
+                    <div class="flex justify-center lg:justify-end lg:order-2 order-1">
+                        <img src="assets/images/packaging-design-your-printer-needs.png"
+                            alt="Brand book contents preview" class="w-full  h-auto object-contain">
+                    </div>
+
+                </div>
+            </div>
+            <!--  section start -->
+            <div class=" xl:mt-12 md:mt-8 mt-6">
+
+                <!-- feature cards grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6 gap-4">
+
+                    <!-- ===== CARD 1: Print-ready artwork ===== -->
+                    <div
+                        class="flex sm:flex-row flex-col items-start sm:gap-8 gap-5 rounded-2xl bg-[#151615] border-b border-[#4A4C4A] px-4 sm:px-8 sm:py-6 py-4">
+                        <img src="assets/images/packaging-printer-need-1.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
+                            alt="Print-ready artwork">
+                        <div>
+                            <h4
+                                class="text-[#EEF3EE] font-fira text-2xl sm:text-[28px] font-medium leading-[110%] mb-2">
+                                Print-ready artwork</h4>
+                            <p class="text-[#9EA19E]  text-lg sm:text-xl font-normal leading-[150%]">Correct bleed, safe
+                                zone, CMYK or Pantone spot colors.</p>
+                        </div>
+                    </div>
+                    <!-- ===== CARD 2: Accurate dieline ===== -->
+                    <div
+                        class="flex sm:flex-row flex-col items-start sm:gap-8 gap-5 rounded-2xl bg-[#151615] border-b border-[#4A4C4A] px-4 sm:px-8 sm:py-6 py-4">
+                        <img src="assets/images/packaging-printer-need-2.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
+                            alt="Print-ready artwork">
+                        <div>
+                            <h4
+                                class="text-[#EEF3EE] font-fira text-2xl sm:text-[28px] font-medium leading-[110%] mb-2">
+                                Accurate dieline</h4>
+                            <p class="text-[#9EA19E]  text-lg sm:text-xl font-normal leading-[150%]">Cut and fold lines
+                                on their own layer, ready to run.</p>
+                        </div>
+                    </div>
+                    <!-- ===== CARD 3: 3D mockups ===== -->
+                    <div
+                        class="flex sm:flex-row flex-col items-start sm:gap-8 gap-5 rounded-2xl bg-[#151615] border-b border-[#4A4C4A] px-4 sm:px-8 sm:py-6 py-4">
+                        <img src="assets/images/packaging-printer-need-3.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
+                            alt="3D mockups">
+                        <div>
+                            <h4
+                                class="text-[#EEF3EE] font-fira text-2xl sm:text-[28px] font-medium leading-[110%] mb-2">
+                                3D mockups</h4>
+                            <p class="text-[#9EA19E]  text-lg sm:text-xl font-normal leading-[150%]">3D mockups</p>
+                        </div>
+                    </div>
+                    <!-- ===== CARD 4: All file formats ===== -->
+                    <div
+                        class="flex sm:flex-row flex-col items-start sm:gap-8 gap-5 rounded-2xl bg-[#151615] border-b border-[#4A4C4A] px-4 sm:px-8 sm:py-6 py-4">
+                        <img src="assets/images/packaging-printer-need-4.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
+                            alt="All file formats">
+                        <div>
+                            <h4
+                                class="text-[#EEF3EE] font-fira text-2xl sm:text-[28px] font-medium leading-[110%] mb-2">
+                                All file formats</h4>
+                            <p class="text-[#9EA19E]  text-lg sm:text-xl font-normal leading-[150%]">Editable source
+                                plus PDF, AI, and EPS for production.</p>
+                        </div>
+                    </div>
+                    <!-- ===== CARD 5: Spec sheet ===== -->
+                    <div
+                        class="flex sm:flex-row flex-col items-start sm:gap-8 gap-5 rounded-2xl bg-[#151615] border-b border-[#4A4C4A] px-4 sm:px-8 sm:py-6 py-4">
+                        <img src="assets/images/packaging-printer-need-5.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
+                            alt="Spec sheet">
+                        <div>
+                            <h4
+                                class="text-[#EEF3EE] font-fira text-2xl sm:text-[28px] font-medium leading-[110%] mb-2">
+                                Spec sheet</h4>
+                            <p class="text-[#9EA19E]  text-lg sm:text-xl font-normal leading-[150%]">Dimensions, colors,
+                                materials, and finish notes.</p>
+                        </div>
+                    </div>
+                    <!-- ===== CARD 6: Full ownership ===== -->
+                    <div
+                        class="flex sm:flex-row flex-col items-start sm:gap-8 gap-5 rounded-2xl bg-[#151615] border-b border-[#151615] px-4 sm:px-8 sm:py-6 py-4">
+                        <img src="assets/images/packaging-printer-need-6.svg" class="img-fluid w-12 sm:w-14 lg:w-[66px]"
+                            alt="Full ownership">
+                        <div>
+                            <h4
+                                class="text-[#EEF3EE] font-fira text-2xl sm:text-[28px] font-medium leading-[110%] mb-2">
+                                Full ownership</h4>
+                            <p class="text-[#9EA19E]  text-lg sm:text-xl font-normal leading-[150%]">Original,
+                                trademark-ready artwork — entirely yours.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center xl:mt-12 md:mt-8 mt-6">
+                    <a href="#" class="btn-cta flex items-center gap-0">
+
+                        <span
+                            class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                            <span class="btn-text-wipe">see pricing</span>
+                        </span>
+                    </a>
+                </div>
+
+
+            </div>
+            <!--  section end -->
+
+        </div>
+    </section>
+    <!-- Everything your printer needs -->
+
+
+
+    <!-- brand pricing section start -->
+    <section class="brand-pricing-section section-padding bg-[linear-gradient(180deg,_#0B0C0B_0%,_#0B0C0B_88.76%,_#232423_101.89%)] overflow-hidden">
+        <div class="container">
+
+            <!-- section title -->
+            <div class="max-w-184 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] lg:text-[56px] font-normal leading-[110%] capitalize mb-3">
+                    Packaging design pricing
+                </h2>
+                <p
+                    class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                    Clear starting points — every project gets an exact quote after a short brief.
+                </p>
+            </div>
+
+            <!-- pricing cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mb-6 sm:mb-8 lg:mb-12">
+
+                <!-- ===================== ESSENTIAL ===================== -->
+                <div class="flex flex-col rounded-xl border border-[#9EA19E] sm:p-8 p-5">
+                    <div class=" mb-6">
+                        <img src="assets/images/brand-package-1.svg" class="img-fluid" alt="packages">
+                    </div>
+
+                    <span class="text-[#9EA19E]  text-base font-normal leading-[150%] mb-2">Label & sticker</span>
+
+                    <div class="flex items-end gap-1.5 mb-6">
+                        <span class="text-[#EEF3EE] font-fira text-4xl sm:text-5xl font-light leading-[110%]">from $199</span>
+                        <span class="text-[#9EA19E]  text-base font-normal leading-[150%] mb-1">/ design</span>
+                    </div>
+
+                    <ul class="flex flex-col gap-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">One label or sticker</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Print-ready dieline</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Mockup + source files</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Two revision rounds</span>
+                        </li>
+                    </ul>
+
+                    <div class="inline-flex mt-auto">
+                        <a href="#"
+                            class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-[#DDE3DD] md:px-8 md:py-4 px-5 py-3 text-base text-[#DDE3DD] font-semibold uppercase whitespace-nowrap"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                            <span class="btn-text-wipe btn-text-wipe--outline ">Choose label</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ===================== COMPLETE (MOST POPULAR) ===================== -->
+                <div class="rounded-2xl border border-yellow1 overflow-hidden flex flex-col">
+
+                    <div class="rounded-t-2xl bg-[#4A4C4A] text-center py-1.5 px-4">
+                        <span
+                            class="text-yellow1 font-fira text-xs font-black uppercase tracking-[0.6px] leading-[110%]">Most
+                            Popular</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col flex-1 sm:p-8 p-5 bg-[linear-gradient(180deg,_#121211_0%,_#4B4B47_87.25%,_rgba(120,120,120,0.20)_100%)]">
+
+                        <div class=" mb-6">
+                            <img src="assets/images/brand-package-2.svg" class="img-fluid" alt="packages">
+                        </div>
+                        <span class="text-yellow1  text-base font-normal leading-[150%] mb-2">Full package</span>
+
+                        <div class="flex items-end gap-1.5 mb-6">
+                            <span class="text-white font-fira text-4xl sm:text-5xl font-light leading-[110%]">from $499</span>
+                            <span class="text-[#9EA19E]  text-base font-normal leading-[150%] mb-1">/ package</span>
+                        </div>
+
+                        <ul class="flex flex-col gap-3 mb-8">
+                            <li class="flex items-center gap-3">
+                                <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Box, pouch, or bottle</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Full artwork + dieline</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">3D mockups</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Spec sheet + all formats</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-auto flex items-center gap-3 w-full">
+                            <a href="#" class="btn-cta flex items-center gap-0 w-full">
+                                <span
+                                    class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                    aria-label="Get free sample"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                    <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_391_13791)">
+                                                <path
+                                                    d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                    fill="black"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_391_13791">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </span>
+                                    <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_391_13951)">
+                                                <path
+                                                    d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                    fill="#73870E"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_391_13951">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </span>
+                                </span>
+
+                                <span
+                                    class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap w-full"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                    <span class="btn-text-wipe">Choose package</span>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===================== STRATEGY + IDENTITY ===================== -->
+                <div class="flex flex-col rounded-xl border border-[#9EA19E] sm:p-8 p-5">
+                    <div class=" mb-6">
+                        <img src="assets/images/brand-package-3.svg" class="img-fluid" alt="packages">
+                    </div>
+
+                    <span class="text-[#9EA19E]  text-base font-normal leading-[150%] mb-2">Product range</span>
+
+                    <div class="mb-6">
+                        <span class="text-[#EEF3EE] font-fira text-4xl sm:text-5xl font-light leading-[110%]">Let's
+                            talk</span>
+                    </div>
+
+                    <ul class="flex flex-col gap-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Multiple SKUs / a line</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Consistent system</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Volume pricing</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                            <span class="text-[#BEC4BE]  text-lg sm:text-xl font-normal leading-[150%]">Ongoing support</span>
+                        </li>
+                    </ul>
+
+                    <div class="inline-flex mt-auto">
+                        <a href="#"
+                            class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-[#DDE3DD] md:px-8 md:py-4 px-5 py-3 text-base text-[#DDE3DD] font-semibold uppercase whitespace-nowrap"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                            <span class="btn-text-wipe btn-text-wipe--outline ">Get a quote</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!--  -->
+            <div class="flex  items-start sm:gap-8 gap-3 rounded-2xl bg-[#232A00]  px-4 sm:px-8 sm:py-6 py-4 ">
+                <img src="assets/images/print-one-package-sheild.svg" class="img-fluid w-12 sm:w-14 lg:w-[78px]"
+                    alt="Print-ready artwork">
+                <div>
+                    <h4
+                        class="text-yellow1 font-fira text-xl sm:text-2xl md:text-[28px] font-medium leading-[110%] mb-2">
+                        Print-ready, or we fix it free
+                    </h4>
+                    <p class="text-yellow1 text-sm sm:text-base md:text-lg  font-normal leading-[150%] max-w-250">
+                        We stand behind every file we deliver. If your printer flags a production issue with our artwork, we'll correct it at no charge — guaranteed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- brand pricing section end -->
+
+
+ <!-- FAQ section start -->
+<section
+    class="quecut-faq section-padding  bg-dark2 overflow-hidden relative z-20">
+    <div
+        class="choose-section-shape absolute left-0 bottom-0 origin-bottom will-change-transform -z-10 lg:block hidden">
+        <img src="assets/images/faq-shape.webp" class="img-fluid" alt="shape">
+    </div>
+    <div class="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- section title -->
+        <div
+            class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 sm:mb-10 mb-8">
+            <h2
+                class="text-[#FFF] text-center text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                Frequently Asked Questions
+            </h2>
+            <p
+                class="text-[#DDE3DD] text-center  sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
+                Don't just take our word for it. Here's what business owners
+                around the world are saying about
+                GraphicNomad.
+            </p>
+        </div>
+
+        <!-- FAQ Grid Wrap -->
+        <div class="max-w-156 mx-auto w-full">
+
+            <!-- FAQ 1 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Will the files be ready for my printer or
+                            manufacturer?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes. We set up artwork correctly for the
+                                    printing method — DTG, screen print,
+                                    embroidery digitizing, sublimation, or vinyl
+                                    — with the right file types,
+                                    resolution, colors, and separations your
+                                    printer needs.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Do you print the apparel too, or just design it?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    We focus on creating professional,
+                                    print-ready apparel designs. We don't print
+                                    the garments ourselves, but we deliver
+                                    production-ready files that your
+                                    preferred printer or manufacturer can use
+                                    immediately. If you don't have a
+                                    printer, we're also happy to recommend a
+                                    trusted printing partner based on your
+                                    project and location.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Can you design a full range or just one item?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes! We can design anything from a single
+                                    apparel item to a complete product
+                                    range. Whether you need one custom T-shirt,
+                                    a matching hoodie and cap, or an
+                                    entire branded clothing collection, we'll
+                                    create consistent, production-ready
+                                    designs tailored to your vision and brand.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Which print methods do you set up for?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    We prepare artwork for all major apparel
+                                    printing methods, including DTG
+                                    (Direct-to-Garment), screen printing,
+                                    embroidery digitizing, sublimation, DTF
+                                    (Direct-to-Film), heat transfer, and vinyl
+                                    cutting. Every file is optimized with
+                                    the correct format, resolution, color
+                                    settings, and specifications for your
+                                    chosen production method.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Do you provide garment mockups?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes. We provide realistic garment mockups to
+                                    help you visualize how your design will look
+                                    on the final apparel. These mockups are
+                                    great for client approvals, presentations,
+                                    online stores, and marketing materials
+                                    before moving into production.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 6 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Do I own the designs?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes. Once your project is completed and
+                                    payment is received, you receive full
+                                    ownership of the final approved design.
+                                    You're free to use it for printing,
+                                    selling, branding, or any commercial purpose
+                                    without ongoing royalties.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- FAQ section end -->
+
+    <!-- The brand-readiness checklist -->
+    <section class="relative w-full  text-white section-padding overflow-hidden bg-dark1">
+
+        <!-- BACKGROUND CONTAINER -->
+        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+            <!-- Background Gradient Image -->
+            <img src="assets/images/the-brand-readiness-checklist-banner.webp" alt="" aria-hidden="true"
+                class="block w-full h-full object-cover object-center" />
+        </div>
+
+        <!-- CONTENT CONTAINER -->
+        <div class="relative z-10 max-w-150 px-4 md:px-0 mx-auto text-center flex flex-col items-center">
+
+            <!-- MAIN HEADING -->
+            <div class="mb-6 md:mb-12">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] mb-3 md:mb-6">
+                    The Packaging Print Checklist
+                </h2>
+
+                <!-- SUBTITLE -->
+                <p class="text-dark7 text-sm sm:text-base md:text-xl font-normal leading-[150%] md:leading-[170%]">
+                    30 things every growing brand needs across logo, packaging, social, and video — free to your inbox.
+                </p>
+            </div>
+
+            <!-- EMAIL INPUT FORM CARD -->
+            <form
+                class="w-full max-w-150 relative flex items-center bg-dark8 rounded-full p-1 sm:p-1.5 transition-all focus-within:ring-2 focus-within:ring-yellow1">
+
+                <!-- INPUT FIELD -->
+                <input type="email" placeholder="Enter your email address" required
+                    class="w-full bg-transparent px-6 py-3 text-sm sm:text-base text-dark2 placeholder-[#4A4C4A] focus:outline-none font-normal" />
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit"
+                    class="cursor-pointer inline-flex items-center gap-2 bg-[#121211] hover:bg-dark3 text-white pl-6 pr-1.5 py-1 rounded-full transition-all duration-300 group shrink-0">
+
+                    <span
+                        class="font-fira text-sm sm:text-base font-semibold uppercase pl-1 group-hover:text-yellow1 transition-colors duration-300">SEND</span>
+
+                    <!-- ICON CIRCLE -->
+                    <span
+                        class="w-10.5 h-10.5 md:w-14 md:h-14 rounded-full bg-[#232A00] flex items-center justify-center group-hover:bg-[#CCFE37] transition-colors duration-300">
+                        <svg class="w-4.5 h-4.5 md:w-6 md:h-6 text-[#CCFE37] group-hover:text-dark1 transition-colors duration-300 transform -rotate-45"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </span>
+
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+    <!-- The brand-readiness checklist -->
+
+
+
+    <!-- blog section start -->
+    <section class="blog-section section-padding bg-[#0B0C0B] overflow-hidden">
+        <div class="container">
+
+            <!-- section header -->
+            <div
+                class="flex sm:flex-row flex-col items-center flex-wrap justify-center sm:justify-between sm:gap-6 gap-3 lg:mb-12 md:mb-10 mb-8">
+                <div class="max-w-xl">
+                    <h2
+                        class="text-[#FFF] text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%] capitalize">
+                        Packaging design guides
+                    </h2>
+                </div>
+
+                <a href="#" class="btn-cta flex items-center gap-0 shrink-0">
+                    <span
+                        class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                        aria-label="See all blog posts">
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 15L15 5M15 5H7M15 5V13" stroke="#0B0C0B" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 15L15 5M15 5H7M15 5V13" stroke="#0B0C0B" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </span>
+
+                    <span
+                        class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 sm:px-6 px-5 py-4 text-sm font-semibold uppercase whitespace-nowrap">
+                        <span class="btn-text-wipe">See All</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- blog marquee slider -->
+            <div class="" aria-label="Latest blog posts">
+                <div class="">
+
+                    <div class="grid md:grid-cols-3 sm:grid-cols-2 lg:gap-8 sm:gap-6 gap-4">
+
+                        <!-- slide 1 -->
+                        <div class="h-auto">
+                            <a href="#"
+                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <div class="blog-card-media">
+                                    <img src="assets/images/blog-1.webp" alt="2026 website design trends"
+                                        class="img-fluid w-full">
+                                </div>
+                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                                                Design</span>
+                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Md. Hasan Biswas"
+                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Md.
+                                                    Hasan Biswas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
+                                            2026 website design trends every modern designer should know</h3>
+
+                                        <div
+                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
+                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide 2 -->
+                        <div class=" h-auto">
+                            <a href="#"
+                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <div class="blog-card-media">
+                                    <img src="assets/images/blog-2.webp" alt="How a startup scaled faster"
+                                        class="img-fluid w-full">
+                                </div>
+                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                                                Design</span>
+                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Albert Flores"
+                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Albert
+                                                    Flores</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
+                                            How a startup scaled faster using our subscription design service</h3>
+
+                                        <div
+                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
+                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide 3 -->
+                        <div class="h-auto">
+                            <a href="#"
+                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <div class="blog-card-media">
+                                    <img src="assets/images/blog-3.webp" alt="From freelancer to full-time designer"
+                                        class="img-fluid w-full">
+                                </div>
+                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                                                Design</span>
+                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Jenny Wilson"
+                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Jenny
+                                                    Wilson</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
+                                            From freelancer to full-time designer with consistent client growth</h3>
+
+                                        <div
+                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
+                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- blog section end -->
+
+
+
+
+    <!-- CTA section start -->
+    <section class="cta-section lg:pt-27 bg-dark1 relative overflow-hidden  border-b border-[#2A2B2A]">
+
+        <!-- radial "lights" -- animated in via GSAP scroll trigger -->
+        <div class="cta-radial cta-radial-gray absolute inset-0 pointer-events-none"></div>
+
+        <div class="cta-radial cta-radial-orange absolute  pointer-events-none"></div>
+
+        <div class="container relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-10 xl:gap-16 items-center">
+
+                <!-- ===== LEFT: Custom Design mockup image ===== -->
+                <div class="cta-image-wrap flex justify-center items-center order-2 lg:order-1">
+                    <img src="assets/images/cta-left.svg" alt="Custom Design" class="img-fluid max-w-full">
+                </div>
+
+                <!-- ===== RIGHT: heading + desc + buttons ===== -->
+                <div class="cta-content order-1 lg:order-2 lg:py-16 md:py-12 py-10 lg:text-start text-center">
+                    <h2
+                        class="text-white font-fira text-[32px] sm:text-[42px] lg:text-[56px] font-normal leading-[110%]">
+                        Ready to build a brand people remember?
+                    </h2>
+                    <p
+                        class="text-dark7 text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-[150%] md:mt-4 sm:mt-3 mt-2 max-w-lg lg:mx-0 mx-auto">
+                        Tell us about your project — we'll reply within one business day with ideas and a quote.
+                    </p>
+
+                    <!-- buttons (same magnetic + reveal-icon pattern from banner) -->
+                    <div
+                        class="flex items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 flex-wrap xl:mt-12 md:mt-8 mt-6 lg:justify-start justify-center">
+                        <!-- START FREE TRIAL -->
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-12 w-12 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Start free trial">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_cta_start_1)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_cta_start_1">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_cta_start_2)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_cta_start_2">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 sm:px-5 px-4 py-3 text-base font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Start a project</span>
+                            </span>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- CTA section end -->
+
+
+    <!-- footer start -->
+    <footer class="footer relative overflow-hidden pt-16 lg:pt-20">
+        <div class="container">
+
+            <!-- nav grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 lg:gap-x-8 mb-12 lg:mb-16">
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Services</h3>
+                    <ul class="footer-col-list">
+                        <li>
+                                    <a href="logo-design.html">
+                                       Logo design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="brand-identity-design.html">Brand Identity
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="packaging-design.html">
+                                        Packaging Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="print-design.html">
+                                        Print design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="illustration-design.html">
+                                        Illustration
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-media-design.html">
+                                        Social Media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">Motion graphics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="video-editing-service.html">Video editing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">Motion graphics
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+
+                <!-- Quecut -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Quecut</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Resources</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Policies</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="cookies-policy.html">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media (full-width on mobile/tablet, 1 col on desktop) -->
+                <div class="footer-col col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="footer-col-title">Social Media</h3>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <a href="#" class="footer-social-icon" aria-label="Dribbble">
+                            <img src="assets/images/social-media-1.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Behance">
+                            <img src="assets/images/social-media-2.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <img src="assets/images/social-media-3.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <img src="assets/images/social-media-4.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copyright + divider -->
+            <p class="footer-copyright">© Quecut</p>
+            <hr class="footer-divider">
+        </div>
+
+        <!-- BIG BOTTOM LOGO with animated gradient wave -->
+        <div class=" xl:mt-36.5 md:mt-25 sm:mt-20 mt-12.5 sticky bottom-0" aria-hidden="true">
+            <!-- <div class="quecut-blob quecut-blob--yellow"></div>
+        <div class="quecut-blob quecut-blob--orange"></div>
+        <div class="quecut-blob quecut-blob--blue"></div>
+        <div class="quecut-blob quecut-blob--magenta"></div> -->
+            <img src="assets/images/quecut-footer.svg" class="img-fluid" alt="footer">
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js">
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

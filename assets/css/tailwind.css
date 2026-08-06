@@ -1259,9 +1259,34 @@ top: 80%;
     filter: brightness(0) saturate(100%) invert(78%) sepia(35%) saturate(930%) hue-rotate(137deg) brightness(96%) contrast(93%);
 }
 
+/* active tab state */
+.blog-tab-btn.active {
+    background-color: #0B0C0B;
+    border-color: #D2F234;
+    color: #D2F234;
+}
 
+/* hide scrollbar on mobile tab strip */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* card reveal on filter/load-more */
+.blog-item.is-entering {
+    animation: blogFadeUp .45s ease forwards;
+}
+@keyframes blogFadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 
+.blog-tab-btn.active img{
+   filter: brightness(0) saturate(100%) invert(91%) sepia(20%) saturate(2081%) hue-rotate(18deg) brightness(103%) contrast(92%);
+  transition: filter 0.3s ease;
+}
+.blog-tab-btn:hover img{
+  filter: brightness(0) saturate(100%) invert(91%) sepia(20%) saturate(2081%) hue-rotate(18deg) brightness(103%) contrast(92%);
+  transition: filter 0.3s ease;
+}
 /* ================= CTA SECTION ================= */
 .cta-section {
     position: relative;
@@ -1297,9 +1322,50 @@ top: 80%;
 
 
 /* faq section  */
+
+
+.faq-item {
+border: 1px solid transparent;
+background:
+linear-gradient(90deg, #696B69 0%, #232423 14.23%) padding-box,
+transparent border-box;
+transition: 0.3s ease;
+}
+
+.faq-item.active {
+border-color: #D2F234;
+background:
+linear-gradient(90deg, #696B69 0%, #232423 14.23%) padding-box,
+#D2F234 border-box;
+}
+.icon-close img{
+transition: filter .3s ease;
+filter: brightness(0.7);
+}
+
+.faq-item.active .icon-close img{
+filter: brightness(0) invert(1);
+}
 .faq-content {
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    opacity: 0;
+    transition:
+        max-height 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 0.45s ease;
+}
+
+.faq-item.active .faq-content {
+    opacity: 1;
+}
+
+
+.faq-content > div {
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    transform: translateY(-8px);
+}
+.faq-item.active .faq-content > div {
+    transform: translateY(0);
 }
 
 
@@ -1479,4 +1545,14 @@ background:  #0B0C0B;
         height: 14px;
         width: 14px;
     }
+}
+
+
+
+
+.print-one-package-bg{
+    background-image: url(../images/print-one-package-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
