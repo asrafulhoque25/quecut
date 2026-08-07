@@ -919,3 +919,311 @@ document.querySelectorAll('.portfolio-card').forEach((card) => {
   card.addEventListener('focusin',  playVideo);  
   card.addEventListener('focusout', stopVideo);
 });
+
+
+
+//blog detail all js
+
+/* ============================
+   BLOG DETAILS — TABLE OF CONTENTS
+   ============================ */
+(function () {
+  "use strict";
+
+  const OFFSET          = -100;
+  const SCROLL_DURATION = 1.2;
+  const ACTIVE_CLASS    = "toc-active";
+  const MAX_OPT_CHARS   = 38;
+
+  /* ── SLUG ── */
+  const usedSlugs = {};
+  function toSlug(text) {
+    let slug = text.toLowerCase().trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
+    usedSlugs[slug] = (usedSlugs[slug] || 0) + 1;
+    return usedSlugs[slug] > 1 ? slug + "-" + usedSlugs[slug] : slug;
+  }
+
+  /* ── INIT ── */
+  function init() {
+    const contentWrap = document.querySelector("[data-toc-content]");
+    if (!contentWrap) return;
+
+    const navWrap      = document.querySelector("[data-toc-nav]");
+    const progressBar  = document.querySelector("[data-toc-progress]");
+    const mobileSelect = document.querySelector("[data-toc-select]");
+
+    const headings = Array.from(contentWrap.querySelectorAll("h2, h3"));
+    if (!headings.length) return;
+
+    headings.forEach((h) => { if (!h.id) h.id = toSlug(h.textContent); });
+
+    buildNav(headings, navWrap, mobileSelect);
+    if (progressBar)  initProgressBar(contentWrap, progressBar);
+    initScrollSpy(headings, navWrap, mobileSelect);
+    if (navWrap)      bindNavClicks(navWrap);
+    if (mobileSelect) { injectSelectArrow(mobileSelect); bindSelectChange(mobileSelect); }
+  }
+
+  /* ── BUILD NAV ── */
+  function buildNav(headings, navWrap, mobileSelect) {
+    if (!navWrap && !mobileSelect) return;
+    if (navWrap)      navWrap.innerHTML      = "";
+    if (mobileSelect) mobileSelect.innerHTML = "";
+
+    // Group headings into [{h2, children:[h3…]}, …]
+    const groups = [];
+    headings.forEach((h) => {
+      if (h.tagName === "H2") {
+        groups.push({ h2: h, children: [] });
+      } else if (h.tagName === "H3" && groups.length) {
+        groups[groups.length - 1].children.push(h);
+      }
+    });
+
+    groups.forEach((group) => {
+      const { h2, children } = group;
+      const hasChildren = children.length > 0;
+
+      /* ── Desktop ── */
+      if (navWrap) {
+
+        // group wrapper — holds the h2 row + its collapsible h3 list
+        const groupWrap = document.createElement("div");
+        groupWrap.className = "toc-group";
+        groupWrap.dataset.groupWrap = h2.id;
+
+        // h2 row (link + optional arrow)
+        const row = document.createElement("div");
+        row.className = "toc-row";
+
+        const a = document.createElement("a");
+        a.href          = "#" + h2.id;
+        a.dataset.tocId = h2.id;
+        a.dataset.level = "2";
+        a.textContent   = h2.textContent.trim();
+        a.className     = "toc-link";
+        row.appendChild(a);
+
+        if (hasChildren) {
+          const btn = document.createElement("button");
+          btn.type          = "button";
+          btn.dataset.group = h2.id;
+          btn.setAttribute("aria-expanded", "false");
+          btn.innerHTML     = arrowSVG(false);
+          btn.className     = "toc-arrow-btn";
+          row.appendChild(btn);
+        }
+
+        groupWrap.appendChild(row);
+
+        // h3 wrapper — collapsed by default
+        if (hasChildren) {
+          const childWrap = document.createElement("div");
+          childWrap.className = "toc-child-wrap";
+          childWrap.dataset.parentGroup = h2.id;
+
+          children.forEach((h3) => {
+            const child = document.createElement("a");
+            child.href          = "#" + h3.id;
+            child.dataset.tocId = h3.id;
+            child.dataset.level = "3";
+            child.textContent   = h3.textContent.trim();
+            child.className     = "toc-link";
+            childWrap.appendChild(child);
+          });
+
+          const spacer = document.createElement("div");
+          spacer.style.height = "6px";
+          childWrap.appendChild(spacer);
+
+          groupWrap.appendChild(childWrap);
+        }
+
+        navWrap.appendChild(groupWrap);
+      }
+
+      /* ── Mobile select ── */
+      if (mobileSelect) {
+        const opt2 = document.createElement("option");
+        opt2.value       = h2.id;
+        const l2         = h2.textContent.trim();
+        opt2.textContent = l2.length > MAX_OPT_CHARS ? l2.slice(0, MAX_OPT_CHARS - 1) + "…" : l2;
+        mobileSelect.appendChild(opt2);
+
+        children.forEach((h3) => {
+          const opt3 = document.createElement("option");
+          opt3.value       = h3.id;
+          const l3         = h3.textContent.trim();
+          const t          = l3.length > MAX_OPT_CHARS - 2 ? l3.slice(0, MAX_OPT_CHARS - 3) + "…" : l3;
+          opt3.textContent = "— " + t;
+          mobileSelect.appendChild(opt3);
+        });
+      }
+    });
+
+    // Arrow toggle — event delegation
+    if (navWrap) {
+      navWrap.addEventListener("click", (e) => {
+        const btn = e.target.closest(".toc-arrow-btn");
+        if (!btn) return;
+        e.stopPropagation();
+        toggleGroup(btn.dataset.group, navWrap);
+      });
+    }
+  }
+
+  function toggleGroup(groupId, navWrap, forceOpen) {
+    const childWrap = navWrap.querySelector("[data-parent-group='" + groupId + "']");
+    const btn       = navWrap.querySelector("[data-group='" + groupId + "']");
+    if (!childWrap || !btn) return;
+
+    const isOpen = forceOpen !== undefined ? !forceOpen : btn.getAttribute("aria-expanded") === "true";
+
+    if (isOpen) {
+      childWrap.style.maxHeight = "0";
+      btn.setAttribute("aria-expanded", "false");
+      btn.innerHTML = arrowSVG(false);
+    } else {
+      childWrap.style.maxHeight = childWrap.scrollHeight + "px";
+      btn.setAttribute("aria-expanded", "true");
+      btn.innerHTML = arrowSVG(true);
+    }
+  }
+
+  /* ── ARROW SVG ── */
+  function arrowSVG(open) {
+    return '<svg style="transform:' + (open ? "rotate(180deg)" : "rotate(0deg)") + ';transition:transform 0.25s ease;" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.995807 0H12.1758C12.3736 0.000829231 12.5667 0.0602841 12.7306 0.170847C12.8946 0.28141 13.0222 0.438116 13.0971 0.621148C13.172 0.804181 13.191 1.00532 13.1516 1.19913C13.1122 1.39295 13.0162 1.57073 12.8758 1.71L7.29581 7.29C7.20284 7.38373 7.09224 7.45812 6.97038 7.50889C6.84853 7.55966 6.71782 7.5858 6.58581 7.5858C6.4538 7.5858 6.32309 7.55966 6.20123 7.50889C6.07937 7.45812 5.96877 7.38373 5.87581 7.29L0.295808 1.71C0.155386 1.57073 0.059415 1.39295 0.0200298 1.19913C-0.0193553 1.00532 -0.000386119 0.804181 0.0745395 0.621148C0.149465 0.438116 0.276982 0.28141 0.440965 0.170847C0.604949 0.0602841 0.798035 0.000829231 0.995807 0Z" fill="currentColor"/></svg>';
+  }
+
+  /* ── CUSTOM SELECT ARROW ── */
+  function injectSelectArrow(select) {
+    const wrapper = document.createElement("div");
+    wrapper.style.cssText = "position:relative;width:100%;";
+
+    select.parentNode.insertBefore(wrapper, select);
+    wrapper.appendChild(select);
+
+    select.style.appearance       = "none";
+    select.style.webkitAppearance = "none";
+    select.style.backgroundImage  = "none";
+    select.style.paddingRight     = "36px";
+
+    const arrow = document.createElement("span");
+    arrow.innerHTML = arrowSVG(false);
+    arrow.style.cssText = [
+      "position:absolute",
+      "right:16px",
+      "top:50%",
+      "transform:translateY(-50%)",
+      "transition:transform 0.25s ease",
+      "pointer-events:none",
+      "display:flex",
+      "align-items:center",
+      "color:#696B69",
+    ].join(";");
+
+    wrapper.appendChild(arrow);
+
+    let isOpen = false;
+    function setArrow(open) {
+      isOpen = open;
+      arrow.style.transform = open
+        ? "translateY(-50%) rotate(180deg)"
+        : "translateY(-50%) rotate(0deg)";
+    }
+
+    select.addEventListener("click",  () => setArrow(!isOpen));
+    select.addEventListener("blur",   () => setArrow(false));
+    select.addEventListener("change", () => setArrow(false));
+  }
+
+  /* ── PROGRESS BAR ── */
+  function initProgressBar(contentWrap, progressBar) {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+    gsap.to(progressBar, {
+      width: "100%", ease: "none",
+      scrollTrigger: { trigger: contentWrap, start: "top top", end: "bottom 40%", scrub: true },
+    });
+  }
+
+  /* ── SCROLLSPY ── */
+  function initScrollSpy(headings, navWrap, mobileSelect) {
+    if (typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id, navWrap, mobileSelect);
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+    );
+    headings.forEach((h) => observer.observe(h));
+  }
+
+  function setActive(id, navWrap, mobileSelect) {
+    if (navWrap) {
+      navWrap.querySelectorAll(".toc-link").forEach((link) => {
+        link.classList.toggle(ACTIVE_CLASS, link.dataset.tocId === id);
+      });
+
+      // auto-open parent group when an h3 scrolls into view
+      const activeLink = navWrap.querySelector(".toc-link[data-toc-id='" + id + "']");
+      if (activeLink && activeLink.dataset.level === "3") {
+        const childWrap = activeLink.closest("[data-parent-group]");
+        if (childWrap) {
+          const groupId = childWrap.dataset.parentGroup;
+          const btn = navWrap.querySelector("[data-group='" + groupId + "']");
+          if (btn && btn.getAttribute("aria-expanded") !== "true") {
+            toggleGroup(groupId, navWrap, false);
+          }
+        }
+      }
+    }
+    if (mobileSelect) mobileSelect.value = id;
+  }
+
+  /* ── SCROLL TO ── */
+  function scrollToSection(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    if (typeof lenis !== "undefined" && lenis) {
+      lenis.scrollTo(target, { offset: OFFSET, duration: SCROLL_DURATION, easing: (t) => 1 - Math.pow(1 - t, 3) });
+    } else {
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + OFFSET, behavior: "smooth" });
+    }
+  }
+
+  /* ── CLICK + CHANGE ── */
+  function bindNavClicks(navWrap) {
+    navWrap.addEventListener("click", (e) => {
+      const link = e.target.closest(".toc-link");
+      if (!link) return;
+      e.preventDefault();
+
+      if (link.dataset.level === "2") {
+        const groupId   = link.dataset.tocId;
+        const childWrap = navWrap.querySelector("[data-parent-group='" + groupId + "']");
+        if (childWrap) {
+          toggleGroup(groupId, navWrap);
+          return;
+        }
+      }
+
+      scrollToSection(link.dataset.tocId);
+    });
+  }
+
+  function bindSelectChange(mobileSelect) {
+    mobileSelect.addEventListener("change", () => scrollToSection(mobileSelect.value));
+  }
+
+  /* ── BOOT ── */
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
