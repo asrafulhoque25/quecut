@@ -935,6 +935,14 @@ document.querySelectorAll('.portfolio-card').forEach((card) => {
   const ACTIVE_CLASS    = "toc-active";
   const MAX_OPT_CHARS   = 38;
 
+    const ACTIVATION_LINE = 140;   
+
+  // module-level refs — scrollToSection theke setActive call korar jonno
+  let navWrapRef, mobileSelectRef;
+  let lastActiveId = null;
+  let spyLocked    = false;
+  let spyLockTimer;
+
   /* ── SLUG ── */
   const usedSlugs = {};
   function toSlug(text) {
@@ -954,6 +962,9 @@ document.querySelectorAll('.portfolio-card').forEach((card) => {
     const navWrap      = document.querySelector("[data-toc-nav]");
     const progressBar  = document.querySelector("[data-toc-progress]");
     const mobileSelect = document.querySelector("[data-toc-select]");
+
+    navWrapRef      = navWrap;        // ← added
+    mobileSelectRef = mobileSelect;   // ← added
 
     const headings = Array.from(contentWrap.querySelectorAll("h2, h3"));
     if (!headings.length) return;
@@ -1149,27 +1160,65 @@ document.querySelectorAll('.portfolio-card').forEach((card) => {
     });
   }
 
-  /* ── SCROLLSPY ── */
+/* ── SCROLLSPY ──
+     scroll position based, not IntersectionObserver: the active heading is
+     simply the last one whose top has passed the activation line. this always
+     agrees with where scrollToSection actually parks the heading. */
   function initScrollSpy(headings, navWrap, mobileSelect) {
-    if (typeof IntersectionObserver === "undefined") return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id, navWrap, mobileSelect);
-        });
-      },
-      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
-    );
-    headings.forEach((h) => observer.observe(h));
+    let ticking = false;
+
+    function update() {
+      ticking = false;
+      if (spyLocked) return;   // programmatic scroll cholakalin off
+
+      let currentId = headings[0].id;
+
+      for (let i = 0; i < headings.length; i++) {
+        if (headings[i].getBoundingClientRect().top <= ACTIVATION_LINE) {
+          currentId = headings[i].id;
+        } else {
+          break;
+        }
+      }
+
+      // page-er ekdom nichey pouchale shesh heading active thakbe
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        currentId = headings[headings.length - 1].id;
+      }
+
+      setActive(currentId, navWrap, mobileSelect);
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
   }
 
-  function setActive(id, navWrap, mobileSelect) {
+  /* click korar por scroll animation cholakalin spy off rakhe, jate
+     majhkhaner heading gulo temporarily active hoye na jay */
+  function lockSpy(duration) {
+    spyLocked = true;
+    clearTimeout(spyLockTimer);
+    spyLockTimer = setTimeout(() => { spyLocked = false; }, duration);
+  }
+
+function setActive(id, navWrap, mobileSelect) {
+    if (id === lastActiveId) return;   // ← added: redundant kaj bondho
+    lastActiveId = id;
+
     if (navWrap) {
       navWrap.querySelectorAll(".toc-link").forEach((link) => {
         link.classList.toggle(ACTIVE_CLASS, link.dataset.tocId === id);
       });
 
-      // auto-open parent group when an h3 scrolls into view
+      // auto-open parent group when an h3 becomes active
       const activeLink = navWrap.querySelector(".toc-link[data-toc-id='" + id + "']");
       if (activeLink && activeLink.dataset.level === "3") {
         const childWrap = activeLink.closest("[data-parent-group]");

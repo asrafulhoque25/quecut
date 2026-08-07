@@ -197,7 +197,7 @@ html {
  
 .navbar-menu ul li:hover::before {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(0.95);
     filter: blur(0px);
 }
  
@@ -1576,7 +1576,7 @@ background:  #0B0C0B;
 .blog-toc-inner {
     border-radius: 24px;
     background: #fff;
-    padding: 24px 20px;
+    /* padding: 24px 20px; */
 }
 
 /* badge */
@@ -2216,7 +2216,7 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
     }
 
     .blog-toc-inner {
-        padding: 20px 16px;
+        /* padding: 20px 16px; */
     }
 
     .blog-details h1 { font-size: 36px; }
@@ -2296,7 +2296,7 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
 }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .blog-details ul li { padding-left: 24px; }
     .blog-details ul.check-list li { padding-left: 28px; }
     .blog-details ol li { padding-left: 34px; }
@@ -2310,5 +2310,15 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
     .blog-details table tbody tr td {
         padding: 10px 12px;
         font-size: 13px;
+    }
+      .blog-details p,
+    .blog-details ul li,
+    .blog-details ol li { font-size: 14px; }
+
+    .badge-gray{
+        font-size: 14px;
+    }
+    .blog-meta-badge{
+        fontsize: 14px;
     }
 }
