@@ -2322,3 +2322,10 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
         fontsize: 14px;
     }
 }
+
+.sub-banner{
+    background-image: url(../images/sub-banner-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

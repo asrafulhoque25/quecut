@@ -50,6 +50,7 @@
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -928,6 +929,9 @@
   .gap-y-10 {
     row-gap: calc(var(--spacing) * 10);
   }
+  .self-end {
+    align-self: flex-end;
+  }
   .self-stretch {
     align-self: stretch;
   }
@@ -1133,6 +1137,9 @@
   .bg-\[linear-gradient\(85deg\,\#D2F234_1\.96\%\,\#BEBEBE_10\.84\%\,\#FFF_44\.28\%\)\] {
     background-image: linear-gradient(85deg,#D2F234 1.96%,#BEBEBE 10.84%,#FFF 44.28%);
   }
+  .bg-\[linear-gradient\(90deg\,\#D5FF02_0\%\,\#1C1D1C_22\%\,\#666666_100\%\)\] {
+    background-image: linear-gradient(90deg,#D5FF02 0%,#1C1D1C 22%,#666666 100%);
+  }
   .bg-\[linear-gradient\(90deg\,_\#D2F234_0\%\,_\#232423_7\.06\%\,_\#0B0C0B_100\%\)\] {
     background-image: linear-gradient(90deg, #D2F234 0%, #232423 7.06%, #0B0C0B 100%);
   }
@@ -1238,6 +1245,9 @@
   .bg-\[linear-gradient\(180deg\,_\#151615_3\.91\%\,_\#0B0C0B_25\.6\%\,_\#151615_89\.4\%\,_\#232423_101\.89\%\)\] {
     background-image: linear-gradient(180deg, #151615 3.91%, #0B0C0B 25.6%, #151615 89.4%, #232423 101.89%);
   }
+  .bg-\[linear-gradient\(180deg\,_\#151615_12\.99\%\,_\#0B0C0B_88\.76\%\,_\#232423_101\.89\%\)\] {
+    background-image: linear-gradient(180deg, #151615 12.99%, #0B0C0B 88.76%, #232423 101.89%);
+  }
   .bg-\[linear-gradient\(180deg\,_\#151615_65\.86\%\,_\#9EA19E_100\%\)\] {
     background-image: linear-gradient(180deg, #151615 65.86%, #9EA19E 100%);
   }
@@ -1276,6 +1286,9 @@
   }
   .bg-\[radial-gradient\(54\%_54\%_at_50\%_57\.05\%\,\#4A4C4A_0\%\,\#151615_100\%\)\] {
     background-image: radial-gradient(54% 54% at 50% 57.05%,#4A4C4A 0%,#151615 100%);
+  }
+  .bg-\[radial-gradient\(circle\,\#4A4C4A_0\%\,\#1C1D1C_100\%\)\] {
+    background-image: radial-gradient(circle,#4A4C4A 0%,#1C1D1C 100%);
   }
   .from-black\/80 {
     --tw-gradient-from: color-mix(in srgb, #000 80%, transparent);
@@ -2367,6 +2380,11 @@
       padding-block: calc(var(--spacing) * 6);
     }
   }
+  .sm\:py-12 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 12);
+    }
+  }
   .sm\:py-20 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 20);
@@ -2786,6 +2804,11 @@
   .md\:py-4 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
     }
   }
   .md\:py-12 {
@@ -3292,6 +3315,11 @@
       padding-block: calc(var(--spacing) * 8);
     }
   }
+  .lg\:py-12 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 12);
+    }
+  }
   .lg\:py-16 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 16);
@@ -3458,6 +3486,11 @@
       gap: calc(var(--spacing) * 16);
     }
   }
+  .xl\:gap-20 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 20);
+    }
+  }
   .xl\:p-8 {
     @media (width >= 80rem) {
       padding: calc(var(--spacing) * 8);
@@ -3471,6 +3504,11 @@
   .xl\:px-12 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .xl\:py-15 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 15);
     }
   }
   .xl\:py-34 {
@@ -3543,6 +3581,16 @@
       font-size: 96px;
     }
   }
+  .\32 xl\:top-\[0\.6\%\] {
+    @media (width >= 96rem) {
+      top: 0.6%;
+    }
+  }
+  .\32 xl\:top-\[2\.5506\%\] {
+    @media (width >= 96rem) {
+      top: 2.5506%;
+    }
+  }
   .\32 xl\:top-\[3\.5506\%\] {
     @media (width >= 96rem) {
       top: 3.5506%;
@@ -3563,9 +3611,19 @@
       top: 10.5506%;
     }
   }
+  .\32 xl\:max-w-152 {
+    @media (width >= 96rem) {
+      max-width: calc(var(--spacing) * 152);
+    }
+  }
   .\32 xl\:gap-20 {
     @media (width >= 96rem) {
       gap: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:gap-40 {
+    @media (width >= 96rem) {
+      gap: calc(var(--spacing) * 40);
     }
   }
   .\32 xl\:py-28\.5 {
@@ -5380,6 +5438,12 @@ html {
   .blog-meta-badge {
     fontsize: 14px;
   }
+}
+.sub-banner {
+  background-image: url(../images/sub-banner-bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @property --tw-border-spacing-x {
   syntax: "<length>";
