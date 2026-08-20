@@ -53,7 +53,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// ===== STICKY SHRINKING NAVBAR ON SCROLL =====
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
 
+    const SCROLL_THRESHOLD = 40;
+    let ticking = false;
+
+    const updateNavbar = () => {
+        navbar.classList.toggle('navbar-scrolled', window.scrollY > SCROLL_THRESHOLD);
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    updateNavbar(); // handle page loaded already scrolled (e.g. anchor link, refresh mid-page)
+});
 
 
 
@@ -287,49 +308,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ================= PORTFOLIO: TAB FILTER + DRAG-SCROLL TABS =================
-// Scoped to '.portfolio-tabs' / '.portfolio-card' only, no generic selectors.
+// ================= PORTFOLIO: TAB FILTER + PAGINATION + DRAG-SCROLL TABS =================
 document.addEventListener('DOMContentLoaded', () => {
     const tabsWrapper = document.querySelector('.portfolio-tabs-wrapper');
     const tabs = document.querySelectorAll('.portfolio-tab');
-    const cards = document.querySelectorAll('.portfolio-card');
+    const cards = Array.from(document.querySelectorAll('.portfolio-card'));
+    const loadMoreBtn = document.getElementById('portfolioLoadMoreBtn');
     if (!tabs.length || !cards.length) return;
-
-    // ---- filtering ----
+ 
+    const INITIAL_COUNT = 9;
+    const LOAD_STEP = 6;
+ 
+    let currentFilter = 'all';
+    let visibleCount = INITIAL_COUNT;
+ 
+    function matchingCards() {
+        return cards.filter((card) => currentFilter === 'all' || card.dataset.category === currentFilter);
+    }
+ 
+    function render() {
+        const matches = matchingCards();
+ 
+        // hide cards not in current filter entirely
+        cards.forEach((card) => {
+            const matches_ = currentFilter === 'all' || card.dataset.category === currentFilter;
+            card.classList.toggle('is-hidden', !matches_);
+        });
+ 
+        // within matches, only show the first `visibleCount`
+        matches.forEach((card, i) => {
+            card.classList.toggle('is-hidden', i >= visibleCount);
+        });
+ 
+        // load-more button state
+        if (visibleCount >= matches.length) {
+            loadMoreBtn.classList.add('is-disabled');
+            loadMoreBtn.setAttribute('aria-disabled', 'true');
+        } else {
+            loadMoreBtn.classList.remove('is-disabled');
+            loadMoreBtn.removeAttribute('aria-disabled');
+        }
+    }
+ 
     tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
             tabs.forEach((t) => t.classList.remove('active'));
             tab.classList.add('active');
-
-            const filter = tab.dataset.filter;
-
-            cards.forEach((card) => {
-                const matches = filter === 'all' || card.dataset.category === filter;
-                card.classList.toggle('is-hidden', !matches);
-            });
+            currentFilter = tab.dataset.filter;
+            visibleCount = INITIAL_COUNT; // reset pagination on filter change
+            render();
         });
     });
-
+ 
+    loadMoreBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (loadMoreBtn.classList.contains('is-disabled')) return;
+        visibleCount += LOAD_STEP;
+        render();
+    });
+ 
+    render();
+ 
     // ---- drag-to-scroll for the tab bar (mouse on desktop; touch works natively) ----
     if (!tabsWrapper) return;
-
     let isDown = false;
     let startX = 0;
     let scrollLeftStart = 0;
-
     tabsWrapper.addEventListener('mousedown', (e) => {
         isDown = true;
         tabsWrapper.classList.add('is-dragging');
         startX = e.pageX - tabsWrapper.offsetLeft;
         scrollLeftStart = tabsWrapper.scrollLeft;
     });
-
     ['mouseleave', 'mouseup'].forEach((evt) => {
         tabsWrapper.addEventListener(evt, () => {
             isDown = false;
             tabsWrapper.classList.remove('is-dragging');
         });
     });
-
     tabsWrapper.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
@@ -338,7 +394,168 @@ document.addEventListener('DOMContentLoaded', () => {
         tabsWrapper.scrollLeft = scrollLeftStart - walk;
     });
 });
-
+ 
+// ================= PORTFOLIO: VIDEO HOVER PREVIEW =================
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.portfolio-card[data-type="video"]').forEach((card) => {
+        const video = card.querySelector('.portfolio-hover-video');
+        if (!video) return;
+        const src = card.dataset.video;
+ 
+        card.addEventListener('mouseenter', () => {
+            if (!video.src) video.src = src;
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        });
+        card.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+        // touch devices: tap once previews, tap again (or the click handler below) opens modal
+        card.addEventListener('touchstart', () => {
+            if (!video.src) video.src = src;
+            video.play().catch(() => {});
+        }, { passive: true });
+    });
+});
+ 
+// ================= PORTFOLIO: CLICK -> IMAGE / VIDEO POPUP =================
+document.addEventListener('DOMContentLoaded', () => {
+    const imageModal = document.getElementById('portfolioImageModal');
+    const imageModalImg = document.getElementById('portfolioImageModalImg');
+    const imageModalClose = document.getElementById('portfolioImageModalClose');
+ 
+    const videoModal = document.getElementById('portfolioVideoModal');
+    const videoModalClose = document.getElementById('portfolioVideoModalClose');
+    const videoModalPlayer = document.getElementById('portfolioVideoModalPlayer');
+    const videoModalTitle = document.getElementById('portfolioVideoModalTitle');
+    const videoModalCurrent = document.getElementById('portfolioVideoModalCurrent');
+    const videoModalDuration = document.getElementById('portfolioVideoModalDuration');
+    const videoModalProgress = document.getElementById('portfolioVideoModalProgress');
+    const videoModalBubble = document.getElementById('portfolioVideoModalBubble');
+    const playPauseBtn = videoModal.querySelector('.video-modal-playpause');
+    const iconPlay = playPauseBtn.querySelector('.icon-play');
+    const iconPause = playPauseBtn.querySelector('.icon-pause');
+ 
+    function formatTime(sec) {
+        if (!isFinite(sec)) return '0:00';
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60).toString().padStart(2, '0');
+        return `${m}:${s}`;
+    }
+ 
+    function openImageModal(src, alt) {
+        imageModalImg.src = src;
+        imageModalImg.alt = alt || '';
+        imageModal.classList.remove('hidden');
+        imageModal.classList.add('flex', 'is-open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeImageModal() {
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex', 'is-open');
+        imageModalImg.src = '';
+        document.body.style.overflow = '';
+    }
+ 
+    function openVideoModal(src, title) {
+        videoModalPlayer.src = src;
+        videoModalTitle.textContent = title || '';
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('flex', 'is-open');
+        document.body.style.overflow = 'hidden';
+        videoModalPlayer.currentTime = 0;
+        videoModalPlayer.play().catch(() => {});
+    }
+    function closeVideoModal() {
+        videoModal.classList.add('hidden');
+        videoModal.classList.remove('flex', 'is-open');
+        videoModalPlayer.pause();
+        videoModalPlayer.removeAttribute('src');
+        videoModalPlayer.load();
+        document.body.style.overflow = '';
+    }
+ 
+    // open on card click
+    document.querySelectorAll('.portfolio-card').forEach((card) => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (card.dataset.type === 'video') {
+                openVideoModal(card.dataset.video, card.dataset.title);
+            } else {
+                const img = card.querySelector('.portfolio-card-img');
+                openImageModal(card.dataset.image || img.src, img.alt);
+            }
+        });
+    });
+ 
+    // close handlers
+    imageModalClose.addEventListener('click', closeImageModal);
+    imageModal.addEventListener('click', (e) => { if (e.target === imageModal) closeImageModal(); });
+ 
+    videoModalClose.addEventListener('click', closeVideoModal);
+    videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
+ 
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        if (imageModal.classList.contains('is-open')) closeImageModal();
+        if (videoModal.classList.contains('is-open')) closeVideoModal();
+    });
+ 
+    // ---- video modal transport controls ----
+    videoModal.querySelectorAll('[data-action]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const action = btn.dataset.action;
+            if (action === 'toggle') {
+                if (videoModalPlayer.paused) {
+                    videoModalPlayer.play();
+                } else {
+                    videoModalPlayer.pause();
+                }
+            } else if (action === 'rewind') {
+                videoModalPlayer.currentTime = Math.max(0, videoModalPlayer.currentTime - 10);
+            } else if (action === 'forward') {
+                videoModalPlayer.currentTime = Math.min(videoModalPlayer.duration || 0, videoModalPlayer.currentTime + 10);
+            }
+        });
+    });
+ 
+    videoModalPlayer.addEventListener('play', () => {
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+    });
+    videoModalPlayer.addEventListener('pause', () => {
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+    });
+ 
+    videoModalPlayer.addEventListener('loadedmetadata', () => {
+        videoModalDuration.textContent = formatTime(videoModalPlayer.duration);
+    });
+ 
+    videoModalPlayer.addEventListener('timeupdate', () => {
+        if (!videoModalPlayer.duration) return;
+        const pct = (videoModalPlayer.currentTime / videoModalPlayer.duration) * 100;
+        videoModalProgress.value = pct;
+        videoModalProgress.style.setProperty('--progress', pct + '%');
+        videoModalCurrent.textContent = formatTime(videoModalPlayer.currentTime);
+    });
+ 
+    videoModalProgress.addEventListener('input', () => {
+        if (!videoModalPlayer.duration) return;
+        const pct = parseFloat(videoModalProgress.value);
+        videoModalPlayer.currentTime = (pct / 100) * videoModalPlayer.duration;
+        videoModalProgress.style.setProperty('--progress', pct + '%');
+ 
+        const time = (pct / 100) * videoModalPlayer.duration;
+        videoModalBubble.textContent = formatTime(time);
+        videoModalBubble.classList.remove('hidden');
+        videoModalBubble.style.left = pct + '%';
+    });
+    videoModalProgress.addEventListener('change', () => {
+        videoModalBubble.classList.add('hidden');
+    });
+});
 
 
 
