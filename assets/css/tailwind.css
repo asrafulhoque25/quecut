@@ -607,9 +607,9 @@ html {
     transition: padding-block 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.navbar .navbar-logo img {
+/* .navbar .navbar-logo img {
     transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
+} */
 
 .navbar-menu ul li a {
     transition: color 0.35s ease, padding-block 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -621,20 +621,19 @@ html {
 
 /* --- scrolled state --- */
 .navbar.navbar-scrolled {
-    background: rgba(11, 12, 11, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: #0B0C0B;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     border-bottom-color: rgba(255, 255, 255, 0.06);
+    /* overflow: hidden; */
 }
 
 .navbar.navbar-scrolled .navbar-inner {
     padding-block: 10px !important;
 }
 
-.navbar.navbar-scrolled .navbar-logo img {
+/* .navbar.navbar-scrolled .navbar-logo img {
     height: 24px;
-}
+} */
 
 /* shrink desktop menu link padding at every breakpoint it's set at */
 .navbar.navbar-scrolled .navbar-menu ul li a {
@@ -2395,6 +2394,26 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
     background-size: cover;
 }
 
+.about-quote-section{
+    background-image: url(../images/about-bg-shape-square.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.team-members{
+    background-image: url(../images/team-member-bg-shape.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.related-opportunities-section{
+    background-image: url(../images/oppotunities-section-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 
  /* popup model show   */
@@ -2441,3 +2460,65 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
     cursor: default;
 }
 
+
+
+
+/* work tab css  */
+
+.featured-works-section{
+    background-image: url(../images/bestwork-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+ 
+.fw-tab {
+    border-radius: 100px;
+    background: #1C1D1C;
+    padding: 7px 32px;
+    color: #9EA19E;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    white-space: nowrap;
+    transition: background 0.35s ease, color 0.35s ease;
+    cursor:pointer;
+}
+
+@media(max-width:991px){
+.fw-tab {
+    padding: 7px 20px;
+    font-size: 16px;
+}
+}
+
+@media(max-width:640px){
+.fw-tab {
+    padding: 7px 20px;
+    font-size: 14px;
+}
+}
+@media(max-width:640px){
+.fw-tab {
+    padding: 10px 16px;
+    font-size: 14px;
+}
+}
+
+.fw-tabs-arrow{
+    cursor: pointer;
+}
+
+
+
+
+.fw-tab:hover,
+.fw-tab.active {
+    background: linear-gradient(90deg, #696B69 0%, #1C1D1C 19.72%, #4A4C4A 100%);
+    color: #D2F234;
+}
+.fw-tabs-scroller.is-dragging {
+    cursor: grabbing;
+}

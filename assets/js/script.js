@@ -274,8 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gap: 16,
         arrows: false,
         pagination: false,
-        drag: 'free',          
-        clones: slideCount * 4,  
+        drag: 'free',        
         breakpoints: {
             1440: { perPage: 4 }, 
             1200: { perPage: 3.5 }, 
@@ -1493,3 +1492,99 @@ function setActive(id, navWrap, mobileSelect) {
     init();
   }
 })();
+
+
+
+
+
+
+
+
+// ================= FEATURED WORKS: TAB FILTER =================
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.fw-tab');
+    const cards = document.querySelectorAll('.fw-card');
+    if (!tabs.length || !cards.length) return;
+ 
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach((t) => t.classList.remove('active'));
+            tab.classList.add('active');
+            const filter = tab.dataset.filter;
+            cards.forEach((card) => {
+                const matches = filter === 'all' || card.dataset.category === filter;
+                card.classList.toggle('hidden', !matches);
+            });
+        });
+    });
+});
+ 
+// ================= FEATURED WORKS: TABS DRAG-SCROLL + PREV/NEXT ARROWS =================
+document.addEventListener('DOMContentLoaded', () => {
+    const scroller = document.getElementById('fwTabsScroller');
+    const prevBtn = document.getElementById('fwTabsPrev');
+    const nextBtn = document.getElementById('fwTabsNext');
+    if (!scroller || !prevBtn || !nextBtn) return;
+ 
+    const SCROLL_STEP = 260;
+    const EPS = 4; // tolerance for float rounding
+ 
+    function updateArrows() {
+        const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+        const atStart = scroller.scrollLeft <= EPS;
+        const atEnd = scroller.scrollLeft >= maxScroll - EPS;
+ 
+        prevBtn.classList.toggle('hidden', atStart);
+        prevBtn.classList.toggle('flex', !atStart);
+ 
+        nextBtn.classList.toggle('hidden', atEnd || maxScroll <= 0);
+        nextBtn.classList.toggle('flex', !atEnd && maxScroll > 0);
+    }
+ 
+    prevBtn.addEventListener('click', () => {
+        scroller.scrollBy({ left: -SCROLL_STEP, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+        scroller.scrollBy({ left: SCROLL_STEP, behavior: 'smooth' });
+    });
+ 
+    let ticking = false;
+    scroller.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updateArrows();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+ 
+    window.addEventListener('resize', updateArrows);
+ 
+    // ---- drag-to-scroll (desktop mouse; touch scrolls natively) ----
+    let isDown = false;
+    let startX = 0;
+    let scrollLeftStart = 0;
+ 
+    scroller.addEventListener('mousedown', (e) => {
+        isDown = true;
+        scroller.classList.add('is-dragging');
+        startX = e.pageX - scroller.offsetLeft;
+        scrollLeftStart = scroller.scrollLeft;
+    });
+    ['mouseleave', 'mouseup'].forEach((evt) => {
+        scroller.addEventListener(evt, () => {
+            isDown = false;
+            scroller.classList.remove('is-dragging');
+        });
+    });
+    scroller.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scroller.offsetLeft;
+        const walk = x - startX;
+        scroller.scrollLeft = scrollLeftStart - walk;
+    });
+ 
+    updateArrows();
+});
