@@ -1,873 +1,1177 @@
 <!doctype html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Details</title>
     <!-- Splide CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- navbar start -->
     <header class="navbar">
-        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
-            <div class="navbar-inner">
+      <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
+        <div class="navbar-inner">
+          <div class="navbar-logo">
+            <a href="index.html">
+              <img
+                src="assets/images/quecut-logo.svg"
+                alt="Quecut"
+                class="img-fluid"
+              />
+            </a>
+          </div>
 
-                <div class="navbar-logo">
-                    <a href="index.html">
-                        <img src="assets/images/quecut-logo.svg" alt="Quecut" class="img-fluid">
+          <!-- DESKTOP MENU (hidden on mobile, structure kept class-free for WP) -->
+          <nav class="navbar-menu">
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="#">
+                  Services
+                  <svg
+                    class="dropdown-arrow"
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1.5L6 6.5L11 1.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+
+                <ul>
+                  <li>
+                    <a href="logo-design-service.html">
+                      <img
+                        src="assets/images/logo-design-service-desktop.svg"
+                        alt="logo design"
+                        class="dropdown-icon"
+                      />
+                      <span>Logo design</span>
                     </a>
-                </div>
-
-                <!-- DESKTOP MENU (hidden on mobile, structure kept class-free for WP) -->
-                <nav class="navbar-menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Services
-                                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="logo-design-service.html">
-                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
-                                            class="dropdown-icon">
-                                        <span>Logo design</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="brand-identity-design.html">
-                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
-                                            class="dropdown-icon">
-                                        <span>Brand Identity</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="packaging-design.html">
-                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
-                                            class="dropdown-icon">
-                                        <span>Packaging Design</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="print-design.html">
-                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
-                                            class="dropdown-icon">
-                                        <span>Print design</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="illustration-design.html">
-                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
-                                            class="dropdown-icon">
-                                        <span>Illustration</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="social-media-design.html">
-                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
-                                            class="dropdown-icon">
-                                        <span>Social Media</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="motion-graphics-service.html">
-                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
-                                            class="dropdown-icon">
-                                        <span>Motion graphics</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="video-editing-service.html">
-                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
-                                            class="dropdown-icon">
-                                        <span>Video editing</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="motion-graphics-service.html">
-                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
-                                            class="dropdown-icon">
-                                        <span>Motion graphics</span>
-                                    </a>
-                                </li>
-                               
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="marketplace.html">Marketplace</a>
-                        </li>
-                        <li>
-                            <a href="pricing.html">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="navbar-btn z-6">
-                    <a href="contact.html" class="btn-getsample font-fira">
-                        <span class="btn-text-wipe btn-text-wipe--navbar">Get Free Sample</span>
+                  </li>
+                  <li>
+                    <a href="brand-identity-design.html">
+                      <img
+                        src="assets/images/brand-identity-service.svg"
+                        alt="Brand Identity"
+                        class="dropdown-icon"
+                      />
+                      <span>Brand Identity</span>
                     </a>
-                </div>
+                  </li>
+                  <li>
+                    <a href="packaging-design.html">
+                      <img
+                        src="assets/images/packaging-service.svg"
+                        alt="Packaging Design"
+                        class="dropdown-icon"
+                      />
+                      <span>Packaging Design</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="print-design.html">
+                      <img
+                        src="assets/images/print-design-service-desktop.svg"
+                        alt="print design"
+                        class="dropdown-icon"
+                      />
+                      <span>Print design</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="illustration-design.html">
+                      <img
+                        src="assets/images/Illustration-service-desktop.svg"
+                        alt="print design"
+                        class="dropdown-icon"
+                      />
+                      <span>Illustration</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="social-media-design.html">
+                      <img
+                        src="assets/images/social-media-service.svg"
+                        alt="Illustration"
+                        class="dropdown-icon"
+                      />
+                      <span>Social Media</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="motion-graphics-service.html">
+                      <img
+                        src="assets/images/motion-graphics-service-desktop.svg"
+                        alt="Motion graphics"
+                        class="dropdown-icon"
+                      />
+                      <span>Motion graphics</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="video-editing-service.html">
+                      <img
+                        src="assets/images/video-editing-service-desktop.svg"
+                        alt="video editing"
+                        class="dropdown-icon"
+                      />
+                      <span>Video editing</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="motion-graphics-service.html">
+                      <img
+                        src="assets/images/motion-graphic.svg"
+                        alt="motion graphics"
+                        class="dropdown-icon"
+                      />
+                      <span>Motion graphics</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
-                <button class="navbar-toggle" aria-label="Open Menu">
-                    <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="2" fill="#DDE3DD" />
-                        <rect y="16" width="32" height="2" fill="#DDE3DD" />
+              <li>
+                <a href="marketplace.html">Marketplace</a>
+              </li>
+              <li>
+                <a href="pricing.html">Pricing</a>
+              </li>
+              <li>
+                <a href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="navbar-btn z-6">
+            <a href="contact.html" class="btn-getsample font-fira">
+              <span class="btn-text-wipe btn-text-wipe--navbar"
+                >Get Free Sample</span
+              >
+            </a>
+          </div>
+
+          <button class="navbar-toggle" aria-label="Open Menu">
+            <svg
+              width="32"
+              height="18"
+              viewBox="0 0 32 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="32" height="2" fill="#DDE3DD" />
+              <rect y="16" width="32" height="2" fill="#DDE3DD" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE OFF-CANVAS MENU (separate structure, matches Figma mobile design) -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-track">
+          <!-- panel 1: main menu -->
+          <div class="mobile-menu-panel mobile-menu-panel-main">
+            <div class="mobile-menu-top">
+              <span class="mobile-menu-heading">Menu</span>
+              <button
+                class="mobile-menu-close"
+                type="button"
+                aria-label="Close Menu"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L15 15M15 1L1 15"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <ul class="mobile-menu-list">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="#" class="mobile-menu-expand" data-panel="services">
+                  Services
+                  <span class="mobile-menu-plus">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1V13M1 7H13"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
                     </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="marketplace.html">Marketplace</a>
+              </li>
+              <li>
+                <a href="pricing.html">Pricing</a>
+              </li>
+              <li>
+                <a href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
 
+            <a href="contact.html" class="btn-getsample mobile-menu-btn"
+              >Get Free Sample</a
+            >
 
-                </button>
-
+            <div class="mobile-menu-deco">
+              <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
             </div>
-        </div>
+          </div>
 
-        <!-- MOBILE OFF-CANVAS MENU (separate structure, matches Figma mobile design) -->
-        <div class="mobile-menu">
-            <div class="mobile-menu-track">
-
-                <!-- panel 1: main menu -->
-                <div class="mobile-menu-panel mobile-menu-panel-main">
-                    <div class="mobile-menu-top">
-                        <span class="mobile-menu-heading">Menu</span>
-                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <ul class="mobile-menu-list">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mobile-menu-expand" data-panel="services">
-                                Services
-                                <span class="mobile-menu-plus">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="1.5"
-                                            stroke-linecap="round" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="marketplace.html">Marketplace</a>
-                        </li>
-                        <li>
-                            <a href="pricing.html">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-
-                    <a href="contact.html" class="btn-getsample mobile-menu-btn">Get Free Sample</a>
-
-                    <div class="mobile-menu-deco">
-                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
-                    </div>
-                </div>
-
-                <!-- panel 2: services grid -->
-                <div class="mobile-menu-panel mobile-menu-panel-services">
-                    <div class="mobile-menu-top">
-                        <button class="mobile-menu-back" type="button">
-                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 6H15M1 6L6 1M1 6L6 11" stroke="white" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Back
-                        </button>
-                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <span class="mobile-menu-heading mobile-services-heading">Services</span>
-
-                    <div class="mobile-services-grid">
-                                    <a href="logo-design-service.html">
-                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
-                                            class="dropdown-icon">
-                                        <span>Logo design</span>
-                                    </a>
-                                    <a href="brand-identity-design.html">
-                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
-                                            class="dropdown-icon">
-                                        <span>Brand Identity</span>
-                                    </a>
-                                    <a href="packaging-design.html">
-                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
-                                            class="dropdown-icon">
-                                        <span>Packaging Design</span>
-                                    </a>
-                                    <a href="print-design.html">
-                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
-                                            class="dropdown-icon">
-                                        <span>Print design</span>
-                                    </a>
-                                    <a href="illustration-design.html">
-                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
-                                            class="dropdown-icon">
-                                        <span>Illustration</span>
-                                    </a>
-                                    <a href="social-media-design.html">
-                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
-                                            class="dropdown-icon">
-                                        <span>Social Media</span>
-                                    </a>
-                                    <a href="motion-graphics-service.html">
-                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
-                                            class="dropdown-icon">
-                                        <span>Motion graphics</span>
-                                    </a>
-                                    <a href="video-editing-service.html">
-                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
-                                            class="dropdown-icon">
-                                        <span>Video editing</span>
-                                    </a>
-                                    <a href="motion-graphics-service.html">
-                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
-                                            class="dropdown-icon">
-                                        <span>Motion graphics</span>
-                                    </a>
-                    </div>
-
-                    <div class="mobile-menu-deco">
-                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
-                    </div>
-                </div>
-
+          <!-- panel 2: services grid -->
+          <div class="mobile-menu-panel mobile-menu-panel-services">
+            <div class="mobile-menu-top">
+              <button class="mobile-menu-back" type="button">
+                <svg
+                  width="16"
+                  height="12"
+                  viewBox="0 0 16 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 6H15M1 6L6 1M1 6L6 11"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Back
+              </button>
+              <button
+                class="mobile-menu-close"
+                type="button"
+                aria-label="Close Menu"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L15 15M15 1L1 15"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
             </div>
+
+            <span class="mobile-menu-heading mobile-services-heading"
+              >Services</span
+            >
+
+            <div class="mobile-services-grid">
+              <a href="logo-design-service.html">
+                <img
+                  src="assets/images/logo-design-service-desktop.svg"
+                  alt="logo design"
+                  class="dropdown-icon"
+                />
+                <span>Logo design</span>
+              </a>
+              <a href="brand-identity-design.html">
+                <img
+                  src="assets/images/brand-identity-service.svg"
+                  alt="Brand Identity"
+                  class="dropdown-icon"
+                />
+                <span>Brand Identity</span>
+              </a>
+              <a href="packaging-design.html">
+                <img
+                  src="assets/images/packaging-service.svg"
+                  alt="Packaging Design"
+                  class="dropdown-icon"
+                />
+                <span>Packaging Design</span>
+              </a>
+              <a href="print-design.html">
+                <img
+                  src="assets/images/print-design-service-desktop.svg"
+                  alt="print design"
+                  class="dropdown-icon"
+                />
+                <span>Print design</span>
+              </a>
+              <a href="illustration-design.html">
+                <img
+                  src="assets/images/Illustration-service-desktop.svg"
+                  alt="print design"
+                  class="dropdown-icon"
+                />
+                <span>Illustration</span>
+              </a>
+              <a href="social-media-design.html">
+                <img
+                  src="assets/images/social-media-service.svg"
+                  alt="Illustration"
+                  class="dropdown-icon"
+                />
+                <span>Social Media</span>
+              </a>
+              <a href="motion-graphics-service.html">
+                <img
+                  src="assets/images/motion-graphics-service-desktop.svg"
+                  alt="Motion graphics"
+                  class="dropdown-icon"
+                />
+                <span>Motion graphics</span>
+              </a>
+              <a href="video-editing-service.html">
+                <img
+                  src="assets/images/video-editing-service-desktop.svg"
+                  alt="video editing"
+                  class="dropdown-icon"
+                />
+                <span>Video editing</span>
+              </a>
+              <a href="motion-graphics-service.html">
+                <img
+                  src="assets/images/motion-graphic.svg"
+                  alt="motion graphics"
+                  class="dropdown-icon"
+                />
+                <span>Motion graphics</span>
+              </a>
+            </div>
+
+            <div class="mobile-menu-deco">
+              <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+            </div>
+          </div>
         </div>
+      </div>
     </header>
     <!-- navbar end -->
 
-
-
-
-     <!-- blog details section start -->
-<section class="blog-details-section py-12 bg-white">
-    <div class="container flex flex-col lg:flex-row lg:gap-8 xl:gap-12 gap-6">
-
+    <!-- blog details section start -->
+    <section class="blog-details-section py-12 bg-white">
+      <div class="container flex flex-col lg:flex-row lg:gap-8 xl:gap-12 gap-6">
         <!-- ===== LEFT: table of contents ===== -->
         <aside class="blog-toc w-full lg:w-[22%] shrink-0">
-            <div class="blog-toc-inner sticky top-12">
+          <div class="blog-toc-inner sticky top-20">
+            <span class="blog-toc-badge">6 minute read</span>
+            <h3 class="blog-toc-title">Table of contents</h3>
 
-                <span class="blog-toc-badge">6 minute read</span>
-                <h3 class="blog-toc-title">Table of contents</h3>
-
-                <!-- progress bar -->
-                <div class="blog-toc-progress">
-                    <div data-toc-progress class="blog-toc-progress-bar"></div>
-                </div>
-
-                <!-- mobile dropdown (JS populates) -->
-                <div class="block lg:hidden">
-                    <select data-toc-select class="blog-toc-select"></select>
-                </div>
-
-                <!-- desktop nav (JS populates) -->
-                <nav data-toc-nav class="blog-toc-nav hidden lg:block"></nav>
-
+            <!-- progress bar -->
+            <div class="blog-toc-progress">
+              <div data-toc-progress class="blog-toc-progress-bar"></div>
             </div>
+
+            <!-- mobile dropdown (JS populates) -->
+            <div class="block lg:hidden">
+              <select data-toc-select class="blog-toc-select"></select>
+            </div>
+
+            <!-- desktop nav (JS populates) -->
+            <nav data-toc-nav class="blog-toc-nav hidden lg:block"></nav>
+          </div>
         </aside>
 
         <!-- ===== CENTER: article ===== -->
         <main data-toc-content class="flex-1 min-w-0 lg:max-w-3xl">
-            <div class="blog-details">
+          <div class="blog-details">
+            <h1>How much should a brand identity cost in 2026?</h1>
 
-                <h1>How much should a brand identity cost in 2026?</h1>
-
-                <!-- meta badges -->
-                <div class="blog-meta">
-                    <span class="blog-meta-badge blog-meta-badge--category">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.99617 0.667969L14.3295 4.33464V11.668L8.66284 14.9487V7.6169L2.32812 3.94947L7.99617 0.667969Z" fill="#0B0C0B"/>
-<path d="M1.66406 5.10547V11.6685L7.33073 14.9492V8.38614L1.66406 5.10547Z" fill="#0B0C0B"/>
-</svg>
-
-                        Packaging
-                    </span>
-                    <span class="blog-meta-badge badge-gray">15 July</span>
-                    <span class="blog-meta-badge badge-gray">Last updated: 28 July</span>
-                </div>
-
-                <img src="assets/images/blog-details-1.webp" class="img-fluid" alt="blog hero image">
-
-                <p>The retail landscape is evolving fast, and packaging design sits at the center of that shift.
-                    Consumers now make purchasing decisions in seconds, often based on how a product looks on the shelf
-                    or in an unboxing video. For brands competing in crowded markets, packaging is no longer just a
-                    container — it's a storytelling tool, a sustainability statement, and a sensory experience.</p>
-
-                <h2>Content with image</h2>
-                <img src="assets/images/blog-details-2.webp" class="img-fluid" alt="content image">
-                <p>Sustainability has become the single most influential force in packaging graphics. Over 70% of
-                    consumers say they prefer brands that use eco-friendly packaging, and this preference is now
-                    directly shaping visual design choices across the industry.</p>
-
-                <h2>Content layout</h2>
-                <p>Sustainable packaging is no longer limited to swapping plastic for cardboard. The graphics industry
-                    is embracing plant-based inks, water-soluble coatings, and mono-material constructions that simplify
-                    recycling. Designers are rethinking color palettes to work with unbleached substrates, using kraft
-                    textures and earthy tones that signal environmental responsibility.</p>
-
-                <h2>Check style</h2>
-                <p>Structural packaging design is experiencing a creative renaissance. Brands are moving beyond standard
-                    box formats to create shapes that demand attention on the shelf and deliver memorable unboxing
-                    experiences for e-commerce customers.</p>
-                <p>Here are the key structural innovations transforming retail packaging:</p>
-
-                
-
-                <ul class="check-list">
-                    <li><strong>Die-cut windows:</strong> Custom die-cut openings let consumers see the product inside,
-                        building trust and reducing the need for excessive product photography on the box.</li>
-                    <li><strong>Modular packaging:</strong> Interlocking and stackable designs allow products to be
-                        displayed together as a collection, increasing visual impact at retail.</li>
-                    <li><strong>Tactile finishes:</strong> Soft-touch coatings, embossed logos, and spot UV varnishes
-                        add a physical dimension that flat print cannot achieve.</li>
-                    <li><strong>Compact engineering:</strong> Brands are reducing void space with precision-fit inserts
-                        and folding structures that lower shipping costs and minimize material waste.</li>
-                </ul>
-
-                <!-- tips box -->
-                <div class="blog-tips">
-                    <span class="blog-tips-label">
-                        <img src="assets/images/tips-icon.svg" alt="tips icon">
-                        Tips
-                    </span>
-                    <p>Start with the most impactful material and finish choices, then build a packaging system that
-                        scales across your product line while maintaining visual consistency.</p>
-                </div>
-
-                <h2>Number style</h2>
-                <p>Personalized and interactive packaging is the third major trend reshaping retail this year. Advances
-                    in digital printing technology have made short-run, variable-data packaging economically viable for
-                    brands of all sizes.</p>
-                <p>These are the core techniques driving personalized packaging forward:</p>
-
-                <ol>
-                    <li>Variable data printing</li>
-                    <li>QR codes, AR experiences, &amp; smart labels</li>
-                    <li>Limited edition graphics</li>
-                    <li>Regional &amp; seasonal variants</li>
-                </ol>
-
-                <h2>Bullet point style</h2>
-                <p>Digital printing has unlocked a new era for packaging graphics. Brands can now produce unique designs
-                    for individual SKUs without the cost burden of traditional plate-based printing, enabling true mass
-                    customization.</p>
-                <p>These are the main advantages of digital-first packaging workflows:</p>
-
-                <ul>
-                    <li>Variable data printing</li>
-                    <li>QR codes, AR experiences, &amp; smart labels</li>
-                    <li>Limited edition graphics</li>
-                    <li>Regional &amp; seasonal variants</li>
-                </ul>
-
-                <h2>Quote</h2>
-                <h3>Under H2</h3>
-                Color accuracy and substrate compatibility remain critical in packaging production. Designers must
-                    work closely with print vendors to ensure brand colors translate faithfully across corrugated,
-                    folding carton, and flexible film substrates.
-                <h3>Under H2</h3>
-                Color accuracy and substrate compatibility remain critical in packaging production. Designers must
-                    work closely with print vendors to ensure brand colors translate faithfully across corrugated,
-                    folding carton, and flexible film substrates.
-                <h3>Under H2</h3>
-                <p>Color accuracy and substrate compatibility remain critical in packaging production. Designers must
-                    work closely with print vendors to ensure brand colors translate faithfully across corrugated,
-                    folding carton, and flexible film substrates.</p>
-
-                <blockquote>
-                    <p>Switching to sustainable packaging graphics completely transformed our shelf presence. Within two
-                        months, our new kraft-and-foil design increased sell-through rates by 34%. Customers told us the
-                        packaging felt more authentic, and retailers started requesting endcap placement.</p>
-                    Elena Voss
-                </blockquote>
-
-                <h2>Table style</h2>
-                <p>Packaging material choices directly affect print quality, cost, and brand perception. Understanding
-                    substrate properties helps designers specify the right combination for each product category.</p>
-                    <div class="blog-table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Material</th>
-                            <th>Best for</th>
-                            <th>Recyclable</th>
-                            <th>Cost/unit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Folding carton</td>
-                            <td>Cosmetics &amp; food</td>
-                            <td>Yes</td>
-                            <td>$0.45</td>
-                        </tr>
-                        <tr>
-                            <td>Corrugated board</td>
-                            <td>E-commerce</td>
-                            <td>Yes</td>
-                            <td>$0.60</td>
-                        </tr>
-                        <tr>
-                            <td>Flexible film</td>
-                            <td>Snacks &amp; pouches</td>
-                            <td>Varies</td>
-                            <td>$0.25</td>
-                        </tr>
-                        <tr>
-                            <td>Rigid box</td>
-                            <td>Luxury &amp; premium</td>
-                            <td>Partial</td>
-                            <td>$1.80</td>
-                        </tr>
-                        <tr>
-                            <td>Kraft paper</td>
-                            <td>Eco-friendly lines</td>
-                            <td>Yes</td>
-                            <td>$0.35</td>
-                        </tr>
-                        <tr>
-                            <td>Molded fiber</td>
-                            <td>Protective inserts</td>
-                            <td>Yes</td>
-                            <td>$0.55</td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-
+            <!-- meta badges -->
+            <div class="blog-meta">
+              <span class="blog-meta-badge blog-meta-badge--category">
+                Packaging
+              </span>
+              <span class="blog-meta-badge badge-gray">15 July</span>
+              <span class="blog-meta-badge badge-gray"
+                >Last updated: 28 July</span
+              >
             </div>
+
+            <figure>
+              <img
+                src="assets/images/blog-details-1.webp"
+                class="img-fluid"
+                alt="blog hero image"
+              />
+            </figure>
+
+            <p>
+              The retail landscape is evolving fast, and packaging design sits
+              at the center of that shift. Consumers now make purchasing
+              decisions in seconds, often based on how a product looks on the
+              shelf or in an unboxing video. For brands competing in crowded
+              markets, packaging is no longer just a container — it's a
+              storytelling tool, a sustainability statement, and a sensory
+              experience.
+            </p>
+
+            <h2>Content with image</h2>
+            <figure>
+              <img
+                src="assets/images/blog-details-2.webp"
+                class="img-fluid"
+                alt="content image"
+              />
+              <figcaption class="image-caption">
+                Your custom caption text goes here
+              </figcaption>
+            </figure>
+            <p>
+              Sustainability has become the single most influential force in
+              packaging graphics. Over 70% of consumers say they prefer brands
+              that use eco-friendly packaging, and this preference is now
+              directly shaping visual design choices across the industry.
+            </p>
+
+            <h2>Content layout</h2>
+            <p>
+              <strong>Sustainable packaging is no longer</strong> limited to
+              swapping plastic for cardboard. The graphics industry is embracing
+              plant-based inks, water-soluble coatings, and mono-material
+              constructions that simplify recycling.
+              <a href="#">Designers are rethinking</a> color palettes to work
+              with unbleached substrates, using kraft textures and earthy tones
+              that signal environmental responsibility.
+              <a href="#">Minimalist print</a> layouts reduce ink coverage,
+              which lowers both cost and environmental impact while creating a
+              clean, premium aesthetic.
+            </p>
+
+            <h2>Check style</h2>
+            <p>
+              Structural packaging design is experiencing a creative
+              renaissance. Brands are moving beyond standard box formats to
+              create shapes that demand attention on the shelf and deliver
+              memorable unboxing experiences for e-commerce customers.
+            </p>
+            <p>
+              Here are the key structural innovations transforming retail
+              packaging:
+            </p>
+
+            <ul class="check-list">
+              <li>
+                <strong>Die-cut windows:</strong> Custom die-cut openings let
+                consumers see the product inside, building trust and reducing
+                the need for excessive product photography on the box.
+              </li>
+              <li>
+                <strong>Modular packaging:</strong> Interlocking and stackable
+                designs allow products to be displayed together as a collection,
+                increasing visual impact at retail.
+              </li>
+              <li>
+                <strong>Tactile finishes:</strong> Soft-touch coatings, embossed
+                logos, and spot UV varnishes add a physical dimension that flat
+                print cannot achieve.
+              </li>
+              <li>
+                <strong>Compact engineering:</strong> Brands are reducing void
+                space with precision-fit inserts and folding structures that
+                lower shipping costs and minimize material waste.
+              </li>
+            </ul>
+
+            <!-- tips box -->
+            <div class="blog-tips">
+              <span class="blog-tips-label">
+                <img src="assets/images/tips-icon.svg" alt="tips icon" />
+                Tips
+              </span>
+              <p>
+                Start with the most impactful material and finish choices, then
+                build a packaging system that scales across your product line
+                while maintaining visual consistency.
+              </p>
+            </div>
+
+            <h2>Number style</h2>
+            <p>
+              Personalized and interactive packaging is the third major trend
+              reshaping retail this year. Advances in digital printing
+              technology have made short-run, variable-data packaging
+              economically viable for brands of all sizes.
+            </p>
+            <p>
+              These are the core techniques driving personalized packaging
+              forward:
+            </p>
+
+            <ol>
+              <li>Variable data printing</li>
+              <li>QR codes, AR experiences, &amp; smart labels</li>
+              <li>Limited edition graphics</li>
+              <li>Regional &amp; seasonal variants</li>
+            </ol>
+
+            <h2>Bullet point style</h2>
+            <p>
+              Digital printing has unlocked a new era for packaging graphics.
+              Brands can now produce unique designs for individual SKUs without
+              the cost burden of traditional plate-based printing, enabling true
+              mass customization.
+            </p>
+            <p>
+              These are the main advantages of digital-first packaging
+              workflows:
+            </p>
+
+            <ul>
+              <li>Variable data printing</li>
+              <li>QR codes, AR experiences, &amp; smart labels</li>
+              <li>Limited edition graphics</li>
+              <li>Regional &amp; seasonal variants</li>
+            </ul>
+
+            <h2>Quote</h2>
+            <h3>Under H2</h3>
+            <p>
+              Color accuracy and substrate compatibility remain critical in
+              packaging production. Designers must work closely with print
+              vendors to ensure brand colors translate faithfully across
+              corrugated, folding carton, and flexible film substrates.
+            </p>
+            <h3>Under H2</h3>
+            <p>
+              Color accuracy and substrate compatibility remain critical in
+              packaging production. Designers must work closely with print
+              vendors to ensure brand colors translate faithfully across
+              corrugated, folding carton, and flexible film substrates.
+            </p>
+            <h3>Under H2</h3>
+            <p>
+              Color accuracy and substrate compatibility remain critical in
+              packaging production. Designers must work closely with print
+              vendors to ensure brand colors translate faithfully across
+              corrugated, folding carton, and flexible film substrates.
+            </p>
+
+            <blockquote>
+              <p>
+                Switching to sustainable packaging graphics completely
+                transformed our shelf presence. Within two months, our new
+                kraft-and-foil design increased sell-through rates by 34%.
+                Customers told us the packaging felt more authentic, and
+                retailers started requesting endcap placement.
+              </p>
+              <cite>Elena Voss</cite>
+            </blockquote>
+
+            <h2>Table style</h2>
+            <p>
+              Packaging material choices directly affect print quality, cost,
+              and brand perception. Understanding substrate properties helps
+              designers specify the right combination for each product category.
+            </p>
+            <div class="blog-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Best for</th>
+                    <th>Recyclable</th>
+                    <th>Cost/unit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Folding carton</td>
+                    <td>Cosmetics &amp; food</td>
+                    <td>Yes</td>
+                    <td>$0.45</td>
+                  </tr>
+                  <tr>
+                    <td>Corrugated board</td>
+                    <td>E-commerce</td>
+                    <td>Yes</td>
+                    <td>$0.60</td>
+                  </tr>
+                  <tr>
+                    <td>Flexible film</td>
+                    <td>Snacks &amp; pouches</td>
+                    <td>Varies</td>
+                    <td>$0.25</td>
+                  </tr>
+                  <tr>
+                    <td>Rigid box</td>
+                    <td>Luxury &amp; premium</td>
+                    <td>Partial</td>
+                    <td>$1.80</td>
+                  </tr>
+                  <tr>
+                    <td>Kraft paper</td>
+                    <td>Eco-friendly lines</td>
+                    <td>Yes</td>
+                    <td>$0.35</td>
+                  </tr>
+                  <tr>
+                    <td>Molded fiber</td>
+                    <td>Protective inserts</td>
+                    <td>Yes</td>
+                    <td>$0.55</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </main>
 
         <!-- ===== RIGHT: sidebar ===== -->
         <div class="blog-sidebar w-full lg:w-[24%] shrink-0">
-            <div class="sticky top-12 flex flex-col md:gap-3 gap-3">
-
-                <!-- author -->
-                <div class="blog-side-card blog-right-side-author">
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="assets/images/blog-author-photo.png" class="blog-author-avatar" alt="author">
-                        <div>
-                            <h4 class="blog-side-title">Bappi Miazi</h4>
-                            <p class="blog-side-text">Senior Packaging Designer</p>
-                        </div>
-                    </div>
-                    <p class="blog-side-text line-clamp-3">Amara is a Senior Packaging Designer with over 12 years of
-                        experience in structural design and brand packaging for consumer goods brands across Europe and
-                        North America.</p>
+          <div class="sticky top-12 flex flex-col md:gap-3 gap-3">
+            <!-- author -->
+            <div class="blog-side-card blog-right-side-author">
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src="assets/images/blog-author-photo.png"
+                  class="blog-author-avatar"
+                  alt="author"
+                />
+                <div>
+                  <h4 class="blog-side-title">Bappi Miazi</h4>
+                  <p class="blog-side-text">Senior Packaging Designer</p>
                 </div>
-
-                <!-- newsletter -->
-                <div class="blog-side-card blog-right-side-newsletter">
-                    <h4 class="blog-side-title mb-2">Stay ahead in packaging design</h4>
-                    <p class="blog-side-text">PackPulse Newsletter — subscribe for packaging trends, material
-                        innovations, &amp; design insights.</p>
-
-                    <form class="blog-side-form">
-                        <input type="email" name="email" placeholder="Email address" required
-                            class="blog-side-input">
-                        <button type="submit" class="blog-side-btn">Subscribe</button>
-                    </form>
-                </div>
-
-                <!-- share -->
-                <div class="blog-side-card blog-right-side-social-link">
-                    <h4 class="blog-side-title mb-4">Share this article</h4>
-                    <div class="flex items-center gap-3">
-                        <a href="#" class="blog-share-icon" aria-label="Facebook">
-                            <img src="assets/images/share-facebook.svg" alt="facebook">
-                        </a>
-                        <a href="#" class="blog-share-icon" aria-label="LinkedIn">
-                            <img src="assets/images/share-linkedin.svg" alt="linkedin">
-                        </a>
-                        <a href="#" class="blog-share-icon" aria-label="X">
-                            <img src="assets/images/share-x.svg" alt="x">
-                        </a>
-                        <a href="#" class="blog-share-icon" aria-label="Copy link">
-                            <img src="assets/images/share-link.svg" alt="copy link">
-                        </a>
-                    </div>
-                </div>
-
+              </div>
+              <p class="blog-side-text line-clamp-3">
+                Amara is a Senior Packaging Designer with over 12 years of
+                experience in structural design and brand packaging for consumer
+                goods brands across Europe and North America.
+              </p>
             </div>
+
+            <!-- newsletter -->
+            <div class="blog-side-card blog-right-side-newsletter">
+              <h4 class="blog-side-title mb-3">
+                Stay ahead in packaging design
+              </h4>
+              <p class="blog-side-text">
+                PackPulse Newsletter — subscribe for packaging trends, material
+                innovations, &amp; design insights.
+              </p>
+
+              <form class="blog-side-form">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                  class="blog-side-input"
+                />
+                <button type="submit" class="blog-side-btn">Subscribe</button>
+              </form>
+            </div>
+
+            <!-- share -->
+            <div class="blog-side-card blog-right-side-social-link">
+              <h4 class="blog-side-title mb-4">Share this article</h4>
+              <div class="flex items-center gap-2">
+                <a href="#" class="blog-share-icon" aria-label="Facebook">
+                  <img src="assets/images/share-facebook.svg" alt="facebook" />
+                </a>
+                <a href="#" class="blog-share-icon" aria-label="LinkedIn">
+                  <img src="assets/images/share-linkedin.svg" alt="linkedin" />
+                </a>
+                <a href="#" class="blog-share-icon" aria-label="X">
+                  <img src="assets/images/share-x.svg" alt="x" />
+                </a>
+                <a href="#" class="blog-share-icon" aria-label="Copy link">
+                  <img src="assets/images/share-link.svg" alt="copy link" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </div>
-</section>
-<!-- blog details section end -->
-
-
+      </div>
+    </section>
+    <!-- blog details section end -->
 
     <!-- blog section start -->
-    <section class="blog-section section-padding bg-[linear-gradient(180deg,_#0B0C0B_65.86%,_#9EA19E_100%)] overflow-hidden">
-        <div class="container">
+    <section
+      class="blog-section section-padding bg-[linear-gradient(180deg,_#0B0C0B_65.86%,_#9EA19E_100%)] overflow-hidden"
+    >
+      <div class="container">
+        <!-- section header -->
+        <div
+          class="flex sm:flex-row flex-col items-center flex-wrap justify-center sm:justify-between sm:gap-6 gap-3 lg:mb-12 md:mb-10 mb-8"
+        >
+          <div class="max-w-xl">
+            <h2
+              class="text-[#FFF] text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize"
+            >
+              Ideas from the studio
+            </h2>
+          </div>
 
-            <!-- section header -->
-            <div
-                class="flex sm:flex-row flex-col items-center flex-wrap justify-center sm:justify-between sm:gap-6 gap-3 lg:mb-12 md:mb-10 mb-8">
-                <div class="max-w-xl">
-                    <h2
-                        class="text-[#FFF] text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
-                        Ideas from the studio
-                    </h2>
-                </div>
+          <a href="#" class="btn-cta flex items-center gap-0 shrink-0">
+            <span
+              class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+              aria-label="See all blog posts"
+            >
+              <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 15L15 5M15 5H7M15 5V13"
+                    stroke="#0B0C0B"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 15L15 5M15 5H7M15 5V13"
+                    stroke="#0B0C0B"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </span>
 
-                <a href="#" class="btn-cta flex items-center gap-0 shrink-0">
-                    <span
-                        class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
-                        aria-label="See all blog posts">
-                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 15L15 5M15 5H7M15 5V13" stroke="#0B0C0B" stroke-width="1.8"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 15L15 5M15 5H7M15 5V13" stroke="#0B0C0B" stroke-width="1.8"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </span>
-
-                    <span
-                        class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 sm:px-6 px-5 py-4 text-sm font-semibold uppercase whitespace-nowrap">
-                        <span class="btn-text-wipe">See All</span>
-                    </span>
-                </a>
-            </div>
-
-            <!-- blog marquee slider -->
-            <div class="" aria-label="Latest blog posts">
-                <div class="">
-
-                    <div class="grid md:grid-cols-3 sm:grid-cols-2 lg:gap-8 sm:gap-6 gap-4">
-
-                        <!-- slide 1 -->
-                        <div class="h-auto">
-                            <a href="blog-details.html"
-                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
-                                <div class="blog-card-media">
-                                    <img src="assets/images/blog-1.webp" alt="2026 website design trends"
-                                        class="img-fluid w-full">
-                                </div>
-                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
-                                    <div class="flex items-center justify-between gap-3 mb-4">
-                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
-                                            <span
-                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
-                                                Design</span>
-                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
-                                                <img src="assets/images/blog-author.png" alt="Md. Hasan Biswas"
-                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
-                                                <span
-                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Md.
-                                                    Hasan Biswas</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-start justify-between gap-3 mb-4">
-                                        <h3
-                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
-                                            2026 website design trends every modern designer should know</h3>
-
-                                        <div
-                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
-                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
-                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
-                                        </div>
-                                    </div>
-
-                                    <p
-                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
-                                        See how in-house teams improved workflow, reduced backlog, and delivered
-                                        consistent brand visuals with a dedicated subscription design system.</p>
-                                    <div
-                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
-                                        <img src="assets/images/readmore-arrow-right.svg"
-                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
-                                        Read More
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- slide 2 -->
-                        <div class=" h-auto">
-                            <a href="blog-details.html"
-                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
-                                <div class="blog-card-media">
-                                    <img src="assets/images/blog-2.webp" alt="How a startup scaled faster"
-                                        class="img-fluid w-full">
-                                </div>
-                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
-                                    <div class="flex items-center justify-between gap-3 mb-4">
-                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
-                                            <span
-                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
-                                                Design</span>
-                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
-                                                <img src="assets/images/blog-author.png" alt="Albert Flores"
-                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
-                                                <span
-                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Albert
-                                                    Flores</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="flex items-start justify-between gap-3 mb-4">
-                                        <h3
-                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
-                                            How a startup scaled faster using our subscription design service</h3>
-
-                                        <div
-                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
-                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
-                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
-                                        </div>
-                                    </div>
-                                    <p
-                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
-                                        See how in-house teams improved workflow, reduced backlog, and delivered
-                                        consistent brand visuals with a dedicated subscription design system.</p>
-                                    <div
-                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
-                                        <img src="assets/images/readmore-arrow-right.svg"
-                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
-                                        Read More
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- slide 3 -->
-                        <div class="h-auto">
-                            <a href="blog-details.html"
-                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
-                                <div class="blog-card-media">
-                                    <img src="assets/images/blog-3.webp" alt="From freelancer to full-time designer"
-                                        class="img-fluid w-full">
-                                </div>
-                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
-                                    <div class="flex items-center justify-between gap-3 mb-4">
-                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
-                                            <span
-                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
-                                                Design</span>
-                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
-                                                <img src="assets/images/blog-author.png" alt="Jenny Wilson"
-                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
-                                                <span
-                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Jenny
-                                                    Wilson</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="flex items-start justify-between gap-3 mb-4">
-                                        <h3
-                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
-                                            From freelancer to full-time designer with consistent client growth</h3>
-
-                                        <div
-                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
-                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
-                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
-                                        </div>
-                                    </div>
-
-                                    <p
-                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
-                                        See how in-house teams improved workflow, reduced backlog, and delivered
-                                        consistent brand visuals with a dedicated subscription design system.</p>
-                                    <div
-                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
-                                        <img src="assets/images/readmore-arrow-right.svg"
-                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
-                                        Read More
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+            <span
+              class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 sm:px-6 px-5 py-4 text-sm font-semibold uppercase whitespace-nowrap"
+            >
+              <span class="btn-text-wipe">See All</span>
+            </span>
+          </a>
         </div>
+
+        <!-- blog marquee slider -->
+        <div class="" aria-label="Latest blog posts">
+          <div class="">
+            <div
+              class="grid md:grid-cols-3 sm:grid-cols-2 lg:gap-8 sm:gap-6 gap-4"
+            >
+              <!-- slide 1 -->
+              <div class="h-auto">
+                <a
+                  href="blog-details.html"
+                  class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col"
+                >
+                  <div class="blog-card-media">
+                    <img
+                      src="assets/images/blog-1.webp"
+                      alt="2026 website design trends"
+                      class="img-fluid w-full"
+                    />
+                  </div>
+                  <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                      <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                        <span
+                          class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap"
+                          >UI/UX Design</span
+                        >
+                        <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                          <img
+                            src="assets/images/blog-author.png"
+                            alt="Md. Hasan Biswas"
+                            class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0"
+                          />
+                          <span
+                            class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate"
+                            >Md. Hasan Biswas</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                      <h3
+                        class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2"
+                      >
+                        2026 website design trends every modern designer should
+                        know
+                      </h3>
+
+                      <div
+                        class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1"
+                      >
+                        <span
+                          class="block sm:text-xl text-lg font-medium leading-[120%]"
+                          >20</span
+                        >
+                        <span
+                          class="block sm:text-sm text-xs font-normal leading-[150%]"
+                          >Feb</span
+                        >
+                      </div>
+                    </div>
+
+                    <p
+                      class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3"
+                    >
+                      See how in-house teams improved workflow, reduced backlog,
+                      and delivered consistent brand visuals with a dedicated
+                      subscription design system.
+                    </p>
+                    <div
+                      class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn"
+                    >
+                      <img
+                        src="assets/images/readmore-arrow-right.svg"
+                        class="img-fluid arrow-icon-right-read-more-icon"
+                        alt="arrow-right icon"
+                      />
+                      Read More
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- slide 2 -->
+              <div class="h-auto">
+                <a
+                  href="blog-details.html"
+                  class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col"
+                >
+                  <div class="blog-card-media">
+                    <img
+                      src="assets/images/blog-2.webp"
+                      alt="How a startup scaled faster"
+                      class="img-fluid w-full"
+                    />
+                  </div>
+                  <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                      <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                        <span
+                          class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap"
+                          >UI/UX Design</span
+                        >
+                        <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                          <img
+                            src="assets/images/blog-author.png"
+                            alt="Albert Flores"
+                            class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0"
+                          />
+                          <span
+                            class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate"
+                            >Albert Flores</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                      <h3
+                        class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2"
+                      >
+                        How a startup scaled faster using our subscription
+                        design service
+                      </h3>
+
+                      <div
+                        class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1"
+                      >
+                        <span
+                          class="block sm:text-xl text-lg font-medium leading-[120%]"
+                          >20</span
+                        >
+                        <span
+                          class="block sm:text-sm text-xs font-normal leading-[150%]"
+                          >Feb</span
+                        >
+                      </div>
+                    </div>
+                    <p
+                      class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3"
+                    >
+                      See how in-house teams improved workflow, reduced backlog,
+                      and delivered consistent brand visuals with a dedicated
+                      subscription design system.
+                    </p>
+                    <div
+                      class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn"
+                    >
+                      <img
+                        src="assets/images/readmore-arrow-right.svg"
+                        class="img-fluid arrow-icon-right-read-more-icon"
+                        alt="arrow-right icon"
+                      />
+                      Read More
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- slide 3 -->
+              <div class="h-auto">
+                <a
+                  href="blog-details.html"
+                  class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col"
+                >
+                  <div class="blog-card-media">
+                    <img
+                      src="assets/images/blog-3.webp"
+                      alt="From freelancer to full-time designer"
+                      class="img-fluid w-full"
+                    />
+                  </div>
+                  <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                      <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                        <span
+                          class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap"
+                          >UI/UX Design</span
+                        >
+                        <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                          <img
+                            src="assets/images/blog-author.png"
+                            alt="Jenny Wilson"
+                            class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0"
+                          />
+                          <span
+                            class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate"
+                            >Jenny Wilson</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                      <h3
+                        class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2"
+                      >
+                        From freelancer to full-time designer with consistent
+                        client growth
+                      </h3>
+
+                      <div
+                        class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1"
+                      >
+                        <span
+                          class="block sm:text-xl text-lg font-medium leading-[120%]"
+                          >20</span
+                        >
+                        <span
+                          class="block sm:text-sm text-xs font-normal leading-[150%]"
+                          >Feb</span
+                        >
+                      </div>
+                    </div>
+
+                    <p
+                      class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3"
+                    >
+                      See how in-house teams improved workflow, reduced backlog,
+                      and delivered consistent brand visuals with a dedicated
+                      subscription design system.
+                    </p>
+                    <div
+                      class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn"
+                    >
+                      <img
+                        src="assets/images/readmore-arrow-right.svg"
+                        class="img-fluid arrow-icon-right-read-more-icon"
+                        alt="arrow-right icon"
+                      />
+                      Read More
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- blog section end -->
 
-
-
     <!-- footer start -->
     <footer class="footer relative overflow-hidden pt-16 lg:pt-20">
-        <div class="container">
+      <div class="container">
+        <!-- nav grid -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 lg:gap-x-8 mb-12 lg:mb-16"
+        >
+          <!-- Services -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Services</h3>
+            <ul class="footer-col-list">
+              <li>
+                <a href="logo-design-service.html"> Logo design </a>
+              </li>
+              <li>
+                <a href="brand-identity-design.html">Brand Identity </a>
+              </li>
+              <li>
+                <a href="packaging-design.html"> Packaging Design </a>
+              </li>
+              <li>
+                <a href="print-design.html"> Print design </a>
+              </li>
+              <li>
+                <a href="illustration-design.html"> Illustration </a>
+              </li>
+              <li>
+                <a href="social-media-design.html"> Social Media </a>
+              </li>
+              <li>
+                <a href="motion-graphics-service.html">Motion graphics </a>
+              </li>
+              <li>
+                <a href="video-editing-service.html">Video editing </a>
+              </li>
+              <li>
+                <a href="motion-graphics-service.html">Motion graphics </a>
+              </li>
+            </ul>
+          </div>
 
-            <!-- nav grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 lg:gap-x-8 mb-12 lg:mb-16">
+          <!-- Quecut -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Quecut</h3>
+            <ul class="footer-col-list">
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
 
-                <!-- Services -->
-                <div class="footer-col">
-                    <h3 class="footer-col-title">Services</h3>
-                    <ul class="footer-col-list">
-                        <li>
-                                    <a href="logo-design-service.html">
-                                       Logo design
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="brand-identity-design.html">Brand Identity
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="packaging-design.html">
-                                        Packaging Design
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="print-design.html">
-                                        Print design
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="illustration-design.html">
-                                        Illustration
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="social-media-design.html">
-                                        Social Media
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="motion-graphics-service.html">Motion graphics
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="video-editing-service.html">Video editing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="motion-graphics-service.html">Motion graphics
-                                    </a>
-                                </li>
-                    </ul>
-                </div>
+          <!-- Resources -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Resources</h3>
+            <ul class="footer-col-list">
+              <li><a href="contact-us.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+          </div>
 
-                <!-- Quecut -->
-                <div class="footer-col">
-                    <h3 class="footer-col-title">Quecut</h3>
-                    <ul class="footer-col-list">
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
+          <!-- Policies -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Policies</h3>
+            <ul class="footer-col-list">
+              <li><a href="help-center.html">Help Center</a></li>
+              <li><a href="privacy-policy.html">Privacy</a></li>
+              <li><a href="cookies-policy.html">Cookies</a></li>
+            </ul>
+          </div>
 
-                <!-- Resources -->
-                <div class="footer-col">
-                    <h3 class="footer-col-title">Resources</h3>
-                    <ul class="footer-col-list">
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-
-                <!-- Policies -->
-                <div class="footer-col">
-                    <h3 class="footer-col-title">Policies</h3>
-                    <ul class="footer-col-list">
-                        <li><a href="help-center.html">Help Center</a></li>
-                        <li><a href="privacy-policy.html">Privacy</a></li>
-                        <li><a href="cookies-policy.html">Cookies</a></li>
-                    </ul>
-                </div>
-
-                <!-- Social Media (full-width on mobile/tablet, 1 col on desktop) -->
-                <div class="footer-col col-span-2 md:col-span-4 lg:col-span-1">
-                    <h3 class="footer-col-title">Social Media</h3>
-                    <div class="flex items-center gap-2 flex-wrap">
-                        <a href="#" class="footer-social-icon" aria-label="Dribbble">
-                            <img src="assets/images/social-media-1.svg" class="img-fluid" alt="social media icon">
-                        </a>
-                        <a href="#" class="footer-social-icon" aria-label="Behance">
-                            <img src="assets/images/social-media-2.svg" class="img-fluid" alt="social media icon">
-                        </a>
-                        <a href="#" class="footer-social-icon" aria-label="Facebook">
-                            <img src="assets/images/social-media-3.svg" class="img-fluid" alt="social media icon">
-                        </a>
-                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
-                            <img src="assets/images/social-media-4.svg" class="img-fluid" alt="social media icon">
-                        </a>
-                    </div>
-                </div>
+          <!-- Social Media (full-width on mobile/tablet, 1 col on desktop) -->
+          <div class="footer-col col-span-2 md:col-span-4 lg:col-span-1">
+            <h3 class="footer-col-title">Social Media</h3>
+            <div class="flex items-center gap-2 flex-wrap">
+              <a href="#" class="footer-social-icon" aria-label="Dribbble">
+                <img
+                  src="assets/images/social-media-1.svg"
+                  class="img-fluid"
+                  alt="social media icon"
+                />
+              </a>
+              <a href="#" class="footer-social-icon" aria-label="Behance">
+                <img
+                  src="assets/images/social-media-2.svg"
+                  class="img-fluid"
+                  alt="social media icon"
+                />
+              </a>
+              <a href="#" class="footer-social-icon" aria-label="Facebook">
+                <img
+                  src="assets/images/social-media-3.svg"
+                  class="img-fluid"
+                  alt="social media icon"
+                />
+              </a>
+              <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                <img
+                  src="assets/images/social-media-4.svg"
+                  class="img-fluid"
+                  alt="social media icon"
+                />
+              </a>
             </div>
-
-            <!-- copyright + divider -->
-            <p class="footer-copyright">© Quecut</p>
-            <hr class="footer-divider">
+          </div>
         </div>
 
-        <!-- BIG BOTTOM LOGO with animated gradient wave -->
-        <div class=" xl:mt-36.5 md:mt-25 sm:mt-20 mt-12.5 sticky bottom-0" aria-hidden="true">
-            <!-- <div class="quecut-blob quecut-blob--yellow"></div>
+        <!-- copyright + divider -->
+        <p class="footer-copyright">© Quecut</p>
+        <hr class="footer-divider" />
+      </div>
+
+      <!-- BIG BOTTOM LOGO with animated gradient wave -->
+      <div
+        class="xl:mt-36.5 md:mt-25 sm:mt-20 mt-12.5 sticky bottom-0"
+        aria-hidden="true"
+      >
+        <!-- <div class="quecut-blob quecut-blob--yellow"></div>
         <div class="quecut-blob quecut-blob--orange"></div>
         <div class="quecut-blob quecut-blob--blue"></div>
         <div class="quecut-blob quecut-blob--magenta"></div> -->
-            <img src="assets/images/quecut-footer.svg" class="img-fluid" alt="footer">
-        </div>
+        <img
+          src="assets/images/quecut-footer.svg"
+          class="img-fluid"
+          alt="footer"
+        />
+      </div>
     </footer>
     <!-- footer end -->
-
-
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -876,9 +1180,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>

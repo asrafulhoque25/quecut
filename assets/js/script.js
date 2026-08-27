@@ -1617,3 +1617,262 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //work page card stack animation
 
+
+
+
+
+// ================= FAQ: CATEGORY FILTER (desktop sidebar + tablet tabs + mobile select) =================
+document.addEventListener('DOMContentLoaded', () => {
+    const faqList = document.getElementById('faqList');
+    if (!faqList) return;
+ 
+    const items = Array.from(faqList.querySelectorAll('.faq-item'));
+    const allTabButtons = document.querySelectorAll('.faq-tab-btn');
+    const mobileSelect = document.getElementById('faqMobileSelect');
+ 
+    function applyFilter(filter) {
+        items.forEach((item) => {
+            const matches = filter === 'all' || item.dataset.category === filter;
+            item.classList.toggle('hidden', !matches);
+        });
+ 
+        // keep every tab-button UI (sidebar + tablet row) and the mobile select in sync
+        allTabButtons.forEach((btn) => {
+            btn.classList.toggle('active', btn.dataset.filter === filter);
+        });
+        if (mobileSelect && mobileSelect.value !== filter) {
+            mobileSelect.value = filter;
+        }
+    }
+ 
+    allTabButtons.forEach((btn) => {
+        btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+ 
+    if (mobileSelect) {
+        mobileSelect.addEventListener('change', () => applyFilter(mobileSelect.value));
+    }
+ 
+    applyFilter('all');
+});
+ 
+// ================= FAQ TABS (tablet): drag-to-scroll =================
+document.addEventListener('DOMContentLoaded', () => {
+    const scroller = document.getElementById('faqTabsScroller');
+    if (!scroller) return;
+ 
+    let isDown = false;
+    let startX = 0;
+    let scrollLeftStart = 0;
+ 
+    scroller.addEventListener('mousedown', (e) => {
+        isDown = true;
+        scroller.classList.add('is-dragging');
+        startX = e.pageX - scroller.offsetLeft;
+        scrollLeftStart = scroller.scrollLeft;
+    });
+    ['mouseleave', 'mouseup'].forEach((evt) => {
+        scroller.addEventListener(evt, () => {
+            isDown = false;
+            scroller.classList.remove('is-dragging');
+        });
+    });
+    scroller.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scroller.offsetLeft;
+        const walk = x - startX;
+        scroller.scrollLeft = scrollLeftStart - walk;
+    });
+});
+
+
+
+
+// ================= FAQ: MOBILE CUSTOM DROPDOWN =================
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.getElementById('faqMobileDropdown');
+    if (!dropdown) return;
+
+    const btn = document.getElementById('faqMobileDropdownBtn');
+    const panel = document.getElementById('faqMobileDropdownPanel');
+    const iconEl = document.getElementById('faqMobileDropdownIcon');
+    const labelEl = document.getElementById('faqMobileDropdownLabel');
+    const chevron = document.getElementById('faqMobileDropdownChevron');
+    const options = dropdown.querySelectorAll('.faq-mobile-option');
+
+    function openPanel() {
+        panel.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+    }
+    function closePanel() {
+        panel.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+    }
+
+    btn.addEventListener('click', () => {
+        panel.classList.contains('hidden') ? openPanel() : closePanel();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) closePanel();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePanel();
+    });
+
+    options.forEach((opt) => {
+        opt.addEventListener('click', () => {
+            iconEl.src = opt.dataset.icon;
+            labelEl.textContent = opt.dataset.label;
+            options.forEach((o) => o.classList.remove('active'));
+            opt.classList.add('active');
+            closePanel();
+            // hook into the shared filter function from the main FAQ script
+            if (typeof applyFilter === 'function') applyFilter(opt.dataset.filter);
+        });
+    });
+});
+
+
+
+
+
+//cookies part js
+document.addEventListener('DOMContentLoaded', () => {
+    const CONSENT_KEY = 'pixxen_cookie_consent';
+    const banner = document.getElementById('cookieConsent');
+    if (!banner) return;
+
+    // show only if no choice has been stored yet
+    if (!localStorage.getItem(CONSENT_KEY)) {
+        banner.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // lock scroll while the mobile modal / bar first appears
+    }
+
+    function hideBanner() {
+        banner.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    function setConsent(value) {
+        localStorage.setItem(CONSENT_KEY, value);
+        hideBanner();
+    }
+
+    document.getElementById('cookieAcceptDesktop')?.addEventListener('click', () => setConsent('accepted'));
+    document.getElementById('cookieDeclineDesktop')?.addEventListener('click', () => setConsent('declined'));
+    document.getElementById('cookieAcceptMobile')?.addEventListener('click', () => setConsent('accepted'));
+    document.getElementById('cookieDeclineMobile')?.addEventListener('click', () => setConsent('declined'));
+
+    // the mobile ✕ just dismisses this visit — no choice is stored, so it will ask again next visit
+    document.getElementById('cookieCloseMobile')?.addEventListener('click', hideBanner);
+});
+
+
+
+
+
+//free audit contact form popup
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openBtns = document.querySelectorAll('.js-open-audit-modal');
+    const auditModal = document.getElementById('freeAuditModal');
+    const closeAuditBtn = document.getElementById('closeAuditModalBtn');
+    const auditForm = document.getElementById('freeAuditForm');
+ 
+    const thankYouModal = document.getElementById('thankYouModal');
+    const closeThankYouBtn = document.getElementById('closeThankYouModalBtn');
+ 
+    function openModal(modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+ 
+    openBtns.forEach((btn) => btn.addEventListener('click', () => openModal(auditModal)));
+    closeAuditBtn?.addEventListener('click', () => closeModal(auditModal));
+    closeThankYouBtn?.addEventListener('click', () => closeModal(thankYouModal));
+ 
+    // click on the dark backdrop closes the modal
+    [auditModal, thankYouModal].forEach((modal) => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal(modal);
+        });
+    });
+ 
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        if (!auditModal.classList.contains('hidden')) closeModal(auditModal);
+        if (!thankYouModal.classList.contains('hidden')) closeModal(thankYouModal);
+    });
+ 
+    // submit -> swap audit form modal for the thank-you modal
+    auditForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        closeModal(auditModal);
+        openModal(thankYouModal);
+        auditForm.reset();
+    });
+});
+
+
+//for carrer counter 
+
+document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.career-counter, #career-counter');
+
+        function formatNum(n, format) {
+          return format === 'comma' ? n.toLocaleString() : n;
+        }
+
+        function animateCounter(el) {
+          const target = parseInt(el.dataset.target, 10);
+          if (isNaN(target)) return;
+
+          const suffix = el.dataset.suffix || '';
+          const prefix = el.dataset.prefix || '';
+          const format = el.dataset.format || '';
+          const duration = 1800; // Total time in ms
+          let startTime = null;
+
+          function step(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            
+            // Easing function (easeOutExpo for smooth slowing down at the end)
+            const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            const currentVal = Math.round(easeProgress * target);
+
+            el.textContent = prefix + formatNum(currentVal, format) + suffix;
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            }
+          }
+
+          requestAnimationFrame(step);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const el = entry.target;
+            if (el.dataset.animated === 'true') return;
+
+            el.dataset.animated = 'true';
+            animateCounter(el);
+            observer.unobserve(el);
+          });
+        }, {
+          threshold: 0.3
+        });
+
+        counters.forEach(counter => observer.observe(counter));
+      });
