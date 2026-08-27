@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageModal = document.getElementById('portfolioImageModal');
     const imageModalImg = document.getElementById('portfolioImageModalImg');
     const imageModalClose = document.getElementById('portfolioImageModalClose');
- 
+
     const videoModal = document.getElementById('portfolioVideoModal');
     const videoModalClose = document.getElementById('portfolioVideoModalClose');
     const videoModalPlayer = document.getElementById('portfolioVideoModalPlayer');
@@ -432,18 +432,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoModalDuration = document.getElementById('portfolioVideoModalDuration');
     const videoModalProgress = document.getElementById('portfolioVideoModalProgress');
     const videoModalBubble = document.getElementById('portfolioVideoModalBubble');
-    const playPauseBtn = videoModal.querySelector('.video-modal-playpause');
-    const iconPlay = playPauseBtn.querySelector('.icon-play');
-    const iconPause = playPauseBtn.querySelector('.icon-pause');
- 
+
+    const hasImageModal = imageModal && imageModalImg && imageModalClose;
+    const hasVideoModal = videoModal && videoModalPlayer && videoModalTitle && videoModalCurrent && videoModalDuration && videoModalProgress && videoModalBubble;
+
+    const playPauseBtn = hasVideoModal ? videoModal.querySelector('.video-modal-playpause') : null;
+    const iconPlay = playPauseBtn ? playPauseBtn.querySelector('.icon-play') : null;
+    const iconPause = playPauseBtn ? playPauseBtn.querySelector('.icon-pause') : null;
+
     function formatTime(sec) {
         if (!isFinite(sec)) return '0:00';
         const m = Math.floor(sec / 60);
         const s = Math.floor(sec % 60).toString().padStart(2, '0');
         return `${m}:${s}`;
     }
- 
+
     function openImageModal(src, alt) {
+        if (!hasImageModal) return;
         imageModalImg.src = src;
         imageModalImg.alt = alt || '';
         imageModal.classList.remove('hidden');
@@ -451,13 +456,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     }
     function closeImageModal() {
+        if (!hasImageModal) return;
         imageModal.classList.add('hidden');
         imageModal.classList.remove('flex', 'is-open');
         imageModalImg.src = '';
         document.body.style.overflow = '';
     }
- 
+
     function openVideoModal(src, title) {
+        if (!hasVideoModal) return;
         videoModalPlayer.src = src;
         videoModalTitle.textContent = title || '';
         videoModal.classList.remove('hidden');
@@ -467,6 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
         videoModalPlayer.play().catch(() => {});
     }
     function closeVideoModal() {
+        if (!hasVideoModal) return;
         videoModal.classList.add('hidden');
         videoModal.classList.remove('flex', 'is-open');
         videoModalPlayer.pause();
@@ -474,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
         videoModalPlayer.load();
         document.body.style.overflow = '';
     }
- 
+
     // open on card click
     document.querySelectorAll('.portfolio-card').forEach((card) => {
         card.addEventListener('click', (e) => {
@@ -483,77 +491,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 openVideoModal(card.dataset.video, card.dataset.title);
             } else {
                 const img = card.querySelector('.portfolio-card-img');
-                openImageModal(card.dataset.image || img.src, img.alt);
+                if (img) openImageModal(card.dataset.image || img.src, img.alt);
             }
         });
     });
- 
+
     // close handlers
-    imageModalClose.addEventListener('click', closeImageModal);
-    imageModal.addEventListener('click', (e) => { if (e.target === imageModal) closeImageModal(); });
- 
-    videoModalClose.addEventListener('click', closeVideoModal);
-    videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
- 
+    if (hasImageModal) {
+        imageModalClose.addEventListener('click', closeImageModal);
+        imageModal.addEventListener('click', (e) => { if (e.target === imageModal) closeImageModal(); });
+    }
+
+    if (hasVideoModal) {
+        videoModalClose.addEventListener('click', closeVideoModal);
+        videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
+    }
+
     document.addEventListener('keydown', (e) => {
         if (e.key !== 'Escape') return;
-        if (imageModal.classList.contains('is-open')) closeImageModal();
-        if (videoModal.classList.contains('is-open')) closeVideoModal();
+        if (hasImageModal && imageModal.classList.contains('is-open')) closeImageModal();
+        if (hasVideoModal && videoModal.classList.contains('is-open')) closeVideoModal();
     });
- 
+
     // ---- video modal transport controls ----
-    videoModal.querySelectorAll('[data-action]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const action = btn.dataset.action;
-            if (action === 'toggle') {
-                if (videoModalPlayer.paused) {
-                    videoModalPlayer.play();
-                } else {
-                    videoModalPlayer.pause();
+    if (hasVideoModal) {
+        videoModal.querySelectorAll('[data-action]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const action = btn.dataset.action;
+                if (action === 'toggle') {
+                    videoModalPlayer.paused ? videoModalPlayer.play() : videoModalPlayer.pause();
+                } else if (action === 'rewind') {
+                    videoModalPlayer.currentTime = Math.max(0, videoModalPlayer.currentTime - 10);
+                } else if (action === 'forward') {
+                    videoModalPlayer.currentTime = Math.min(videoModalPlayer.duration || 0, videoModalPlayer.currentTime + 10);
                 }
-            } else if (action === 'rewind') {
-                videoModalPlayer.currentTime = Math.max(0, videoModalPlayer.currentTime - 10);
-            } else if (action === 'forward') {
-                videoModalPlayer.currentTime = Math.min(videoModalPlayer.duration || 0, videoModalPlayer.currentTime + 10);
-            }
+            });
         });
-    });
- 
-    videoModalPlayer.addEventListener('play', () => {
-        iconPlay.classList.add('hidden');
-        iconPause.classList.remove('hidden');
-    });
-    videoModalPlayer.addEventListener('pause', () => {
-        iconPlay.classList.remove('hidden');
-        iconPause.classList.add('hidden');
-    });
- 
-    videoModalPlayer.addEventListener('loadedmetadata', () => {
-        videoModalDuration.textContent = formatTime(videoModalPlayer.duration);
-    });
- 
-    videoModalPlayer.addEventListener('timeupdate', () => {
-        if (!videoModalPlayer.duration) return;
-        const pct = (videoModalPlayer.currentTime / videoModalPlayer.duration) * 100;
-        videoModalProgress.value = pct;
-        videoModalProgress.style.setProperty('--progress', pct + '%');
-        videoModalCurrent.textContent = formatTime(videoModalPlayer.currentTime);
-    });
- 
-    videoModalProgress.addEventListener('input', () => {
-        if (!videoModalPlayer.duration) return;
-        const pct = parseFloat(videoModalProgress.value);
-        videoModalPlayer.currentTime = (pct / 100) * videoModalPlayer.duration;
-        videoModalProgress.style.setProperty('--progress', pct + '%');
- 
-        const time = (pct / 100) * videoModalPlayer.duration;
-        videoModalBubble.textContent = formatTime(time);
-        videoModalBubble.classList.remove('hidden');
-        videoModalBubble.style.left = pct + '%';
-    });
-    videoModalProgress.addEventListener('change', () => {
-        videoModalBubble.classList.add('hidden');
-    });
+
+        videoModalPlayer.addEventListener('play', () => {
+            if (iconPlay) iconPlay.classList.add('hidden');
+            if (iconPause) iconPause.classList.remove('hidden');
+        });
+        videoModalPlayer.addEventListener('pause', () => {
+            if (iconPlay) iconPlay.classList.remove('hidden');
+            if (iconPause) iconPause.classList.add('hidden');
+        });
+
+        videoModalPlayer.addEventListener('loadedmetadata', () => {
+            videoModalDuration.textContent = formatTime(videoModalPlayer.duration);
+        });
+
+        videoModalPlayer.addEventListener('timeupdate', () => {
+            if (!videoModalPlayer.duration) return;
+            const pct = (videoModalPlayer.currentTime / videoModalPlayer.duration) * 100;
+            videoModalProgress.value = pct;
+            videoModalProgress.style.setProperty('--progress', pct + '%');
+            videoModalCurrent.textContent = formatTime(videoModalPlayer.currentTime);
+        });
+
+        videoModalProgress.addEventListener('input', () => {
+            if (!videoModalPlayer.duration) return;
+            const pct = parseFloat(videoModalProgress.value);
+            videoModalPlayer.currentTime = (pct / 100) * videoModalPlayer.duration;
+            videoModalProgress.style.setProperty('--progress', pct + '%');
+
+            const time = (pct / 100) * videoModalPlayer.duration;
+            videoModalBubble.textContent = formatTime(time);
+            videoModalBubble.classList.remove('hidden');
+            videoModalBubble.style.left = pct + '%';
+        });
+        videoModalProgress.addEventListener('change', () => {
+            videoModalBubble.classList.add('hidden');
+        });
+    }
 });
 
 
@@ -566,22 +576,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const el = document.querySelector('.testimonial-slider');
     if (!el) return;
 
-    const slideCount = el.querySelectorAll('.splide__slide').length;
-
     const splide = new Splide(el, {
         type: 'loop',
-        direction: 'ltr',
-        perPage: 'auto',
+        drag: 'free',
+        focus: 'center',        
+        perPage: 1,             
+        autoWidth: true,
         gap: 24,
         arrows: false,
         pagination: false,
-        drag: 'free',           // <-- fix: smooth free-drag, both directions
-        autoWidth: true,        // <-- fix: accurate width detection for clone calculation
-        clones: slideCount * 6, // <-- fix: enough buffer for both left-to-right & right-to-left drag
+      
         autoScroll: {
             speed: 0.6,
             pauseOnHover: true,
             pauseOnFocus: false,
+            rewind: false,      
         },
         breakpoints: {
             640: {
@@ -592,8 +601,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     splide.on('mounted', () => {
         const autoScroll = splide.Components.AutoScroll;
-        splide.on('drag', () => autoScroll.pause());
-        splide.on('dragged', () => autoScroll.play());
+        if (autoScroll) {
+            splide.on('drag', () => autoScroll.pause());
+            splide.on('dragged', () => autoScroll.play());
+        }
     });
 
     splide.mount({ AutoScroll: window.splide.Extensions.AutoScroll });
@@ -975,7 +986,20 @@ gsap.ticker.lagSmoothing(0);
 
 
 
-//industry page radiul
+//contact us arrow
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.js-select-rotate').forEach((wrapper) => {
+        const select = wrapper.querySelector('select');
+        const arrow = wrapper.querySelector('.js-select-arrow');
+        if (!select || !arrow) return;
+ 
+        select.addEventListener('focus', () => arrow.classList.add('rotate-180'));
+        select.addEventListener('blur', () => arrow.classList.remove('rotate-180'));
+        // some browsers fire 'change' without a preceding blur when picking via keyboard
+        select.addEventListener('change', () => arrow.classList.remove('rotate-180'));
+    });
+});
 
 
 
@@ -1588,3 +1612,8 @@ document.addEventListener('DOMContentLoaded', () => {
  
     updateArrows();
 });
+
+
+
+//work page card stack animation
+

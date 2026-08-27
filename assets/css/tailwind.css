@@ -37,13 +37,13 @@
 }
 
 body {
-    
+    font-family: "Inter", sans-serif;
     background-color: #0B0C0B;
 }
 
 html {
     scroll-behavior: smooth;
-   
+   font-family: "Inter", sans-serif;
 }
 
 /* p{
@@ -641,9 +641,9 @@ html {
     padding-bottom: 14px !important;
 }
 
-.navbar.navbar-scrolled .navbar-btn .btn-getsample {
+/* .navbar.navbar-scrolled .navbar-btn .btn-getsample {
     padding: 10px 18px;
-}
+} */
 
 @media (max-width: 640px) {
     .navbar.navbar-scrolled .navbar-inner {
@@ -1363,7 +1363,7 @@ top: 80%;
 /* gray spotlight from below -- creates the soft top-lit vignette behind the mockup */
 @media (min-width: 1025px) {
     .cta-section {
-        min-height: 100vh;
+        /* min-height: 100vh; */
         display: flex;
         align-items: center;
     }
@@ -1390,9 +1390,7 @@ top: 80%;
 
 .faq-item {
 border: 1px solid transparent;
-background:
-linear-gradient(90deg, #696B69 0%, #232423 14.23%) padding-box,
-transparent border-box;
+background:#1C1D1C;
 transition: 0.3s ease;
 }
 
@@ -1447,6 +1445,20 @@ filter: brightness(0) invert(1);
 }
 /* subtle gradient fade instead of a harsh brightness darken — reads more premium */
 
+
+/* contact page  */
+
+.contact-strategy{
+    background-image:url(../images/schedule-contact-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-bg {
+  background:
+    url("../images/Q.svg") left bottom 0% no-repeat,
+    radial-gradient(50.91% 80.18% at 0.28% 50.39%, var(--Dark-Colors-Dark-4, #4A4C4A) 0%, var(--Dark-Colors-Dark-1, #0B0C0B) 72.67%), var(--Dark-Colors-Dark-1, #0B0C0B)
+}
 
 /* band book bg  */
 .brand-book-section .brand-book-inner{
@@ -2521,4 +2533,49 @@ background: var(--Gradient-Mix-2, radial-gradient(64.21% 64.21% at 50% 0%, #DCE6
 }
 .fw-tabs-scroller.is-dragging {
     cursor: grabbing;
+}
+
+#fwTabsNext{
+    position: relative;
+    z-index: 200;
+    background-color: #4A4C4A !important;
+    opacity: 100;
+
+}
+@media (min-width:991px) {
+    #fwTabsNext::after{
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+    width:250px;
+    background: linear-gradient(90deg, rgba(11, 12, 11, 0.00) 15.37%, rgba(11, 12, 11, 0.75) 66.07%, var(--Dark-Colors-Dark-1, #0B0C0B) 100%);
+    z-index: -2;
+}
+}
+
+
+@media (min-width:1024px) {
+    .process-section{
+    background-image: url(../images/allprocess-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+}
+
+.case-details-quote-section{
+    background-image: url(../images/square-full-case-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+
+.video-edited-bg {
+    background-image: url(../images/video-edited-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }

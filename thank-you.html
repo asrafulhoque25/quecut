@@ -1,0 +1,759 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank you</title>
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <header class="navbar">
+        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
+            <div class="navbar-inner">
+
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/quecut-logo.svg" alt="Quecut" class="img-fluid">
+                    </a>
+                </div>
+
+                <!-- DESKTOP MENU (hidden on mobile, structure kept class-free for WP) -->
+                <nav class="navbar-menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Services
+                                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="logo-design-service.html">
+                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
+                                            class="dropdown-icon">
+                                        <span>Logo design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="brand-identity-design.html">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="packaging-design.html">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="print-design.html">
+                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Print design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="illustration-design.html">
+                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Illustration</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-media-design.html">
+                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="video-editing-service.html">
+                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
+                                            class="dropdown-icon">
+                                        <span>Video editing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="about-us.html">about us</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">work</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="navbar-btn z-6">
+                    <a href="contact.html" class="btn-getsample font-fira">
+                        <span class="btn-text-wipe btn-text-wipe--navbar">Get Free Sample</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggle" aria-label="Open Menu">
+                    <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" fill="#DDE3DD" />
+                        <rect y="16" width="32" height="2" fill="#DDE3DD" />
+                    </svg>
+
+
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MOBILE OFF-CANVAS MENU (separate structure, matches Figma mobile design) -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-track">
+
+                <!-- panel 1: main menu -->
+                <div class="mobile-menu-panel mobile-menu-panel-main">
+                    <div class="mobile-menu-top">
+                        <span class="mobile-menu-heading">Menu</span>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu-expand" data-panel="services">
+                                Services
+                                <span class="mobile-menu-plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">about us</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">work</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn-getsample mobile-menu-btn">Get Free Sample</a>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+                <!-- panel 2: services grid -->
+                <div class="mobile-menu-panel mobile-menu-panel-services">
+                    <div class="mobile-menu-top">
+                        <button class="mobile-menu-back" type="button">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6H15M1 6L6 1M1 6L6 11" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Back
+                        </button>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <span class="mobile-menu-heading mobile-services-heading">Services</span>
+
+                    <div class="mobile-services-grid">
+                                    <a href="logo-design-service.html">
+                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
+                                            class="dropdown-icon">
+                                        <span>Logo design</span>
+                                    </a>
+                                    <a href="brand-identity-design.html">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                    <a href="packaging-design.html">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                    <a href="print-design.html">
+                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Print design</span>
+                                    </a>
+                                    <a href="illustration-design.html">
+                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Illustration</span>
+                                    </a>
+                                    <a href="social-media-design.html">
+                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                    <a href="video-editing-service.html">
+                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
+                                            class="dropdown-icon">
+                                        <span>Video editing</span>
+                                    </a>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                    </div>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- navbar end -->
+
+
+<!-- ============ CONTACT US ============ -->
+<section class="contact-bg py-12 sm:py-16 md:py-18 lg:py-21">
+    <div class="container">
+        <div class="max-w-163 w-full mx-auto">
+            <div class="flex justify-center">
+                <img src="assets/images/thanku-check.svg" class="img-fluid xl:w-auto lg:w-25 sm:w-20 w-18" alt="thanks">
+            </div>
+            <h1 class="text-center text-[36px] pt-2 md:my-4 sm:my-3 my-2 capitalize sm:text-[56px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
+                   Thank You! Your Request Has Been Received.
+                </h1>
+                <p class="text-dark7 text-base sm:text-xl font-normal leading-[150%] w-full text-center">
+                   We’ve received your details successfully. Our team will get in touch with you shortly to discuss your project and the next steps.
+                </p>
+                <div class="flex justify-center w-full md:mt-8 sm:mt-6 mt-4">
+                    <a href="#" class="btn-cta flex items-center gap-0">
+                                <span class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0" aria-label="Get free sample" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                    <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_391_13791)">
+                                                <path d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z" fill="black"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_391_13791">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </span>
+                                    <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_391_13951)">
+                                                <path d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z" fill="#73870E"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_391_13951">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </span>
+                                </span>
+
+                                <span class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 sm:px-5 px-4 py-3 md:text-base sm:text-sm text-xs font-semibold uppercase whitespace-nowrap" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                    <span class="btn-text-wipe">View more opportunities</span>
+                                </span>
+                            </a>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+ <!-- achievements start -->
+    <section class="achievements-section py-6 bg-[#0B0C0B] overflow-hidden">
+        <div class="achievements-slider splide" aria-label="Achievements">
+            <div class="splide__track overflow-visible">
+                <ul class="splide__list flex items-stretch">
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Rose Neal</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Google</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Meta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Adobe</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Aversan</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Rose Neal</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Google</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Meta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Adobe</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Aversan</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- achievements end -->
+
+
+
+
+    <!-- contact location start -->
+     <section class="lg:pt-24 sm:pt-16 pt-12 bg-[radial-gradient(76.18%_76.18%_at_50%_100%,#696B69_0%,#0B0C0B_100%)]">
+        <div class="container">
+            <div class="max-w-[736px] mx-auto text-center mb-6 sm:mb-8 lg:mb-12 px-4">
+                <h2 class="text-[#FFF] text-center  text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                    We’re Here for <span class="text-yellow1">You</span>
+                </h2>
+                <p class="text-[#DDE3DD] text-center xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%] sm:mt-4 mt-3">
+                    Team Quecutis so excited to get to know about you, your business, and your goals!
+                </p>
+            </div>
+
+            <div class="max-w-[990px] w-full mx-auto">
+                <div class="grid md:grid-cols-2 lg:gap-8 md:gap-6 sm:gap-4 gap-2">
+                    <div class="p-4 rounded-3xl flex lg:gap-8 sm:gap-6 gap-3 items-start bg-dark1">
+                        <img src="assets/images/contact-location-yellow-icon.svg" class="img-fluid xl:w-auto lg:w-[42px] sm:w-[38px] w-[32px]" alt="location-contact">
+                        <div>
+                            <h3 class="xl:text-[28px] sm:text-2xl text-xl font-medium text-white lg:mb-3 mb-2">Our Headquater</h3>
+                            <p class="xl:text-xl md:text-lg sm:text-base text-sm text-dark6 leading-[150%]">128 City Road London EC1V 2NX UNITED KINGDOM</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-3xl flex lg:gap-8 sm:gap-6 gap-3 items-start bg-dark1">
+                        <img src="assets/images/contact-location-orange-icon.svg" class="img-fluid xl:w-auto lg:w-[42px] sm:w-[38px] w-[32px]" alt="location-contact">
+                        <div>
+                            <h3 class="xl:text-[28px] sm:text-2xl text-xl font-medium text-white lg:mb-3 mb-2">Regional Office</h3>
+                            <p class="xl:text-xl md:text-lg sm:text-base text-sm text-dark6 leading-[150%]">128 City Road London EC1V 2NX UNITED KINGDOM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="location-caontact-bg lg:mt-16 md:mt-12 sm:mt-8 mt-6">
+            <img src="assets/images/location-contact-bg.png" class="w-full img-fluid" alt="location bg">
+        </div>
+     </section>
+    <!-- contact location end -->
+
+
+
+    <!-- call strategy start -->
+     <section class="section-padding contact-strategy">
+        <div class="container">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <!-- ===== LEFT ===== -->
+            <div>
+                <span class="inline-flex items-center gap-2 rounded-full py-1 pl-2 pr-4 font-fira lg:text-base sm:text-sm text-xs font-bold uppercase text-yellow1 bg-[linear-gradient(90deg,_#D5FF02_0%,_#1C1D1C_21.63%,_#666_100%)]">
+                    <img src="assets/images/quecut-trust-icon.svg" class="img-fluid" alt="trust icon">
+                    Free Call Strategy
+                </span>
+
+                <h2 class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] font-normal leading-[110%] capitalize mt-4 mb-4">
+                    Free 30-Minute Design Strategy Call
+                </h2>
+
+                <p class="text-white text-base sm:text-lg font-normal leading-[150%]">
+                    Book a one-on-one consultation with our GRAPHICS DESIGN experts to discuss your website, business goals, and opportunities for growth. This is a no-pressure conversation focused on providing clear, actionable insights tailored to your business.
+                </p>
+
+                <div class="rounded-3xl border border-yellow1 bg-dark1 p-6 mt-8">
+                    <h3 class="text-white font-fira xl:text-xl md:text-lg text-lg font-medium leading-[150%] capitalize mb-4">
+                        During The Call, We'll
+                    </h3>
+
+                    <ul class="flex flex-col sm:gap-3 gap-2">
+                        <li class="flex items-start gap-3">
+                            <img src="assets/images/contact-check.svg" class="img-fluid lg:w-auto sm:w-[18px] w-[16px] lg:mt-0.5 mt-1" alt="contact-check">
+                            <p class="text-dark8 text-base sm:text-lg font-normal leading-[150%]">Review your current website and GRAPHICS DESIGN performance</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="assets/images/contact-check.svg" class="img-fluid lg:w-auto sm:w-[18px] w-[16px] lg:mt-0.5 mt-1" alt="contact-check">
+                            <p class="text-dark8 text-base sm:text-lg font-normal leading-[150%]">Identify opportunities to improve visibility and rankings</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="assets/images/contact-check.svg" class="img-fluid lg:w-auto sm:w-[18px] w-[16px] lg:mt-0.5 mt-1" alt="contact-check">
+                            <p class="text-dark8 text-base sm:text-lg font-normal leading-[150%]">Discuss your biggest marketing challenges</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="assets/images/contact-check.svg" class="img-fluid lg:w-auto sm:w-[18px] w-[16px] lg:mt-0.5 mt-1" alt="contact-check">
+                            <p class="text-dark8 text-base sm:text-lg font-normal leading-[150%]">Answer your GRAPHICS DESIGN questions</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="assets/images/contact-check.svg" class="img-fluid lg:w-auto sm:w-[18px] w-[16px] lg:mt-0.5 mt-1" alt="contact-check">
+                            <p class="text-dark8 text-base sm:text-lg font-normal leading-[150%]">Recommend practical next steps based on your goals</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-white text-base sm:text-lg font-normal leading-[150%] mt-8">
+                    Whether you're exploring GRAPHICS DESIGN for the first time or looking for a better agency partner, you'll leave with a clearer understanding of where your business stands and how to move forward.
+                </p>
+            </div>
+
+            <!-- ===== RIGHT — IMAGE ===== -->
+            <div class="rounded-3xl overflow-hidden">
+                <img src="assets/images/schedule-contact.png" class="img-fluid w-full h-full object-cover" alt="Book a free call strategy session">
+            </div>
+
+        </div>
+        </div>
+     </section>
+    <!-- call strategy end -->
+
+
+    <!-- footer start -->
+    <footer class="footer relative overflow-hidden pt-16 lg:pt-20">
+        <div class="container">
+
+            <!-- nav grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 lg:gap-x-8 mb-12 lg:mb-16">
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Services</h3>
+                    <ul class="footer-col-list">
+                        <li>
+                                    <a href="logo-design-service.html">
+                                       Logo design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="brand-identity-design.html">Brand Identity
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="packaging-design.html">
+                                        Packaging Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="print-design.html">
+                                        Print design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="illustration-design.html">
+                                        Illustration
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-media-design.html">
+                                        Social Media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">Motion graphics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="video-editing-service.html">Video editing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">Motion graphics
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+
+                <!-- Quecut -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Quecut</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">work</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Resources</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Policies</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="cookies-policy.html">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media (full-width on mobile/tablet, 1 col on desktop) -->
+                <div class="footer-col col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="footer-col-title">Social Media</h3>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <a href="#" class="footer-social-icon" aria-label="Dribbble">
+                            <img src="assets/images/social-media-1.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Behance">
+                            <img src="assets/images/social-media-2.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <img src="assets/images/social-media-3.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <img src="assets/images/social-media-4.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copyright + divider -->
+            <p class="footer-copyright">© Quecut</p>
+            <hr class="footer-divider">
+        </div>
+
+        <!-- BIG BOTTOM LOGO with animated gradient wave -->
+        <div class=" xl:mt-36.5 md:mt-25 sm:mt-20 mt-12.5 sticky bottom-0" aria-hidden="true">
+            <!-- <div class="quecut-blob quecut-blob--yellow"></div>
+        <div class="quecut-blob quecut-blob--orange"></div>
+        <div class="quecut-blob quecut-blob--blue"></div>
+        <div class="quecut-blob quecut-blob--magenta"></div> -->
+            <img src="assets/images/quecut-footer.svg" class="img-fluid" alt="footer">
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

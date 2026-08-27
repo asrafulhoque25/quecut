@@ -1,0 +1,2889 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video editing</title>
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+ <!-- navbar start -->
+    <header class="navbar">
+        <div class="max-w-440 mx-auto px-4 sm:px-5 lg:px-6">
+            <div class="navbar-inner">
+
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/quecut-logo.svg" alt="Quecut" class="img-fluid">
+                    </a>
+                </div>
+
+                <!-- DESKTOP MENU (hidden on mobile, structure kept class-free for WP) -->
+                <nav class="navbar-menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Services
+                                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="logo-design-service.html">
+                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
+                                            class="dropdown-icon">
+                                        <span>Logo design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="brand-identity-design.html">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="packaging-design.html">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="print-design.html">
+                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Print design</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="illustration-design.html">
+                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Illustration</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-media-design.html">
+                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="video-editing-service.html">
+                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
+                                            class="dropdown-icon">
+                                        <span>Video editing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="navbar-btn z-6">
+                    <a href="contact.html" class="btn-getsample font-fira">
+                        <span class="btn-text-wipe btn-text-wipe--navbar">Get Free Sample</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggle" aria-label="Open Menu">
+                    <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="2" fill="#DDE3DD" />
+                        <rect y="16" width="32" height="2" fill="#DDE3DD" />
+                    </svg>
+
+
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MOBILE OFF-CANVAS MENU (separate structure, matches Figma mobile design) -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-track">
+
+                <!-- panel 1: main menu -->
+                <div class="mobile-menu-panel mobile-menu-panel-main">
+                    <div class="mobile-menu-top">
+                        <span class="mobile-menu-heading">Menu</span>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu-expand" data-panel="services">
+                                Services
+                                <span class="mobile-menu-plus">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 1V13M1 7H13" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="marketplace.html">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn-getsample mobile-menu-btn">Get Free Sample</a>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+                <!-- panel 2: services grid -->
+                <div class="mobile-menu-panel mobile-menu-panel-services">
+                    <div class="mobile-menu-top">
+                        <button class="mobile-menu-back" type="button">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6H15M1 6L6 1M1 6L6 11" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Back
+                        </button>
+                        <button class="mobile-menu-close" type="button" aria-label="Close Menu">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L15 15M15 1L1 15" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <span class="mobile-menu-heading mobile-services-heading">Services</span>
+
+                    <div class="mobile-services-grid">
+                                    <a href="logo-design-service.html">
+                                        <img src="assets/images/logo-design-service-desktop.svg" alt="logo design"
+                                            class="dropdown-icon">
+                                        <span>Logo design</span>
+                                    </a>
+                                    <a href="brand-identity-design.html">
+                                        <img src="assets/images/brand-identity-service.svg" alt="Brand Identity"
+                                            class="dropdown-icon">
+                                        <span>Brand Identity</span>
+                                    </a>
+                                    <a href="packaging-design.html">
+                                        <img src="assets/images/packaging-service.svg" alt="Packaging Design"
+                                            class="dropdown-icon">
+                                        <span>Packaging Design</span>
+                                    </a>
+                                    <a href="print-design.html">
+                                        <img src="assets/images/print-design-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Print design</span>
+                                    </a>
+                                    <a href="illustration-design.html">
+                                        <img src="assets/images/Illustration-service-desktop.svg" alt="print design"
+                                            class="dropdown-icon">
+                                        <span>Illustration</span>
+                                    </a>
+                                    <a href="social-media-design.html">
+                                        <img src="assets/images/social-media-service.svg" alt="Illustration"
+                                            class="dropdown-icon">
+                                        <span>Social Media</span>
+                                    </a>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphics-service-desktop.svg" alt="Motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                                    <a href="video-editing-service.html">
+                                        <img src="assets/images/video-editing-service-desktop.svg" alt="video editing"
+                                            class="dropdown-icon">
+                                        <span>Video editing</span>
+                                    </a>
+                                    <a href="motion-graphics-service.html">
+                                        <img src="assets/images/motion-graphic.svg" alt="motion graphics"
+                                            class="dropdown-icon">
+                                        <span>Motion graphics</span>
+                                    </a>
+                    </div>
+
+                    <div class="mobile-menu-deco">
+                        <!-- <img src="assets/images/dropdown-graphic.svg" alt="" class="img-fluid"> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- navbar end -->
+
+
+
+      <!-- sub banner section start -->
+    <section class="sub-banner  overflow-hidden relative z-20 md:rounded-2xl">
+
+        
+
+        <div class="container">
+            <div class="grid lg:grid-cols-2 items-center 2xl:gap-40 xl:gap-20 lg:gap-10 gap-6 ">
+
+                <div class="flex flex-col sm:items-start items-center gap-3 md:py-10 py-8 2xl:max-w-152 w-full">
+                    <!-- badge -->
+                        <div class="inline-flex w-fit items-center gap-2 bg-[linear-gradient(90deg,#D5FF02_0%,#1C1D1C_22%,#666666_100%)] rounded-full px-2 sm:px-4 sm:py-1 py-1.5">
+                            <img src="assets/images/quecut-trust-icon.svg" class="img-fluid" alt="trust icon">
+                            <span
+                                class="text-yellow1 font-fira xl:text-base lg:text-sm sm:text-xs text-[10px] font-semibold leading-[150%] uppercase">video editing</span>
+                        </div>
+
+
+                    <!-- title -->
+                    <h1 class="text-[36px] sm:text-start text-center capitalize sm:text-[56px] xl:text-[56px] font-fira font-light leading-[110%] bg-[linear-gradient(85deg,#D2F234_1.96%,#BEBEBE_10.84%,#FFF_44.28%)] bg-clip-text text-transparent">
+                       Video editing services that make every second count
+                    </h1>
+
+                    <!-- description -->
+                    <p class=" text-dark7 sm:text-start text-center xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm font-normal leading-[150%]">
+                        Send us the raw footage — we'll turn it into a polished, on-brand video that holds attention to the end. Explainers, promos, podcasts, YouTube, corporate and wedding films, all professionally cut, color-graded, captioned, and delivered ready to publish.
+                    </p>
+
+                    <!-- buttons -->
+                    <div class="flex  lg:gap-4 md:gap-3 sm:gap-2 gap-1 flex-wrap md:mt-8 sm:mt-6 mt-3">
+
+                        <!-- outer anchor is now the single hover trigger for BOTH icon reveal + text wipe -->
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Get free sample">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13791)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13791">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13951)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13951">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-4 py-3 md:text-base sm:text-sm text-xs font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Get Free Sample</span>
+                            </span>
+                        </a>
+
+                        <a href="#"
+                            class="magnetic-btn banner-btn-outline inline-flex items-center justify-center rounded-full border border-2 border-yellow1 md:px-8 md:py-3.5 px-4 py-2.5 md:text-base sm:text-sm text-xs font-semibold uppercase whitespace-nowrap">
+                            <span class="btn-text-wipe btn-text-wipe--outline">See Pricing</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center self-end">
+                    <img src="assets/images/video-editing-banner.webp" class="img-fluid" alt="Brand Identity Banner">
+                    </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- sub banner section end -->
+
+
+
+
+    <!-- achievements start -->
+    <section class="achievements-section py-6 bg-[#0B0C0B] overflow-hidden">
+        <div class="achievements-slider splide" aria-label="Achievements">
+            <div class="splide__track overflow-visible">
+                <ul class="splide__list flex items-stretch">
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Rose Neal</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Google</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Meta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Adobe</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Aversan</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/rose-neal.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Rose Neal</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/google-rating.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white uppercase font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Google</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/meta.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Meta</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/adobe.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Adobe</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/aversan.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Aversan</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide w-auto shrink-0">
+                        <div
+                            class="flex items-center sm:gap-4 gap-3 md:gap-6 sm:px-6 sm:py-5 py-3 px-3 md:rounded-3xl rounded-xl bg-dark3 whitespace-nowrap h-full">
+                            <img src="assets/images/fiverr.svg"
+                                class="img-fluid md:h-auto md:max-h-auto sm:max-h-[55px]  max-h-[40px]"
+                                alt="achievement icon">
+                            <div>
+                                <p
+                                    class="m-0 text-white font-fira md:text-xl sm:text-lg text-base lg:text-2xl font-extrabold leading-[110%] font-fira">
+                                    Fiverr</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- achievements end -->
+
+
+
+    <!-- brand system section start -->
+    <section class="brand-system-section section-padding md:rounded-[16px] bg-[linear-gradient(180deg,#151615_0%,#0B0C0B_13.13%,#151615_88.9%,#1C1D1C_101.89%)] overflow-hidden">
+        <div class="container">
+
+            <!-- section title -->
+            <div class="max-w-248 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2 class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                  Why professional <span class="text-yellow1">video editing</span> matters
+                </h2>
+                <p
+                    class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                  Great footage is only half the job — the edit is where a video becomes worth watching. Professional editing tightens the story, holds attention past those first few seconds, and makes your brand look polished and credible, turning passive viewers into people who watch to the end and act.
+                </p>
+            </div>
+
+            <!-- cards grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 md:gap-4  gap-3">
+
+                <!-- ===== CARD 1: Brand strategy ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,#5F7200_0%,#191A19_13.38%,#191A19_86.92%,#1C1D1C_91.21%)] [--card-accent:#B4D700]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-editing-matters-icon-1.svg" class="img-fluid sm:w-auto w-10" alt="brand system">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Grabs attention instantly</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">
+                           Movement stops the scroll in a way a still image simply can't — the eye is wired to follow it.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 2: Logo suite ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,#7B3300_0%,#191A19_13.38%,#191A19_86.92%,#1C1D1C_91.21%)] [--card-accent:#FF7A00]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-editing-matters-icon-2.svg" class="img-fluid sm:w-auto w-10" alt="brand system">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Explains ideas in seconds</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">A short animation can make a complex product or process instantly clear — no wall of text.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 3: Color palette ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,#00537C_0%,#191A19_13.38%,#191A19_86.92%,#1C1D1C_91.21%)] [--card-accent:#29B6F6]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-editing-matters-icon-3.svg" class="img-fluid sm:w-auto w-10" alt="brand system">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Boosts conversions</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Animated demos, ads, and explainers move people to act more often than static versions.</p>
+                    </div>
+                </div>
+
+                <!-- ===== CARD 4: Typography ===== -->
+                <div class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,#7C6B00_0%,#191A19_13.38%,#191A19_86.92%,#1C1D1C_91.21%)] [--card-accent:#ECD540]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-editing-matters-icon-4.svg" class="img-fluid sm:w-auto w-10" alt="brand system">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Gets shared more</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Motion is inherently more engaging, so it earns more views, shares, and time watched.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 5: Typography ===== -->
+                <div class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,#790069_0%,#191A19_13.38%,#191A19_86.92%,#1C1D1C_91.21%)] [--card-accent:#FF00DD]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-editing-matters-icon-5.svg" class="img-fluid sm:w-auto w-10" alt="brand system">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Looks premium & modern</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Smooth, considered motion signals a current, well-resourced brand people take seriously.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 6: Typography ===== -->
+                <div class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,#005E06_0%,#191A19_13.38%,#191A19_86.92%,#1C1D1C_91.21%)] [--card-accent:#00CD0D]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-editing-matters-icon-6.svg" class="img-fluid sm:w-auto w-10" alt="brand system">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 ">Works across every channel</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">One animation flexes into social, ads, your website, email, and presentations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- brand system section end -->
+
+
+
+    <!-- king of video editing start -->
+       <section class="relative section-padding overflow-hidden video-edited-bg">
+
+        <div class="container relative z-10">
+
+           
+               <!-- section title -->
+            <div class="max-w-248 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2 class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                  Every kind of <span class="text-yellow1">video,</span> edited
+                </h2>
+                <p class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                  From a full production to a single podcast cut, we handle the whole edit — story, pacing, color,
+sound, captions, and export. Whatever you shoot and whoever it's for, it leaves us polished, on-
+brand, and ready to publish.
+                </p>
+            </div>
+
+          <!-- CARDS GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3">
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                           Video Production Services
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                          Full-service video, from concept and shoot planning to final edit.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-1.svg" alt="Video Production Services"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                           Podcast Editing Services
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                           Clean audio, tight cuts, and video versions for every episode.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-2.svg" alt="Podcast Editing Services"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            Explainer Video Services
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Clear, engaging explainers that make your product make sense.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-3.svg"
+                            alt="Explainer Video Services" aria-hidden="true"
+                            class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            Promotional Video Services
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Punchy promos and ads that drive clicks and sales.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-4.svg" alt="Promotional Video Services"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            Wedding Video Editing
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Cinematic wedding films that turn the day into a story.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-5.svg" alt="Wedding Video Editing"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            Video Captioning Services
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Accurate captions and subtitles for reach and accessibility.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-6.svg" alt="Video Captioning Services"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            Color Grading Services
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Cinematic color that gives your footage a consistent, premium look.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-7.svg" alt="Color Grading Services"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            YouTube Video Editing
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Retention-first edits, hooks, and thumbnails that grow channels.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-8.svg" alt="YouTube Video Editing"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+                <!-- CARD  -->
+                <div class="flex flex-col justify-between  rounded-3xl lg:rounded-4xl overflow-hidden"
+                    style="background: linear-gradient(180deg, #151615 0%, #4A4C4A 100%);">
+                    <!-- Content -->
+                    <div class="lg:p-8 p-6">
+                        <h3 class="text-dark8 font-fira text-2xl sm:text-[28px] font-medium leading-[110%]">
+                            Corporate Video Editing
+                        </h3>
+                        <p class="mt-3 text-dark7 text-sm sm:text-base md:text-lg lg:text-xl leading-[150%]">
+                            Training, internal, and brand videos edited to a professional standard.
+                        </p>
+                    </div>
+                    <!-- Bottom Image -->
+                    <div>
+                        <img src="assets/images/kings-of-video-9.svg" alt="Corporate Video Editing"
+                            aria-hidden="true" class="w-full h-auto block" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- king of video editing end -->
+
+
+
+    <!-- footage section start -->
+     <section class="bg-[linear-gradient(180deg,#1C1D1C_0%,#151615_12.99%,#0B0C0B_88.76%,#1C1D1C_101.89%)] section-padding">
+        <div class="container">
+               <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                   <!-- ================= left: image ================= -->
+                    <div class="flex justify-center lg:justify-end lg:order-1 order-2">
+                        <img src="assets/images/send-footage.webp" alt="Brand book contents preview"
+                            class="w-full  h-auto object-contain">
+                    </div>
+
+                    <!-- ================= right: content ================= -->
+                    <div class="lg:order-2 order-1">
+                        <h2
+                            class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                            Just send the <span class="text-yellow1">footage</span> — we'll take it from there
+                        </h2>
+
+                        <p
+                            class="text-[#EEF3EE]  xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%] mb-6 sm:mb-8">
+                           No complicated hand-off, no software to learn. Drop your raw clips in a shared link, tell us what you're going for, and we handle the rest — big files, mixed formats, and messy footage all welcome.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 sm:gap-y-4 mb-6 sm:mb-8 lg:mb-10">
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Any drive, WeTransfer or Frame.io</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Music & licensing sorted</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Large & raw files welcome</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Review in your browser</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Mixed cameras & phones</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Time-coded feedback</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">We organize the footage</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <img src="assets/images/comparison-check1.svg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-1" alt="">
+                                <span
+                                    class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Delivered ready to post</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                 
+
+                </div>
+        </div>
+     </section>
+    <!-- footage section end -->
+
+
+
+
+
+     
+<!-- process section start -->
+    <section
+        class="process-section section-padding bg-[linear-gradient(180deg,#151615_0%,#0B0C0B_101.89%)] overflow-hidden">
+        <div class="px-1">
+            <!-- section title -->
+            <div class="max-w-184 mx-auto text-center lg:mb-12 md:mb-10 sm:mb-10 mb-8 px-4">
+                <h2 class="text-white text-center font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                  Our Social Media Design <span class="text-yellow1">Process</span>
+                </h2>
+            </div>
+            <!-- ================= DESKTOP / TABLET (absolute staggered layout, pixel-matched to design) ================= -->
+            <div class="hidden lg:block relative w-full aspect-[1920/890]">
+                <!-- connecting curve bg -->
+                <img src="assets/images/process-bgs.svg" class="absolute inset-0 w-full h-full z-0 top-[23%]" alt="">
+                <!-- ===== CARD 1: Brief & Footage ===== -->
+                <div class="absolute z-10 left-[10.9375%] 2xl:top-[10.5506%] lg:top-[5%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div class="max-w-[315px] w-full">
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Brief & Footage</h3>
+                            <p class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                               You share the raw footage, goals, and any brand assets or references.</p>
+                        </div>
+                        <img src="assets/images/video-design-process-1.svg" alt="Brief & Footage"
+                            class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 1 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[22.031%] top-[43.258%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 1 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[22.031%] top-[52.135%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    1</div>
+                <!-- ===== CARD 2: Story & Assembly ===== -->
+                <div class="absolute z-10 left-[24.896%] top-[56.180%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div>
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Story & Assembly</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                We shape the structure and build a first rough cut of the story.</p>
+                        </div>
+                        <img src="assets/images/video-design-process-2.svg" alt="Story & Assembly" class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 2 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[35.990%] top-[50.898%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 2 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[35.990%] top-[47.303%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    2</div>
+                <!-- ===== CARD 3: Edit & Polish ===== -->
+                <div class="absolute z-10 left-[38.802%] 2xl:top-[0.6%] lg:top-[-1%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div>
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Edit & Polish</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Fine cut with graphics, captions, sound, and cinematic color.</p>
+                        </div>
+                        <img src="assets/images/video-design-process-3.svg" alt="Edit & Polish" class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 3 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[49.948%] top-[35.955%] h-[6.854%] -translate-x-1/2">
+                </div>
+                <!-- dot 3 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[49.948%] top-[46.404%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    3</div>
+                <!-- ===== CARD 4: Review & Revisions ===== -->
+                <div class="absolute z-10 left-[52.708%] top-[56.180%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div>
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Review & Revisions</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Review, refine, and perfect every design.</p>
+                        </div>
+                        <img src="assets/images/video-design-process-4.svg" alt="Review & Revisions" class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 4 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[63.906%] top-[50.898%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 4 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[63.906%] top-[47.303%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    4</div>
+                <!-- ===== CARD 5: Final Delivery ===== -->
+                <div class="absolute z-10 left-[66.667%] 2xl:top-[10.5506%] lg:top-[5%] xl:w-[22.396%] w-[26%] h-auto">
+                    <div
+                        class="process-card flex flex-col justify-between h-full rounded-4xl px-4 pt-4 xl:px-6 xl:pt-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                        <div class="max-w-[315px] w-full">
+                            <h3 class="text-dark8 font-fira text-2xl xl:text-[36px] font-normal leading-[110%] mb-2">
+                                Final Delivery</h3>
+                            <p
+                                class="text-dark7  text-sm xl:text-base xl:text-lg 2xl:text-xl font-normal leading-[150%] lg:mb-4 mb-2">
+                                Create scroll-stopping, on-brand designs.</p>
+                        </div>
+                        <img src="assets/images/video-design-process-5.svg" alt="Final Delivery" class="img-fluid w-full rounded-3xl">
+                    </div>
+                </div>
+                <!-- stem 5 -->
+                <div class="absolute w-px bg-[#D2F234] z-0 left-[77.865%] top-[43.258%] h-[5.281%] -translate-x-1/2">
+                </div>
+                <!-- dot 5 -->
+                <div
+                    class="absolute z-10 rounded-full bg-[#3B4400] text-yellow1 border-4 border-dark1 font-fira font-medium flex items-center justify-center left-[77.865%] top-[52.135%] w-[3.333%] h-[7.191%] -translate-x-1/2 -translate-y-1/2">
+                    5</div>
+            </div>
+            <!-- ================= MOBILE / TABLET-DOWN (vertical timeline) ================= -->
+            <div
+                class="process-timeline lg:hidden relative pl-10 sm:pl-12 mt-8 lg:mt-0 max-w-[644px] w-full mx-auto pr-4">
+                <div class="process-timeline-line absolute left-3.5 sm:left-3.75 w-px bg-[#D2F234]"></div>
+                <div class="flex flex-col gap-4 sm:gap-8 md:gap-10">
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">1</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Brief & Footage</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">You share the
+                                raw footage, goals, and any brand assets or references.</p>
+                            <img src="assets/images/motion-graphics-process-1.svg" alt="Brief & Footage"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">2</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Story & Assembly</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">
+                                We shape the structure and build a first rough cut of the story.</p>
+                            <img src="assets/images/motion-graphics-process-2.svg" alt="Story & Assembly"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">3</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Edit & Polish</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">Fine cut with
+                                graphics, captions, sound, and cinematic color.
+                            </p>
+                            <img src="assets/images/motion-graphics-process-3.svg" alt="Edit & Polish"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">4</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Review & Revisions</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">Review,
+                                refine, and perfect every design.
+                            </p>
+                            <img src="assets/images/motion-graphics-process-4.svg" alt="Review & Revisions"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="process-timeline-dot border-4 border-dark1 absolute -left-10 sm:-left-12 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#3B4400] text-[#D2F234] font-fira text-sm font-medium flex items-center justify-center z-10">5</span>
+                        <div
+                            class="process-card rounded-3xl p-6 bg-[linear-gradient(180deg,_#151615_0%,_#4A4C4A_100%)]">
+                            <h3
+                                class="text-dark8 font-fira text-2xl sm:text-[36px] lg:text-[36px] font-normal leading-[110%] mb-2">
+                                Final Delivery</h3>
+                            <p class="text-dark7 text-sm sm:text-base font-normal leading-[150%] mb-6">Create
+                                scroll-stopping, on-brand designs.
+                            </p>
+                            <img src="assets/images/motion-graphics-process-5.svg" alt="Final Delivery"
+                                class="img-fluid w-full rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- process section end -->
+
+
+
+
+
+<!-- videos showcase start -->
+<section class="portfolio-section section-padding bg-[linear-gradient(180deg,_#0B0C0B_0%,_#151615_101.89%)]">
+    <div class="px-4">
+        <!-- section title -->
+        <div class="max-w-[736px] mx-auto text-center lg:mb-12 md:mb-10 sm:mb-8 mb-6">
+            <h2 class="text-[#FFF] text-center font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                <span class="text-yellow1">Videos</span> We've Edited
+            </h2>
+        </div>
+ 
+        <!-- cards grid -->
+        <div id="industryGrid" class="portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-3 gap-3 lg:gap-3 md:mb-12 sm:mb-10 mb-8">
+ 
+            <!-- 1 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-1.mp4" data-title="Wine Presentation Video">
+                <img src="assets/images/video-editing-showcase-1.webp" alt="Wine Presentation Video" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-1.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Wine Presentation Video</span>
+                </div>
+            </a>
+ 
+            <!-- 2 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-2.mp4" data-title="Website Video">
+                <img src="assets/images/video-editing-showcase-2.webp" alt="Website Video" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-2.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Website Video</span>
+                </div>
+            </a>
+ 
+            <!-- 3 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-4.mp4" data-title="Pixxen Branding">
+                <img src="assets/images/video-editing-showcase-3.webp" alt="Pixxen Branding" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-4.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Pixxen Branding</span>
+                </div>
+            </a>
+ 
+            <!-- 4 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-3.mp4" data-title="News Live Video">
+                <img src="assets/images/video-editing-showcase-4.webp" alt="News Live Video" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-3.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">News Live Video</span>
+                </div>
+            </a>
+ 
+            <!-- 5 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-2.mp4" data-title="Noodly Branding">
+                <img src="assets/images/video-editing-showcase-1.webp" alt="Noodly Branding" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-2.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Noodly Branding</span>
+                </div>
+            </a>
+ 
+            <!-- 6 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-1.mp4" data-title="Fitness Video">
+                <img src="assets/images/video-editing-showcase-3.webp" alt="Fitness Video" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-1.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Fitness Video</span>
+                </div>
+            </a>
+ 
+            <!-- 7 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-3.mp4" data-title="Revenue Growth Video">
+                <img src="assets/images/video-editing-showcase-2.webp" alt="Revenue Growth Video" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-3.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">Revenue Growth Video</span>
+                </div>
+            </a>
+ 
+            <!-- 8 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-3.mp4" data-title="New Presenting Promo Video">
+                <img src="assets/images/video-editing-showcase-1.webp" alt="New Presenting Promo Video" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-3.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">New Presenting Promo Video</span>
+                </div>
+            </a>
+ 
+            <!-- 9 -->
+            <a href="#" class="industry-card portfolio-card group relative rounded-[10.537px] overflow-hidden" data-type="video" data-video="assets/videos/case-4.mp4" data-title="News Presentation Background">
+                <img src="assets/images/video-editing-showcase-4.webp" alt="News Presentation Background" class="portfolio-card-img w-full object-cover">
+                <video src="assets/videos/case-4.mp4" class="portfolio-hover-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" muted loop playsinline preload="none"></video>
+                <span class="portfolio-play-icon pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white sm:h-16 sm:w-16">
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8.268a2 2 0 010 3.464L3 19.66A2 2 0 010 17.928V2.072A2 2 0 013 .34l14 7.928z" fill="#0B0C0B"/></svg>
+                    </span>
+                </span>
+                <div class="portfolio-card-label absolute inset-x-0 bottom-0 sm:px-6 px-4 sm:py-4 py-3.5">
+                    <span class="text-yellow1 font-fira text-sm sm:text-base md:text-xl xl:text-2xl font-medium leading-[110%] capitalize">News Presentation Background</span>
+                </div>
+            </a>
+ 
+        </div>
+ 
+        <!-- load more -->
+        <div class="flex justify-center">
+            <button type="button" id="loadMoreBtn"
+                class="magnetic-btn cursor-pointer inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-4 py-3 md:text-base sm:text-sm text-xs font-semibold uppercase whitespace-nowrap transition-opacity duration-300 disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none">
+                LOAD MORE
+            </button>
+        </div>
+    </div>
+</section>
+<!-- videos showcase end -->
+ 
+<!-- ===== VIDEO POPUP ===== -->
+<div id="portfolioVideoModal" class="portfolio-modal fixed inset-0 z-[999] hidden items-center justify-center bg-black/90 p-4 backdrop-blur-sm sm:p-10">
+    <button type="button" id="portfolioVideoModalClose" class="absolute cursor-pointer right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full text-white transition hover:bg-white/10 sm:right-8 sm:top-8">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+ 
+    <div class="relative w-full max-w-[1200px]">
+        <video id="portfolioVideoModalPlayer" class="w-full max-h-[75vh] rounded-xl bg-black object-contain" playsinline></video>
+ 
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center gap-4">
+            <button type="button" data-action="rewind" class="video-modal-btn pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-black/45 text-white transition hover:bg-black/65">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 3L1 8l7 5V3z"/><path d="M15 3L8 8l7 5V3z"/></svg>
+            </button>
+            <button type="button" data-action="toggle" class="video-modal-btn video-modal-playpause pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full bg-black/45 text-white transition hover:bg-black/65">
+                <svg class="icon-pause" width="16" height="18" viewBox="0 0 16 18" fill="currentColor"><rect x="0" y="0" width="5" height="18"/><rect x="11" y="0" width="5" height="18"/></svg>
+                <svg class="icon-play hidden" width="16" height="18" viewBox="0 0 16 18" fill="currentColor"><path d="M0 0l16 9-16 9V0z"/></svg>
+            </button>
+            <button type="button" data-action="forward" class="video-modal-btn pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-black/45 text-white transition hover:bg-black/65">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="transform:scaleX(-1)"><path d="M8 3L1 8l7 5V3z"/><path d="M15 3L8 8l7 5V3z"/></svg>
+            </button>
+        </div>
+ 
+        <div class="absolute inset-x-0 bottom-0 px-4 pb-4 sm:px-6 sm:pb-6">
+            <div class="mb-2 flex items-center justify-between text-[13px] font-medium text-white sm:text-sm">
+                <span id="portfolioVideoModalTitle"></span>
+                <span><span id="portfolioVideoModalCurrent">0:00</span> / <span id="portfolioVideoModalDuration">0:00</span></span>
+            </div>
+            <div class="video-modal-progress-wrap relative">
+                <div id="portfolioVideoModalBubble" class="video-modal-bubble pointer-events-none absolute -top-8 hidden -translate-x-1/2 rounded-md bg-white px-2 py-1 text-[12px] font-semibold text-black">0:00</div>
+                <input id="portfolioVideoModalProgress" type="range" min="0" max="100" value="0" step="0.1" class="video-modal-progress w-full">
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+          <!-- Identity Package section -->
+    <section class="relative section-padding overflow-hidden bg-[linear-gradient(180deg,#0B0C0B_0%,#151615_100%)]">
+        <!-- Animated Gradient Overlay with Initial Filter -->
+        <div class="sec-bg-ani-grad absolute inset-0 pointer-events-none" style="background: linear-gradient(180deg,#0B0C0B 0%,#0B0C0B 13.13%,#151615 88.9%,#232423 101.89%);
+      filter: brightness(0.15);opacity: 0;"></div>
+
+        <div class="container relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+
+            <!-- LEFT CONTENT (5 Columns) -->
+            <div class="lg:col-span-6 lg:order-1 order-2">
+                <div class="lg:max-w-[608px] w-ful md:space-y-8 sm:space-y-6 space-y-4">
+                    <h2 class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                       From raw uploads to a channel people finish
+                    </h2>
+
+                    <p class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal lg:leading-[170%] leading-[150%]">
+                  Cadence was posting long, loosely-cut videos that lost viewers in the first minute. We rebuilt their edit around hooks, tighter pacing, captions, and clean sound. Average view duration more than tripled, and the channel's watch time followed.
+                    </p>
+                     <!-- view full portfolio (reuses the existing magnetic + reveal-icon button component) -->
+            <div class="flex justify-start">
+                <a href="#" class="btn-cta flex items-center gap-0">
+                    <span
+                        class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                        aria-label="Get free sample">
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_391_13791)">
+                                    <path
+                                        d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_391_13791">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_391_13951)">
+                                    <path
+                                        d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                        fill="#73870E" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_391_13951">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                    </span>
+
+                    <span
+                        class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-4 py-3 md:text-base sm:text-sm text-xs font-semibold uppercase whitespace-nowrap">
+                        <span class="btn-text-wipe">Read the case study</span>
+                    </span>
+                </a>
+            </div>
+
+                </div>
+            </div>
+
+            <!-- SPACER (1 Column) -->
+            <!-- <div class="hidden lg:block lg:col-span-1"></div> -->
+
+            <!-- RIGHT CONTENT (6 Columns) -->
+            <div class="lg:col-span-6 flex items-center justify-center lg:order-2 order-1">
+                <img src="assets/images/video-upload-count.webp" alt="Full Identity Package Graphic"
+                    class="w-full h-auto object-contain max-w-lg lg:max-w-full" />
+            </div>
+
+        </div>
+    </section>
+    <!-- Identity Package section -->
+
+
+<!-- video pricing  -->
+     <section class="brand-pricing-section section-padding bg-dark1 overflow-hidden">
+    <div class="container">
+        <!-- section title -->
+        <div class="max-w-184 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+            <h2
+                class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize mb-3">
+               Video Editing <span class="text-yellow1">Pricing</span>
+            </h2>
+            <p class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+               Pricing scales with length, footage, and complexity — every project gets an exact quote after a short brief, so
+you know the full cost before we open the timeline.
+            </p>
+        </div>
+        <!-- pricing cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            <!-- ===================== ESSENTIAL ===================== -->
+            <div class="flex flex-col rounded-xl border border-[#9EA19E] sm:p-8 p-5">
+                <div class=" mb-6">
+                    <img src="assets/images/video-editing-price.svg" class="img-fluid" alt="packages">
+                </div>
+                <span class="text-[#9EA19E]  sm:text-base text-sm font-normal leading-[150%] mb-2">Single edit</span>
+                <div class="flex items-end gap-1.5 mb-6">
+                    <span class="text-[#EEF3EE] font-fira text-4xl sm:text-5xl font-light leading-[110%]">from
+                        $149</span>
+                    <span class="text-[#9EA19E]  text-base font-normal leading-[150%] mb-1">/video</span>
+                </div>
+                <ul class="flex flex-col gap-3 mb-8">
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">One edited
+                            video</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Cuts, music &amp; captions</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Basic color &amp; sound</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Two revision
+                            rounds</span>
+                    </li>
+                </ul>
+                <div class="inline-flex mt-auto">
+                    <a href="#"
+                        class="magnetic-btn banner-btn-outline w-full inline-flex items-center justify-center rounded-full border border-2 border-[#DDE3DD] md:px-8 md:py-4 px-5 py-3 text-base text-[#DDE3DD] font-semibold uppercase whitespace-nowrap"
+                        style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                        <span class="btn-text-wipe btn-text-wipe--outline ">Choose single</span>
+                    </a>
+                </div>
+            </div>
+            <!-- ===================== COMPLETE (MOST POPULAR) ===================== -->
+            <div class="rounded-2xl border border-yellow1 overflow-hidden flex flex-col">
+                <div class="rounded-t-2xl bg-[#4A4C4A] text-center py-1.5 px-4">
+                    <span
+                        class="text-yellow1 font-fira text-xs font-black uppercase tracking-[0.6px] leading-[110%]">Most
+                        Popular</span>
+                </div>
+                <div
+                    class="flex flex-col flex-1 sm:p-8 p-5 bg-[linear-gradient(180deg,_#121211_0%,_#4B4B47_87.25%,_rgba(120,120,120,0.20)_100%)]">
+                    <div class=" mb-6">
+                        <img src="assets/images/motion-pricing-2.svg" class="img-fluid" alt="packages">
+                    </div>
+                    <span class="text-yellow1  text-base font-normal leading-[150%] mb-2">Monthly editing</span>
+                    <div class="flex items-end gap-1.5 mb-6">
+                        <span class="text-white font-fira text-4xl sm:text-5xl font-light leading-[110%]">from $899</span>
+                        <span class="text-[#9EA19E] text-sm sm:text-base font-normal leading-[150%] mb-1">/month</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                            <span
+                                class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Regular
+                                videos each month</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                            <span
+                                class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Long-form
+                                + short cut-downs</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                            <span
+                                class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Color,
+                                sound &amp; captions</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="assets/images/price-check-yellow.svg" class="img-fluid" alt="price-check">
+                            <span
+                                class="text-[#DDE3DD] xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">Priority
+                                turnaround</span>
+                        </li>
+                    </ul>
+                    <div class="mt-auto flex items-center gap-3 w-full">
+                        <a href="#" class="btn-cta flex items-center gap-0 w-full">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Get free sample"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13791)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13791">
+                                                <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_391_13951)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_391_13951">
+                                                <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 px-5 py-3 text-base font-semibold uppercase whitespace-nowrap w-full"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                                <span class="btn-text-wipe">Choose monthly</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- ===================== STRATEGY + IDENTITY ===================== -->
+            <div class="flex flex-col rounded-xl border border-[#9EA19E] sm:p-8 p-5">
+                <div class=" mb-6">
+                    <img src="assets/images/logo-design-package-3.svg" class="img-fluid" alt="packages">
+                </div>
+                <span class="text-[#9EA19E]  text-base font-normal leading-[150%] mb-2">Production &amp; post</span>
+                <div class="mb-6">
+                    <span class="text-[#EEF3EE] font-fira text-4xl sm:text-5xl font-light leading-[110%]">Let's
+                        talk</span>
+                </div>
+                <ul class="flex flex-col gap-3 mb-8">
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Full production or
+                            big project</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Explainer,
+                            wedding or corporate</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Grading, VO
+                            &amp; motion graphics</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="assets/images/price-check-white.svg" class="img-fluid" alt="price-check">
+                        <span class="text-[#BEC4BE] sm:text-base text-sm md:text-lg xl:text-xl font-normal leading-[150%]">Ongoing
+                            support</span>
+                    </li>
+                </ul>
+                <div class="inline-flex mt-auto">
+                    <a href="#"
+                        class="magnetic-btn banner-btn-outline w-full inline-flex items-center justify-center rounded-full border border-2 border-[#DDE3DD] md:px-8 md:py-4 px-5 py-3 text-base text-[#DDE3DD] font-semibold uppercase whitespace-nowrap"
+                        style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                        <span class="btn-text-wipe btn-text-wipe--outline ">Get a quote</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- video pricing  -->
+
+
+
+
+ <!-- brand system section start -->
+    <section class="brand-system-section section-padding bg-[linear-gradient(180deg,_#151615_0%,_#0B0C0B_13.13%,_#151615_88.9%,_#232423_101.89%)] overflow-hidden">
+        <div class="container">
+            <!-- section title -->
+            <div class="max-w-248 mx-auto text-center mb-6 sm:mb-8 lg:mb-12">
+                <h2
+                    class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize mb-3 sm:mb-4">
+                    Everything <span class="text-yellow1">Ready</span> To Publish
+                </h2>
+                <p
+                    class="text-dark7 xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%]">
+                    The master edit plus every version you need to post it everywhere — ready the moment it lands.
+                </p>
+            </div>
+            <!-- cards grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 md:gap-4  gap-3">
+                <!-- ===== CARD 1: Final Master Edit ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#5F7200_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#B4D700]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-publish-1.svg" class="img-fluid sm:w-auto w-10"
+                            alt="Final Master Edit">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 capitalize">
+                            Final Master Edit</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">
+                            Full-resolution MP4/MOV, ready for anywhere.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 2: Social Cut-Downs ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#7B3300_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF7A00]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-publish-2.svg" class="img-fluid sm:w-auto w-10"
+                            alt="Social Cut-Downs">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 capitalize">
+                            Social Cut-Downs</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Shorts
+                            and reels pulled from the main edit.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 3: Every Aspect Ratio ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#00537C_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#29B6F6]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-publish-3.svg" class="img-fluid sm:w-auto w-10"
+                            alt="Every Aspect Ratio">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 capitalize">
+                            Every Aspect Ratio</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">16:9,
+                            1:1, and 9:16 versions per platform.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 4: Captions & Subtitles ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#7C6B00_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#ECD540]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-publish-4.svg" class="img-fluid sm:w-auto w-10"
+                            alt="Captions & Subtitles">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 capitalize">
+                            Captions &amp; Subtitles</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">
+                            Burned-in or SRT files for reach and access.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 5: Thumbnail Frames ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#790069_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#FF00DD]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-publish-5.svg" class="img-fluid sm:w-auto w-10"
+                            alt="Thumbnail Frames">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 capitalize">
+                            Thumbnail Frames</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Clean
+                            stills and thumbnails where you need them.</p>
+                    </div>
+                </div>
+                <!-- ===== CARD 6: Full Ownership ===== -->
+                <div
+                    class="design-card relative rounded-3xl lg:p-8 sm:p-6 p-4 bg-[linear-gradient(140deg,_#006F2A_0%,_#191A19_13.38%,_#191A19_86.92%,_#232423_91.21%)] [--card-accent:#00D95F]">
+                    <div class="relative z-10">
+                        <img src="assets/images/video-publish-6.svg" class="img-fluid sm:w-auto w-10"
+                            alt="Full Ownership">
+                        <h3
+                            class="text-white font-fira  text-xl sm:text-2xl lg:text-[28px] font-medium leading-[110%] md:mb-4 sm:mb-3 mb-2 md:mt-8 sm:mt-6 mt-4 capitalize">
+                            Full Ownership</h3>
+                        <p class="text-[#DDE3DD] text-sm sm:text-base md:text-lg font-normal leading-[150%]">Your
+                            finished videos, entirely yours to keep.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- brand system section end -->
+
+
+
+
+
+    <!-- testimonials start -->
+    <section class="testimonials-section section-padding bg-dark1 overflow-hidden">
+        <div class="px-0">
+
+            <!-- section title -->
+            <div class="max-w-[736px] mx-auto text-center mb-6 sm:mb-8 lg:mb-12 px-4">
+                <h2
+                    class="text-[#FFF] text-center  text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                    What Our Clients Say
+                </h2>
+                <p
+                    class="text-[#DDE3DD] text-center xl:text-xl lg:text-lg md:text-base sm:text-base text-sm font-normal leading-[150%] sm:mt-4 mt-3">
+                    Don't just take our word for it. Here's what business owners around the world are saying about
+                    GraphicNomad.
+                </p>
+            </div>
+
+            <!-- testimonial marquee slider -->
+            <div class="testimonial-slider splide " aria-label="Client testimonials">
+                <div class="splide__track overflow-visible">
+                    <ul class="splide__list flex items-stretch">
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full sm:min-h-[442px] min-h-[380px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,#D2F234_0%,#798C1E_100%)]">
+                                    <img src="assets/images/testimonial-author-1.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Leslie Alexander</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    CEO, TechStart Inc.</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut has been a game-changer for our startup. We get professional designs
+                                        delivered fast, and the unlimited revisions mean we always get exactly what we
+                                        need."</p>
+
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full sm:min-h-[442px] min-h-[380px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,#FF6A00_0%,#994000_100%)]">
+                                    <img src="assets/images/testimonial-author-2.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Jane Cooper</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    TechNova Solutions</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut delivered outstanding designs for our startup right on time. The fast
+                                        revisions made it easy for us to quickly reach the final product we needed."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full sm:min-h-[442px] min-h-[380px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,#0AF_0%,#069_100%)]">
+                                    <img src="assets/images/testimonial-author-3.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Kathryn Murphy</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    BrightWave Digital</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut helped us refresh our brand with creative ideas and flawless execution.
+                                        The entire process was smooth, fast, and highly professional."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full sm:min-h-[442px] min-h-[380px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,_#F0D_0%,_#770067_100%)]">
+                                    <img src="assets/images/testimonial-author-1.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Leslie Alexander</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    CEO, TechStart Inc.</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut has been a game-changer for our startup. We get professional designs
+                                        delivered fast, and the unlimited revisions mean we always get exactly what we
+                                        need."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full sm:min-h-[442px] min-h-[380px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,_#52D6DA_0%,_#008589_100%)]">
+                                    <img src="assets/images/testimonial-author-2.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Jane Cooper</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    TechNova Solutions</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut delivered outstanding designs for our startup right on time. The fast
+                                        revisions made it easy for us to quickly reach the final product we needed."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide w-[480px] max-w-[85vw] shrink-0">
+                            <div
+                                class="testimonial-card flex rounded-[32px] overflow-hidden h-full sm:min-h-[442px] min-h-[380px] relative">
+                                <div
+                                    class="w-16 sm:w-20 shrink-0 [border-radius:32px_0_0_32px] bg-[linear-gradient(180deg,_#ECD540_0%,_#A89100_100%)]">
+                                    <img src="assets/images/testimonial-author-3.png" class="img-fluid sm:p-4 p-2"
+                                        alt="Testimonial Author">
+                                </div>
+                                <div class="testimonial-card-body flex-1 bg-[#232423] p-6 relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-4 relative z-10">
+                                        <div class="flex items-center gap-3">
+
+                                            <div>
+                                                <p
+                                                    class="text-white font-fira lg:text-2xl md:text-xl sm:text-lg text-base font-bold leading-8 capitalize">
+                                                    Kathryn Murphy</p>
+                                                <p
+                                                    class="text-[#DDE3DD]  lg:text-lg md:text-base text-sm font-normal leading-[140%] capitalize">
+                                                    BrightWave Digital</p>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0 rounded-full bg-[#ECD540] text-[#0B0C0B] font-fira text-base sm:text-lg md:text-[22px] font-black leading-[150%] capitalize shrink-0">
+                                            <img src="assets/images/testimonial-star.svg" class="img-fluid"
+                                                alt="textimonial star">
+                                            4.9</span>
+                                    </div>
+                                    <hr class="border-white/10 mb-4 relative z-10">
+                                    <p
+                                        class="text-dark8 lg:text-lg sm:text-base text-sm font-normal leading-[170%] capitalize relative z-10">
+                                        "Quecut helped us refresh our brand with creative ideas and flawless execution.
+                                        The entire process was smooth, fast, and highly professional."</p>
+
+                                    <img src="assets/images/quote-testimonial.svg"
+                                        class="absolute bottom-0 right-5 opacity-30 sm:w-auto w-15" alt="Quote">
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonials end -->
+
+
+
+
+
+
+
+ <!-- FAQ section start -->
+<section
+    class="quecut-faq section-padding  bg-dark2 overflow-hidden relative z-20">
+    <div
+        class="choose-section-shape absolute left-0 bottom-0 origin-bottom will-change-transform -z-10 lg:block hidden">
+        <img src="assets/images/faq-shape.webp" class="img-fluid" alt="shape">
+    </div>
+    <div class="max-w-300 mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- section title -->
+        <div
+            class="max-w-[736px] mx-auto text-center lg:mb-16 md:mb-12 sm:mb-10 mb-8">
+            <h2
+                class="text-[#FFF] text-center text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                Frequently Asked Questions
+            </h2>
+            <p
+                class="text-[#DDE3DD] text-center  sm:text-base text-sm md:text-lg lg:text-xl font-normal leading-[150%] sm:mt-4 mt-3">
+                Don't just take our word for it. Here's what business owners
+                around the world are saying about
+                GraphicNomad.
+            </p>
+        </div>
+
+        <!-- FAQ Grid Wrap -->
+        <div class="max-w-156 mx-auto w-full">
+
+            <!-- FAQ 1 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Will the files be ready for my printer or
+                            manufacturer?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes. We set up artwork correctly for the
+                                    printing method — DTG, screen print,
+                                    embroidery digitizing, sublimation, or vinyl
+                                    — with the right file types,
+                                    resolution, colors, and separations your
+                                    printer needs.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Do you print the apparel too, or just design it?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    We focus on creating professional,
+                                    print-ready apparel designs. We don't print
+                                    the garments ourselves, but we deliver
+                                    production-ready files that your
+                                    preferred printer or manufacturer can use
+                                    immediately. If you don't have a
+                                    printer, we're also happy to recommend a
+                                    trusted printing partner based on your
+                                    project and location.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Can you design a full range or just one item?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes! We can design anything from a single
+                                    apparel item to a complete product
+                                    range. Whether you need one custom T-shirt,
+                                    a matching hoodie and cap, or an
+                                    entire branded clothing collection, we'll
+                                    create consistent, production-ready
+                                    designs tailored to your vision and brand.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Which print methods do you set up for?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    We prepare artwork for all major apparel
+                                    printing methods, including DTG
+                                    (Direct-to-Garment), screen printing,
+                                    embroidery digitizing, sublimation, DTF
+                                    (Direct-to-Film), heat transfer, and vinyl
+                                    cutting. Every file is optimized with
+                                    the correct format, resolution, color
+                                    settings, and specifications for your
+                                    chosen production method.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Do you provide garment mockups?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes. We provide realistic garment mockups to
+                                    help you visualize how your design will look
+                                    on the final apparel. These mockups are
+                                    great for client approvals, presentations,
+                                    online stores, and marketing materials
+                                    before moving into production.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 6 -->
+            <div
+                class="faq-item rounded-lg overflow-hidden  mb-3">
+                <button
+                    class="faq-trigger w-full flex items-center justify-between gap-4 sm:p-4 p-2 md:p-6 cursor-pointer text-left">
+                    <span class="flex items-center sm:gap-4 gap-3">
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#D4F53C] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            Q
+                        </span>
+                        <span
+                            class="text-white font-fira text-base sm:text-lg md:text-[22px] font-medium leading-[130%]">
+                            Do I own the designs?
+                        </span>
+                    </span>
+
+                    <span class="icon-close shrink-0 text-white">
+                        <img src="assets/images/faq-arrow.svg" class="img-fluid"
+                            alt="arrow icon">
+                    </span>
+                </button>
+
+                <div class="faq-content overflow-hidden bg-dark1 "
+                    style="max-height:0;">
+                    <div
+                        class="flex items-start sm:gap-4 gap-3 sm:p-4 p-2 md:p-6">
+
+                        <!-- A Badge -->
+                        <span
+                            class="sm:w-8 sm:h-8 h-6 w-6 shrink-0 rounded-full bg-[#52D6DA] flex items-center justify-center text-dark1 font-fira font-bold text-base">
+                            A
+                        </span>
+
+                        <!-- Divider + Content -->
+                        <div class="flex items-stretch sm:gap-4 gap-3 flex-1">
+
+                            <!-- Divider -->
+                            <div class="faq-divider shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="100%" viewBox="0 0 8 121"
+                                    fill="none" preserveAspectRatio="none">
+                                    <path opacity="0.5"
+                                        d="M3.32808 120.354C3.52334 120.549 3.83993 120.549 4.03519 120.354L7.21717 117.172C7.41243 116.976 7.41243 116.66 7.21717 116.464C7.02191 116.269 6.70532 116.269 6.51006 116.464L3.68164 119.293L0.853208 116.464C0.657946 116.269 0.341364 116.269 0.146102 116.464C-0.0491606 116.66 -0.0491606 116.976 0.146102 117.172L3.32808 120.354ZM3.68164 0L3.18164 -2.18557e-08L3.18164 120L3.68164 120L4.18164 120L4.18164 2.18557e-08L3.68164 0Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <!-- Answer -->
+                            <div class="flex-1">
+                                <p
+                                    class="text-dark7 sm:text-base text-sm md:text-lg lg:text-xl leading-[150%]">
+                                    Yes. Once your project is completed and
+                                    payment is received, you receive full
+                                    ownership of the final approved design.
+                                    You're free to use it for printing,
+                                    selling, branding, or any commercial purpose
+                                    without ongoing royalties.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- FAQ section end -->
+
+    <!-- The brand-readiness checklist -->
+    <section class="relative w-full  text-white section-padding overflow-hidden bg-dark1">
+
+        <!-- BACKGROUND CONTAINER -->
+        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+            <!-- Background Gradient Image -->
+            <img src="assets/images/the-brand-readiness-checklist-banner.webp" alt="" aria-hidden="true"
+                class="block w-full h-full object-cover object-center" />
+        </div>
+
+        <!-- CONTENT CONTAINER -->
+        <div class="relative z-10 max-w-150 px-4 md:px-0 mx-auto text-center flex flex-col items-center">
+
+            <!-- MAIN HEADING -->
+            <div class="mb-6 md:mb-12">
+                <h2 class="text-white font-fira text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px]  font-normal leading-[110%] mb-3 md:mb-6">
+                   The motion project brief
+template
+                </h2>
+
+                <!-- SUBTITLE -->
+                <p class="text-dark7 text-sm sm:text-base md:text-xl font-normal leading-[150%] md:leading-[170%]">
+                   Free, instant, and genuinely useful — no strings attached.
+                </p>
+            </div>
+
+            <!-- EMAIL INPUT FORM CARD -->
+            <form
+                class="w-full max-w-150 relative flex items-center bg-dark8 rounded-full p-1 sm:p-1.5 transition-all focus-within:ring-2 focus-within:ring-yellow1">
+
+                <!-- INPUT FIELD -->
+                <input type="email" placeholder="Enter your email address" required
+                    class="w-full bg-transparent px-6 py-3 text-sm sm:text-base text-dark2 placeholder-[#4A4C4A] focus:outline-none font-normal" />
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit"
+                    class="cursor-pointer inline-flex items-center gap-2 bg-[#121211] hover:bg-dark3 text-white pl-6 pr-1.5 py-1 rounded-full transition-all duration-300 group shrink-0">
+
+                    <span
+                        class="font-fira text-sm sm:text-base font-semibold uppercase pl-1 group-hover:text-yellow1 transition-colors duration-300">SEND</span>
+
+                    <!-- ICON CIRCLE -->
+                    <span
+                        class="w-10.5 h-10.5 md:w-14 md:h-14 rounded-full bg-[#232A00] flex items-center justify-center group-hover:bg-[#CCFE37] transition-colors duration-300">
+                        <svg class="w-4.5 h-4.5 md:w-6 md:h-6 text-[#CCFE37] group-hover:text-dark1 transition-colors duration-300 transform -rotate-45"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </span>
+
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+    <!-- The brand-readiness checklist -->
+
+
+
+    <!-- blog section start -->
+    <section class="blog-section section-padding bg-[linear-gradient(180deg,_#0B0C0B_65.86%,_#9EA19E_100%)] overflow-hidden">
+        <div class="container">
+
+            <!-- section header -->
+            <div
+                class="flex sm:flex-row flex-col items-center flex-wrap justify-center sm:justify-between sm:gap-6 gap-3 lg:mb-12 md:mb-10 mb-8">
+                <div class="max-w-xl">
+                    <h2
+                        class="text-[#FFF] text-[32px] sm:text-[42px] md:text-[48px] xl:text-[56px] font-normal leading-[110%] capitalize">
+                        Ideas from the studio
+                    </h2>
+                </div>
+
+                <a href="#" class="btn-cta flex items-center gap-0 shrink-0">
+                    <span
+                        class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                        aria-label="See all blog posts">
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 15L15 5M15 5H7M15 5V13" stroke="#0B0C0B" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 15L15 5M15 5H7M15 5V13" stroke="#0B0C0B" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </span>
+
+                    <span
+                        class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 sm:px-6 px-5 py-4 text-sm font-semibold uppercase whitespace-nowrap">
+                        <span class="btn-text-wipe">See All</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- blog marquee slider -->
+            <div class="" aria-label="Latest blog posts">
+                <div class="">
+
+                    <div class="grid md:grid-cols-3 sm:grid-cols-2 lg:gap-8 sm:gap-6 gap-4">
+
+                        <!-- slide 1 -->
+                        <div class="h-auto">
+                            <a href="blog-details.html"
+                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <div class="blog-card-media">
+                                    <img src="assets/images/blog-1.webp" alt="2026 website design trends"
+                                        class="img-fluid w-full">
+                                </div>
+                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                                                Design</span>
+                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Md. Hasan Biswas"
+                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Md.
+                                                    Hasan Biswas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
+                                            2026 website design trends every modern designer should know</h3>
+
+                                        <div
+                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
+                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide 2 -->
+                        <div class=" h-auto">
+                            <a href="blog-details.html"
+                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <div class="blog-card-media">
+                                    <img src="assets/images/blog-2.webp" alt="How a startup scaled faster"
+                                        class="img-fluid w-full">
+                                </div>
+                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                                                Design</span>
+                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Albert Flores"
+                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Albert
+                                                    Flores</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
+                                            How a startup scaled faster using our subscription design service</h3>
+
+                                        <div
+                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
+                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- slide 3 -->
+                        <div class="h-auto">
+                            <a href="blog-details.html"
+                                class="blog-card portfolio-card relative bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+                                <div class="blog-card-media">
+                                    <img src="assets/images/blog-3.webp" alt="From freelancer to full-time designer"
+                                        class="img-fluid w-full">
+                                </div>
+                                <div class="sm:p-4 p-3 md:p-6 flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-3 mb-4">
+                                        <div class="flex items-center sm:gap-4 gap-3 min-w-0">
+                                            <span
+                                                class="inline-flex items-center py-0 md:py-1.5 md:px-2 px-1 rounded-full bg-[#inline-flex items-center rounded-full bg-[#52D6DA] text-dark1 text-xs sm:text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap">UI/UX
+                                                Design</span>
+                                            <div class="flex items-center sm:gap-2 gap-1.5 min-w-0">
+                                                <img src="assets/images/blog-author.png" alt="Jenny Wilson"
+                                                    class="sm:w-6 sm:h-6 h-4.5 w-4.5 rounded-full object-cover shrink-0">
+                                                <span
+                                                    class="text-dark2 md::text-base sm:text-sm text-xs font-medium leading-[150%] truncate">Jenny
+                                                    Wilson</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-start justify-between gap-3 mb-4">
+                                        <h3
+                                            class="overflow-hidden text-ellipsis text-[#0B0C0B] sm:text-xl text-lg md:text-2xl font-medium leading-[120%] line-clamp-2 ">
+                                            From freelancer to full-time designer with consistent client growth</h3>
+
+                                        <div
+                                            class="w-14 py-1.5 rounded-xl bg-[#inline-flex items-center py-1.5 px-4 rounded-full bg-[#52D6DA] text-dark1 text-sm md:text-base font-medium font-fira leading-[20px] uppercase whitespace-nowrap text-dark1">
+                                            <span class="block sm:text-xl text-lg font-medium leading-[120%]">20</span>
+                                            <span class="block sm:text-sm text-xs font-normal leading-[150%]">Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="text-[#151615] text-sm sm:text-base lg:text-lg font-normal leading-[140%] line-clamp-2 sm:mb-4 mb-3">
+                                        See how in-house teams improved workflow, reduced backlog, and delivered
+                                        consistent brand visuals with a dedicated subscription design system.</p>
+                                    <div
+                                        class="text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 text-dark3 font-fira text-sm sm:text-base font-medium leading-none uppercase no-underline mt-auto inline-flex items-center gap-2 blog-read-more-btn">
+                                        <img src="assets/images/readmore-arrow-right.svg"
+                                            class="img-fluid arrow-icon-right-read-more-icon" alt="arrow-right icon">
+                                        Read More
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- blog section end -->
+
+
+
+
+    <!-- CTA section start -->
+    <section class="cta-section lg:pt-27 bg-dark1 relative overflow-hidden  border-b border-[#2A2B2A]">
+
+        <!-- radial "lights" -- animated in via GSAP scroll trigger -->
+        <div class="cta-radial cta-radial-gray absolute inset-0 pointer-events-none"></div>
+
+        <div class="cta-radial cta-radial-orange absolute  pointer-events-none"></div>
+
+        <div class="container relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 sm:gap-10 xl:gap-16 items-center">
+
+                <!-- ===== LEFT: Custom Design mockup image ===== -->
+                <div class="cta-image-wrap flex justify-center items-center order-2 lg:order-1">
+                    <img src="assets/images/cta-left.svg" alt="Custom Design" class="img-fluid max-w-full">
+                </div>
+
+                <!-- ===== RIGHT: heading + desc + buttons ===== -->
+                <div class="cta-content order-1 lg:order-2 lg:py-16 md:py-12 py-10 lg:text-start text-center">
+                    <h2
+                        class="text-white font-fira text-[32px] sm:text-[42px] xl:text-[56px] font-normal leading-[110%]">
+                       Ready to build a brand people remember?
+                    </h2>
+                    <p
+                        class="text-dark7 text-sm sm:text-base md:text-lg xl:text-xl font-normal leading-[150%] md:mt-4 sm:mt-3 mt-2 max-w-lg lg:mx-0 mx-auto">
+                        Tell us about your project — we'll reply within one business day with ideas and a quote.
+                    </p>
+
+                    <!-- buttons (same magnetic + reveal-icon pattern from banner) -->
+                    <div
+                        class="flex items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 flex-wrap xl:mt-12 md:mt-8 mt-6 lg:justify-start justify-center">
+                        <!-- START FREE TRIAL -->
+                        <a href="#" class="btn-cta flex items-center gap-0">
+                            <span
+                                class="magnetic-btn btn-reveal-icon relative md:w-14 md:h-14 h-10.5 w-10.5 rounded-full bg-yellow1 flex items-center justify-center overflow-hidden shrink-0"
+                                aria-label="Start free trial">
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_cta_start_1)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_cta_start_1">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span class="btn-reveal-icon-layer btn-reveal-icon-layer-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_cta_start_2)">
+                                            <path
+                                                d="M22 0H9.99997V2H20.586L0.0429688 22.543L1.45697 23.957L22 3.414V14H24V2C24 0.897 23.103 0 22 0Z"
+                                                fill="#73870E" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_cta_start_2">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </span>
+
+                            <span
+                                class="magnetic-btn inline-flex items-center justify-center rounded-full bg-yellow1 md:px-8 md:py-4 sm:px-5 px-4 py-3 md:text-base sm:text-sm text-xs font-semibold uppercase whitespace-nowrap">
+                                <span class="btn-text-wipe">Start a project</span>
+                            </span>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- CTA section end -->
+
+
+ 
+    <!-- footer start -->
+    <footer class="footer relative overflow-hidden pt-16 lg:pt-20">
+        <div class="container">
+
+            <!-- nav grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 lg:gap-x-8 mb-12 lg:mb-16">
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Services</h3>
+                    <ul class="footer-col-list">
+                        <li>
+                                    <a href="logo-design-service.html">
+                                       Logo design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="brand-identity-design.html">Brand Identity
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="packaging-design.html">
+                                        Packaging Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="print-design.html">
+                                        Print design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="illustration-design.html">
+                                        Illustration
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="social-media-design.html">
+                                        Social Media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">Motion graphics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="video-editing-service.html">Video editing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="motion-graphics-service.html">Motion graphics
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+
+                <!-- Quecut -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Quecut</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Resources</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-col">
+                    <h3 class="footer-col-title">Policies</h3>
+                    <ul class="footer-col-list">
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="cookies-policy.html">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media (full-width on mobile/tablet, 1 col on desktop) -->
+                <div class="footer-col col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="footer-col-title">Social Media</h3>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <a href="#" class="footer-social-icon" aria-label="Dribbble">
+                            <img src="assets/images/social-media-1.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Behance">
+                            <img src="assets/images/social-media-2.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Facebook">
+                            <img src="assets/images/social-media-3.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <img src="assets/images/social-media-4.svg" class="img-fluid" alt="social media icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copyright + divider -->
+            <p class="footer-copyright">© Quecut</p>
+            <hr class="footer-divider">
+        </div>
+
+        <!-- BIG BOTTOM LOGO with animated gradient wave -->
+        <div class=" xl:mt-36.5 md:mt-25 sm:mt-20 mt-12.5 sticky bottom-0" aria-hidden="true">
+            <!-- <div class="quecut-blob quecut-blob--yellow"></div>
+        <div class="quecut-blob quecut-blob--orange"></div>
+        <div class="quecut-blob quecut-blob--blue"></div>
+        <div class="quecut-blob quecut-blob--magenta"></div> -->
+            <img src="assets/images/quecut-footer.svg" class="img-fluid" alt="footer">
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
