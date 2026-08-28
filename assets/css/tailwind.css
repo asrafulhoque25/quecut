@@ -2558,6 +2558,9 @@ background:  #0B0C0B;
   .blog-details ul.check-list li {
     padding-left: 28px;
   }
+  .blog-details ol{
+    gap: 8px;
+  }
   .blog-details ol li {
     padding-left: 34px;
   }
@@ -2923,4 +2926,37 @@ background:  #0B0C0B;
       var(--Dark-Colors-Dark-1, #0b0c0b) 72.67%
     ),
     var(--Dark-Colors-Dark-1, #0b0c0b);
+}
+
+
+
+
+
+/* contact popup */
+
+#freeAuditModal .overflow-y-auto,
+#thankYouModal .overflow-y-auto {
+    scrollbar-width: thin;                
+    scrollbar-color: #4A4C4A transparent; 
+}
+
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar,
+#thankYouModal .overflow-y-auto::-webkit-scrollbar {
+    width: 6px;                          
+}
+
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-track,
+#thankYouModal .overflow-y-auto::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb,
+#thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb {
+    background-color: #4A4C4A;
+    border-radius: 999px;
+}
+
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb:hover,
+#thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background-color: #696B69;
 }

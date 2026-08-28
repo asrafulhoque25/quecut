@@ -1779,9 +1779,6 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
-  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
@@ -2852,6 +2849,11 @@
       display: none;
     }
   }
+  .sm\:h-4 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 4);
+    }
+  }
   .sm\:h-6 {
     @media (width >= 40rem) {
       height: calc(var(--spacing) * 6);
@@ -2905,6 +2907,11 @@
   .sm\:min-h-\[442px\] {
     @media (width >= 40rem) {
       min-height: 442px;
+    }
+  }
+  .sm\:w-4 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 4);
     }
   }
   .sm\:w-4\.5 {
@@ -3003,11 +3010,6 @@
   .sm\:flex-wrap {
     @media (width >= 40rem) {
       flex-wrap: wrap;
-    }
-  }
-  .sm\:items-start {
-    @media (width >= 40rem) {
-      align-items: flex-start;
     }
   }
   .sm\:justify-between {
@@ -3246,11 +3248,6 @@
   .sm\:pl-12 {
     @media (width >= 40rem) {
       padding-left: calc(var(--spacing) * 12);
-    }
-  }
-  .sm\:text-start {
-    @media (width >= 40rem) {
-      text-align: start;
     }
   }
   .sm\:text-2xl {
@@ -3638,9 +3635,19 @@
       gap: calc(var(--spacing) * 4);
     }
   }
+  .md\:gap-5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
   .md\:gap-6 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:gap-7 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 7);
     }
   }
   .md\:gap-8 {
@@ -4376,11 +4383,6 @@
       border-radius: var(--radius-3xl);
     }
   }
-  .lg\:rounded-4xl {
-    @media (width >= 64rem) {
-      border-radius: var(--radius-4xl);
-    }
-  }
   .lg\:border-r {
     @media (width >= 64rem) {
       border-right-style: var(--tw-border-style);
@@ -4492,11 +4494,6 @@
   .lg\:py-25 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 25);
-    }
-  }
-  .lg\:py-37\.75 {
-    @media (width >= 64rem) {
-      padding-block: calc(var(--spacing) * 37.75);
     }
   }
   .lg\:py-48 {
@@ -4739,6 +4736,11 @@
       gap: calc(var(--spacing) * 4);
     }
   }
+  .xl\:gap-6 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
   .xl\:gap-8 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 8);
@@ -4796,6 +4798,11 @@
       border-radius: var(--radius-3xl);
     }
   }
+  .xl\:rounded-4xl {
+    @media (width >= 80rem) {
+      border-radius: var(--radius-4xl);
+    }
+  }
   .xl\:p-6 {
     @media (width >= 80rem) {
       padding: calc(var(--spacing) * 6);
@@ -4804,6 +4811,11 @@
   .xl\:p-8 {
     @media (width >= 80rem) {
       padding: calc(var(--spacing) * 8);
+    }
+  }
+  .xl\:p-16 {
+    @media (width >= 80rem) {
+      padding: calc(var(--spacing) * 16);
     }
   }
   .xl\:px-5 {
@@ -4844,11 +4856,6 @@
   .xl\:py-28 {
     @media (width >= 80rem) {
       padding-block: calc(var(--spacing) * 28);
-    }
-  }
-  .xl\:py-34 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 34);
     }
   }
   .xl\:pt-6 {
@@ -6986,6 +6993,9 @@ html {
   .blog-details ul.check-list li {
     padding-left: 28px;
   }
+  .blog-details ol {
+    gap: 8px;
+  }
   .blog-details ol li {
     padding-left: 34px;
   }
@@ -7283,6 +7293,23 @@ html {
 }
 .legal-bg {
   background: url("../images/full-Q.svg") left bottom 0% no-repeat, radial-gradient( 50.91% 80.18% at 0.28% 50.39%, var(--Dark-Colors-Dark-4, #4a4c4a) 0%, var(--Dark-Colors-Dark-1, #0b0c0b) 72.67% ), var(--Dark-Colors-Dark-1, #0b0c0b);
+}
+#freeAuditModal .overflow-y-auto, #thankYouModal .overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #4A4C4A transparent;
+}
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar, #thankYouModal .overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-track, #thankYouModal .overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb, #thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #4A4C4A;
+  border-radius: 999px;
+}
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb:hover, #thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background-color: #696B69;
 }
 @property --tw-border-spacing-x {
   syntax: "<length>";

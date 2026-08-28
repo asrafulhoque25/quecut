@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.portfolio-tab');
     const cards = Array.from(document.querySelectorAll('.portfolio-card'));
     const loadMoreBtn = document.getElementById('portfolioLoadMoreBtn');
-    if (!tabs.length || !cards.length) return;
+    if (!tabs.length || !cards.length || !loadMoreBtn) return; // <- guard: skip entirely if this page has no tabs
  
     const INITIAL_COUNT = 9;
     const LOAD_STEP = 6;
@@ -328,18 +328,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function render() {
         const matches = matchingCards();
  
-        // hide cards not in current filter entirely
         cards.forEach((card) => {
             const matches_ = currentFilter === 'all' || card.dataset.category === currentFilter;
             card.classList.toggle('is-hidden', !matches_);
         });
  
-        // within matches, only show the first `visibleCount`
         matches.forEach((card, i) => {
             card.classList.toggle('is-hidden', i >= visibleCount);
         });
  
-        // load-more button state
         if (visibleCount >= matches.length) {
             loadMoreBtn.classList.add('is-disabled');
             loadMoreBtn.setAttribute('aria-disabled', 'true');
@@ -354,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tabs.forEach((t) => t.classList.remove('active'));
             tab.classList.add('active');
             currentFilter = tab.dataset.filter;
-            visibleCount = INITIAL_COUNT; // reset pagination on filter change
+            visibleCount = INITIAL_COUNT;
             render();
         });
     });
@@ -368,7 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
  
     render();
  
-    // ---- drag-to-scroll for the tab bar (mouse on desktop; touch works natively) ----
     if (!tabsWrapper) return;
     let isDown = false;
     let startX = 0;
@@ -394,7 +390,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
  
-// ================= PORTFOLIO: VIDEO HOVER PREVIEW =================
+// ================= 2) PLAIN LOAD MORE (industryGrid / loadMoreBtn) =================
+// Only runs on pages that have #industryGrid — i.e. every page that
+// is NOT the home page (home uses #portfolioLoadMoreBtn above instead).
+document.addEventListener('DOMContentLoaded', () => {
+    const ITEMS_PER_CLICK = 6;
+    const grid = document.getElementById('industryGrid');
+    const button = document.getElementById('loadMoreBtn');
+    if (!grid || !button) return; // <- guard: skip entirely if this page has no plain load-more grid
+ 
+    const cards = Array.from(grid.querySelectorAll('.industry-card'));
+    const initialCount = ITEMS_PER_CLICK;
+    let visibleCount = Math.min(initialCount, cards.length);
+ 
+    function render() {
+        cards.forEach((card, i) => {
+            card.classList.toggle('hidden', i >= visibleCount);
+        });
+ 
+        const allVisible = visibleCount >= cards.length;
+        button.textContent = allVisible ? 'SHOW LESS' : 'LOAD MORE';
+        button.disabled = false;
+ 
+        if (cards.length <= initialCount) {
+            button.disabled = true;
+            button.textContent = 'LOAD MORE';
+        }
+    }
+ 
+    button.addEventListener('click', () => {
+        const allVisible = visibleCount >= cards.length;
+        if (allVisible) {
+            visibleCount = initialCount;
+            render();
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            visibleCount = Math.min(visibleCount + ITEMS_PER_CLICK, cards.length);
+            render();
+        }
+    });
+ 
+    render();
+});
+ 
+// ================= 3) VIDEO HOVER PREVIEW =================
+// Generic — safely does nothing on pages with no video cards.
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.portfolio-card[data-type="video"]').forEach((card) => {
         const video = card.querySelector('.portfolio-hover-video');
@@ -410,7 +450,6 @@ document.addEventListener('DOMContentLoaded', () => {
             video.pause();
             video.currentTime = 0;
         });
-        // touch devices: tap once previews, tap again (or the click handler below) opens modal
         card.addEventListener('touchstart', () => {
             if (!video.src) video.src = src;
             video.play().catch(() => {});
@@ -418,12 +457,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
  
-// ================= PORTFOLIO: CLICK -> IMAGE / VIDEO POPUP =================
+// ================= 4) CLICK -> IMAGE / VIDEO POPUP =================
+// Generic — targets every .portfolio-card on any page. Works whether
+// the page has an image modal only, a video modal only, both, or
+// (in the unlikely case) neither — each modal is independently
+// optional via the hasImageModal / hasVideoModal checks below.
 document.addEventListener('DOMContentLoaded', () => {
     const imageModal = document.getElementById('portfolioImageModal');
     const imageModalImg = document.getElementById('portfolioImageModalImg');
     const imageModalClose = document.getElementById('portfolioImageModalClose');
-
+ 
     const videoModal = document.getElementById('portfolioVideoModal');
     const videoModalClose = document.getElementById('portfolioVideoModalClose');
     const videoModalPlayer = document.getElementById('portfolioVideoModalPlayer');
@@ -432,21 +475,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoModalDuration = document.getElementById('portfolioVideoModalDuration');
     const videoModalProgress = document.getElementById('portfolioVideoModalProgress');
     const videoModalBubble = document.getElementById('portfolioVideoModalBubble');
-
+ 
     const hasImageModal = imageModal && imageModalImg && imageModalClose;
     const hasVideoModal = videoModal && videoModalPlayer && videoModalTitle && videoModalCurrent && videoModalDuration && videoModalProgress && videoModalBubble;
-
+ 
+    if (!hasImageModal && !hasVideoModal) return; // <- guard: skip entirely if neither modal exists on this page
+ 
     const playPauseBtn = hasVideoModal ? videoModal.querySelector('.video-modal-playpause') : null;
     const iconPlay = playPauseBtn ? playPauseBtn.querySelector('.icon-play') : null;
     const iconPause = playPauseBtn ? playPauseBtn.querySelector('.icon-pause') : null;
-
+ 
     function formatTime(sec) {
         if (!isFinite(sec)) return '0:00';
         const m = Math.floor(sec / 60);
         const s = Math.floor(sec % 60).toString().padStart(2, '0');
         return `${m}:${s}`;
     }
-
+ 
     function openImageModal(src, alt) {
         if (!hasImageModal) return;
         imageModalImg.src = src;
@@ -462,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imageModalImg.src = '';
         document.body.style.overflow = '';
     }
-
+ 
     function openVideoModal(src, title) {
         if (!hasVideoModal) return;
         videoModalPlayer.src = src;
@@ -482,38 +527,35 @@ document.addEventListener('DOMContentLoaded', () => {
         videoModalPlayer.load();
         document.body.style.overflow = '';
     }
-
-    // open on card click
+ 
     document.querySelectorAll('.portfolio-card').forEach((card) => {
         card.addEventListener('click', (e) => {
             e.preventDefault();
             if (card.dataset.type === 'video') {
                 openVideoModal(card.dataset.video, card.dataset.title);
             } else {
-                const img = card.querySelector('.portfolio-card-img');
+                const img = card.querySelector('.portfolio-card-img') || card.querySelector('img');
                 if (img) openImageModal(card.dataset.image || img.src, img.alt);
             }
         });
     });
-
-    // close handlers
+ 
     if (hasImageModal) {
         imageModalClose.addEventListener('click', closeImageModal);
         imageModal.addEventListener('click', (e) => { if (e.target === imageModal) closeImageModal(); });
     }
-
+ 
     if (hasVideoModal) {
         videoModalClose.addEventListener('click', closeVideoModal);
         videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
     }
-
+ 
     document.addEventListener('keydown', (e) => {
         if (e.key !== 'Escape') return;
         if (hasImageModal && imageModal.classList.contains('is-open')) closeImageModal();
         if (hasVideoModal && videoModal.classList.contains('is-open')) closeVideoModal();
     });
-
-    // ---- video modal transport controls ----
+ 
     if (hasVideoModal) {
         videoModal.querySelectorAll('[data-action]').forEach((btn) => {
             btn.addEventListener('click', () => {
@@ -527,7 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-
+ 
         videoModalPlayer.addEventListener('play', () => {
             if (iconPlay) iconPlay.classList.add('hidden');
             if (iconPause) iconPause.classList.remove('hidden');
@@ -536,11 +578,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (iconPlay) iconPlay.classList.remove('hidden');
             if (iconPause) iconPause.classList.add('hidden');
         });
-
         videoModalPlayer.addEventListener('loadedmetadata', () => {
             videoModalDuration.textContent = formatTime(videoModalPlayer.duration);
         });
-
         videoModalPlayer.addEventListener('timeupdate', () => {
             if (!videoModalPlayer.duration) return;
             const pct = (videoModalPlayer.currentTime / videoModalPlayer.duration) * 100;
@@ -548,13 +588,11 @@ document.addEventListener('DOMContentLoaded', () => {
             videoModalProgress.style.setProperty('--progress', pct + '%');
             videoModalCurrent.textContent = formatTime(videoModalPlayer.currentTime);
         });
-
         videoModalProgress.addEventListener('input', () => {
             if (!videoModalPlayer.duration) return;
             const pct = parseFloat(videoModalProgress.value);
             videoModalPlayer.currentTime = (pct / 100) * videoModalPlayer.duration;
             videoModalProgress.style.setProperty('--progress', pct + '%');
-
             const time = (pct / 100) * videoModalPlayer.duration;
             videoModalBubble.textContent = formatTime(time);
             videoModalBubble.classList.remove('hidden');
@@ -565,8 +603,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
 
 
 
