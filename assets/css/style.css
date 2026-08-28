@@ -268,12 +268,6 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
-  .top-12 {
-    top: calc(var(--spacing) * 12);
-  }
-  .top-20 {
-    top: calc(var(--spacing) * 20);
-  }
   .top-22 {
     top: calc(var(--spacing) * 22);
   }
@@ -4426,11 +4420,6 @@
       padding: calc(var(--spacing) * 9);
     }
   }
-  .lg\:p-16 {
-    @media (width >= 64rem) {
-      padding: calc(var(--spacing) * 16);
-    }
-  }
   .lg\:p-\[48px_62px_48px_48px\] {
     @media (width >= 64rem) {
       padding: 48px 62px 48px 48px;
@@ -5578,6 +5567,11 @@ html {
 .btn-reveal-icon:hover .btn-reveal-icon-layer-2 {
   transform: translate(0, 0);
   opacity: 1;
+}
+@media (max-width:640px) {
+  .btn-reveal-icon-layer svg {
+    transform: scale(.7);
+  }
 }
 .btn-text-wipe {
   background-size: 200% 100%;

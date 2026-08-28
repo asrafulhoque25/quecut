@@ -722,6 +722,11 @@ html {
     opacity: 1;
 }
 
+@media(max-width:640px){
+    .btn-reveal-icon-layer svg{
+        transform: scale(.7);
+    }
+}
 
 
 
