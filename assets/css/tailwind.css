@@ -2432,6 +2432,10 @@ background:  #0B0C0B;
   .blog-toc-nav .toc-link {
     font-size: 18px;
   }
+
+  .blog-details blockquote cite {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -2599,11 +2603,17 @@ background:  #0B0C0B;
     font-size: 14px;
   }
   .blog-meta-badge {
-    fontsize: 14px;
+    font-size: 14px;
   }
   .blog-details ul.check-list li::before {
     width: 20px;
     height: 20px;
+  }
+    .blog-details blockquote cite {
+    font-size: 16px;
+  }
+  .blog-details blockquote p{
+    font-size: 14px;
   }
 }
 
@@ -2955,29 +2965,37 @@ background:  #0B0C0B;
 
 /* contact popup */
 
-#freeAuditModal .overflow-y-auto,
-#thankYouModal .overflow-y-auto {
-    scrollbar-width: thin;                
-    scrollbar-color: #4A4C4A transparent; 
+#freeAuditModal .rounded-\[24px\],
+#thankYouModal {
+  overflow: hidden !important;
 }
 
 #freeAuditModal .overflow-y-auto::-webkit-scrollbar,
-#thankYouModal .overflow-y-auto::-webkit-scrollbar {
-    width: 6px;                          
+#thankYouModal::-webkit-scrollbar {
+  width: 2px !important;
 }
 
 #freeAuditModal .overflow-y-auto::-webkit-scrollbar-track,
-#thankYouModal .overflow-y-auto::-webkit-scrollbar-track {
-    background: transparent;
+#thankYouModal::-webkit-scrollbar-track {
+  background: transparent !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important; 
 }
 
 #freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb,
-#thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb {
-    background-color: #4A4C4A;
-    border-radius: 999px;
+#thankYouModal::-webkit-scrollbar-thumb {
+  background-color: #4A4C4A !important;
+  border-radius: 999px !important;
 }
 
 #freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb:hover,
-#thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-    background-color: #696B69;
+#thankYouModal::-webkit-scrollbar-thumb:hover {
+  background-color: #696B69 !important;
+}
+
+
+#freeAuditModal .overflow-y-auto,
+#thankYouModal {
+  scrollbar-width: thin !important;
+  scrollbar-color: #4A4C4A transparent !important;
 }

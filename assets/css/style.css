@@ -709,6 +709,9 @@
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
@@ -1571,8 +1574,8 @@
   .bg-\[linear-gradient\(180deg\,\#4A4C4A_0\%\,\#151615_89\.42\%\,\#696B69_100\%\)\] {
     background-image: linear-gradient(180deg,#4A4C4A 0%,#151615 89.42%,#696B69 100%);
   }
-  .bg-\[linear-gradient\(180deg\,\#4A4C4A_0\%\,rgba\(120\,120\,120\,0\.20\)_100\%\)\] {
-    background-image: linear-gradient(180deg,#4A4C4A 0%,rgba(120,120,120,0.20) 100%);
+  .bg-\[linear-gradient\(180deg\,\#4A4C4A_0\%\,\#D2F234_100\%\)\] {
+    background-image: linear-gradient(180deg,#4A4C4A 0%,#D2F234 100%);
   }
   .bg-\[linear-gradient\(180deg\,\#151615_0\%\,\#0B0C0B_13\.13\%\,\#151615_88\.9\%\,\#1C1D1C_101\.89\%\)\] {
     background-image: linear-gradient(180deg,#151615 0%,#0B0C0B 13.13%,#151615 88.9%,#1C1D1C 101.89%);
@@ -1775,6 +1778,12 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+  .p-\[44px_16px_16px_16px\] {
+    padding: 44px 16px 16px 16px;
+  }
+  .p-\[44px_20px_24px_20px\] {
+    padding: 44px 20px 24px 20px;
   }
   .p-px {
     padding: 1px;
@@ -6893,6 +6902,9 @@ html {
   .blog-toc-nav .toc-link {
     font-size: 18px;
   }
+  .blog-details blockquote cite {
+    font-size: 18px;
+  }
 }
 @media (max-width: 1023px) {
   .blog-toc-inner, .blog-sidebar > div {
@@ -7027,11 +7039,17 @@ html {
     font-size: 14px;
   }
   .blog-meta-badge {
-    fontsize: 14px;
+    font-size: 14px;
   }
   .blog-details ul.check-list li::before {
     width: 20px;
     height: 20px;
+  }
+  .blog-details blockquote cite {
+    font-size: 16px;
+  }
+  .blog-details blockquote p {
+    font-size: 14px;
   }
 }
 .sub-banner {
@@ -7306,22 +7324,27 @@ html {
 .legal-bg {
   background: url("../images/full-Q.svg") left bottom 0% no-repeat, radial-gradient( 50.91% 80.18% at 0.28% 50.39%, var(--Dark-Colors-Dark-4, #4a4c4a) 0%, var(--Dark-Colors-Dark-1, #0b0c0b) 72.67% ), var(--Dark-Colors-Dark-1, #0b0c0b);
 }
-#freeAuditModal .overflow-y-auto, #thankYouModal .overflow-y-auto {
-  scrollbar-width: thin;
-  scrollbar-color: #4A4C4A transparent;
+#freeAuditModal .rounded-\[24px\], #thankYouModal {
+  overflow: hidden !important;
 }
-#freeAuditModal .overflow-y-auto::-webkit-scrollbar, #thankYouModal .overflow-y-auto::-webkit-scrollbar {
-  width: 6px;
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar, #thankYouModal::-webkit-scrollbar {
+  width: 2px !important;
 }
-#freeAuditModal .overflow-y-auto::-webkit-scrollbar-track, #thankYouModal .overflow-y-auto::-webkit-scrollbar-track {
-  background: transparent;
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-track, #thankYouModal::-webkit-scrollbar-track {
+  background: transparent !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
-#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb, #thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb {
-  background-color: #4A4C4A;
-  border-radius: 999px;
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb, #thankYouModal::-webkit-scrollbar-thumb {
+  background-color: #4A4C4A !important;
+  border-radius: 999px !important;
 }
-#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb:hover, #thankYouModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background-color: #696B69;
+#freeAuditModal .overflow-y-auto::-webkit-scrollbar-thumb:hover, #thankYouModal::-webkit-scrollbar-thumb:hover {
+  background-color: #696B69 !important;
+}
+#freeAuditModal .overflow-y-auto, #thankYouModal {
+  scrollbar-width: thin !important;
+  scrollbar-color: #4A4C4A transparent !important;
 }
 @property --tw-border-spacing-x {
   syntax: "<length>";
