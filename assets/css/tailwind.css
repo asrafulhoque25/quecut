@@ -21,12 +21,17 @@
 }
 
 .container {
-    max-width: 1545px;
+    max-width: 1562px;
     width: 100%;
     margin: auto;
-    padding-inline: 20px;
+    padding-inline: 56px;
 }
 
+@media (max-width:1280px) {
+    .container {
+    padding-inline: 32px;
+}
+}
 @media (max-width:640px) {
     .container {
     padding-inline: 16px;
@@ -681,10 +686,10 @@ html {
 
 
 /* industry css start  */
-@media (max-width:991px) {
+@media (max-width:1534px) {
     .industry-card svg{
-        width: 6px;
-        height: 6px;
+        width: 16px;
+        height: 16px;
 }
 }
 
@@ -2801,12 +2806,23 @@ background:  #0B0C0B;
 
 /* faq page  */
 
-.quecut-faq{
+
+.marquee-track {
+    user-select: none;
+    -webkit-user-select: none;
+}
+.marquee-item img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+/* .quecut-faq{
     background-image: url(../images/faq-page-bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-}
+} */
 .faq-banner-bg{
     background-image: url(../images/faq-bg.webp);
     background-size: cover;

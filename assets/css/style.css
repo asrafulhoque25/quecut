@@ -364,8 +364,8 @@
   .left-3 {
     left: calc(var(--spacing) * 3);
   }
-  .left-3\.5 {
-    left: calc(var(--spacing) * 3.5);
+  .left-3\.75 {
+    left: calc(var(--spacing) * 3.75);
   }
   .left-4 {
     left: calc(var(--spacing) * 4);
@@ -486,6 +486,9 @@
   }
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
+  }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
   }
   .mt-0\.5 {
     margin-top: calc(var(--spacing) * 0.5);
@@ -622,9 +625,6 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-7 {
-    height: calc(var(--spacing) * 7);
-  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -645,6 +645,9 @@
   }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-18 {
+    height: calc(var(--spacing) * 18);
   }
   .h-31\.5 {
     height: calc(var(--spacing) * 31.5);
@@ -720,9 +723,6 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
-  }
-  .w-7 {
-    width: calc(var(--spacing) * 7);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -4999,6 +4999,16 @@
       top: 10.5506%;
     }
   }
+  .\32 xl\:h-24 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 24);
+    }
+  }
+  .\32 xl\:w-24 {
+    @media (width >= 96rem) {
+      width: calc(var(--spacing) * 24);
+    }
+  }
   .\32 xl\:max-w-152 {
     @media (width >= 96rem) {
       max-width: calc(var(--spacing) * 152);
@@ -5042,10 +5052,15 @@
   }
 }
 .container {
-  max-width: 1545px;
+  max-width: 1562px;
   width: 100%;
   margin: auto;
-  padding-inline: 20px;
+  padding-inline: 56px;
+}
+@media (max-width:1280px) {
+  .container {
+    padding-inline: 32px;
+  }
 }
 @media (max-width:640px) {
   .container {
@@ -5538,10 +5553,10 @@ html {
     background-image: none;
   }
 }
-@media (max-width:991px) {
+@media (max-width:1534px) {
   .industry-card svg {
-    width: 6px;
-    height: 6px;
+    width: 16px;
+    height: 16px;
   }
 }
 .btn-reveal-icon-layer {
@@ -7189,11 +7204,14 @@ html {
   background-repeat: no-repeat;
   background-position: bottom center;
 }
-.quecut-faq {
-  background-image: url(../images/faq-page-bg.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
+.marquee-track {
+  user-select: none;
+  -webkit-user-select: none;
+}
+.marquee-item img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
 }
 .faq-banner-bg {
   background-image: url(../images/faq-bg.webp);
