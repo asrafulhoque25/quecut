@@ -1912,3 +1912,262 @@ document.addEventListener('DOMContentLoaded', () => {
 
         counters.forEach(counter => observer.observe(counter));
       });
+
+
+
+
+
+
+      // timeline about page
+
+      
+
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("timelineTrack");
+  if (!track) return;
+
+  const line = track.querySelector(".timeline-line");
+  const fill = document.getElementById("timelineFill");
+  const badges = Array.prototype.slice.call(track.querySelectorAll(".timeline-badge"));
+  const cards = Array.prototype.slice.call(track.querySelectorAll(".timeline-card"));
+
+  // ---------------------------------------------------------------
+  // LINE POSITIONING — plain DOM/CSS, does NOT depend on GSAP.
+  // Runs regardless of whether the GSAP CDN loaded, so the line is
+  // never invisible just because a script tag failed to fetch.
+  // Positions it so it starts at the CENTER of the first badge and
+  // ends at the CENTER of the last badge (no overhang), horizontally
+  // on desktop and vertically on mobile.
+  // ---------------------------------------------------------------
+  function positionLine(refreshTrigger) {
+    if (!line || badges.length < 2) return;
+
+    const isDesktop = window.matchMedia("(min-width: 901px)").matches;
+    const trackRect = track.getBoundingClientRect();
+    const firstRect = badges[0].getBoundingClientRect();
+    const lastRect = badges[badges.length - 1].getBoundingClientRect();
+
+    if (isDesktop) {
+      const startX = firstRect.left + firstRect.width / 2 - trackRect.left;
+      const endX = lastRect.left + lastRect.width / 2 - trackRect.left;
+      const centerY = firstRect.top + firstRect.height / 2 - trackRect.top;
+
+      line.style.top = centerY + "px";
+      line.style.left = startX + "px";
+      line.style.width = Math.max(endX - startX, 0) + "px";
+      line.style.right = "auto";
+      line.style.bottom = "auto";
+      line.style.height = "2px";
+    } else {
+      const startY = firstRect.top + firstRect.height / 2 - trackRect.top;
+      const endY = lastRect.top + lastRect.height / 2 - trackRect.top;
+      const centerX = firstRect.left + firstRect.width / 2 - trackRect.left;
+
+      line.style.left = centerX + "px";
+      line.style.top = startY + "px";
+      line.style.height = Math.max(endY - startY, 0) + "px";
+      line.style.right = "auto";
+      line.style.bottom = "auto";
+      line.style.width = "2px";
+    }
+
+    // Only recalculate ScrollTrigger's own trigger positions when
+    // explicitly asked (after a real layout change) — doing this on
+    // every scroll frame would be wasteful and can fight the scrub.
+    if (refreshTrigger && window.ScrollTrigger) ScrollTrigger.refresh();
+  }
+
+  // ---------------------------------------------------------------
+  // CARD HEIGHT MATCHING — plain JS, does NOT rely on flexbox stretch.
+  // On desktop, every card is forced to the height of the TALLEST
+  // card (whichever item has the most text). This is done directly
+  // in JS instead of trusting CSS align-items:stretch, because that
+  // can silently break if any other CSS on the page (theme resets,
+  // Bootstrap-style grid classes, etc.) touches flex/height on these
+  // elements. On mobile the inline height is cleared — each row there
+  // pairs its own badge + card and doesn't need cross-item matching.
+  // ---------------------------------------------------------------
+  function matchCardHeights() {
+    if (!cards.length) return;
+    const isDesktop = window.matchMedia("(min-width: 901px)").matches;
+
+    // reset first so we measure NATURAL (content) height, not a
+    // previously-forced one
+    cards.forEach(function (card) {
+      card.style.minHeight = "";
+    });
+
+    if (!isDesktop) return; // mobile: natural per-row height is correct
+
+    let max = 0;
+    cards.forEach(function (card) {
+      max = Math.max(max, card.getBoundingClientRect().height);
+    });
+    cards.forEach(function (card) {
+      card.style.minHeight = max + "px";
+    });
+  }
+
+  positionLine(true);
+  matchCardHeights();
+
+  // Belt-and-suspenders: a few delayed re-checks right after load, to
+  // catch any late reflow (e.g. the Tailwind Play CDN script — loaded
+  // from cdn.tailwindcss.com — finishes generating utility styles a
+  // moment after DOMContentLoaded, which can shift badge height).
+  window.addEventListener("load", function () {
+    positionLine(true);
+    matchCardHeights();
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        positionLine(true);
+        matchCardHeights();
+      });
+    });
+    setTimeout(function () {
+      positionLine(true);
+      matchCardHeights();
+    }, 300);
+    setTimeout(function () {
+      positionLine(true);
+      matchCardHeights();
+    }, 800);
+  });
+
+  // The real fix: watch the badges themselves. Any time a badge's
+  // rendered box changes size for ANY reason (late Tailwind styling,
+  // a web font swapping in, a resize), this fires and we re-measure —
+  // so the line is always locked to the badge's true center instead
+  // of a snapshot taken before styles finished applying.
+  if (window.ResizeObserver) {
+    let roTimer;
+    const ro = new ResizeObserver(function () {
+      clearTimeout(roTimer);
+      roTimer = setTimeout(function () {
+        positionLine(true);
+      }, 30);
+    });
+    badges.forEach(function (badge) {
+      ro.observe(badge);
+    });
+    ro.observe(track);
+  }
+
+  let resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      positionLine(true);
+      matchCardHeights();
+    }, 150);
+  });
+
+  // Extra safety net: re-check on scroll too (rAF-throttled, and does
+  // NOT force a ScrollTrigger.refresh — just keeps the line's own
+  // top/left/width in sync). Nothing in the current animations should
+  // shift the badge centers mid-scroll anymore, but this keeps the
+  // line self-healing if anything else on the page ever does.
+  let scrollTicking = false;
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(function () {
+        positionLine(false);
+        scrollTicking = false;
+      });
+    },
+    { passive: true }
+  );
+
+  // ---------------------------------------------------------------
+  // GSAP ANIMATIONS — layered on top, only if GSAP actually loaded.
+  // If the CDN is blocked/offline this block just quietly skips and
+  // the line/badges/cards still show (without the scroll animation).
+  // ---------------------------------------------------------------
+  if (typeof gsap === "undefined") {
+    console.warn("GSAP did not load — timeline is showing without scroll animation.");
+    return;
+  }
+  if (typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);
+
+  let mm = gsap.matchMedia();
+
+  mm.add(
+    {
+      isDesktop: "(min-width: 901px)",
+      isMobile: "(max-width: 900px)",
+    },
+    (context) => {
+      const { isDesktop } = context.conditions;
+
+      gsap.set(fill, { clearProps: "transform" });
+      positionLine(true);
+      matchCardHeights();
+
+      const lineTween = gsap.fromTo(
+        fill,
+        isDesktop ? { scaleX: 0 } : { scaleY: 0 },
+        {
+          scaleX: isDesktop ? 1 : undefined,
+          scaleY: isDesktop ? undefined : 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: track,
+            // Desktop: one horizontal row — a fixed viewport-% window
+            // is fine and completes quickly (before top reaches 70%).
+            // Mobile: the stacked column can be MANY screen-heights
+            // tall, so tying "end" to a fixed top-% finishes the fill
+            // after barely any scrolling — the rest of the (long)
+            // scroll then just shows solid yellow with no visible
+            // change. Tying it to the track's own BOTTOM instead makes
+            // it scale with however tall the stack actually is.
+            start: isDesktop ? "top 80%" : "top 85%",
+            end: isDesktop ? "top 50%" : "bottom 60%",
+            scrub: 0.6,
+          },
+        }
+      );
+
+      // badges pop in with opacity + scale only (NO x/y translate).
+      // Scale is centered by default, so the badge's rendered CENTER
+      // point never shifts during the animation — this is what keeps
+      // the line's measured position correct at every moment, instead
+      // of drifting/jumping when measured mid-animation.
+      const badgeTween = gsap.from(badges, {
+        opacity: 0,
+        scale: 0.4,
+        duration: 0.5,
+        ease: "back.out(2)",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: track,
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // cards fade + rise in right after their badge
+      const cardTween = gsap.from(cards, {
+        opacity: 0,
+        y: 40,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.15,
+        delay: 0.1,
+        scrollTrigger: {
+          trigger: track,
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      return () => {
+        lineTween.kill();
+        badgeTween.kill();
+        cardTween.kill();
+      };
+    }
+  );
+});
