@@ -2171,3 +2171,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 });
+
+
+
+
+//vision mission section

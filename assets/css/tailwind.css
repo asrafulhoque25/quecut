@@ -804,7 +804,7 @@ html {
  
 .banner-slide-col .splide__slide {
     height: 300px;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
 }
  
@@ -2819,6 +2819,34 @@ background:  #0B0C0B;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
+
+
+.leading-quecut{
+    background-image: url(../images/leading-quecut-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.management-1{
+    background-image: url(../images/quecut-management-1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.management-2{
+    background-image: url(../images/quecut-management-1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.print-placement-section{
+    background-image: url(../images/right-size-mesurment.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 
 /* faq page  */
 
