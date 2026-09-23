@@ -1653,6 +1653,138 @@ background:  #0B0C0B;
 
 
 
+/* career details css start */
+
+.career-details h2 {
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 110%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 32px;
+  border-top: 1px solid #4A4C4A;
+}
+
+.career-details h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+
+.career-details p {
+  color: #BEC4BE;
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 16px;
+}
+
+.career-details a {
+  position: relative;
+  color: #fff;
+  font-family: "Stack Sans Text", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+
+
+/* ---------- 5. LISTS ---------- */
+
+/* default bullet list */
+.career-details ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.career-details ul li {
+  position: relative;
+  padding-left: 20px;
+  color: #BEC4BE;
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.career-details ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  min-width: 6px;
+  background-image: url("../images/career-bullet-point-yellow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+
+
+
+
+
+
+@media (max-width: 1023px) {
+  .career-details h2 {
+    font-size: 28px;
+    margin-top: 32px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .career-details h2 {
+    font-size: 24px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+  }
+
+  .career-details p,
+  .career-details ul li,
+  .career-details ol li {
+    font-size: 16px;
+  }
+  .career-details ul {
+  gap: 10px;
+}
+}
+
+
+
+@media (max-width: 640px) {
+  .career-details p,
+  .career-details ul li,
+  .career-details ol li {
+    font-size: 14px;
+  }
+  .career-details ul li::before {
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  }
+  .career-details ul li {
+  padding-left: 16px;
+  }
+    .career-details ul {
+  gap: 6px;
+}
+}
+
+/* career details css end */
+
+
 
 
 /* blog details all css  */
@@ -2846,7 +2978,15 @@ background:  #0B0C0B;
     background-repeat: no-repeat;
     background-position: center center;
 }
-
+.ceo-bg{
+    background-image: url(../images/ceo-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.js-text-reveal {
+  will-change: clip-path, transform;
+}
 
 /* faq page  */
 

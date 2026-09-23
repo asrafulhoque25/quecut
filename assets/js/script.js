@@ -1649,7 +1649,65 @@ document.addEventListener('DOMContentLoaded', () => {
     updateArrows();
 });
 
+// ================= FEATURED WORKS: TAB FILTER + LOAD MORE =================
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.fw-tab');
+    const cards = document.querySelectorAll('.fw-card');
+    const loadMoreBtn = document.getElementById('fwLoadMore');
+    if (!tabs.length || !cards.length) return;
 
+    const INITIAL_COUNT = 6;
+    const LOAD_STEP = 4; // protibar click a koyta item add hobe (3 ba 6)
+
+    let currentFilter = 'all';
+    let visibleCount = INITIAL_COUNT;
+
+    function getFilteredCards() {
+        return Array.from(cards).filter(
+            (card) => currentFilter === 'all' || card.dataset.category === currentFilter
+        );
+    }
+
+    function render() {
+        const filtered = getFilteredCards();
+
+        // sob card age hide, tarpor filter onujayi show
+        cards.forEach((card) => card.classList.add('hidden'));
+        filtered.forEach((card, i) => {
+            card.classList.toggle('hidden', i >= visibleCount);
+        });
+
+        if (loadMoreBtn) {
+            const noMoreLeft = visibleCount >= filtered.length;
+            const tooFewItems = filtered.length <= INITIAL_COUNT;
+            const shouldDisable = tooFewItems || noMoreLeft;
+
+            loadMoreBtn.disabled = shouldDisable;
+            loadMoreBtn.classList.toggle('opacity-50', shouldDisable);
+            loadMoreBtn.classList.toggle('cursor-not-allowed', shouldDisable);
+            loadMoreBtn.classList.toggle('pointer-events-none', shouldDisable);
+        }
+    }
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach((t) => t.classList.remove('active'));
+            tab.classList.add('active');
+            currentFilter = tab.dataset.filter;
+            visibleCount = INITIAL_COUNT;
+            render();
+        });
+    });
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            visibleCount += LOAD_STEP;
+            render();
+        });
+    }
+
+    render();
+});
 
 //work page card stack animation
 
@@ -2175,4 +2233,156 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//vision mission section
+// about - ceo
+
+
+(function () {
+  if (typeof gsap === "undefined") return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  const ceoSection = document.querySelector(".js-ceo-section");
+  const mgmtCards = document.querySelectorAll(".js-mgmt-card");
+
+  let ctx = gsap.context(() => {
+
+    // ================= CEO Statement — scroll-scrubbed =================
+    if (ceoSection) {
+
+      // Text block: reveals line-by-line, tied directly to scroll position
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".js-ceo-section",
+          start: "top 85%",
+          end: "top 25%",
+          scrub: 0.6,
+          id: "ceoTextScrub"
+        }
+      })
+      .from(".js-ceo-heading", {
+        clipPath: "inset(0 0 100% 0)",
+        y: 30,
+        ease: "none"
+      })
+      .from(".js-ceo-para", {
+        clipPath: "inset(0 0 100% 0)",
+        y: 20,
+        stagger: 0.3,
+        ease: "none"
+      }, "<0.1")
+      .from(".js-ceo-name", {
+        clipPath: "inset(0 0 100% 0)",
+        y: 15,
+        ease: "none"
+      }, "<0.2");
+
+      // Image: independent parallax + scale, scrubbed across the whole section pass
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".js-ceo-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.8,
+          id: "ceoImageParallax"
+        }
+      })
+      .fromTo(".js-ceo-img", {
+        yPercent: 8,
+        scale: 1.12
+      }, {
+        yPercent: -8,
+        scale: 1,
+        ease: "none"
+      });
+    }
+
+    // ================= Management cards — scroll-scrubbed =================
+    mgmtCards.forEach((card, i) => {
+      const img = card.querySelector(".js-mgmt-img");
+      const content = card.querySelector(".js-mgmt-content");
+
+      // card reveal, scrubbed as it enters
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          end: "top 40%",
+          scrub: 0.6,
+          id: "mgmtCardScrub-" + i
+        }
+      })
+      .from(card, {
+        clipPath: "inset(0 0 100% 0)",
+        ease: "none"
+      })
+      .from(content.children, {
+        clipPath: "inset(0 0 100% 0)",
+        y: 15,
+        stagger: 0.25,
+        ease: "none"
+      }, "<0.15");
+
+      // image parallax within the card, scrubbed across a longer pass
+      gsap.fromTo(img, {
+        yPercent: -10,
+        scale: 1.08
+      }, {
+        yPercent: 10,
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.8,
+          id: "mgmtImgParallax-" + i
+        }
+      });
+    });
+
+  }, [ceoSection, ...mgmtCards]);
+
+  // ctx.revert(); // cleanup helper if section is dynamically rebuilt
+})();
+
+
+
+// text animation reveal
+(function () {
+  if (typeof gsap === "undefined") return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  function initTextReveal() {
+    const targets = document.querySelectorAll(".js-text-reveal:not([data-tr-init])");
+
+    targets.forEach((el, i) => {
+      el.setAttribute("data-tr-init", "true");
+
+      gsap.fromTo(el,
+        {
+          clipPath: "inset(0 0 100% 0)",
+          y: 12
+        },
+        {
+          clipPath: "inset(0 0 0% 0)",
+          y: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            end: "top 80%",
+            scrub: 0.7,
+            id: "textReveal-" + i
+          }
+        }
+      );
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initTextReveal);
+  } else {
+    initTextReveal();
+  }
+
+  window.initTextReveal = initTextReveal;
+})();
