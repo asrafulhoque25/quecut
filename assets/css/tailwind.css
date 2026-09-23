@@ -217,7 +217,7 @@ html {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 666px;
+    width: 730px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -237,7 +237,7 @@ html {
         linear-gradient(180deg, var(--Dark-Colors-Dark-1, #0B0C0B) 0%, var(--Dark-Colors-Dark-2, #151615) 31.53%, var(--Dark-Colors-Dark-4, #4A4C4A) 100%);
     background-repeat: no-repeat, no-repeat;
     background-position: right bottom, right bottom;
-    background-size: 360px auto, cover;
+    background-size: 430px auto, cover;
     background-clip: padding-box, padding-box;
 
     opacity: 0;
@@ -246,6 +246,20 @@ html {
     transform: translateY(4px);
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
     z-index: 1000;
+}
+
+@media (max-width:1200px) {
+    .navbar-menu ul li ul {
+    width: 730px;
+    background-image:
+        url("../images/dropdown-frame.svg"),
+        linear-gradient(180deg, var(--Dark-Colors-Dark-1, #0B0C0B) 0%, var(--Dark-Colors-Dark-2, #151615) 31.53%, var(--Dark-Colors-Dark-4, #4A4C4A) 100%);
+    background-size: 430px auto, cover;
+
+    opacity: 0;
+
+}
+
 }
 
 .navbar-menu ul li:hover > ul {
@@ -527,7 +541,7 @@ html {
         max-width: 100%;
     }
     .navbar-menu ul li ul {
-        width: 520px;
+        width: 620px;
     }
 }
 
